@@ -160,15 +160,22 @@ def resolve_thread(events: list[Event], tr: Transcript, thread_title: str, ids: 
         authority = last_agree.speaker in tr.chairs
         hedged = _hedged(last_agree)
         co_chair = _unresolved_co_chair(evs, last_agree, tr) if authority else None
+        # Câu "đồng ý" chỉ là "Ừ."/"Dạ." → đồng ý gián tiếp, không bao giờ FINAL (quy ước Nash 5)
+        u = tr.utt(last_agree.utt)
+        nod_only = is_backchannel(u.text if u else last_agree.quote)
         fallback = has_fallback(last_agree.quote)
         status = (
-            Status.FINAL if authority and not hedged and not co_chair else Status.NEEDS_CONFIRMATION
+            Status.FINAL
+            if authority and not hedged and not co_chair and not nod_only
+            else Status.NEEDS_CONFIRMATION
         )
         flags = []
         if not authority:
             flags.append("người đồng ý không phải người chủ trì")
         if hedged:
             flags.append("đồng thuận có rào đón")
+        if nod_only:
+            flags.append("chủ trì chỉ đáp 'Ừ.' — đồng ý gián tiếp, cần xác nhận")
         if co_chair:
             flags.append(f"đồng chủ trì {co_chair} đã phản đối, chưa đồng ý lại")
         if fallback:

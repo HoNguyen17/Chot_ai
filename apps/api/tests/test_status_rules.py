@@ -169,7 +169,7 @@ def test_co_chair_objection_not_withdrawn_needs_confirmation():
         "[00:20] Bình: Em đề xuất B.",
         "[00:30] Hai: Anh thấy B rủi ro.",
         "[00:40] Sếp: Chị quyết đi B.",
-        "[00:50] Hai: Ờ.",
+        "[00:50] Hai: Ok, anh đồng ý đi B.",
         participants="Sếp (chủ trì); Hai (chủ trì); An; Bình",
     )
     evs = [
@@ -181,8 +181,8 @@ def test_co_chair_objection_not_withdrawn_needs_confirmation():
     (d,) = decisions(ledger_for(tr, evs))
     assert d.status == Status.NEEDS_CONFIRMATION
     assert any("đồng chủ trì" in f for f in d.flags)
-    # đồng chủ trì đồng ý lại → final
-    evs.append(ev("u005", K.AGREE, "Hai", "B", quote="Ờ"))
+    # đồng chủ trì đồng ý lại bằng lời rõ ràng (không phải "Ờ.") → final
+    evs.append(ev("u005", K.AGREE, "Hai", "B", quote="anh đồng ý đi B"))
     (d,) = decisions(ledger_for(tr, evs))
     assert d.status == Status.FINAL
 
@@ -236,3 +236,14 @@ def test_absent_owner_kept_and_needs_confirmation():
     (t,) = [i for i in led.items if i.type == ItemType.TASK]
     assert t.owner == "Chi" and t.status == Status.NEEDS_CONFIRMATION
     assert any("vắng mặt" in f for f in t.flags)
+
+
+def test_agree_label_on_bare_backchannel_is_only_indirect():
+    # LLM đôi khi gán agree cho "Ừ." dù prompt cấm — luật không được tin thành FINAL
+    tr = _tr("[00:10] An: Em đề xuất chuyển sang A.", "[00:20] Sếp: Ừ.")
+    led = ledger_for(
+        tr, [ev("u001", K.PROPOSE, "An", "A"), ev("u002", K.AGREE, "Sếp", "A", quote="Ừ")]
+    )
+    (d,) = decisions(led)
+    assert d.status == Status.NEEDS_CONFIRMATION
+    assert any("gián tiếp" in f for f in d.flags)

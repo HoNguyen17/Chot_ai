@@ -71,7 +71,8 @@ chot/
 |---|---|---|---|
 | Lọc keyword | answer_key m01–m05 | 66,7% | 0% |
 | Luật + sự kiện chuẩn | answer_key m01–m05 | 0% | 100% |
-| LLM + luật (gpt-4.1-mini) | gold m01–m25 | 17,6% | 42,1% |
+| LLM + luật (gpt-4.1-mini) — trước tinh chỉnh | gold m01–m25 | 17,6% | 42,1% |
+| LLM + luật (gpt-4.1-mini) — sau P3 (prompt + luật) | gold m01–m25 | **0%** | 78,9% |
 | 1 prompt tóm tắt (gpt-4.1-mini) | gold m01–m25 | *chưa chạy — vướng rate limit OpenAI* | |
 
-Dòng thứ hai chỉ chứng minh luật khớp hướng dẫn gán nhãn; điểm thật của sản phẩm là dòng thứ ba. Dòng LLM đo trên 25 cuộc họp (5 thật + 20 kịch bản bẫy), gold theo quy ước của Nash (`docs/LABELING_GUIDE.md`, quy tắc 1–13) — một phần lỗi là quy ước chưa có trong luật/prompt. Chi tiết: [docs/EVAL_LOG.md](docs/EVAL_LOG.md).
+Dòng thứ hai chỉ chứng minh luật khớp hướng dẫn gán nhãn; điểm thật của sản phẩm là dòng thứ ba. Dòng LLM đo trên 25 cuộc họp (5 thật + 20 kịch bản bẫy), gold theo quy ước của Nash (`docs/LABELING_GUIDE.md`, quy tắc 1–13) — một phần lỗi là quy ước chưa có trong luật/prompt. Dòng "sau P3" là sự kiện của lần chạy LLM thật gần nhất đi qua luật cuối (replay); lần chạy đầu-cuối trước vòng luật cuối là 4,8%. Chi tiết: [docs/EVAL_LOG.md](docs/EVAL_LOG.md).
