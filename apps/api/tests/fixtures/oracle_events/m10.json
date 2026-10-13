@@ -1,0 +1,24 @@
+{
+  "threads": [
+    {"id": "login", "title": "Phương án đăng nhập app"},
+    {"id": "uat", "title": "Lịch và môi trường UAT"}
+  ],
+  "events": [
+    {"utt": "u002", "thread": "login", "kind": "propose", "speaker": "Tuyết", "key": "otp-sms", "content": "Đăng nhập bằng OTP SMS mọi lần", "quote": "Bên chị muốn đăng nhập bằng OTP qua SMS"},
+    {"utt": "u003", "thread": "login", "kind": "object", "speaker": "Đức", "key": "otp-sms", "content": "Tốn ~40 triệu/tháng tiền SMS", "quote": "OTP SMS mỗi tin khoảng 800 đồng"},
+    {"utt": "u003", "thread": "login", "kind": "info", "speaker": "Đức", "content": "OTP SMS ~800 đồng/tin; 50 nghìn user/tháng ≈ 40 triệu", "quote": "50 nghìn user một tháng là 40 triệu tiền SMS"},
+    {"utt": "u004", "thread": "login", "kind": "propose", "speaker": "Kim", "key": "email", "content": "Đăng nhập bằng email kèm mật khẩu", "quote": "Em đề xuất đăng nhập bằng email kèm mật khẩu"},
+    {"utt": "u005", "thread": "login", "kind": "agree", "speaker": "Nam", "key": "email", "content": "Đi email với mật khẩu", "quote": "Ok vậy đi email với mật khẩu"},
+    {"utt": "u006", "thread": "login", "kind": "object", "speaker": "Tuyết", "key": "email", "content": "Khách phần lớn là người bán hàng ở chợ, ít dùng email", "quote": "khách của chị phần lớn là người bán hàng ở chợ, ít ai dùng email"},
+    {"utt": "u007", "thread": "login", "kind": "propose", "speaker": "Đức", "key": "zalo", "content": "Đăng nhập bằng Zalo", "quote": "Vậy dùng đăng nhập bằng Zalo"},
+    {"utt": "u008", "thread": "login", "kind": "object", "speaker": "Hòa", "key": "zalo", "content": "Phải chờ duyệt Zalo Developer ~3 tuần", "quote": "Đăng nhập Zalo cần app được duyệt trên Zalo Developer"},
+    {"utt": "u008", "thread": "login", "kind": "info", "speaker": "Hòa", "content": "Đăng nhập Zalo cần duyệt trên Zalo Developer, lần trước chờ 3 tuần", "quote": "lần trước bên em chờ ba tuần"},
+    {"utt": "u009", "thread": "login", "kind": "revise", "speaker": "Tuyết", "key": "otp-sms-thiet-bi-moi", "content": "OTP SMS, chỉ gửi khi đăng nhập trên máy mới", "quote": "Thôi quay lại OTP SMS, nhưng chỉ gửi OTP khi đăng nhập trên máy mới thôi"},
+    {"utt": "u011", "thread": "login", "kind": "agree", "speaker": "Nam", "key": "otp-sms-thiet-bi-moi", "content": "Đăng nhập OTP SMS, chỉ gửi khi đăng nhập trên thiết bị mới; bỏ email và Zalo", "quote": "Chốt đăng nhập OTP SMS, chỉ gửi khi đăng nhập trên thiết bị mới"},
+    {"utt": "u013", "thread": "login", "kind": "assign", "speaker": "Nam", "key": "arch-doc", "owner": "Đức", "content": "Cập nhật tài liệu kiến trúc phần đăng nhập, gửi chị Tuyết", "deadline_text": "thứ Hai tuần sau", "quote": "Đức cập nhật lại tài liệu kiến trúc phần đăng nhập, thứ Hai tuần sau gửi chị Tuyết"},
+    {"utt": "u014", "thread": "login", "kind": "commit", "speaker": "Đức", "key": "arch-doc", "owner": "Đức", "deadline_text": "thứ Hai", "quote": "Dạ ok anh, thứ Hai em gửi"},
+    {"utt": "u015", "thread": "uat", "kind": "blocker", "speaker": "Hòa", "content": "Chưa có môi trường staging có dữ liệu thật đã ẩn danh để UAT", "quote": "team em chưa có môi trường staging có dữ liệu thật đã ẩn danh"},
+    {"utt": "u016", "thread": "uat", "kind": "defer", "speaker": "Tuyết", "content": "Ngày bắt đầu UAT chưa chốt, chờ lịch nghỉ lễ phía khách", "quote": "Ngày bắt đầu UAT thì mình chưa chốt được"},
+    {"utt": "u017", "thread": "uat", "kind": "commit", "speaker": "Kim", "key": "user-story", "owner": "Kim", "content": "Cập nhật user story đăng nhập lên Jira", "deadline_text": "trong hôm nay", "quote": "Em sẽ cập nhật user story đăng nhập lên Gi ra trong hôm nay"}
+  ]
+}

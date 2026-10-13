@@ -1,27 +1,86 @@
 {
-  "meeting_id": "m01",
+  "_huong_dan": {
+    "1_gan_cho_cai_gi": "Mỗi phần tử trong items = 1 dòng biên bản (1 quyết định, 1 việc, 1 vướng mắc...). KHÔNG gán từng câu, KHÔNG gán từng người. Nhiều câu cùng chủ đề -> 1 mục, các câu đó vào evidence. 'Dạ/Ừ', chào hỏi, nêu chương trình họp, chuyển chủ đề -> không gán gì.",
+    "2_id": "Tiền tố theo type + số đếm trong file: D=decision, O=option, T=task, B=blocker, Q=open_question, K=knowledge, R=request, F=feedback. Vd D1, O1, O2, T1. Chỉ cần không trùng.",
+    "3_thread": "Slug tiếng Anh kebab-case cho CÂU HỎI cuộc họp phải trả lời (vd 'payment-gateway'). Chủ đề quay lại -> dùng lại slug cũ. decision + option của nó bắt buộc cùng thread; mỗi thread tối đa 1 decision.",
+    "4_evidence": "Mã câu u001, u002... = thứ tự các dòng có [timestamp] (dòng # không tính). In bằng lệnh trong docs/LABELING_GUIDE.md.",
+    "5_status": "final | needs_confirmation | superseded | deferred | open. Xem bảng 'Quy ước từng loại' trong docs/LABELING_GUIDE.md.",
+    "6_khi_dung": "Chép file này thành data/gold/<meeting_id>.json, XOÁ key _huong_dan và mọi mục mẫu không dùng (mục mẫu để lại sẽ bị chấm như nhãn thật)."
+  },
+  "meeting_id": "mXX",
   "labeler": "nash",
   "items": [
     {
       "id": "D1",
       "type": "decision",
-      "thread": "payment-gateway",
-      "content": "Mô tả ngắn quyết định",
+      "thread": "topic-a",
+      "content": "Phương án được chốt, diễn đạt ngắn",
       "status": "final",
-      "decided_by": "Tên người chốt",
-      "evidence": ["u019"],
-      "note": "Vì sao gán nhãn này (bẫy nào?)"
+      "decided_by": "Tên chủ trì đã chốt",
+      "evidence": ["uNNN", "uNNN"],
+      "note": "evidence = câu đồng ý sau cùng + câu đề xuất gốc. final chỉ khi chủ trì chốt không rào đón và không bị lật lại; còn lại needs_confirmation / deferred."
+    },
+    {
+      "id": "O1",
+      "type": "option",
+      "thread": "topic-a",
+      "content": "Phương án bị loại",
+      "status": "superseded",
+      "evidence": ["uNNN"],
+      "note": "Cùng thread với D1. superseded nếu D1 final, open nếu D1 needs_confirmation. Không có decided_by."
     },
     {
       "id": "T1",
       "type": "task",
-      "thread": "payment-gateway",
+      "thread": "topic-a",
       "content": "Việc cần làm",
       "status": "open",
-      "owner": "Tên người làm hoặc null",
+      "owner": "Tên người nhận (trong # participants) hoặc null",
       "deadline": "2026-10-09",
-      "deadline_text": "thứ sáu này",
-      "evidence": ["u020", "u021"]
+      "deadline_text": "thứ Sáu này",
+      "evidence": ["uNNN", "uNNN"],
+      "note": "evidence = câu giao + câu nhận. 'Dạ'/'để em xem lại' -> needs_confirmation. Không có ngày cụ thể -> deadline null."
+    },
+    {
+      "id": "Q1",
+      "type": "open_question",
+      "thread": "topic-b",
+      "content": "Câu hỏi chưa ai kết luận",
+      "status": "open",
+      "evidence": ["uNNN"],
+      "note": "Chủ đề có bàn nhưng không ai chốt và không hoãn rõ ràng. Có câu hoãn -> dùng decision + deferred."
+    },
+    {
+      "id": "B1",
+      "type": "blocker",
+      "thread": "topic-a",
+      "content": "Vướng mắc đang chặn việc",
+      "status": "open",
+      "evidence": ["uNNN"]
+    },
+    {
+      "id": "K1",
+      "type": "knowledge",
+      "thread": "topic-a",
+      "content": "Sự thật / ràng buộc mới đáng lưu (số liệu, quy định...)",
+      "status": "open",
+      "evidence": ["uNNN"]
+    },
+    {
+      "id": "R1",
+      "type": "request",
+      "thread": "topic-b",
+      "content": "Yêu cầu từ khách / bên ngoài, hoặc đề xuất cải tiến chưa được bàn",
+      "status": "open",
+      "evidence": ["uNNN"]
+    },
+    {
+      "id": "F1",
+      "type": "feedback",
+      "thread": "topic-c",
+      "content": "Nhận xét về sản phẩm / thiết kế",
+      "status": "open",
+      "evidence": ["uNNN"]
     }
   ]
 }

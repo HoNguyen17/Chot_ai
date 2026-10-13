@@ -1,0 +1,25 @@
+{
+  "threads": [
+    {"id": "wait-time", "title": "Có chuyển sang đặt lịch hẹn qua Zalo không"},
+    {"id": "record-storage", "title": "Lưu hồ sơ bệnh án điện tử 10 năm"},
+    {"id": "printer", "title": "Máy in hóa đơn quầy lễ tân"},
+    {"id": "intake-process", "title": "Quy trình tiếp nhận"}
+  ],
+  "events": [
+    {"utt": "u002", "thread": "wait-time", "kind": "feedback", "speaker": "Bích", "content": "Bệnh nhân phàn nàn chờ lâu buổi sáng, có người chờ hơn một tiếng", "quote": "Bệnh nhân phàn nàn nhiều về thời gian chờ buổi sáng"},
+    {"utt": "u003", "thread": "wait-time", "kind": "propose", "speaker": "Loan", "key": "zalo-booking", "content": "Đặt lịch hẹn qua Zalo, khung 15 phút tối đa 4 bệnh nhân", "quote": "Em đề xuất chuyển sang đặt lịch hẹn qua Zalo"},
+    {"utt": "u004", "thread": "wait-time", "kind": "object", "speaker": "Sang", "key": "zalo-booking", "content": "Phần mềm ~3 triệu/tháng, chưa có ngân sách", "quote": "chưa có trong ngân sách năm nay"},
+    {"utt": "u004", "thread": "wait-time", "kind": "info", "speaker": "Sang", "content": "Phần mềm đặt lịch ~3 triệu/tháng, chưa có trong ngân sách năm nay", "quote": "Phần mềm đặt lịch tốn khoảng 3 triệu một tháng"},
+    {"utt": "u005", "thread": "wait-time", "kind": "defer", "speaker": "Hưng", "content": "Khoản chi mới phải để giám đốc Thịnh duyệt", "quote": "Khoản chi mới này phải để anh Thịnh duyệt"},
+    {"utt": "u005", "thread": "wait-time", "kind": "assign", "speaker": "Hưng", "key": "de-xuat", "owner": "Loan", "content": "Làm đề xuất chi tiết đặt lịch qua Zalo gửi anh Thịnh", "quote": "Loan làm đề xuất chi tiết gửi anh Thịnh nhé"},
+    {"utt": "u006", "thread": "wait-time", "kind": "commit", "speaker": "Loan", "key": "de-xuat", "owner": "Loan", "hedged": true, "quote": "Dạ để em xem lại số liệu rồi làm"},
+    {"utt": "u007", "thread": "record-storage", "kind": "info", "speaker": "Loan", "content": "Từ tháng 11 Sở Y tế yêu cầu lưu hồ sơ bệnh án điện tử tối thiểu 10 năm", "quote": "từ tháng 11 Sở Y tế yêu cầu lưu hồ sơ bệnh án điện tử tối thiểu 10 năm"},
+    {"utt": "u008", "thread": "record-storage", "kind": "blocker", "speaker": "Sang", "content": "Server chỉ còn trống ~20%, không đủ lưu 10 năm", "quote": "Server hiện tại chỉ còn trống khoảng 20%"},
+    {"utt": "u009", "thread": "record-storage", "kind": "assign", "speaker": "Hưng", "key": "cloud-quote", "owner": "Sang", "content": "Hỏi báo giá lưu trữ cloud ba bên", "deadline_text": "thứ Ba tuần sau", "quote": "Sang hỏi báo giá lưu trữ cloud ba bên, trước thứ Ba tuần sau gửi anh"},
+    {"utt": "u010", "thread": "record-storage", "kind": "commit", "speaker": "Sang", "key": "cloud-quote", "owner": "Sang", "deadline_text": "thứ Ba", "quote": "Ok anh, thứ Ba em gửi"},
+    {"utt": "u011", "thread": "printer", "kind": "blocker", "speaker": "Bích", "content": "Máy in hóa đơn quầy lễ tân kẹt giấy liên tục, phải viết tay", "quote": "Máy in hóa đơn ở quầy lễ tân kẹt giấy liên tục"},
+    {"utt": "u012", "thread": "printer", "kind": "assign", "speaker": "Hưng", "key": "sua-may-in", "owner": "Bích", "content": "Liên hệ bảo hành sửa máy in hóa đơn", "deadline_text": "trong tuần này", "quote": "Bích liên hệ bên bảo hành sửa máy in trong tuần này nhé"},
+    {"utt": "u013", "thread": "printer", "kind": "commit", "speaker": "Bích", "key": "sua-may-in", "owner": "Bích", "quote": "Dạ vâng"},
+    {"utt": "u014", "thread": "intake-process", "kind": "commit", "speaker": "Loan", "key": "quy-trinh", "owner": "Loan", "content": "Cập nhật quy trình tiếp nhận mới cho điều dưỡng", "deadline_text": "thứ Hai tuần sau", "quote": "Em sẽ cập nhật quy trình tiếp nhận mới cho điều dưỡng, thứ Hai tuần sau phổ biến"}
+  ]
+}

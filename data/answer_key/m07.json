@@ -1,0 +1,15 @@
+{
+  "meeting_id": "m07",
+  "labeler": "answer-key",
+  "items": [
+    {"id": "K1", "type": "knowledge", "thread": "picking-layout", "content": "Volume tháng 11 dự báo tăng 40%, khu picking sẽ nghẽn ở dock 2", "status": "open", "evidence": ["u002"]},
+    {"id": "K2", "type": "knowledge", "thread": "picking-layout", "content": "Lối thoát hiểm cạnh dock 1 phải trống tối thiểu 1,2 m (quy định PCCC)", "status": "open", "evidence": ["u005"]},
+    {"id": "D1", "type": "decision", "thread": "picking-layout", "content": "Dời khu hàng fast-moving lên sát dock 1", "status": "needs_confirmation", "decided_by": "Tâm", "evidence": ["u006", "u003"], "note": "Bẫy 'tạm thời…, để anh xem lại' rồi hết họp không nhắc lại → cần xác nhận."},
+    {"id": "D2", "type": "decision", "thread": "shift-plan", "content": "Lịch ca mùa peak (thêm ca đêm hay tăng ca) — tính với HR, tuần sau quyết", "status": "deferred", "evidence": ["u011"]},
+    {"id": "B1", "type": "blocker", "thread": "scanner", "content": "Máy quét barcode dock 2 lỗi kết nối Wi-Fi, picker phải nhập tay", "status": "open", "evidence": ["u012"]},
+    {"id": "T1", "type": "task", "thread": "scanner", "content": "Gọi vendor check máy quét barcode", "status": "needs_confirmation", "owner": null, "deadline": null, "deadline_text": null, "evidence": ["u013"], "note": "Bẫy 'ai đó…': không ai nhận; 'Dạ vâng.' của Hải chỉ là đang nghe."},
+    {"id": "T2", "type": "task", "thread": "wms-update", "content": "Deploy bản update WMS lên môi trường test", "status": "open", "owner": "Nga", "deadline": "2026-10-13", "deadline_text": "trong hôm nay", "evidence": ["u015"]},
+    {"id": "R1", "type": "request", "thread": "client-report", "content": "Khách Minh Khoa yêu cầu report tồn kho hàng ngày, gửi trước 9 giờ sáng", "status": "open", "evidence": ["u016"]},
+    {"id": "T3", "type": "task", "thread": "client-report", "content": "Làm template report tồn kho daily, gửi anh Tâm xem", "status": "open", "owner": "Quyên", "deadline": "2026-10-15", "deadline_text": "thứ Năm", "evidence": ["u017", "u018"]}
+  ]
+}

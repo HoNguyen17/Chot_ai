@@ -1,0 +1,28 @@
+{
+  "threads": [
+    {"id": "logo", "title": "Chọn phương án logo"},
+    {"id": "slogan", "title": "Slogan chính"},
+    {"id": "menu-board", "title": "Bộ menu board"},
+    {"id": "font-license", "title": "License font chữ"}
+  ],
+  "events": [
+    {"utt": "u002", "thread": "logo", "kind": "request", "speaker": "Toàn", "content": "Khách yêu cầu thêm bản logo dạng chữ đơn giản để in lên ly giấy", "quote": "Họ request thêm một bản logo dạng chữ đơn giản để in lên ly giấy"},
+    {"utt": "u003", "thread": "logo", "kind": "propose", "speaker": "Mai", "key": "la-tra", "content": "Logo lá trà cách điệu", "quote": "Phương án 1 là lá trà cách điệu"},
+    {"utt": "u003", "thread": "logo", "kind": "propose", "speaker": "Mai", "key": "chu-viet-tay", "content": "Logo chữ viết tay", "quote": "phương án 2 là chữ viết tay"},
+    {"utt": "u003", "thread": "logo", "kind": "propose", "speaker": "Mai", "key": "con-dau", "content": "Logo con dấu tròn", "quote": "phương án 3 là con dấu tròn"},
+    {"utt": "u004", "thread": "logo", "kind": "object", "speaker": "Kha", "key": "chu-viet-tay", "content": "In nhỏ trên ly dễ nhòe nét", "quote": "Phương án 2 in nhỏ trên ly thì nét chữ viết tay dễ bị nhòe"},
+    {"utt": "u005", "thread": "logo", "kind": "agree", "speaker": "Duyên", "key": "chu-viet-tay", "content": "Thích phương án 2", "hedged": true, "quote": "Chị vẫn thích phương án 2 hơn"},
+    {"utt": "u007", "thread": "logo", "kind": "assign", "speaker": "Duyên", "key": "logo-ly", "owner": "Mai", "content": "Làm thêm bản logo chữ đơn giản cho ly", "deadline_text": "thứ Sáu này", "quote": "Mai làm thêm bản logo chữ đơn giản cho ly, thứ Sáu này gửi chị"},
+    {"utt": "u008", "thread": "logo", "kind": "commit", "speaker": "Mai", "key": "logo-ly", "owner": "Mai", "deadline_text": "thứ Sáu", "quote": "Dạ ok chị, thứ Sáu em gửi"},
+    {"utt": "u009", "thread": "slogan", "kind": "propose", "speaker": "Kha", "key": "tra-moc", "content": "Slogan: Trà mộc vị thật", "quote": "Trà mộc vị thật"},
+    {"utt": "u009", "thread": "slogan", "kind": "propose", "speaker": "Kha", "key": "uong-cham", "content": "Slogan: Uống chậm sống chậm", "quote": "Uống chậm sống chậm"},
+    {"utt": "u010", "thread": "slogan", "kind": "object", "speaker": "Toàn", "key": "uong-cham", "content": "Khách thấy câu này hơi buồn", "quote": "câu Uống chậm sống chậm nghe hơi buồn"},
+    {"utt": "u010", "thread": "slogan", "kind": "feedback", "speaker": "Toàn", "content": "Khách thấy slogan Uống chậm sống chậm hơi buồn, muốn năng động hơn", "quote": "Khách feedback là câu Uống chậm sống chậm nghe hơi buồn, họ muốn năng động hơn"},
+    {"utt": "u011", "thread": "slogan", "kind": "agree", "speaker": "Duyên", "key": "tra-moc", "content": "Slogan chính: Trà mộc vị thật", "quote": "Vậy chốt dùng Trà mộc vị thật làm slogan chính nhé"},
+    {"utt": "u013", "thread": "menu-board", "kind": "request", "speaker": "Toàn", "content": "Khách hỏi làm thêm bộ menu board, xong trước khai trương 1/12", "quote": "Bên khách cũng hỏi có làm được bộ menu board luôn không"},
+    {"utt": "u014", "thread": "menu-board", "kind": "info", "speaker": "Duyên", "content": "Menu board ngoài scope hợp đồng", "quote": "Menu board thì ngoài scope hợp đồng"},
+    {"utt": "u014", "thread": "menu-board", "kind": "assign", "speaker": "Duyên", "key": "bao-gia-menu", "owner": "Toàn", "content": "Báo giá phần menu board cho khách", "quote": "Toàn báo giá phần đó cho khách nha"},
+    {"utt": "u015", "thread": "menu-board", "kind": "commit", "speaker": "Toàn", "key": "bao-gia-menu", "owner": "Toàn", "hedged": true, "quote": "Dạ để em xem lại hợp đồng rồi báo giá"},
+    {"utt": "u016", "thread": "font-license", "kind": "blocker", "speaker": "Mai", "content": "Font phương án 2 đang dùng bản trial, chưa có license thương mại", "quote": "Font chữ phương án 2 bên mình đang dùng bản trial"}
+  ]
+}

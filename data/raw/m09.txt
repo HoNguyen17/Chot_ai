@@ -1,0 +1,20 @@
+# meeting: m09
+# title: Họp vận hành tuần — Phòng khám đa khoa An Tâm
+# date: 2026-10-15
+# participants: Hưng (Bác sĩ trưởng, chủ trì); Loan (Điều dưỡng trưởng); Bích (Lễ tân); Sang (Kế toán)
+# absent: Thịnh (Giám đốc)
+[00:00:10] Hưng: Mình họp vận hành tuần. Anh Thịnh đi hội thảo nên anh chủ trì.
+[00:00:50] Bích: Bệnh nhân phàn nàn nhiều về thời gian chờ buổi sáng, có người chờ hơn một tiếng.
+[00:01:35] Loan: Em đề xuất chuyển sang đặt lịch hẹn qua Zalo, mỗi khung 15 phút tối đa 4 bệnh nhân.
+[00:02:20] Sang: Phần mềm đặt lịch tốn khoảng 3 triệu một tháng, chưa có trong ngân sách năm nay.
+[00:03:00] Hưng: Khoản chi mới này phải để anh Thịnh duyệt. Loan làm đề xuất chi tiết gửi anh Thịnh nhé.
+[00:03:20] Loan: Dạ để em xem lại số liệu rồi làm.
+[00:04:05] Loan: Thêm một việc: từ tháng 11 Sở Y tế yêu cầu lưu hồ sơ bệnh án điện tử tối thiểu 10 năm.
+[00:04:50] Sang: Server hiện tại chỉ còn trống khoảng 20%, không đủ cho 10 năm.
+[00:05:30] Hưng: Sang hỏi báo giá lưu trữ cloud ba bên, trước thứ Ba tuần sau gửi anh.
+[00:05:50] Sang: Ok anh, thứ Ba em gửi.
+[00:06:30] Bích: Máy in hóa đơn ở quầy lễ tân kẹt giấy liên tục, nhiều hôm phải viết tay.
+[00:07:10] Hưng: Bích liên hệ bên bảo hành sửa máy in trong tuần này nhé.
+[00:07:25] Bích: Dạ vâng.
+[00:08:05] Loan: Em sẽ cập nhật quy trình tiếp nhận mới cho điều dưỡng, thứ Hai tuần sau phổ biến.
+[00:08:40] Hưng: Ok, hết rồi. Cảm ơn mọi người.

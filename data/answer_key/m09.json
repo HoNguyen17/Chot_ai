@@ -1,0 +1,16 @@
+{
+  "meeting_id": "m09",
+  "labeler": "answer-key",
+  "items": [
+    {"id": "F1", "type": "feedback", "thread": "wait-time", "content": "Bệnh nhân phàn nàn chờ lâu buổi sáng, có người chờ hơn một tiếng", "status": "open", "evidence": ["u002"]},
+    {"id": "D1", "type": "decision", "thread": "wait-time", "content": "Có chuyển sang đặt lịch hẹn qua Zalo không — chờ giám đốc Thịnh duyệt", "status": "deferred", "evidence": ["u005"], "note": "Bẫy đẩy lên người vắng mặt."},
+    {"id": "K1", "type": "knowledge", "thread": "wait-time", "content": "Phần mềm đặt lịch ~3 triệu/tháng, chưa có trong ngân sách năm nay", "status": "open", "evidence": ["u004"]},
+    {"id": "T1", "type": "task", "thread": "wait-time", "content": "Làm đề xuất chi tiết đặt lịch qua Zalo gửi anh Thịnh", "status": "needs_confirmation", "owner": "Loan", "deadline": null, "deadline_text": null, "evidence": ["u005", "u006"], "note": "Bẫy 'để em xem lại' → chưa cam kết."},
+    {"id": "K2", "type": "knowledge", "thread": "record-storage", "content": "Từ tháng 11 Sở Y tế yêu cầu lưu hồ sơ bệnh án điện tử tối thiểu 10 năm", "status": "open", "evidence": ["u007"]},
+    {"id": "B1", "type": "blocker", "thread": "record-storage", "content": "Server chỉ còn trống ~20%, không đủ lưu 10 năm", "status": "open", "evidence": ["u008"]},
+    {"id": "T2", "type": "task", "thread": "record-storage", "content": "Hỏi báo giá lưu trữ cloud ba bên", "status": "open", "owner": "Sang", "deadline": "2026-10-20", "deadline_text": "thứ Ba", "evidence": ["u009", "u010"]},
+    {"id": "B2", "type": "blocker", "thread": "printer", "content": "Máy in hóa đơn quầy lễ tân kẹt giấy liên tục, phải viết tay", "status": "open", "evidence": ["u011"]},
+    {"id": "T3", "type": "task", "thread": "printer", "content": "Liên hệ bảo hành sửa máy in hóa đơn", "status": "needs_confirmation", "owner": "Bích", "deadline": null, "deadline_text": "trong tuần này", "evidence": ["u012", "u013"], "note": "Chỉ đáp 'Dạ vâng.'; 'trong tuần này' không có ngày cụ thể."},
+    {"id": "T4", "type": "task", "thread": "intake-process", "content": "Cập nhật quy trình tiếp nhận mới cho điều dưỡng", "status": "open", "owner": "Loan", "deadline": "2026-10-19", "deadline_text": "thứ Hai tuần sau", "evidence": ["u014"]}
+  ]
+}

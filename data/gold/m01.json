@@ -1,0 +1,153 @@
+{
+  "meeting_id": "m01",
+  "labeler": "nguyen",
+  "items": [
+    {
+      "id": "D1",
+      "type": "decision",
+      "thread": "payment-gateway",
+      "content": "Launch tháng 11 dùng MoMo; VNPay để phase 2",
+      "status": "final",
+      "decided_by": "Hùng",
+      "evidence": ["u019", "u005"],
+      "note": "Bẫy đổi ý: u008 'tạm thời đi MoMo' là đồng ý có rào đón, u017 Minh đề xuất quay lại VNPay. Chỉ u019 là chủ trì chốt không rào đón và sau đó không ai lật lại → final. Evidence = câu chốt + câu đề xuất gốc (Lan, u005)."
+    },
+    {
+      "id": "O1",
+      "type": "option",
+      "thread": "payment-gateway",
+      "content": "Dùng VNPay cho launch tháng 11",
+      "status": "superseded",
+      "evidence": ["u002", "u017"],
+      "note": "Đề xuất ở u002, đề xuất lại ở u017; bị thay bởi D1 (final) → superseded. VNPay cho phase 2 nằm trong nội dung D1, không tách mục."
+    },
+    {
+      "id": "O2",
+      "type": "option",
+      "thread": "payment-gateway",
+      "content": "Tạm thời đi MoMo để kịp launch (tạm chốt giữa họp)",
+      "status": "superseded",
+      "evidence": ["u005", "u008"],
+      "note": "Quy tắc tạm chốt trung gian: đề xuất u005 + tạm chốt có rào đón u008, bị thay bởi lần chốt cuối u019 (D1) → superseded."
+    },
+    {
+      "id": "B1",
+      "type": "blocker",
+      "thread": "payment-gateway",
+      "content": "VNPay phí giao dịch cao hơn, tích hợp mất ~3 tuần, không kịp launch",
+      "status": "open",
+      "evidence": ["u004"],
+      "note": "Phản biện có nội dung cụ thể (chi phí, thời gian) → blocker."
+    },
+    {
+      "id": "B2",
+      "type": "blocker",
+      "thread": "payment-gateway",
+      "content": "Sandbox MoMo lỗi: callback trả về sai mã giao dịch",
+      "status": "open",
+      "evidence": ["u015", "u018"],
+      "note": "Câu nêu (u015) + câu bàn tiếp (u018: Lan đã mở ticket với MoMo)."
+    },
+    {
+      "id": "B3",
+      "type": "blocker",
+      "thread": "payment-gateway",
+      "content": "Khách hàng nhiều người lớn tuổi, quen chuyển khoản ngân hàng hơn ví MoMo",
+      "status": "open",
+      "evidence": ["u006"],
+      "note": "Phản biện cụ thể với MoMo → blocker; cũng là thông tin về khách → kèm K2."
+    },
+    {
+      "id": "K1",
+      "type": "knowledge",
+      "thread": "payment-gateway",
+      "content": "Sandbox MoMo chỉ chạy với tài khoản merchant đã xác minh → phải làm hồ sơ merchant trước",
+      "status": "open",
+      "evidence": ["u016"],
+      "note": "Ràng buộc mới đáng lưu. Không ai được giao làm hồ sơ merchant → không thành task."
+    },
+    {
+      "id": "K2",
+      "type": "knowledge",
+      "thread": "payment-gateway",
+      "content": "Tệp khách nhiều người lớn tuổi, quen chuyển khoản ngân hàng",
+      "status": "open",
+      "evidence": ["u006"],
+      "note": "Phản biện đồng thời là thông tin về khách → blocker (B3) + knowledge."
+    },
+    {
+      "id": "T1",
+      "type": "task",
+      "thread": "payment-gateway",
+      "content": "Theo vụ sandbox MoMo, báo lại anh Hùng đã fix được chưa",
+      "status": "open",
+      "owner": "Lan",
+      "deadline": "2026-10-09",
+      "deadline_text": "thứ Sáu này",
+      "evidence": ["u020", "u021"],
+      "note": "Lan nhận rõ 'Ok anh, thứ Sáu em báo' → open. Họp thứ Hai 05/10 → thứ Sáu này = 09/10."
+    },
+    {
+      "id": "T2",
+      "type": "task",
+      "thread": "payment-gateway",
+      "content": "Tìm hiểu phí VNPay cho phase 2, gửi bảng so sánh",
+      "status": "needs_confirmation",
+      "owner": "Minh",
+      "deadline": null,
+      "deadline_text": "tuần sau",
+      "evidence": ["u022", "u023"],
+      "note": "Bẫy: 'Dạ, để em xem lại ạ' không phải cam kết → needs_confirmation. 'Tuần sau' không có thứ cụ thể → deadline null."
+    },
+    {
+      "id": "D2",
+      "type": "decision",
+      "thread": "onboarding",
+      "content": "Flow onboarding mới: 5 → 3 bước, bỏ màn chọn sở thích, đưa xác thực SĐT lên đầu",
+      "status": "needs_confirmation",
+      "decided_by": "Hùng",
+      "evidence": ["u011", "u013"],
+      "note": "Quy tắc trình bày + chủ trì đồng ý gián tiếp: Tú trình bày (u011), Hùng 'Ừ anh cũng thấy vậy… sửa lại cái nút' (u013), không chốt rõ → needs_confirmation."
+    },
+    {
+      "id": "F1",
+      "type": "feedback",
+      "thread": "onboarding",
+      "content": "Bỏ màn sở thích ok, nhưng nút 'Tiếp tục' hơi nhỏ, khó bấm trên Android màn hình nhỏ",
+      "status": "open",
+      "evidence": ["u012"],
+      "note": "Nhận xét về thiết kế; giữ song song với D2."
+    },
+    {
+      "id": "T3",
+      "type": "task",
+      "thread": "onboarding",
+      "content": "Sửa lại nút 'Tiếp tục' rồi gửi bản thiết kế mới",
+      "status": "open",
+      "owner": "Tú",
+      "deadline": "2026-10-08",
+      "deadline_text": "thứ Năm",
+      "evidence": ["u013", "u014"],
+      "note": "'Dạ ok anh, thứ Năm em gửi bản mới' = nhận rõ, có hạn → open. Thứ Năm gần nhất sau 05/10 = 08/10."
+    },
+    {
+      "id": "R1",
+      "type": "request",
+      "thread": "launch-date",
+      "content": "Bên marketing hỏi ngày launch cụ thể",
+      "status": "open",
+      "evidence": ["u024"],
+      "note": "Yêu cầu từ bộ phận ngoài cuộc họp."
+    },
+    {
+      "id": "D3",
+      "type": "decision",
+      "thread": "launch-date",
+      "content": "Ngày launch cụ thể: để họp tuần sau chốt, khi có kết quả sandbox",
+      "status": "deferred",
+      "decided_by": "Hùng",
+      "evidence": ["u025"],
+      "note": "Chủ trì hoãn rõ ràng → deferred (không phải open_question). Không có phương án ngày nào được nêu → không có option."
+    }
+  ]
+}

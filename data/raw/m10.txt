@@ -1,0 +1,22 @@
+# meeting: m10
+# title: Họp với khách — phương án đăng nhập app bán hàng
+# date: 2026-10-16
+# participants: Nam (Project manager, chủ trì); Tuyết (Product owner phía khách); Đức (Tech lead); Hòa (QA lead); Kim (BA)
+[00:00:15] Nam: Chào chị Tuyết, hôm nay mình bàn phương án đăng nhập cho app và lịch UAT.
+[00:01:00] Tuyết: Bên chị muốn đăng nhập bằng OTP qua SMS, người dùng quen rồi.
+[00:01:45] Đức: OTP SMS mỗi tin khoảng 800 đồng, 50 nghìn user một tháng là 40 triệu tiền SMS.
+[00:02:30] Kim: Em đề xuất đăng nhập bằng email kèm mật khẩu, không tốn phí.
+[00:03:10] Nam: Ok vậy đi email với mật khẩu.
+[00:03:50] Tuyết: Khoan, khách của chị phần lớn là người bán hàng ở chợ, ít ai dùng email.
+[00:04:35] Đức: Vậy dùng đăng nhập bằng Zalo, gần như ai cũng có, mà miễn phí.
+[00:05:20] Hòa: Đăng nhập Zalo cần app được duyệt trên Zalo Developer, lần trước bên em chờ ba tuần.
+[00:06:00] Tuyết: Ba tuần thì trễ UAT mất. Thôi quay lại OTP SMS, nhưng chỉ gửi OTP khi đăng nhập trên máy mới thôi.
+[00:06:45] Đức: Chỉ gửi khi đổi máy thì số SMS giảm còn khoảng một phần mười, tầm 4 triệu một tháng.
+[00:07:30] Nam: Được. Chốt đăng nhập OTP SMS, chỉ gửi khi đăng nhập trên thiết bị mới. Email và Zalo bỏ.
+[00:08:10] Tuyết: Ok em.
+[00:08:50] Nam: Đức cập nhật lại tài liệu kiến trúc phần đăng nhập, thứ Hai tuần sau gửi chị Tuyết.
+[00:09:05] Đức: Dạ ok anh, thứ Hai em gửi.
+[00:09:45] Hòa: Về UAT, team em chưa có môi trường staging có dữ liệu thật đã ẩn danh, nên chưa test được.
+[00:10:30] Tuyết: Ngày bắt đầu UAT thì mình chưa chốt được, chị phải hỏi lại sếp bên chị về lịch nghỉ lễ.
+[00:11:10] Kim: Em sẽ cập nhật user story đăng nhập lên Gi ra trong hôm nay để Hòa viết test case.
+[00:11:50] Nam: Ok, cảm ơn chị Tuyết và mọi người.

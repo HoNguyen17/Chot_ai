@@ -1,0 +1,25 @@
+{
+  "threads": [
+    {"id": "picking-layout", "title": "Layout khu picking mùa peak"},
+    {"id": "shift-plan", "title": "Lịch ca mùa peak: 3 ca hay tăng ca"},
+    {"id": "scanner", "title": "Máy quét barcode dock 2"},
+    {"id": "wms-update", "title": "Bản update WMS"},
+    {"id": "client-report", "title": "Report tồn kho cho khách Minh Khoa"}
+  ],
+  "events": [
+    {"utt": "u002", "thread": "picking-layout", "kind": "info", "speaker": "Quyên", "content": "Volume tháng 11 dự báo tăng 40%, khu picking sẽ nghẽn ở dock 2", "quote": "Volume dự báo tháng 11 tăng 40%"},
+    {"utt": "u003", "thread": "picking-layout", "kind": "propose", "speaker": "Hải", "key": "fast-dock1", "content": "Dời khu hàng fast-moving lên sát dock 1", "quote": "Em propose dời khu hàng fast-moving lên sát dock 1"},
+    {"utt": "u004", "thread": "picking-layout", "kind": "object", "speaker": "Nga", "key": "fast-dock1", "content": "Phải mapping lại ~1.200 SKU trên WMS, mất 3 ngày", "quote": "phải update lại location trên WMS"},
+    {"utt": "u005", "thread": "picking-layout", "kind": "info", "speaker": "Phúc", "content": "Lối thoát hiểm cạnh dock 1 phải trống tối thiểu 1,2 m (quy định PCCC)", "quote": "Lối thoát hiểm cạnh dock 1 phải giữ trống tối thiểu 1,2 mét"},
+    {"utt": "u006", "thread": "picking-layout", "kind": "agree", "speaker": "Tâm", "key": "fast-dock1", "content": "Tạm đi phương án dời fast-moving lên dock 1", "hedged": true, "quote": "Tạm thời mình đi phương án dời fast-moving lên dock 1 nha"},
+    {"utt": "u009", "thread": "shift-plan", "kind": "propose", "speaker": "Hải", "key": "ca-dem", "content": "Thêm ca đêm, tuyển ~15 thời vụ", "quote": "Em nghĩ thêm ca đêm, tuyển thời vụ khoảng 15 người"},
+    {"utt": "u010", "thread": "shift-plan", "kind": "object", "speaker": "Quyên", "key": "ca-dem", "content": "Thời vụ training mất cả tuần, KPI picking accuracy tụt", "quote": "Thời vụ thì training mất cả tuần"},
+    {"utt": "u011", "thread": "shift-plan", "kind": "defer", "speaker": "Tâm", "content": "Tính với HR, tuần sau quyết", "quote": "để anh tính với HR rồi tuần sau quyết"},
+    {"utt": "u012", "thread": "scanner", "kind": "blocker", "speaker": "Nga", "content": "Máy quét barcode dock 2 lỗi kết nối Wi-Fi, picker phải nhập tay", "quote": "máy quét barcode ở dock 2 bị lỗi kết nối Wi-Fi từ hôm qua"},
+    {"utt": "u013", "thread": "scanner", "kind": "assign", "speaker": "Tâm", "key": "vendor-check", "owner": null, "content": "Gọi vendor check máy quét barcode", "quote": "Ai đó gọi bên vendor check giúp cái máy quét nhé"},
+    {"utt": "u015", "thread": "wms-update", "kind": "commit", "speaker": "Nga", "key": "wms-deploy", "owner": "Nga", "content": "Deploy bản update WMS lên môi trường test", "deadline_text": "trong hôm nay", "quote": "Em sẽ deploy bản update WMS lên môi trường test trong hôm nay"},
+    {"utt": "u016", "thread": "client-report", "kind": "request", "speaker": "Quyên", "content": "Khách Minh Khoa yêu cầu report tồn kho hàng ngày, gửi trước 9 giờ sáng", "quote": "Bên khách Minh Khoa request report tồn kho hàng ngày thay vì hàng tuần"},
+    {"utt": "u017", "thread": "client-report", "kind": "assign", "speaker": "Tâm", "key": "daily-report", "owner": "Quyên", "content": "Làm template report tồn kho daily", "deadline_text": "trước thứ Năm", "quote": "Quyên làm template report daily rồi gửi anh xem trước thứ Năm nha"},
+    {"utt": "u018", "thread": "client-report", "kind": "commit", "speaker": "Quyên", "key": "daily-report", "owner": "Quyên", "deadline_text": "thứ Năm", "quote": "Ok anh, thứ Năm em gửi"}
+  ]
+}

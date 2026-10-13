@@ -1,0 +1,18 @@
+{
+  "meeting_id": "m08",
+  "labeler": "answer-key",
+  "items": [
+    {"id": "R1", "type": "request", "thread": "logo", "content": "Khách yêu cầu thêm bản logo dạng chữ đơn giản để in lên ly giấy", "status": "open", "evidence": ["u002"]},
+    {"id": "D1", "type": "decision", "thread": "logo", "content": "Logo chữ viết tay (phương án 2)", "status": "needs_confirmation", "decided_by": "Duyên", "evidence": ["u005", "u003"], "note": "Bẫy 'thích' ≠ chốt. u006 'Nếu mà khách chọn…' là câu điều kiện, không gán."},
+    {"id": "O1", "type": "option", "thread": "logo", "content": "Logo lá trà cách điệu (phương án 1)", "status": "open", "evidence": ["u003"]},
+    {"id": "O2", "type": "option", "thread": "logo", "content": "Logo con dấu tròn (phương án 3)", "status": "open", "evidence": ["u003"]},
+    {"id": "T1", "type": "task", "thread": "logo", "content": "Làm thêm bản logo chữ đơn giản cho ly", "status": "open", "owner": "Mai", "deadline": "2026-10-16", "deadline_text": "thứ Sáu", "evidence": ["u007", "u008"]},
+    {"id": "D2", "type": "decision", "thread": "slogan", "content": "Slogan chính: Trà mộc vị thật", "status": "final", "decided_by": "Duyên", "evidence": ["u011", "u009"]},
+    {"id": "O3", "type": "option", "thread": "slogan", "content": "Slogan: Uống chậm sống chậm", "status": "superseded", "evidence": ["u009"]},
+    {"id": "F1", "type": "feedback", "thread": "slogan", "content": "Khách thấy slogan Uống chậm sống chậm hơi buồn, muốn năng động hơn", "status": "open", "evidence": ["u010"]},
+    {"id": "R2", "type": "request", "thread": "menu-board", "content": "Khách hỏi làm thêm bộ menu board, xong trước khai trương 1/12", "status": "open", "evidence": ["u013"]},
+    {"id": "K1", "type": "knowledge", "thread": "menu-board", "content": "Menu board ngoài scope hợp đồng", "status": "open", "evidence": ["u014"]},
+    {"id": "T2", "type": "task", "thread": "menu-board", "content": "Báo giá phần menu board cho khách", "status": "needs_confirmation", "owner": "Toàn", "deadline": null, "deadline_text": null, "evidence": ["u014", "u015"], "note": "'Dạ để em xem lại hợp đồng' → chưa cam kết."},
+    {"id": "B1", "type": "blocker", "thread": "font-license", "content": "Font phương án 2 đang dùng bản trial, chưa có license thương mại", "status": "open", "evidence": ["u016"]}
+  ]
+}

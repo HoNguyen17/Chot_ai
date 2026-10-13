@@ -1,0 +1,147 @@
+{
+  "meeting_id": "m05",
+  "labeler": "nguyen",
+  "items": [
+    {
+      "id": "D1",
+      "type": "decision",
+      "thread": "winter-dish",
+      "content": "Món mới mùa đông: chưa chốt, tuần sau quyết sau khi có chi phí bếp từ",
+      "status": "deferred",
+      "decided_by": "Kiên",
+      "evidence": ["u006"],
+      "note": "Bẫy 'thôi khoan': u004 'Ok chốt lẩu mini' bị chính chủ trì lật ở u006 → deferred."
+    },
+    {
+      "id": "O1",
+      "type": "option",
+      "thread": "winter-dish",
+      "content": "Lẩu mini một người",
+      "status": "open",
+      "evidence": ["u003", "u004"],
+      "note": "Quy tắc chốt rồi bị lật thành hoãn → mọi phương án open. Evidence = đề xuất + câu chốt bị lật."
+    },
+    {
+      "id": "O2",
+      "type": "option",
+      "thread": "winter-dish",
+      "content": "Bánh canh cua",
+      "status": "open",
+      "evidence": ["u002"],
+      "note": "D1 deferred → phương án còn treo."
+    },
+    {
+      "id": "B1",
+      "type": "blocker",
+      "thread": "winter-dish",
+      "content": "Lẩu mini cần bếp từ mỗi bàn, 3 chi nhánh chưa có, đầu tư ~40 triệu/chi nhánh",
+      "status": "open",
+      "evidence": ["u005", "u006"],
+      "note": "Phản biện có số liệu + câu bàn tiếp (u006 chủ trì hoãn) → blocker + knowledge (K1)."
+    },
+    {
+      "id": "K1",
+      "type": "knowledge",
+      "thread": "winter-dish",
+      "content": "3 chi nhánh chưa có bếp từ; đầu tư ~40 triệu/chi nhánh",
+      "status": "open",
+      "evidence": ["u005"]
+    },
+    {
+      "id": "T1",
+      "type": "task",
+      "thread": "winter-dish",
+      "content": "Tính chi phí bếp từ cụ thể cho 3 chi nhánh, gửi bảng chi phí",
+      "status": "open",
+      "owner": "Nhi",
+      "deadline": "2026-10-14",
+      "deadline_text": "thứ Tư",
+      "evidence": ["u006", "u007"],
+      "note": "'Ok anh, thứ Tư em gửi bảng chi phí' → open. Họp thứ Sáu 09/10 → thứ Tư 14/10."
+    },
+    {
+      "id": "D2",
+      "type": "decision",
+      "thread": "lunch-combo",
+      "content": "Giá combo trưa 65 nghìn",
+      "status": "final",
+      "decided_by": "Kiên",
+      "evidence": ["u010"],
+      "note": "Chủ trì chốt không rào đón; 'Dạ.' của Uyên chỉ là đang nghe."
+    },
+    {
+      "id": "O3",
+      "type": "option",
+      "thread": "lunch-combo",
+      "content": "Giá combo trưa 59 nghìn",
+      "status": "superseded",
+      "evidence": ["u008"],
+      "note": "Bị thay bởi D2 final."
+    },
+    {
+      "id": "B2",
+      "type": "blocker",
+      "thread": "lunch-combo",
+      "content": "Giá 59 nghìn là lỗ: food cost hiện 45%, mục tiêu dưới 35%",
+      "status": "open",
+      "evidence": ["u009", "u010"],
+      "note": "Phản biện có số liệu + câu bàn tiếp (u010) → blocker + knowledge (K2)."
+    },
+    {
+      "id": "K2",
+      "type": "knowledge",
+      "thread": "lunch-combo",
+      "content": "Food cost combo trưa hiện tại 45%, mục tiêu công ty dưới 35%",
+      "status": "open",
+      "evidence": ["u009"]
+    },
+    {
+      "id": "F1",
+      "type": "feedback",
+      "thread": "reviews",
+      "content": "Nhiều khách phàn nàn giờ trưa chờ món hơn 20 phút",
+      "status": "open",
+      "evidence": ["u012"],
+      "note": "Phản hồi của khách về dịch vụ."
+    },
+    {
+      "id": "Q1",
+      "type": "open_question",
+      "thread": "tiktok-reviewer",
+      "content": "Có chạy TikTok với food reviewer không?",
+      "status": "open",
+      "evidence": ["u013", "u014"],
+      "note": "Có đề xuất nhưng chủ trì 'chưa chắc hiệu quả' (phản biện không cụ thể → không thành blocker), không hoãn rõ → open_question."
+    },
+    {
+      "id": "T2",
+      "type": "task",
+      "thread": "tiktok-reviewer",
+      "content": "Gửi anh Kiên vài case study chạy TikTok với food reviewer",
+      "status": "open",
+      "owner": "Uyên",
+      "deadline": "2026-10-12",
+      "deadline_text": "thứ Hai tuần sau",
+      "evidence": ["u014", "u015"],
+      "note": "'Dạ thứ Hai tuần sau em gửi anh' có hạn cụ thể → open."
+    },
+    {
+      "id": "Q2",
+      "type": "open_question",
+      "thread": "thu-duc-morning",
+      "content": "Chi nhánh Thủ Đức có nên mở thêm ca sáng không?",
+      "status": "open",
+      "evidence": ["u016", "u017"],
+      "note": "Hết giờ, chủ trì chỉ 'Ừm…' (đang tranh luận, không phải đồng ý một đề xuất) → không ai kết luận."
+    },
+    {
+      "id": "B3",
+      "type": "blocker",
+      "thread": "thu-duc-morning",
+      "content": "Mở ca sáng thì thiếu người, đang tuyển chưa được",
+      "status": "open",
+      "evidence": ["u017"],
+      "note": "Phản biện cụ thể (thiếu nguồn lực) → blocker."
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "meeting_id": "m02",
+  "labeler": "nguyen",
+  "items": [
+    {
+      "id": "D1",
+      "type": "decision",
+      "thread": "kol",
+      "content": "Đi nhóm 5 micro-KOL (chờ hỏi lại khách)",
+      "status": "needs_confirmation",
+      "decided_by": "Ngọc",
+      "evidence": ["u007", "u004"],
+      "note": "Bẫy rào đón: 'Tạm thời chị nghiêng về… nhưng chị phải hỏi lại khách', sau đó không chốt lại → needs_confirmation (không có chốt cuối nên không có option tạm chốt bị thay)."
+    },
+    {
+      "id": "O1",
+      "type": "option",
+      "thread": "kol",
+      "content": "Booking KOL Lily Trần",
+      "status": "open",
+      "evidence": ["u002"],
+      "note": "D1 chỉ needs_confirmation → phương án khác vẫn open."
+    },
+    {
+      "id": "B1",
+      "type": "blocker",
+      "thread": "kol",
+      "content": "Lily Trần báo giá 80 triệu/post, vượt sức budget KOL 120 triệu",
+      "status": "open",
+      "evidence": ["u003"],
+      "note": "Phản biện có số liệu → blocker + knowledge (K1)."
+    },
+    {
+      "id": "K1",
+      "type": "knowledge",
+      "thread": "kol",
+      "content": "Tổng budget KOL 120 triệu; Lily Trần báo giá 80 triệu/post",
+      "status": "open",
+      "evidence": ["u003"]
+    },
+    {
+      "id": "B2",
+      "type": "blocker",
+      "thread": "kol",
+      "content": "Micro-KOL engagement tốt nhưng độ nhận diện thấp, khách thích tên tuổi",
+      "status": "open",
+      "evidence": ["u005"],
+      "note": "Phản biện cụ thể với phương án đang nghiêng (micro-KOL) → blocker + knowledge (K2) vì có thông tin về khách."
+    },
+    {
+      "id": "K2",
+      "type": "knowledge",
+      "thread": "kol",
+      "content": "Khách hàng An Phú thích KOL có tên tuổi",
+      "status": "open",
+      "evidence": ["u005"]
+    },
+    {
+      "id": "T1",
+      "type": "task",
+      "thread": "kol",
+      "content": "Hỏi lại khách về phương án micro-KOL",
+      "status": "open",
+      "owner": "Ngọc",
+      "deadline": null,
+      "deadline_text": null,
+      "evidence": ["u007"],
+      "note": "[Nash xem lại] Chủ trì tự nhận hành động cụ thể ('chị phải hỏi lại khách') → open. Có thể bỏ nếu coi đây chỉ là phần rào đón của D1."
+    },
+    {
+      "id": "D2",
+      "type": "decision",
+      "thread": "budget-split",
+      "content": "Chia budget 60% Facebook ads, 40% TikTok; tháng 1 review lại theo số thực tế",
+      "status": "final",
+      "decided_by": "Ngọc",
+      "evidence": ["u011", "u009"],
+      "note": "Bẫy phản đối rồi khẳng định lại: Hân phản biện (u010), chủ trì 'vẫn giữ 60-40' (u011) → final."
+    },
+    {
+      "id": "B3",
+      "type": "blocker",
+      "thread": "budget-split",
+      "content": "CPM TikTok tháng Chạp thường tăng mạnh, 40% có thể không đủ reach",
+      "status": "open",
+      "evidence": ["u010", "u011"],
+      "note": "Phản biện cụ thể + câu bàn tiếp (chủ trì 'chị biết… tháng 1 review lại')."
+    },
+    {
+      "id": "K3",
+      "type": "knowledge",
+      "thread": "budget-split",
+      "content": "CPM TikTok thường tăng mạnh vào tháng Chạp",
+      "status": "open",
+      "evidence": ["u010"]
+    },
+    {
+      "id": "T2",
+      "type": "task",
+      "thread": "budget-split",
+      "content": "Gửi media plan chi tiết",
+      "status": "open",
+      "owner": "Hân",
+      "deadline": "2026-10-11",
+      "deadline_text": "cuối tuần này",
+      "evidence": ["u020"],
+      "note": "Tự nhận, không rào đón → open. Cuối tuần này = Chủ nhật tuần họp (họp thứ Ba 06/10)."
+    },
+    {
+      "id": "D3",
+      "type": "decision",
+      "thread": "key-visual",
+      "content": "Key visual concept 2 (tông đỏ hiện đại)",
+      "status": "needs_confirmation",
+      "decided_by": "Ngọc",
+      "evidence": ["u014", "u013"],
+      "note": "Bẫy 'thích' ≠ quyết định → needs_confirmation. u015 'Nếu mà khách duyệt…' là câu điều kiện, không gán."
+    },
+    {
+      "id": "O2",
+      "type": "option",
+      "thread": "key-visual",
+      "content": "Key visual concept 1 (tông vàng truyền thống)",
+      "status": "open",
+      "evidence": ["u013"],
+      "note": "D3 needs_confirmation → option open."
+    },
+    {
+      "id": "T3",
+      "type": "task",
+      "thread": "key-visual",
+      "content": "Làm thêm biến thể vuông 1:1 cho concept 2 để gửi khách",
+      "status": "needs_confirmation",
+      "owner": "Duy",
+      "deadline": null,
+      "deadline_text": null,
+      "evidence": ["u016", "u017"],
+      "note": "Chỉ trả lời 'Dạ vâng.' → needs_confirmation."
+    },
+    {
+      "id": "R1",
+      "type": "request",
+      "thread": "landing-page",
+      "content": "Khách yêu cầu làm thêm bản tiếng Anh cho landing page (cho nhà phân phối nước ngoài)",
+      "status": "open",
+      "evidence": ["u018"],
+      "note": "Yêu cầu từ khách."
+    },
+    {
+      "id": "T4",
+      "type": "task",
+      "thread": "landing-page",
+      "content": "Báo giá lại với khách phần landing page tiếng Anh (tính thêm phí)",
+      "status": "open",
+      "owner": "Ngọc",
+      "deadline": null,
+      "deadline_text": null,
+      "evidence": ["u019"],
+      "note": "Hành động cụ thể, tự làm → open."
+    },
+    {
+      "id": "Q1",
+      "type": "open_question",
+      "thread": "tiktok-music",
+      "content": "Dùng nhạc trend TikTok có cần mua bản quyền không?",
+      "status": "open",
+      "evidence": ["u021", "u022"],
+      "note": "Không ai kết luận; chủ trì nói 'chị cũng không rõ'."
+    },
+    {
+      "id": "T5",
+      "type": "task",
+      "thread": "tiktok-music",
+      "content": "Hỏi bên legal về bản quyền nhạc trend TikTok rồi báo lại",
+      "status": "open",
+      "owner": "Ngọc",
+      "deadline": null,
+      "deadline_text": null,
+      "evidence": ["u022"],
+      "note": "Tự nhận hành động cụ thể ('chị sẽ hỏi bên legal') → open."
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "meeting_id": "m10",
+  "labeler": "answer-key",
+  "items": [
+    {"id": "D1", "type": "decision", "thread": "login", "content": "Đăng nhập OTP SMS, chỉ gửi khi đăng nhập trên thiết bị mới; bỏ email và Zalo", "status": "final", "decided_by": "Nam", "evidence": ["u011", "u009"], "note": "Bẫy đổi ý 3 lần: SMS → email (chủ trì đã 'ok' ở u005) → bị lật u006 → Zalo → quay lại SMS biến thể → chốt u011."},
+    {"id": "O1", "type": "option", "thread": "login", "content": "Đăng nhập bằng OTP SMS mọi lần", "status": "superseded", "evidence": ["u002"]},
+    {"id": "O2", "type": "option", "thread": "login", "content": "Đăng nhập bằng email kèm mật khẩu", "status": "superseded", "evidence": ["u004"]},
+    {"id": "O3", "type": "option", "thread": "login", "content": "Đăng nhập bằng Zalo", "status": "superseded", "evidence": ["u007"]},
+    {"id": "K1", "type": "knowledge", "thread": "login", "content": "OTP SMS ~800 đồng/tin; 50 nghìn user/tháng ≈ 40 triệu", "status": "open", "evidence": ["u003"]},
+    {"id": "K2", "type": "knowledge", "thread": "login", "content": "Đăng nhập Zalo cần duyệt trên Zalo Developer, lần trước chờ 3 tuần", "status": "open", "evidence": ["u008"]},
+    {"id": "T1", "type": "task", "thread": "login", "content": "Cập nhật tài liệu kiến trúc phần đăng nhập, gửi chị Tuyết", "status": "open", "owner": "Đức", "deadline": "2026-10-19", "deadline_text": "thứ Hai", "evidence": ["u013", "u014"]},
+    {"id": "B1", "type": "blocker", "thread": "uat", "content": "Chưa có môi trường staging có dữ liệu thật đã ẩn danh để UAT", "status": "open", "evidence": ["u015"]},
+    {"id": "D2", "type": "decision", "thread": "uat", "content": "Ngày bắt đầu UAT — chưa chốt, chờ lịch nghỉ lễ phía khách", "status": "deferred", "evidence": ["u016"], "note": "Bẫy keyword 'chưa chốt được'."},
+    {"id": "T2", "type": "task", "thread": "uat", "content": "Cập nhật user story đăng nhập lên Jira", "status": "open", "owner": "Kim", "deadline": "2026-10-16", "deadline_text": "trong hôm nay", "evidence": ["u017"], "note": "Bẫy ASR: 'Gi ra' = Jira."}
+  ]
+}

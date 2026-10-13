@@ -1,0 +1,94 @@
+{
+  "meeting_id": "m04",
+  "labeler": "nguyen",
+  "items": [
+    {
+      "id": "K1",
+      "type": "knowledge",
+      "thread": "wood-supplier",
+      "content": "Gỗ Tân Phát tăng giá 12% từ tháng 11",
+      "status": "open",
+      "evidence": ["u002"],
+      "note": "Số liệu mới từ nhà cung cấp, là lý do của cả chủ đề (không phải phản biện)."
+    },
+    {
+      "id": "B1",
+      "type": "blocker",
+      "thread": "wood-supplier",
+      "content": "Đắk Nông Xanh chưa có chứng nhận FSC, đơn đi Nhật bắt buộc phải có (họ nói tháng 12 mới có)",
+      "status": "open",
+      "evidence": ["u003", "u004"],
+      "note": "Phản biện là ràng buộc → blocker + knowledge (K2). u004 là câu bàn tiếp."
+    },
+    {
+      "id": "K2",
+      "type": "knowledge",
+      "thread": "wood-supplier",
+      "content": "Đơn hàng đi Nhật bắt buộc có chứng nhận FSC; Đắk Nông Xanh dự kiến tháng 12 mới có",
+      "status": "open",
+      "evidence": ["u003", "u004"]
+    },
+    {
+      "id": "D1",
+      "type": "decision",
+      "thread": "wood-supplier",
+      "content": "Đổi nhà cung cấp gỗ sang Lâm sản Đắk Nông Xanh hay không: chờ anh Phong quyết",
+      "status": "deferred",
+      "decided_by": "Sơn",
+      "evidence": ["u007"],
+      "note": "Bẫy: Hiền (không có thẩm quyền) nói 'mình chốt đổi… luôn đi anh' (u006) chỉ là đề xuất. Chủ trì đẩy lên người vắng mặt → deferred. Chưa từng chốt nên không áp quy tắc 'chốt rồi bị lật' → không tạo option."
+    },
+    {
+      "id": "T1",
+      "type": "task",
+      "thread": "wood-supplier",
+      "content": "Làm bảng so sánh Tân Phát và Đắk Nông Xanh gửi anh Phong",
+      "status": "open",
+      "owner": "Hiền",
+      "deadline": "2026-10-12",
+      "deadline_text": "sáng thứ Hai",
+      "evidence": ["u007", "u008"],
+      "note": "'Ok anh, sáng thứ Hai em gửi' → open. Họp thứ Năm 08/10 → thứ Hai 12/10."
+    },
+    {
+      "id": "T2",
+      "type": "task",
+      "thread": "wood-supplier",
+      "content": "Kiểm tra hợp đồng cũ với Tân Phát có điều khoản phạt khi đổi nhà cung cấp không",
+      "status": "needs_confirmation",
+      "owner": null,
+      "deadline": null,
+      "deadline_text": null,
+      "evidence": ["u009", "u010"],
+      "note": "Bẫy 'ai đó…': không ai nhận rõ; 'Dạ vâng.' của Mỹ chỉ là đang nghe → owner null, needs_confirmation."
+    },
+    {
+      "id": "B2",
+      "type": "blocker",
+      "thread": "qc",
+      "content": "Lô gỗ nhập tuần trước độ ẩm 16%, vượt chuẩn 12%, chưa được đưa vào sản xuất",
+      "status": "open",
+      "evidence": ["u011"]
+    },
+    {
+      "id": "D2",
+      "type": "decision",
+      "thread": "overtime",
+      "content": "Từ tuần sau xưởng làm thêm ca tối thứ Bảy cho tới khi xong đơn Nhật",
+      "status": "final",
+      "decided_by": "Sơn",
+      "evidence": ["u012"],
+      "note": "Chủ trì quyết rõ ('Anh quyết vậy'), không ai lật lại."
+    },
+    {
+      "id": "D3",
+      "type": "decision",
+      "thread": "warehouse-slip",
+      "content": "Chuyển phiếu xuất kho viết tay sang file Excel",
+      "status": "needs_confirmation",
+      "decided_by": "Sơn",
+      "evidence": ["u014", "u015"],
+      "note": "Quy tắc đề xuất + chủ trì chỉ 'Ừ.' → đồng ý gián tiếp → decision needs_confirmation."
+    }
+  ]
+}

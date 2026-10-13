@@ -1,0 +1,142 @@
+{
+  "meeting_id": "m03",
+  "labeler": "nguyen",
+  "items": [
+    {
+      "id": "D1",
+      "type": "decision",
+      "thread": "release-date",
+      "content": "Release v2.0 ngày 15/11, export PDF chuyển sang v2.1",
+      "status": "final",
+      "decided_by": "Quân",
+      "evidence": ["u012", "u009"],
+      "note": "Bẫy đổi ý: u006 chủ trì đồng ý dời 22/11 nhưng bị lật ở u007 ('Khoan đã'). u012 là câu chốt sau cùng không bị lật → final. Đề xuất gốc: Trang u009."
+    },
+    {
+      "id": "O1",
+      "type": "option",
+      "thread": "release-date",
+      "content": "Dời release v2.0 sang 22/11 (tạm chốt giữa họp)",
+      "status": "superseded",
+      "evidence": ["u004", "u006"],
+      "note": "Quy tắc tạm chốt trung gian: đề xuất u004 + chủ trì đồng ý u006, bị thay bởi u012 ('Bỏ phương án 22/11') → superseded. u005 'Nếu chốt 22/11…' là câu điều kiện, không gán."
+    },
+    {
+      "id": "O2",
+      "type": "option",
+      "thread": "release-date",
+      "content": "Release v2.0 ngày 15/11 với đầy đủ scope (gồm export PDF)",
+      "status": "superseded",
+      "evidence": ["u002"],
+      "note": "Đề xuất gốc của Trang (u002) bị thay bởi biến thể 15/11 bỏ export PDF (D1)."
+    },
+    {
+      "id": "B1",
+      "type": "blocker",
+      "thread": "release-date",
+      "content": "Module export PDF cần thêm ~2 tuần, 15/11 không kịp nếu giữ đủ scope",
+      "status": "open",
+      "evidence": ["u003", "u010"],
+      "note": "Phản biện có số liệu + câu bàn tiếp (u010: bỏ export PDF thì kịp) → blocker + knowledge (K1)."
+    },
+    {
+      "id": "K1",
+      "type": "knowledge",
+      "thread": "release-date",
+      "content": "Module export PDF ước tính cần thêm 2 tuần",
+      "status": "open",
+      "evidence": ["u003"]
+    },
+    {
+      "id": "B2",
+      "type": "blocker",
+      "thread": "release-date",
+      "content": "22/11 trùng đợt kiểm kê cuối năm của khách, khách không nhận bản mới tuần đó",
+      "status": "open",
+      "evidence": ["u007", "u008"],
+      "note": "Phản biện là ràng buộc của khách → blocker + knowledge (K2). u008 là câu bàn tiếp."
+    },
+    {
+      "id": "K2",
+      "type": "knowledge",
+      "thread": "release-date",
+      "content": "Tuần 22/11 khách kiểm kê cuối năm, không nhận bản mới",
+      "status": "open",
+      "evidence": ["u007"]
+    },
+    {
+      "id": "T1",
+      "type": "task",
+      "thread": "release-date",
+      "content": "Báo khách việc export PDF chuyển sang bản 2.1",
+      "status": "open",
+      "owner": "Trang",
+      "deadline": "2026-10-07",
+      "deadline_text": "trong hôm nay",
+      "evidence": ["u013", "u014"],
+      "note": "'Ok anh, chiều nay em gọi khách' → open, hạn hôm nay (07/10)."
+    },
+    {
+      "id": "B3",
+      "type": "blocker",
+      "thread": "staging-server",
+      "content": "Server staging hết dung lượng, không deploy được bản mới",
+      "status": "open",
+      "evidence": ["u015", "u016"],
+      "note": "Câu nêu + câu bàn tiếp (chủ trì xử lý ở u016)."
+    },
+    {
+      "id": "D2",
+      "type": "decision",
+      "thread": "staging-server",
+      "content": "Nâng cấp ổ đĩa server staging",
+      "status": "final",
+      "decided_by": "Quân",
+      "evidence": ["u016"],
+      "note": "Chủ trì tự quyết rõ ('anh duyệt nâng cấp ổ đĩa') dù chen trong câu giao việc → tách decision final."
+    },
+    {
+      "id": "T2",
+      "type": "task",
+      "thread": "staging-server",
+      "content": "Tạo ticket trên Jira để nâng cấp ổ đĩa server staging",
+      "status": "needs_confirmation",
+      "owner": "Bảo",
+      "deadline": "2026-10-08",
+      "deadline_text": "mai",
+      "evidence": ["u016", "u017"],
+      "note": "Bẫy: 'Dạ để em xem lại cấu hình rồi báo anh' → needs_confirmation. Bẫy ASR: 'Gia ra' = Jira."
+    },
+    {
+      "id": "K3",
+      "type": "knowledge",
+      "thread": "testing",
+      "content": "Khách chỉ test được trên Chrome 109 vì máy kho chạy Windows 7",
+      "status": "open",
+      "evidence": ["u018"],
+      "note": "Ràng buộc môi trường khách."
+    },
+    {
+      "id": "T3",
+      "type": "task",
+      "thread": "testing",
+      "content": "Viết test plan cho regression, gửi team review",
+      "status": "open",
+      "owner": "Linh",
+      "deadline": "2026-10-09",
+      "deadline_text": "thứ Sáu",
+      "evidence": ["u019"],
+      "note": "Tự nhận, không rào đón → open. Họp thứ Tư 07/10 → thứ Sáu 09/10."
+    },
+    {
+      "id": "D3",
+      "type": "decision",
+      "thread": "dark-mode",
+      "content": "Có làm dark mode không: chưa chốt, để sprint sau bàn",
+      "status": "deferred",
+      "decided_by": null,
+      "evidence": ["u020"],
+      "note": "Bẫy keyword 'chốt' trong 'chưa chốt được' → deferred. Người hoãn là Trang (không chủ trì); 'Ok.' của Quân ở u021 là kết thúc họp → decided_by null."
+    }
+  ]
+}

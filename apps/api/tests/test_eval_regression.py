@@ -17,7 +17,7 @@ FIX = Path(__file__).parent / "fixtures" / "oracle_events"
 
 def _run(data_dir, make_builder):
     total = Counts()
-    for gpath in sorted((data_dir / "answer_key").glob("m0*.json")):
+    for gpath in sorted((data_dir / "answer_key").glob("m*.json")):
         gold = GoldMeeting.model_validate_json(gpath.read_text(encoding="utf-8"))
         tr = parse_transcript_file(data_dir / "raw" / f"{gold.meeting_id}.txt")
         ledger = make_builder(gold.meeting_id).build(tr)

@@ -1,0 +1,26 @@
+{
+  "threads": [
+    {"id": "pricing", "title": "Mô hình thu phí bản mới"},
+    {"id": "lesson-plan", "title": "Lịch ra bài học tháng 11"},
+    {"id": "app-crash", "title": "App văng trên Android cũ"}
+  ],
+  "events": [
+    {"utt": "u002", "thread": "pricing", "kind": "propose", "speaker": "Khang", "key": "tron-doi", "content": "Gói trọn đời 990 nghìn", "quote": "em đề xuất bán gói trọn đời 990 nghìn"},
+    {"utt": "u004", "thread": "pricing", "kind": "object", "speaker": "Thư", "key": "tron-doi", "content": "Doanh thu dồn hết tháng đầu", "quote": "Gói trọn đời thì doanh thu dồn hết tháng đầu"},
+    {"utt": "u005", "thread": "pricing", "kind": "object", "speaker": "Long", "key": "tron-doi", "content": "Phải tích hợp lại cổng thanh toán, mất hai tuần", "quote": "làm gói trọn đời phải tích hợp lại mất hai tuần"},
+    {"utt": "u005", "thread": "pricing", "kind": "info", "speaker": "Long", "content": "Cổng thanh toán hiện chỉ hỗ trợ trả theo tháng", "quote": "cổng thanh toán bên mình hiện chỉ hỗ trợ trả theo tháng"},
+    {"utt": "u006", "thread": "pricing", "kind": "propose", "speaker": "Thư", "key": "thue-bao-thang", "content": "Thuê bao tháng 149 nghìn, dùng thử 7 ngày", "quote": "Em đề xuất thuê bao tháng 149 nghìn, có dùng thử 7 ngày"},
+    {"utt": "u007", "thread": "pricing", "kind": "object", "speaker": "Khang", "key": "thue-bao-thang", "content": "Phụ huynh ngại trả tháng vì sợ bị trừ tiền tự động", "quote": "phụ huynh hay ngại đăng ký trả tháng"},
+    {"utt": "u009", "thread": "pricing", "kind": "revise", "speaker": "Khang", "key": "goi-6-thang", "content": "Gói 6 tháng 690 nghìn", "hedged": true, "quote": "Hay là làm gói 6 tháng 690 nghìn"},
+    {"utt": "u010", "thread": "pricing", "kind": "object", "speaker": "Long", "key": "goi-6-thang", "content": "Cũng phải sửa cổng thanh toán", "quote": "Gói 6 tháng thì cũng phải sửa cổng thanh toán"},
+    {"utt": "u011", "thread": "pricing", "kind": "agree", "speaker": "Vy", "key": "thue-bao-thang", "content": "Thu phí thuê bao tháng 149 nghìn, 7 ngày dùng thử; bỏ gói trọn đời và gói 6 tháng", "quote": "chốt: bản mới thu phí theo thuê bao tháng 149 nghìn"},
+    {"utt": "u013", "thread": "pricing", "kind": "assign", "speaker": "Vy", "key": "paywall", "owner": "Khang", "content": "Viết lại màn hình paywall theo giá mới", "deadline_text": "cuối tuần này", "quote": "Khang viết lại màn hình paywall theo giá mới, cuối tuần này gửi chị duyệt nhé"},
+    {"utt": "u014", "thread": "pricing", "kind": "commit", "speaker": "Khang", "key": "paywall", "owner": "Khang", "deadline_text": "cuối tuần này", "quote": "Ok chị, cuối tuần này em gửi"},
+    {"utt": "u016", "thread": "lesson-plan", "kind": "blocker", "speaker": "Thư", "content": "Freelancer thu âm giọng bản xứ trễ hẹn, mới xong 8/20 bài", "quote": "giọng đọc bản xứ bên freelancer đang trễ hẹn"},
+    {"utt": "u017", "thread": "lesson-plan", "kind": "assign", "speaker": "Vy", "key": "upload-tool", "owner": "Long", "content": "Dựng công cụ upload bài học hàng loạt", "quote": "Long hỗ trợ Thư dựng công cụ upload bài học hàng loạt"},
+    {"utt": "u018", "thread": "lesson-plan", "kind": "commit", "speaker": "Long", "key": "upload-tool", "owner": "Long", "quote": "Dạ"},
+    {"utt": "u019", "thread": "lesson-plan", "kind": "commit", "speaker": "Thư", "key": "lesson-list", "owner": "Thư", "content": "Gửi danh sách 20 bài kèm tiến độ cho cả team", "deadline_text": "trước thứ Tư", "quote": "Em sẽ gửi danh sách 20 bài kèm tiến độ từng bài cho cả team trước thứ Tư"},
+    {"utt": "u020", "thread": "app-crash", "kind": "feedback", "speaker": "Khang", "content": "Phụ huynh phản ánh app hay văng khi mở bài nghe trên Android cũ", "quote": "phụ huynh trong group Zalo phản ánh app hay văng khi mở bài nghe trên máy Android cũ"},
+    {"utt": "u021", "thread": "app-crash", "kind": "commit", "speaker": "Long", "key": "fix-audio", "owner": "Long", "content": "Nâng cấp thư viện audio để sửa lỗi văng app", "deadline_text": "thứ Sáu này", "quote": "Em sẽ nâng cấp thư viện, thứ Sáu này có bản sửa"}
+  ]
+}
