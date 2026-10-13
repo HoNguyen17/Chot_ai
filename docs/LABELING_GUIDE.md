@@ -142,4 +142,4 @@ Ghi `deadline_text` nguyên văn và `deadline` dạng `YYYY-MM-DD` theo quy ư�
 - [ ] Mỗi mục có ít nhất 1 mã câu trong `evidence`.
 - [ ] `owner` / `decided_by` là tên có trong `# participants`.
 - [ ] Không có 2 mục `decision` cho cùng một chủ đề.
-- [ ] Mỗi bẫy trong transcript đã được ghi chú ở `note`.
+- [ ] MỌI mục đều có `note` (bắt buộc, kể cả K/B/R/F): vì sao chọn type/status, nêu số quy tắc; mỗi bẫy trong transcript được ghi rõ.

@@ -3,7 +3,7 @@
 # date: 2026-10-05
 # participants: Hùng (CEO, chủ trì); Minh (PM); Lan (Tech lead); Tú (Designer)
 [00:00:10] Hùng: Ok bắt đầu nhé. Hôm nay có ba việc: cổng thanh toán, flow onboarding, và timeline launch tháng 11.
-[00:01:05] Minh: Về thanh toán, em đề xuất mình đi VNPay, vì bên họ hỗ trợ nhiều ngân hàng nhất.
+[00:01:05] Minh: Về thanh toán, em đề xuất mình sử dụng VNPay, vì bên họ hỗ trợ nhiều ngân hàng nhất.
 [00:01:40] Tú: Dạ.
 [00:02:30] Lan: Em thấy VNPay phí giao dịch cao hơn, mà tích hợp theo doc của họ chắc mất tầm ba tuần, không kịp launch.
 [00:03:15] Lan: Em đề xuất MoMo, SDK của MoMo tụi em làm rồi ở dự án cũ, tầm một tuần là xong.

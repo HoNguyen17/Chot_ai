@@ -26,7 +26,8 @@
       "thread": "wood-supplier",
       "content": "Đơn hàng đi Nhật bắt buộc có chứng nhận FSC; Đắk Nông Xanh dự kiến tháng 12 mới có",
       "status": "open",
-      "evidence": ["u003", "u004"]
+      "evidence": ["u003", "u004"],
+      "note": "Quy tắc 2: phản biện kèm số liệu/ràng buộc → B1 (blocker) + K này giữ dữ kiện để tra lại. Gộp cả câu tiếp u004 (FSC tháng 12 mới có) theo quy tắc 7."
     },
     {
       "id": "D1",
@@ -68,7 +69,8 @@
       "thread": "qc",
       "content": "Lô gỗ nhập tuần trước độ ẩm 16%, vượt chuẩn 12%, chưa được đưa vào sản xuất",
       "status": "open",
-      "evidence": ["u011"]
+      "evidence": ["u011"],
+      "note": "Vướng mắc đang chặn sản xuất (lô gỗ chưa được dùng), không có phản biện đi kèm → chỉ blocker, open."
     },
     {
       "id": "D2",

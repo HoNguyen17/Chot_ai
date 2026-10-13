@@ -45,7 +45,8 @@
       "thread": "winter-dish",
       "content": "3 chi nhánh chưa có bếp từ; đầu tư ~40 triệu/chi nhánh",
       "status": "open",
-      "evidence": ["u005"]
+      "evidence": ["u005"],
+      "note": "Quy tắc 2: phản biện kèm số liệu/ràng buộc → B1 (blocker) + K này giữ dữ kiện để tra lại."
     },
     {
       "id": "T1",
@@ -93,7 +94,8 @@
       "thread": "lunch-combo",
       "content": "Food cost combo trưa hiện tại 45%, mục tiêu công ty dưới 35%",
       "status": "open",
-      "evidence": ["u009"]
+      "evidence": ["u009"],
+      "note": "Quy tắc 2: phản biện kèm số liệu/ràng buộc → B2 (blocker) + K này giữ dữ kiện để tra lại."
     },
     {
       "id": "F1",

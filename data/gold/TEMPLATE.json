@@ -5,6 +5,7 @@
     "3_thread": "Slug tiếng Anh kebab-case cho CÂU HỎI cuộc họp phải trả lời (vd 'payment-gateway'). Chủ đề quay lại -> dùng lại slug cũ. decision + option của nó bắt buộc cùng thread; mỗi thread tối đa 1 decision.",
     "4_evidence": "Mã câu u001, u002... = thứ tự các dòng có [timestamp] (dòng # không tính). In bằng lệnh trong docs/LABELING_GUIDE.md.",
     "5_status": "final | needs_confirmation | superseded | deferred | open. Xem bảng 'Quy ước từng loại' trong docs/LABELING_GUIDE.md.",
+    "7_note": "BẮT BUỘC cho MỌI mục (kể cả K/B/R/F): 1 câu vì sao chọn type/status này, nêu số quy tắc nếu có.",
     "6_khi_dung": "Chép file này thành data/gold/<meeting_id>.json, XOÁ key _huong_dan và mọi mục mẫu không dùng (mục mẫu để lại sẽ bị chấm như nhãn thật)."
   },
   "meeting_id": "mXX",
@@ -56,7 +57,8 @@
       "thread": "topic-a",
       "content": "Vướng mắc đang chặn việc",
       "status": "open",
-      "evidence": ["uNNN"]
+      "evidence": ["uNNN"],
+      "note": "Vì sao là blocker (quy tắc 1/2/7). Phản biện có số liệu → thêm K cùng evidence."
     },
     {
       "id": "K1",
@@ -64,7 +66,8 @@
       "thread": "topic-a",
       "content": "Sự thật / ràng buộc mới đáng lưu (số liệu, quy định...)",
       "status": "open",
-      "evidence": ["uNNN"]
+      "evidence": ["uNNN"],
+      "note": "Nguồn của dữ kiện: đi cặp blocker nào (quy tắc 2) hay quyết định họp trước (quy tắc 9)."
     },
     {
       "id": "R1",
@@ -72,7 +75,8 @@
       "thread": "topic-b",
       "content": "Yêu cầu từ khách / bên ngoài, hoặc đề xuất cải tiến chưa được bàn",
       "status": "open",
-      "evidence": ["uNNN"]
+      "evidence": ["uNNN"],
+      "note": "Ai yêu cầu, vì sao không phải decision/task."
     },
     {
       "id": "F1",
@@ -80,7 +84,8 @@
       "thread": "topic-c",
       "content": "Nhận xét về sản phẩm / thiết kế",
       "status": "open",
-      "evidence": ["uNNN"]
+      "evidence": ["uNNN"],
+      "note": "Phản hồi của ai, về cái gì."
     }
   ]
 }

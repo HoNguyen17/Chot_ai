@@ -5,7 +5,7 @@
     {"id": "launch-date", "title": "Ngày launch cụ thể"}
   ],
   "events": [
-    {"utt": "u002", "thread": "payment-gateway", "kind": "propose", "speaker": "Minh", "key": "VNPay", "content": "Dùng VNPay khi launch", "quote": "em đề xuất mình đi VNPay"},
+    {"utt": "u002", "thread": "payment-gateway", "kind": "propose", "speaker": "Minh", "key": "VNPay", "content": "Dùng VNPay khi launch", "quote": "em đề xuất mình sử dụng VNPay"},
     {"utt": "u004", "thread": "payment-gateway", "kind": "object", "speaker": "Lan", "key": "VNPay", "content": "VNPay phí cao, tích hợp 3 tuần", "quote": "VNPay phí giao dịch cao hơn"},
     {"utt": "u005", "thread": "payment-gateway", "kind": "propose", "speaker": "Lan", "key": "MoMo", "content": "Dùng MoMo khi launch", "quote": "Em đề xuất MoMo"},
     {"utt": "u006", "thread": "payment-gateway", "kind": "object", "speaker": "Minh", "key": "MoMo", "content": "Khách lớn tuổi quen chuyển khoản", "quote": "họ quen chuyển khoản ngân hàng hơn"},

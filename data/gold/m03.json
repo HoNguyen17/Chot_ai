@@ -45,7 +45,8 @@
       "thread": "release-date",
       "content": "Module export PDF ước tính cần thêm 2 tuần",
       "status": "open",
-      "evidence": ["u003"]
+      "evidence": ["u003"],
+      "note": "Quy tắc 2: phản biện kèm số liệu/ràng buộc → B1 (blocker) + K này giữ dữ kiện để tra lại."
     },
     {
       "id": "B2",
@@ -62,7 +63,8 @@
       "thread": "release-date",
       "content": "Tuần 22/11 khách kiểm kê cuối năm, không nhận bản mới",
       "status": "open",
-      "evidence": ["u007"]
+      "evidence": ["u007"],
+      "note": "Quy tắc 2: phản biện kèm số liệu/ràng buộc → B2 (blocker) + K này giữ dữ kiện để tra lại."
     },
     {
       "id": "T1",

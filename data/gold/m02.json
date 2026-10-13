@@ -36,7 +36,8 @@
       "thread": "kol",
       "content": "Tổng budget KOL 120 triệu; Lily Trần báo giá 80 triệu/post",
       "status": "open",
-      "evidence": ["u003"]
+      "evidence": ["u003"],
+      "note": "Quy tắc 2: phản biện kèm số liệu/ràng buộc → B1 (blocker) + K này giữ dữ kiện để tra lại."
     },
     {
       "id": "B2",
@@ -53,7 +54,8 @@
       "thread": "kol",
       "content": "Khách hàng An Phú thích KOL có tên tuổi",
       "status": "open",
-      "evidence": ["u005"]
+      "evidence": ["u005"],
+      "note": "Quy tắc 2: phản biện kèm số liệu/ràng buộc → B2 (blocker) + K này giữ dữ kiện để tra lại."
     },
     {
       "id": "T1",
@@ -92,7 +94,8 @@
       "thread": "budget-split",
       "content": "CPM TikTok thường tăng mạnh vào tháng Chạp",
       "status": "open",
-      "evidence": ["u010"]
+      "evidence": ["u010"],
+      "note": "Quy tắc 2: phản biện kèm số liệu/ràng buộc → B3 (blocker) + K này giữ dữ kiện để tra lại."
     },
     {
       "id": "T2",
