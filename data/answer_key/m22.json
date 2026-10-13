@@ -1,0 +1,27 @@
+{
+  "meeting_id": "m22",
+  "labeler": "answer-key",
+  "items": [
+    {"id": "D1", "type": "decision", "thread": "slab-pour", "content": "Đổ sàn tầng 5 sáng thứ Ba 3/11; công trình chịu tiền chờ của tổ đổ", "status": "final", "decided_by": "Đạo", "evidence": ["u026", "u014"], "note": "Bẫy họp dài, chủ đề quay lại 3 lần: chủ trì 'Ok vậy đổ thứ Bảy' (u016) rồi 'không đổ thứ Bảy nữa' (u023); Toản (không thẩm quyền) nói 'chốt thứ Ba… đi anh' (u024) chỉ là đề xuất; u026 mới là chốt cuối."},
+    {"id": "O1", "type": "option", "thread": "slab-pour", "content": "Đổ bê tông sàn tầng 5 sáng thứ Bảy 31/10", "status": "superseded", "evidence": ["u003"]},
+    {"id": "K1", "type": "knowledge", "thread": "slab-pour", "content": "Mưa khi bê tông chưa ninh kết làm bề mặt rỗ, phải mài lại thêm ~2 ngày", "status": "open", "evidence": ["u013"]},
+    {"id": "T1", "type": "task", "thread": "slab-pour", "content": "Gửi lại phiếu yêu cầu bê tông cho trạm trộn, đổi ngày giao sang thứ Ba", "status": "open", "owner": "Sinh", "deadline": "2026-10-28", "deadline_text": "chiều nay", "evidence": ["u028", "u029"]},
+    {"id": "B1", "type": "blocker", "thread": "steel", "content": "Thép phi 16 giao trễ 5 ngày, nhà cung cấp hẹn thứ Hai", "status": "open", "evidence": ["u006"]},
+    {"id": "D2", "type": "decision", "thread": "steel", "content": "Mua lô thép phi 16 này của Đông Á", "status": "final", "decided_by": "Đạo", "evidence": ["u041", "u038"]},
+    {"id": "K2", "type": "knowledge", "thread": "steel", "content": "Hợp đồng mua thép trên 10 triệu phải có chữ ký giám đốc dự án", "status": "open", "evidence": ["u042"]},
+    {"id": "T2", "type": "task", "thread": "steel", "content": "Soạn hợp đồng Đông Á, gửi giám đốc dự án Khải ký online", "status": "open", "owner": "Lam", "deadline": "2026-10-28", "deadline_text": "trong hôm nay", "evidence": ["u043", "u044"]},
+    {"id": "B2", "type": "blocker", "thread": "safety", "content": "3 công nhân làm trên giàn giáo tầng 4 không đeo dây an toàn", "status": "open", "evidence": ["u009"]},
+    {"id": "K3", "type": "knowledge", "thread": "safety", "content": "Quy định công ty: vi phạm an toàn lần đầu phạt 500 nghìn, lần hai cho nghỉ việc", "status": "open", "evidence": ["u010"]},
+    {"id": "D3", "type": "decision", "thread": "safety", "content": "Phạt đúng quy định 500 nghìn/người; công nhân mới phải học an toàn trước khi lên giàn giáo", "status": "final", "decided_by": "Đạo", "evidence": ["u033", "u030"]},
+    {"id": "O2", "type": "option", "thread": "safety", "content": "Lần này chỉ nhắc nhở, training lại cả tổ", "status": "superseded", "evidence": ["u031"]},
+    {"id": "T3", "type": "task", "thread": "safety", "content": "Tổ chức buổi training an toàn cho công nhân mới", "status": "open", "owner": "Toản", "deadline": "2026-10-29", "deadline_text": "thứ Năm", "evidence": ["u034", "u035"]},
+    {"id": "T4", "type": "task", "thread": "safety", "content": "Cho tổ trưởng kiểm tra dây an toàn đầu mỗi ca", "status": "open", "owner": "Quý", "deadline": "2026-10-29", "deadline_text": "mai", "evidence": ["u036"]},
+    {"id": "R1", "type": "request", "thread": "salary-advance", "content": "Công nhân xin ứng trước một nửa lương tháng 11 để về quê", "status": "open", "evidence": ["u018"]},
+    {"id": "K4", "type": "knowledge", "thread": "salary-advance", "content": "Quỹ công trình còn ~300 triệu; ứng cho 40 người hết ~200 triệu", "status": "open", "evidence": ["u019"]},
+    {"id": "D4", "type": "decision", "thread": "salary-advance", "content": "Ứng lương tháng 11 cho công nhân — chờ hỏi giám đốc dự án", "status": "deferred", "evidence": ["u020"]},
+    {"id": "B3", "type": "blocker", "thread": "hoist", "content": "Máy vận thăng chở người kêu lạ, đã dừng chạy", "status": "open", "evidence": ["u045"]},
+    {"id": "T5", "type": "task", "thread": "hoist", "content": "Gọi bên cho thuê vận thăng xuống kiểm tra", "status": "needs_confirmation", "owner": null, "deadline": null, "deadline_text": null, "evidence": ["u046"], "note": "Bẫy 'ai đó…': 'Dạ.' của Quý chỉ là đang nghe."},
+    {"id": "B4", "type": "blocker", "thread": "stair-drawing", "content": "Bản vẽ điều chỉnh cầu thang tầng 6 gửi tư vấn thiết kế từ tuần trước, chưa ai phản hồi", "status": "open", "evidence": ["u048"]},
+    {"id": "T6", "type": "task", "thread": "stair-drawing", "content": "Gọi chủ trì thiết kế hối bản vẽ cầu thang tầng 6", "status": "needs_confirmation", "owner": "Sinh", "deadline": "2026-10-30", "deadline_text": "thứ Sáu", "evidence": ["u049", "u050"], "note": "'nhưng em chưa chắc' → chưa cam kết."}
+  ]
+}

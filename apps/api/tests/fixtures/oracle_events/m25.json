@@ -1,0 +1,27 @@
+{
+  "threads": [
+    {"id": "fabric-supplier", "title": "Nhà cung cấp vải cho đơn áo khoác"},
+    {"id": "cost-compare", "title": "Bảng so sánh chi phí nhà cung cấp"},
+    {"id": "qc-machine", "title": "Máy kiểm tra độ bền màu"},
+    {"id": "shirt-quality", "title": "Chất lượng lô áo sơ mi"},
+    {"id": "labels", "title": "Nhãn mác đơn áo khoác"}
+  ],
+  "events": [
+    {"utt": "u002", "thread": "fabric-supplier", "kind": "propose", "speaker": "Tuấn", "key": "thanh-cong", "content": "Giữ nhà cung cấp cũ Thành Công (68 nghìn/m, giao 10 ngày)", "quote": "Phương án một là giữ nhà cung cấp cũ Thành Công"},
+    {"utt": "u003", "thread": "fabric-supplier", "kind": "propose", "speaker": "Tuấn", "key": "phu-thinh", "content": "Chuyển sang Phú Thịnh (61 nghìn/m, giao 7 ngày)", "quote": "Em đề xuất Phú Thịnh"},
+    {"utt": "u004", "thread": "fabric-supplier", "kind": "object", "speaker": "Hồng", "key": "phu-thinh", "content": "Chưa từng làm, chưa có kết quả test co rút", "quote": "chưa có kết quả test độ co rút vải"},
+    {"utt": "u005", "thread": "fabric-supplier", "kind": "info", "speaker": "Tuấn", "content": "Phú Thịnh làm mẫu test trong 2 ngày, miễn phí", "quote": "Phú Thịnh nhận làm mẫu test trong 2 ngày, không tính phí"},
+    {"utt": "u006", "thread": "fabric-supplier", "kind": "info", "speaker": "Vĩnh", "content": "Đơn áo khoác giao khách ngày 5/12", "quote": "Đơn này giao khách ngày 5/12"},
+    {"utt": "u007", "thread": "fabric-supplier", "kind": "agree", "speaker": "Liên", "key": "phu-thinh", "content": "Dùng vải Phú Thịnh cho đơn áo khoác", "quote": "Chốt dùng vải Phú Thịnh cho đơn này"},
+    {"utt": "u008", "thread": "fabric-supplier", "kind": "commit", "speaker": "Tuấn", "key": "bao-gui-mau", "owner": "Tuấn", "content": "Báo Phú Thịnh gửi mẫu vải test", "quote": "em báo Phú Thịnh gửi mẫu ngay"},
+    {"utt": "u009", "thread": "fabric-supplier", "kind": "assign", "speaker": "Liên", "key": "test-co-rut", "owner": "Hồng", "content": "Test độ co rút mẫu vải Phú Thịnh", "deadline_text": "trước thứ Ba", "quote": "Hồng test độ co rút mẫu vải ngay khi về, có kết quả trước thứ Ba"},
+    {"utt": "u010", "thread": "fabric-supplier", "kind": "commit", "speaker": "Hồng", "key": "test-co-rut", "owner": "Hồng", "deadline_text": "thứ Ba", "quote": "Dạ ok chị, thứ Ba có kết quả"},
+    {"utt": "u011", "thread": "cost-compare", "kind": "assign", "speaker": "Liên", "key": "bang-so-sanh", "owner": "Phương", "content": "Làm bảng so sánh chi phí hai nhà cung cấp vải", "deadline_text": "thứ Sáu", "quote": "Phương làm bảng so sánh chi phí hai nhà cung cấp, thứ Sáu nộp chị"},
+    {"utt": "u012", "thread": "cost-compare", "kind": "commit", "speaker": "Vĩnh", "key": "nhan-phuong", "owner": "Vĩnh", "content": "Nhắn chị Phương (đang nghỉ phép) về việc làm bảng so sánh", "quote": "em sẽ nhắn chị ấy"},
+    {"utt": "u013", "thread": "qc-machine", "kind": "blocker", "speaker": "Hồng", "content": "Máy kiểm tra độ bền màu hỏng, gửi mẫu ra ngoài test mất 3 ngày", "quote": "Máy kiểm tra độ bền màu của phòng QC hỏng từ tuần trước"},
+    {"utt": "u014", "thread": "qc-machine", "kind": "assign", "speaker": "Liên", "key": "gia-sua-may", "owner": "Tuấn", "content": "Hỏi giá sửa máy kiểm tra độ bền màu", "quote": "Tuấn hỏi giá sửa máy kiểm tra độ bền màu nha"},
+    {"utt": "u015", "thread": "qc-machine", "kind": "commit", "speaker": "Tuấn", "key": "gia-sua-may", "owner": "Tuấn", "quote": "Dạ"},
+    {"utt": "u016", "thread": "shirt-quality", "kind": "feedback", "speaker": "Hồng", "content": "Khách phản hồi lô áo sơ mi tuần trước lệch đường may cổ áo ở ~3% sản phẩm", "quote": "khách phản hồi đường may cổ áo bị lệch ở khoảng 3% sản phẩm"},
+    {"utt": "u017", "thread": "labels", "kind": "request", "speaker": "Vĩnh", "content": "Khách Nhật yêu cầu thêm nhãn mác song ngữ Nhật–Việt cho đơn áo khoác", "quote": "Khách Nhật vừa yêu cầu thêm nhãn mác song ngữ Nhật–Việt cho đơn áo khoác"}
+  ]
+}

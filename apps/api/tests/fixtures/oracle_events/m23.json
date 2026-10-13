@@ -1,0 +1,27 @@
+{
+  "threads": [
+    {"id": "sales-channel", "title": "Kênh bán mới"},
+    {"id": "freeship", "title": "Ngưỡng freeship"},
+    {"id": "warehouse", "title": "Kệ kho"},
+    {"id": "product-review", "title": "Review sữa rửa mặt mới"}
+  ],
+  "events": [
+    {"utt": "u002", "thread": "sales-channel", "kind": "propose", "speaker": "Hảo", "key": "shopee-mall", "content": "Mở Shopee Mall", "quote": "Em đề xuất mở Shopee Mall"},
+    {"utt": "u003", "thread": "sales-channel", "kind": "object", "speaker": "Phụng", "key": "shopee-mall", "content": "Phí tổng ~12% doanh thu", "quote": "phí cố định cộng phí thanh toán tổng khoảng 12% doanh thu"},
+    {"utt": "u003", "thread": "sales-channel", "kind": "info", "speaker": "Phụng", "content": "Phí Shopee Mall (cố định + thanh toán) ~12% doanh thu", "quote": "Shopee Mall phí cố định cộng phí thanh toán tổng khoảng 12% doanh thu"},
+    {"utt": "u004", "thread": "sales-channel", "kind": "propose", "speaker": "Hảo", "key": "tiktok-shop", "content": "Mở TikTok Shop (phí ~8%, có sẵn 3 bạn làm video)", "quote": "TikTok Shop thì phí thấp hơn, khoảng 8%"},
+    {"utt": "u005", "thread": "sales-channel", "kind": "object", "speaker": "Khánh", "key": "tiktok-shop", "content": "TikTok Shop đổi chính sách liên tục", "quote": "TikTok Shop đổi chính sách liên tục"},
+    {"utt": "u006", "thread": "sales-channel", "kind": "agree", "speaker": "Vân", "key": "tiktok-shop", "content": "Đi TikTok Shop trước, mở tháng 12; Shopee Mall để quý sau", "quote": "Chị quyết đi TikTok Shop trước, tháng 12 mở"},
+    {"utt": "u008", "thread": "sales-channel", "kind": "assign", "speaker": "Vân", "key": "ke-hoach-video", "owner": "Hảo", "content": "Lên kế hoạch 30 video cho tháng đầu TikTok Shop", "deadline_text": "thứ Hai tuần sau", "quote": "Hảo lên kế hoạch 30 video cho tháng đầu, thứ Hai tuần sau gửi chị"},
+    {"utt": "u009", "thread": "sales-channel", "kind": "commit", "speaker": "Hảo", "key": "ke-hoach-video", "owner": "Hảo", "deadline_text": "thứ Hai", "quote": "Dạ ok chị, thứ Hai em gửi"},
+    {"utt": "u010", "thread": "freeship", "kind": "propose", "speaker": "Khánh", "key": "299k", "content": "Freeship cho đơn từ 299 nghìn (thay vì 199 nghìn)", "quote": "anh đề xuất freeship cho đơn từ 299 nghìn"},
+    {"utt": "u011", "thread": "freeship", "kind": "info", "speaker": "Phụng", "content": "Đơn trung bình hiện 260 nghìn", "quote": "Đơn trung bình bên mình đang là 260 nghìn"},
+    {"utt": "u012", "thread": "freeship", "kind": "agree", "speaker": "Vân", "key": "299k", "content": "Freeship cho đơn từ 299 nghìn, áp dụng từ 1/11", "quote": "chốt freeship từ 299 nghìn, áp dụng từ 1/11"},
+    {"utt": "u014", "thread": "warehouse", "kind": "blocker", "speaker": "Phụng", "content": "Kho thiếu kệ, 2 pallet hàng mới để dưới sàn", "quote": "Kho hiện thiếu kệ cho hàng mới về"},
+    {"utt": "u015", "thread": "warehouse", "kind": "assign", "speaker": "Khánh", "key": "ke-sat", "owner": "Phụng", "content": "Đặt thêm và lắp 4 kệ sắt cho kho", "deadline_text": "thứ Bảy này", "quote": "Phụng đặt thêm 4 kệ sắt, thứ Bảy này lắp xong nhé"},
+    {"utt": "u016", "thread": "warehouse", "kind": "commit", "speaker": "Phụng", "key": "ke-sat", "owner": "Phụng", "deadline_text": "thứ Bảy", "quote": "Ok anh, thứ Bảy em lắp"},
+    {"utt": "u017", "thread": "product-review", "kind": "feedback", "speaker": "Hảo", "content": "Khách chê sữa rửa mặt mới mùi hơi nồng, 15 đánh giá 3 sao trong tuần", "quote": "Khách review sữa rửa mặt mới nói mùi hơi nồng"},
+    {"utt": "u018", "thread": "product-review", "kind": "assign", "speaker": "Vân", "key": "gom-review", "owner": "Hảo", "content": "Gom các review chê mùi gửi nhà máy", "quote": "Hảo gom lại các review đó gửi bên nhà máy nhé"},
+    {"utt": "u019", "thread": "product-review", "kind": "commit", "speaker": "Hảo", "key": "gom-review", "owner": "Hảo", "quote": "Dạ vâng"}
+  ]
+}

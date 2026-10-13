@@ -1,0 +1,25 @@
+{
+  "threads": [
+    {"id": "release-32", "title": "Ngày release bản 3.2"},
+    {"id": "advanced-report", "title": "Báo cáo nâng cao ở bản nào"},
+    {"id": "performance", "title": "Hiệu năng báo cáo tháng"},
+    {"id": "staging-ssl", "title": "Chứng chỉ SSL staging"}
+  ],
+  "events": [
+    {"utt": "u001", "thread": "release-32", "kind": "info", "speaker": "Bình", "content": "Họp tuần trước đã chốt: bản 3.2 release ngày 1/11", "quote": "bản 3.2 release ngày 1/11"},
+    {"utt": "u001", "thread": "advanced-report", "kind": "info", "speaker": "Bình", "content": "Họp tuần trước đã chốt: báo cáo nâng cao để sang bản 3.3", "quote": "tính năng báo cáo nâng cao để sang bản 3.3"},
+    {"utt": "u002", "thread": "release-32", "kind": "blocker", "speaker": "Thơ", "content": "Regression 3.2 còn 4 bug mức cao, có bug mất dữ liệu khi đồng bộ offline", "quote": "Regression bản 3.2 còn 4 bug mức cao"},
+    {"utt": "u004", "thread": "release-32", "kind": "propose", "speaker": "Thơ", "key": "5-11", "content": "Dời release 3.2 sang thứ Năm 5/11", "quote": "Em đề xuất dời release 3.2 sang thứ Năm 5/11"},
+    {"utt": "u005", "thread": "release-32", "kind": "info", "speaker": "Nhật", "content": "Khách Minh Long đã được hứa bản mới đầu tháng 11", "quote": "Khách Minh Long được hứa bản mới đầu tháng 11"},
+    {"utt": "u006", "thread": "release-32", "kind": "agree", "speaker": "Bình", "key": "5-11", "content": "Release 3.2 dời sang thứ Năm 5/11", "quote": "release 3.2 dời sang thứ Năm 5/11"},
+    {"utt": "u008", "thread": "release-32", "kind": "assign", "speaker": "Bình", "key": "bao-khach", "owner": "Nhật", "content": "Báo khách Minh Long lịch release mới", "deadline_text": "trong hôm nay", "quote": "Nhật báo khách Minh Long lịch mới trong hôm nay nhé"},
+    {"utt": "u009", "thread": "release-32", "kind": "commit", "speaker": "Nhật", "key": "bao-khach", "owner": "Nhật", "quote": "Ok chị, em gửi email ngay"},
+    {"utt": "u010", "thread": "advanced-report", "kind": "request", "speaker": "Nhật", "content": "Khách Minh Long hỏi đưa báo cáo nâng cao vào bản 3.2", "quote": "Khách Minh Long cũng hỏi có đưa được báo cáo nâng cao vào 3.2 luôn không"},
+    {"utt": "u011", "thread": "advanced-report", "kind": "agree", "speaker": "Bình", "key": "bao-cao-3-3", "content": "Báo cáo nâng cao vẫn ở bản 3.3", "quote": "báo cáo nâng cao vẫn ở bản 3.3"},
+    {"utt": "u012", "thread": "performance", "kind": "feedback", "speaker": "Nhật", "content": "6 khách phàn nàn app chậm khi mở báo cáo tháng", "quote": "Tuần này có 6 khách phàn nàn app chậm khi mở báo cáo tháng"},
+    {"utt": "u013", "thread": "release-32", "kind": "commit", "speaker": "Thơ", "key": "bao-cao-bug", "owner": "Thơ", "content": "Gửi danh sách 4 bug mức cao kèm trạng thái lên kênh release mỗi sáng tới ngày release", "quote": "Em sẽ gửi danh sách 4 bug mức cao kèm trạng thái lên kênh release mỗi sáng"},
+    {"utt": "u014", "thread": "staging-ssl", "kind": "blocker", "speaker": "Giang", "content": "Chứng chỉ SSL staging hết hạn, QA không truy cập được HTTPS", "quote": "Server staging hết hạn chứng chỉ SSL từ hôm qua"},
+    {"utt": "u015", "thread": "staging-ssl", "kind": "assign", "speaker": "Bình", "key": "gia-han-ssl", "owner": "Giang", "content": "Gia hạn chứng chỉ SSL staging", "deadline_text": "trong hôm nay", "quote": "Giang gia hạn chứng chỉ trong hôm nay nhé"},
+    {"utt": "u016", "thread": "staging-ssl", "kind": "commit", "speaker": "Giang", "key": "gia-han-ssl", "owner": "Giang", "quote": "Ok chị, em làm liền"}
+  ]
+}

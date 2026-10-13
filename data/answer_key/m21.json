@@ -1,0 +1,16 @@
+{
+  "meeting_id": "m21",
+  "labeler": "answer-key",
+  "items": [
+    {"id": "K1", "type": "knowledge", "thread": "tet-tour", "content": "Tour Đà Lạt 4 ngày năm ngoái bán hết sớm nhất (12 đoàn); xe giường nằm dịp Tết khó thuê", "status": "open", "evidence": ["u002"]},
+    {"id": "D1", "type": "decision", "thread": "tet-tour", "content": "Tour Đà Lạt limousine là sản phẩm chính dịp Tết; Phú Quốc để dành cho mùa hè", "status": "final", "decided_by": "Hoàng", "evidence": ["u007", "u005"], "note": "Bẫy quyết định ngầm: 'Vậy làm theo hướng đó đi' không có chữ chốt/thống nhất nhưng là cam kết rõ của chủ trì."},
+    {"id": "O1", "type": "option", "thread": "tet-tour", "content": "Tour Phú Quốc bay thẳng 3 ngày 2 đêm", "status": "superseded", "evidence": ["u003"]},
+    {"id": "K2", "type": "knowledge", "thread": "tet-tour", "content": "Vé máy bay Tết đi Phú Quốc ~5 triệu/chiều", "status": "open", "evidence": ["u004"]},
+    {"id": "T1", "type": "task", "thread": "tet-tour", "content": "Giữ chỗ và đặt cọc 20 xe limousine với nhà xe", "status": "open", "owner": "Thanh", "deadline": "2026-10-29", "deadline_text": "thứ Năm", "evidence": ["u008", "u009"]},
+    {"id": "T2", "type": "task", "thread": "tet-tour", "content": "Làm bộ ảnh và landing page tour Đà Lạt", "status": "open", "owner": "Trinh", "deadline": "2026-11-10", "deadline_text": "trước ngày 10/11", "evidence": ["u010"]},
+    {"id": "R1", "type": "request", "thread": "private-tour", "content": "Khách đoàn Hòa An hỏi tour riêng 40 người, đi mùng 2 Tết", "status": "open", "evidence": ["u011"]},
+    {"id": "T3", "type": "task", "thread": "private-tour", "content": "Báo giá tour riêng cho khách đoàn Hòa An", "status": "needs_confirmation", "owner": "Đăng", "deadline": null, "deadline_text": null, "evidence": ["u012", "u013"], "note": "Chỉ đáp 'Dạ vâng.' → chưa nhận việc."},
+    {"id": "K3", "type": "knowledge", "thread": "hotel-deposit", "content": "Từ năm nay khách sạn Đà Lạt bắt buộc cọc 50% cho booking dịp Tết, không hoàn", "status": "open", "evidence": ["u014"]},
+    {"id": "T4", "type": "task", "thread": "hotel-deposit", "content": "Tính lại dòng tiền đặt cọc cho cả mùa Tết", "status": "open", "owner": "Thanh", "deadline": "2026-11-01", "deadline_text": "cuối tuần này", "evidence": ["u015", "u016"]}
+  ]
+}

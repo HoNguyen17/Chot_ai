@@ -1,0 +1,23 @@
+# meeting: m25
+# title: Họp chọn nhà cung cấp vải — xưởng may gia công
+# date: 2026-10-31
+# participants: Liên (Giám đốc xưởng, chủ trì); Tuấn (Thu mua); Hồng (QC); Vĩnh (Kế hoạch)
+# absent: Phương (Kế toán trưởng)
+[00:00:10] Liên: Họp chọn nhà cung cấp vải cho đơn áo khoác 5.000 cái của khách Nhật.
+[00:00:50] Tuấn: Phương án một là giữ nhà cung cấp cũ Thành Công, 68 nghìn một mét, giao trong 10 ngày.
+[00:01:35] Tuấn: Phương án hai là chuyển sang Phú Thịnh, 61 nghìn một mét, rẻ hơn 10%, giao trong 7 ngày. Em đề xuất Phú Thịnh.
+[00:02:15] Hồng: Phú Thịnh mình chưa làm bao giờ, chưa có kết quả test độ co rút vải.
+[00:02:50] Tuấn: Phú Thịnh nhận làm mẫu test trong 2 ngày, không tính phí.
+[00:03:30] Vĩnh: Đơn này giao khách ngày 5/12, vải về trễ là cả chuyền đứng.
+[00:04:15] Liên: Chốt dùng vải Phú Thịnh cho đơn này. Nếu thứ Ba Phú Thịnh không gửi được mẫu test đạt thì quay về Thành Công.
+[00:04:30] Tuấn: Ok chị, em báo Phú Thịnh gửi mẫu ngay.
+[00:05:05] Liên: Hồng test độ co rút mẫu vải ngay khi về, có kết quả trước thứ Ba.
+[00:05:20] Hồng: Dạ ok chị, thứ Ba có kết quả.
+[00:06:00] Liên: Phương làm bảng so sánh chi phí hai nhà cung cấp, thứ Sáu nộp chị.
+[00:06:25] Vĩnh: Chị Phương nghỉ phép tới thứ Năm, em sẽ nhắn chị ấy.
+[00:07:10] Hồng: Máy kiểm tra độ bền màu của phòng QC hỏng từ tuần trước, đang gửi mẫu ra ngoài test, mất 3 ngày.
+[00:07:45] Liên: Tuấn hỏi giá sửa máy kiểm tra độ bền màu nha.
+[00:07:55] Tuấn: Dạ.
+[00:08:40] Hồng: Lô áo sơ mi giao tuần trước khách phản hồi đường may cổ áo bị lệch ở khoảng 3% sản phẩm.
+[00:09:20] Vĩnh: Khách Nhật vừa yêu cầu thêm nhãn mác song ngữ Nhật–Việt cho đơn áo khoác.
+[00:09:55] Liên: Ok, hết.

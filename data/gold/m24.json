@@ -1,0 +1,115 @@
+{
+  "meeting_id": "m24",
+  "labeler": "nguyen",
+  "items": [
+    {
+      "id": "O1",
+      "type": "option",
+      "thread": "release-32",
+      "content": "Release bản 3.2 ngày 1/11 (đã chốt ở họp tuần trước)",
+      "status": "superseded",
+      "evidence": ["u001"],
+      "note": "[Nash xem lại] Quy tắc 9: quyết định họp trước bị lật trong họp này → D1 là quyết định mới; giá trị cũ ghi như phương án bị thay (giống quy tắc 3)."
+    },
+    {
+      "id": "K1",
+      "type": "knowledge",
+      "thread": "advanced-report",
+      "content": "Báo cáo nâng cao để sang bản 3.3 (chốt từ họp tuần trước, giữ nguyên)",
+      "status": "open",
+      "evidence": ["u001", "u011"],
+      "note": "Quy tắc 9: nhắc lại quyết định họp trước → knowledge. u011 chỉ khẳng định lại khi khách hỏi, không phải quyết định mới."
+    },
+    {
+      "id": "B1",
+      "type": "blocker",
+      "thread": "release-32",
+      "content": "Regression 3.2 còn 4 bug mức cao, có bug mất dữ liệu khi đồng bộ offline (cần thêm 3 ngày để fix)",
+      "status": "open",
+      "evidence": ["u002", "u003"],
+      "note": "Vướng mắc đang chặn release; quy tắc 7: kèm câu bàn tiếp u003."
+    },
+    {
+      "id": "D1",
+      "type": "decision",
+      "thread": "release-32",
+      "content": "Release 3.2 dời sang thứ Năm 5/11",
+      "status": "final",
+      "decided_by": "Bình",
+      "evidence": ["u006", "u004"],
+      "note": "Chủ trì đồng ý rõ, không rào đón; lật quyết định 1/11 của họp trước. 'Dạ.' của Giang chỉ là đang nghe."
+    },
+    {
+      "id": "K2",
+      "type": "knowledge",
+      "thread": "release-32",
+      "content": "Khách Minh Long đã được hứa bản mới đầu tháng 11",
+      "status": "open",
+      "evidence": ["u005"],
+      "note": "Cam kết với khách đáng lưu; không phản đối đề xuất dời ngày."
+    },
+    {
+      "id": "T1",
+      "type": "task",
+      "thread": "release-32",
+      "content": "Báo khách Minh Long lịch release mới",
+      "status": "open",
+      "owner": "Nhật",
+      "deadline": "2026-10-30",
+      "deadline_text": "trong hôm nay",
+      "evidence": ["u008", "u009"],
+      "note": "'Ok chị, em gửi email ngay' = nhận rõ → open, hạn hôm nay 30/10."
+    },
+    {
+      "id": "R1",
+      "type": "request",
+      "thread": "advanced-report",
+      "content": "Khách Minh Long hỏi đưa báo cáo nâng cao vào bản 3.2",
+      "status": "open",
+      "evidence": ["u010"],
+      "note": "Yêu cầu từ khách; bị từ chối bằng quyết định cũ (K1)."
+    },
+    {
+      "id": "F1",
+      "type": "feedback",
+      "thread": "performance",
+      "content": "6 khách phàn nàn app chậm khi mở báo cáo tháng",
+      "status": "open",
+      "evidence": ["u012"],
+      "note": "Phản hồi của khách về sản phẩm."
+    },
+    {
+      "id": "T2",
+      "type": "task",
+      "thread": "release-32",
+      "content": "Gửi danh sách 4 bug mức cao kèm trạng thái lên kênh release mỗi sáng tới ngày release",
+      "status": "open",
+      "owner": "Thơ",
+      "deadline": null,
+      "deadline_text": null,
+      "evidence": ["u013"],
+      "note": "Tự nhận, không rào đón → open; việc lặp lại, không có hạn chót."
+    },
+    {
+      "id": "B2",
+      "type": "blocker",
+      "thread": "staging-ssl",
+      "content": "Chứng chỉ SSL staging hết hạn, QA không truy cập được HTTPS",
+      "status": "open",
+      "evidence": ["u014", "u015"],
+      "note": "Vướng mắc đang chặn QA; quy tắc 7: kèm câu bàn tiếp u015."
+    },
+    {
+      "id": "T3",
+      "type": "task",
+      "thread": "staging-ssl",
+      "content": "Gia hạn chứng chỉ SSL staging",
+      "status": "open",
+      "owner": "Giang",
+      "deadline": "2026-10-30",
+      "deadline_text": "trong hôm nay",
+      "evidence": ["u015", "u016"],
+      "note": "'Ok chị, em làm liền' = nhận rõ → open, hạn hôm nay."
+    }
+  ]
+}

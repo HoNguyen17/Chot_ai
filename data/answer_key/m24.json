@@ -1,0 +1,18 @@
+{
+  "meeting_id": "m24",
+  "labeler": "answer-key",
+  "items": [
+    {"id": "K1", "type": "knowledge", "thread": "release-32", "content": "Họp tuần trước đã chốt: bản 3.2 release ngày 1/11", "status": "open", "evidence": ["u001"]},
+    {"id": "K2", "type": "knowledge", "thread": "advanced-report", "content": "Họp tuần trước đã chốt: báo cáo nâng cao để sang bản 3.3", "status": "open", "evidence": ["u001"]},
+    {"id": "B1", "type": "blocker", "thread": "release-32", "content": "Regression 3.2 còn 4 bug mức cao, có bug mất dữ liệu khi đồng bộ offline", "status": "open", "evidence": ["u002"]},
+    {"id": "D1", "type": "decision", "thread": "release-32", "content": "Release 3.2 dời sang thứ Năm 5/11", "status": "final", "decided_by": "Bình", "evidence": ["u006", "u004"]},
+    {"id": "K3", "type": "knowledge", "thread": "release-32", "content": "Khách Minh Long đã được hứa bản mới đầu tháng 11", "status": "open", "evidence": ["u005"]},
+    {"id": "T1", "type": "task", "thread": "release-32", "content": "Báo khách Minh Long lịch release mới", "status": "open", "owner": "Nhật", "deadline": "2026-10-30", "deadline_text": "trong hôm nay", "evidence": ["u008", "u009"]},
+    {"id": "R1", "type": "request", "thread": "advanced-report", "content": "Khách Minh Long hỏi đưa báo cáo nâng cao vào bản 3.2", "status": "open", "evidence": ["u010"]},
+    {"id": "D2", "type": "decision", "thread": "advanced-report", "content": "Báo cáo nâng cao vẫn ở bản 3.3", "status": "final", "decided_by": "Bình", "evidence": ["u011"], "note": "Quy ước cũ: chủ trì trả lời dứt khoát, không rào đón → ghi thành quyết định."},
+    {"id": "F1", "type": "feedback", "thread": "performance", "content": "6 khách phàn nàn app chậm khi mở báo cáo tháng", "status": "open", "evidence": ["u012"]},
+    {"id": "T2", "type": "task", "thread": "release-32", "content": "Gửi danh sách 4 bug mức cao kèm trạng thái lên kênh release mỗi sáng tới ngày release", "status": "open", "owner": "Thơ", "deadline": null, "deadline_text": null, "evidence": ["u013"]},
+    {"id": "B2", "type": "blocker", "thread": "staging-ssl", "content": "Chứng chỉ SSL staging hết hạn, QA không truy cập được HTTPS", "status": "open", "evidence": ["u014"]},
+    {"id": "T3", "type": "task", "thread": "staging-ssl", "content": "Gia hạn chứng chỉ SSL staging", "status": "open", "owner": "Giang", "deadline": "2026-10-30", "deadline_text": "trong hôm nay", "evidence": ["u015", "u016"]}
+  ]
+}

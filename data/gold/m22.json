@@ -1,0 +1,301 @@
+{
+  "meeting_id": "m22",
+  "labeler": "nguyen",
+  "items": [
+    {
+      "id": "D1",
+      "type": "decision",
+      "thread": "slab-pour",
+      "content": "Đổ sàn tầng 5 sáng thứ Ba 3/11; công trình chịu tiền chờ của tổ đổ",
+      "status": "final",
+      "decided_by": "Đạo",
+      "evidence": ["u026", "u014"],
+      "note": "Bẫy họp dài, chủ đề quay lại 3 lần (u003, u012, u021). Toản (không thẩm quyền) nói 'chốt thứ Ba… đi anh' (u024) chỉ là đề xuất; u026 là chốt cuối của chủ trì, không ai lật lại."
+    },
+    {
+      "id": "O1",
+      "type": "option",
+      "thread": "slab-pour",
+      "content": "Đổ bê tông sàn tầng 5 sáng thứ Bảy 31/10 (tạm chốt giữa họp)",
+      "status": "superseded",
+      "evidence": ["u003", "u016"],
+      "note": "Quy tắc 3: chủ trì 'Ok vậy đổ thứ Bảy' (u016) rồi tự lật ở u023, bị thay bởi D1."
+    },
+    {
+      "id": "B1",
+      "type": "blocker",
+      "thread": "slab-pour",
+      "content": "Thứ Bảy dự báo mưa lớn, đổ dở dang phải xử lý mạch ngừng",
+      "status": "open",
+      "evidence": ["u004", "u005"],
+      "note": "Quy tắc 1 + 7: phản biện cụ thể (rủi ro thời tiết), kèm câu bàn tiếp u005. Dự báo thời tiết là tạm thời nên không tách knowledge."
+    },
+    {
+      "id": "K1",
+      "type": "knowledge",
+      "thread": "slab-pour",
+      "content": "Mưa khi bê tông chưa ninh kết làm bề mặt rỗ, phải mài lại thêm ~2 ngày",
+      "status": "open",
+      "evidence": ["u013"],
+      "note": "Kiến thức kỹ thuật trả lời câu hỏi của chủ trì (u012), đáng lưu."
+    },
+    {
+      "id": "B2",
+      "type": "blocker",
+      "thread": "slab-pour",
+      "content": "Dời sang thứ Ba thì tổ đổ bê tông phải chờ, mất hai ngày công ~12 triệu",
+      "status": "open",
+      "evidence": ["u015", "u025", "u026"],
+      "note": "Quy tắc 2 + 7: phản biện có số liệu → blocker + K2; nhắc lại ở u025, chủ trì xử lý ở u026 (công trình chịu)."
+    },
+    {
+      "id": "K2",
+      "type": "knowledge",
+      "thread": "slab-pour",
+      "content": "Tổ đổ bê tông chờ hai ngày tốn ~12 triệu tiền công",
+      "status": "open",
+      "evidence": ["u015"],
+      "note": "Số liệu trong phản biện u015 → đi kèm B2 (quy tắc 2)."
+    },
+    {
+      "id": "B3",
+      "type": "blocker",
+      "thread": "slab-pour",
+      "content": "Dự báo mới: thứ Bảy mưa từ 10 giờ sáng, đổ 6–10 giờ không kịp xong sàn",
+      "status": "open",
+      "evidence": ["u021", "u022", "u023"],
+      "note": "Quy tắc 1 + 7: phản biện cụ thể làm chủ trì lật quyết định thứ Bảy (u023)."
+    },
+    {
+      "id": "T1",
+      "type": "task",
+      "thread": "slab-pour",
+      "content": "Gửi lại phiếu yêu cầu bê tông cho trạm trộn, đổi ngày giao sang thứ Ba",
+      "status": "open",
+      "owner": "Sinh",
+      "deadline": "2026-10-28",
+      "deadline_text": "chiều nay",
+      "evidence": ["u028", "u029"],
+      "note": "'Ok anh, chiều nay em gửi' = nhận rõ → open, hạn hôm nay 28/10."
+    },
+    {
+      "id": "B4",
+      "type": "blocker",
+      "thread": "steel",
+      "content": "Thép phi 16 giao trễ 5 ngày; Hòa Bình báo thứ Hai cũng chưa chắc có vì nhà máy bảo trì",
+      "status": "open",
+      "evidence": ["u006", "u007", "u037"],
+      "note": "Quy tắc 7: câu nêu + câu bàn tiếp (u007 ảnh hưởng cột tầng 6, u037 cập nhật khi chủ đề quay lại)."
+    },
+    {
+      "id": "D2",
+      "type": "decision",
+      "thread": "steel",
+      "content": "Mua lô thép phi 16 này của Đông Á",
+      "status": "final",
+      "decided_by": "Đạo",
+      "evidence": ["u041", "u038"],
+      "note": "Chủ trì quyết rõ. 'Hòa Bình giao lô sau thì tính tiếp' không phải phương án được đề xuất → không tạo option."
+    },
+    {
+      "id": "B5",
+      "type": "blocker",
+      "thread": "steel",
+      "content": "Mua Đông Á giá cao hơn 3%, lô 25 tấn đội thêm ~15 triệu",
+      "status": "open",
+      "evidence": ["u039", "u040"],
+      "note": "Quy tắc 2 + 7: phản biện có số liệu → blocker + K3, kèm câu bàn tiếp u040."
+    },
+    {
+      "id": "K3",
+      "type": "knowledge",
+      "thread": "steel",
+      "content": "Thép Đông Á đắt hơn 3%, lô 25 tấn đội thêm ~15 triệu",
+      "status": "open",
+      "evidence": ["u039"],
+      "note": "Số liệu trong phản biện u039 → đi kèm B5 (quy tắc 2)."
+    },
+    {
+      "id": "K4",
+      "type": "knowledge",
+      "thread": "steel",
+      "content": "Hợp đồng mua thép trên 10 triệu phải có chữ ký giám đốc dự án",
+      "status": "open",
+      "evidence": ["u042"],
+      "note": "Quy định nội bộ đáng lưu."
+    },
+    {
+      "id": "T2",
+      "type": "task",
+      "thread": "steel",
+      "content": "Soạn hợp đồng Đông Á, gửi giám đốc dự án Khải ký online",
+      "status": "open",
+      "owner": "Lam",
+      "deadline": "2026-10-28",
+      "deadline_text": "trong hôm nay",
+      "evidence": ["u043", "u044"],
+      "note": "'Dạ, em gửi liền' = nhận rõ (không chỉ 'Dạ.') → open. Giao cho Lam (có mặt), anh Khải chỉ là người ký → không áp quy tắc 12."
+    },
+    {
+      "id": "B6",
+      "type": "blocker",
+      "thread": "safety",
+      "content": "3 công nhân làm trên giàn giáo tầng 4 không đeo dây an toàn",
+      "status": "open",
+      "evidence": ["u009"],
+      "note": "Vướng mắc an toàn đang treo."
+    },
+    {
+      "id": "K5",
+      "type": "knowledge",
+      "thread": "safety",
+      "content": "Quy định công ty: vi phạm an toàn lần đầu phạt 500 nghìn, lần hai cho nghỉ việc",
+      "status": "open",
+      "evidence": ["u010"],
+      "note": "Quy định đáng lưu."
+    },
+    {
+      "id": "B7",
+      "type": "blocker",
+      "thread": "safety",
+      "content": "Công nhân vi phạm mới vào, chưa được training kỹ",
+      "status": "open",
+      "evidence": ["u011"],
+      "note": "Quy tắc 1: phản biện cụ thể với việc phạt."
+    },
+    {
+      "id": "D3",
+      "type": "decision",
+      "thread": "safety",
+      "content": "Phạt đúng quy định 500 nghìn/người; công nhân mới phải học an toàn trước khi lên giàn giáo",
+      "status": "final",
+      "decided_by": "Đạo",
+      "evidence": ["u033", "u030"],
+      "note": "Chủ trì quyết rõ sau khi nghe hai phía; chủ đề an toàn quay lại sau 11 phút (u009 → u030)."
+    },
+    {
+      "id": "O2",
+      "type": "option",
+      "thread": "safety",
+      "content": "Lần này chỉ nhắc nhở, training lại cả tổ",
+      "status": "superseded",
+      "evidence": ["u031"],
+      "note": "Phương án bị loại; D3 final → superseded."
+    },
+    {
+      "id": "B8",
+      "type": "blocker",
+      "thread": "safety",
+      "content": "Bỏ qua vi phạm thì các tổ khác làm theo, khó quản lý",
+      "status": "open",
+      "evidence": ["u032"],
+      "note": "Quy tắc 1: phản biện cụ thể (rủi ro quản lý) với phương án nhắc nhở."
+    },
+    {
+      "id": "T3",
+      "type": "task",
+      "thread": "safety",
+      "content": "Tổ chức buổi training an toàn cho công nhân mới",
+      "status": "open",
+      "owner": "Toản",
+      "deadline": "2026-10-29",
+      "deadline_text": "thứ Năm",
+      "evidence": ["u034", "u035"],
+      "note": "'Ok anh, sáng thứ Năm em tổ chức' = nhận rõ → open. Họp thứ Tư 28/10 → thứ Năm 29/10."
+    },
+    {
+      "id": "T4",
+      "type": "task",
+      "thread": "safety",
+      "content": "Cho tổ trưởng kiểm tra dây an toàn đầu mỗi ca",
+      "status": "open",
+      "owner": "Quý",
+      "deadline": "2026-10-29",
+      "deadline_text": "mai",
+      "evidence": ["u036"],
+      "note": "Tự nhận, không rào đón → open; 'bắt đầu từ mai' = 29/10."
+    },
+    {
+      "id": "R1",
+      "type": "request",
+      "thread": "salary-advance",
+      "content": "Công nhân xin ứng trước một nửa lương tháng 11 để về quê",
+      "status": "open",
+      "evidence": ["u018"],
+      "note": "Yêu cầu từ công nhân (ngoài cuộc họp)."
+    },
+    {
+      "id": "K6",
+      "type": "knowledge",
+      "thread": "salary-advance",
+      "content": "Quỹ công trình còn ~300 triệu; ứng cho 40 người hết ~200 triệu",
+      "status": "open",
+      "evidence": ["u019"],
+      "note": "Số liệu tài chính đáng lưu, không phải phản biện."
+    },
+    {
+      "id": "D4",
+      "type": "decision",
+      "thread": "salary-advance",
+      "content": "Ứng lương tháng 11 cho công nhân — chờ hỏi giám đốc dự án",
+      "status": "deferred",
+      "decided_by": "Đạo",
+      "evidence": ["u020"],
+      "note": "Chủ trì hoãn, chờ cấp trên. Chưa từng chốt → không tạo option."
+    },
+    {
+      "id": "T5",
+      "type": "task",
+      "thread": "salary-advance",
+      "content": "Hỏi giám đốc dự án về việc ứng lương rồi trả lời công nhân",
+      "status": "open",
+      "owner": "Đạo",
+      "deadline": null,
+      "deadline_text": null,
+      "evidence": ["u020"],
+      "note": "Quy tắc 13: hành động tự nhận nằm trong câu hoãn vẫn tách task."
+    },
+    {
+      "id": "B9",
+      "type": "blocker",
+      "thread": "hoist",
+      "content": "Máy vận thăng chở người kêu lạ, đã dừng chạy",
+      "status": "open",
+      "evidence": ["u045", "u046"],
+      "note": "Vướng mắc đang treo; quy tắc 7: kèm câu bàn tiếp u046."
+    },
+    {
+      "id": "T6",
+      "type": "task",
+      "thread": "hoist",
+      "content": "Gọi bên cho thuê vận thăng xuống kiểm tra",
+      "status": "needs_confirmation",
+      "owner": null,
+      "deadline": null,
+      "deadline_text": null,
+      "evidence": ["u046", "u047"],
+      "note": "Bẫy 'ai đó…': 'Dạ.' của Quý không phải nhận việc → owner null."
+    },
+    {
+      "id": "B10",
+      "type": "blocker",
+      "thread": "stair-drawing",
+      "content": "Bản vẽ điều chỉnh cầu thang tầng 6 gửi tư vấn thiết kế từ tuần trước, chưa ai phản hồi",
+      "status": "open",
+      "evidence": ["u048", "u049"],
+      "note": "Vướng mắc đang treo; quy tắc 7: kèm câu bàn tiếp u049."
+    },
+    {
+      "id": "T7",
+      "type": "task",
+      "thread": "stair-drawing",
+      "content": "Gọi chủ trì thiết kế hối bản vẽ cầu thang tầng 6",
+      "status": "needs_confirmation",
+      "owner": "Sinh",
+      "deadline": "2026-10-30",
+      "deadline_text": "thứ Sáu",
+      "evidence": ["u049", "u050"],
+      "note": "'nhưng em chưa chắc' → needs_confirmation. Thứ Sáu này = 30/10."
+    }
+  ]
+}

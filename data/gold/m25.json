@@ -1,0 +1,139 @@
+{
+  "meeting_id": "m25",
+  "labeler": "nguyen",
+  "items": [
+    {
+      "id": "D1",
+      "type": "decision",
+      "thread": "fabric-supplier",
+      "content": "Dùng vải Phú Thịnh cho đơn áo khoác; nếu thứ Ba mẫu test không đạt thì quay về Thành Công",
+      "status": "final",
+      "decided_by": "Liên",
+      "evidence": ["u007", "u003"],
+      "note": "Quy tắc 11: 'Chốt B, nếu… thì quay về A' → B final (quyết định hiện hành), điều kiện ghi trong content."
+    },
+    {
+      "id": "O1",
+      "type": "option",
+      "thread": "fabric-supplier",
+      "content": "Giữ nhà cung cấp cũ Thành Công (68 nghìn/m, giao 10 ngày)",
+      "status": "open",
+      "evidence": ["u002", "u007"],
+      "note": "Quy tắc 11: A chưa bị loại hẳn (có thể quay lại nếu mẫu không đạt) → open, không superseded."
+    },
+    {
+      "id": "B1",
+      "type": "blocker",
+      "thread": "fabric-supplier",
+      "content": "Phú Thịnh chưa từng hợp tác, chưa có kết quả test độ co rút vải",
+      "status": "open",
+      "evidence": ["u004", "u005"],
+      "note": "Quy tắc 1 + 7: phản biện cụ thể (rủi ro chất lượng), kèm câu bàn tiếp u005."
+    },
+    {
+      "id": "K1",
+      "type": "knowledge",
+      "thread": "fabric-supplier",
+      "content": "Phú Thịnh làm mẫu test trong 2 ngày, miễn phí",
+      "status": "open",
+      "evidence": ["u005"],
+      "note": "Thông tin nhà cung cấp đáng lưu, không phải phản biện."
+    },
+    {
+      "id": "K2",
+      "type": "knowledge",
+      "thread": "fabric-supplier",
+      "content": "Đơn áo khoác giao khách ngày 5/12",
+      "status": "open",
+      "evidence": ["u006"],
+      "note": "Ràng buộc thời gian của đơn hàng, đáng lưu."
+    },
+    {
+      "id": "T1",
+      "type": "task",
+      "thread": "fabric-supplier",
+      "content": "Báo Phú Thịnh gửi mẫu vải test",
+      "status": "open",
+      "owner": "Tuấn",
+      "deadline": null,
+      "deadline_text": null,
+      "evidence": ["u008"],
+      "note": "Tự nhận rõ ('em báo… ngay') → open; không có hạn cụ thể."
+    },
+    {
+      "id": "T2",
+      "type": "task",
+      "thread": "fabric-supplier",
+      "content": "Test độ co rút mẫu vải Phú Thịnh",
+      "status": "open",
+      "owner": "Hồng",
+      "deadline": "2026-11-03",
+      "deadline_text": "thứ Ba",
+      "evidence": ["u009", "u010"],
+      "note": "'Dạ ok chị, thứ Ba có kết quả' = nhận rõ → open. Họp thứ Bảy 31/10 → thứ Ba 3/11."
+    },
+    {
+      "id": "T3",
+      "type": "task",
+      "thread": "cost-compare",
+      "content": "Làm bảng so sánh chi phí hai nhà cung cấp vải",
+      "status": "needs_confirmation",
+      "owner": "Phương",
+      "deadline": "2026-11-06",
+      "deadline_text": "thứ Sáu",
+      "evidence": ["u011", "u012"],
+      "note": "Quy tắc 12: giao cho người vắng mặt (Phương, ở # absent) → owner = Phương, chưa ai nhận trong họp → needs_confirmation."
+    },
+    {
+      "id": "T4",
+      "type": "task",
+      "thread": "cost-compare",
+      "content": "Nhắn chị Phương (đang nghỉ phép) về việc làm bảng so sánh",
+      "status": "open",
+      "owner": "Vĩnh",
+      "deadline": null,
+      "deadline_text": null,
+      "evidence": ["u012"],
+      "note": "Tự nhận, không rào đón → open."
+    },
+    {
+      "id": "B2",
+      "type": "blocker",
+      "thread": "qc-machine",
+      "content": "Máy kiểm tra độ bền màu hỏng, gửi mẫu ra ngoài test mất 3 ngày",
+      "status": "open",
+      "evidence": ["u013", "u014"],
+      "note": "Vướng mắc đang làm chậm QC; quy tắc 7: kèm câu bàn tiếp u014."
+    },
+    {
+      "id": "T5",
+      "type": "task",
+      "thread": "qc-machine",
+      "content": "Hỏi giá sửa máy kiểm tra độ bền màu",
+      "status": "needs_confirmation",
+      "owner": "Tuấn",
+      "deadline": null,
+      "deadline_text": null,
+      "evidence": ["u014", "u015"],
+      "note": "Chỉ đáp 'Dạ.' → needs_confirmation."
+    },
+    {
+      "id": "F1",
+      "type": "feedback",
+      "thread": "shirt-quality",
+      "content": "Khách phản hồi lô áo sơ mi tuần trước lệch đường may cổ áo ở ~3% sản phẩm",
+      "status": "open",
+      "evidence": ["u016"],
+      "note": "Phản hồi của khách về chất lượng."
+    },
+    {
+      "id": "R1",
+      "type": "request",
+      "thread": "labels",
+      "content": "Khách Nhật yêu cầu thêm nhãn mác song ngữ Nhật–Việt cho đơn áo khoác",
+      "status": "open",
+      "evidence": ["u017"],
+      "note": "Yêu cầu thêm việc từ khách."
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "meeting_id": "m23",
+  "labeler": "nguyen",
+  "items": [
+    {
+      "id": "D1",
+      "type": "decision",
+      "thread": "sales-channel",
+      "content": "Đi TikTok Shop trước, mở tháng 12; Shopee Mall để quý sau",
+      "status": "needs_confirmation",
+      "decided_by": "Vân",
+      "evidence": ["u006", "u004"],
+      "note": "Quy tắc 10: hai co-founder cùng thẩm quyền; Vân chốt nhưng Khánh vừa phản đối TikTok (u005) và sau đó chỉ 'Ờ.' (u007) → chưa đồng ý → needs_confirmation."
+    },
+    {
+      "id": "O1",
+      "type": "option",
+      "thread": "sales-channel",
+      "content": "Mở Shopee Mall",
+      "status": "open",
+      "evidence": ["u002"],
+      "note": "D1 chỉ needs_confirmation → phương án khác còn open."
+    },
+    {
+      "id": "B1",
+      "type": "blocker",
+      "thread": "sales-channel",
+      "content": "Shopee Mall tốn phí ~12% doanh thu",
+      "status": "open",
+      "evidence": ["u003"],
+      "note": "Quy tắc 2: phản biện có số liệu → blocker + K1."
+    },
+    {
+      "id": "K1",
+      "type": "knowledge",
+      "thread": "sales-channel",
+      "content": "Phí Shopee Mall (cố định + thanh toán) ~12% doanh thu",
+      "status": "open",
+      "evidence": ["u003"],
+      "note": "Số liệu trong phản biện u003 → đi kèm B1 (quy tắc 2)."
+    },
+    {
+      "id": "B2",
+      "type": "blocker",
+      "thread": "sales-channel",
+      "content": "TikTok Shop đổi chính sách liên tục, rủi ro hơn Shopee Mall",
+      "status": "open",
+      "evidence": ["u005"],
+      "note": "Quy tắc 1: phản biện cụ thể (rủi ro chính sách) của co-founder Khánh."
+    },
+    {
+      "id": "T1",
+      "type": "task",
+      "thread": "sales-channel",
+      "content": "Lên kế hoạch 30 video cho tháng đầu TikTok Shop",
+      "status": "open",
+      "owner": "Hảo",
+      "deadline": "2026-11-02",
+      "deadline_text": "thứ Hai",
+      "evidence": ["u008", "u009"],
+      "note": "'Dạ ok chị, thứ Hai em gửi' = nhận rõ → open. Họp thứ Năm 29/10 → thứ Hai tuần sau = 2/11."
+    },
+    {
+      "id": "D2",
+      "type": "decision",
+      "thread": "freeship",
+      "content": "Freeship cho đơn từ 299 nghìn, áp dụng từ 1/11",
+      "status": "final",
+      "decided_by": "Vân",
+      "evidence": ["u012", "u010"],
+      "note": "Cả hai người thẩm quyền đồng ý: Khánh đề xuất (u010), Vân chốt (u012), Khánh 'Ok.' (u013) → final (khác D1)."
+    },
+    {
+      "id": "K2",
+      "type": "knowledge",
+      "thread": "freeship",
+      "content": "Đơn trung bình hiện 260 nghìn",
+      "status": "open",
+      "evidence": ["u011"],
+      "note": "Số liệu kinh doanh; không phản đối đề xuất nên không thành blocker."
+    },
+    {
+      "id": "B3",
+      "type": "blocker",
+      "thread": "warehouse",
+      "content": "Kho thiếu kệ, 2 pallet hàng mới để dưới sàn",
+      "status": "open",
+      "evidence": ["u014", "u015"],
+      "note": "Vướng mắc đang treo; quy tắc 7: kèm câu bàn tiếp u015."
+    },
+    {
+      "id": "T2",
+      "type": "task",
+      "thread": "warehouse",
+      "content": "Đặt thêm và lắp 4 kệ sắt cho kho",
+      "status": "open",
+      "owner": "Phụng",
+      "deadline": "2026-10-31",
+      "deadline_text": "thứ Bảy",
+      "evidence": ["u015", "u016"],
+      "note": "'Ok anh, thứ Bảy em lắp' = nhận rõ → open. Thứ Bảy này = 31/10."
+    },
+    {
+      "id": "F1",
+      "type": "feedback",
+      "thread": "product-review",
+      "content": "Khách chê sữa rửa mặt mới mùi hơi nồng, 15 đánh giá 3 sao trong tuần",
+      "status": "open",
+      "evidence": ["u017", "u018"],
+      "note": "Phản hồi của khách về sản phẩm; quy tắc 7: kèm câu bàn tiếp u018."
+    },
+    {
+      "id": "T3",
+      "type": "task",
+      "thread": "product-review",
+      "content": "Gom các review chê mùi gửi nhà máy",
+      "status": "needs_confirmation",
+      "owner": "Hảo",
+      "deadline": null,
+      "deadline_text": null,
+      "evidence": ["u018", "u019"],
+      "note": "Chỉ đáp 'Dạ vâng.' → needs_confirmation."
+    }
+  ]
+}

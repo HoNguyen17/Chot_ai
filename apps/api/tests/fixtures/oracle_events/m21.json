@@ -1,0 +1,24 @@
+{
+  "threads": [
+    {"id": "tet-tour", "title": "Sản phẩm tour chính dịp Tết"},
+    {"id": "private-tour", "title": "Tour riêng cho khách đoàn Hòa An"},
+    {"id": "hotel-deposit", "title": "Đặt cọc khách sạn dịp Tết"}
+  ],
+  "events": [
+    {"utt": "u002", "thread": "tet-tour", "kind": "info", "speaker": "Thanh", "content": "Tour Đà Lạt 4 ngày năm ngoái bán hết sớm nhất (12 đoàn); xe giường nằm dịp Tết khó thuê", "quote": "Năm ngoái tour Đà Lạt 4 ngày bán hết sớm nhất, 12 đoàn"},
+    {"utt": "u003", "thread": "tet-tour", "kind": "propose", "speaker": "Trinh", "key": "phu-quoc", "content": "Tour Phú Quốc bay thẳng 3 ngày 2 đêm", "quote": "Em đề xuất năm nay đẩy tour Phú Quốc bay thẳng"},
+    {"utt": "u004", "thread": "tet-tour", "kind": "object", "speaker": "Đăng", "key": "phu-quoc", "content": "Vé máy bay Tết ~5 triệu/chiều, giá tour vượt 15 triệu/người", "quote": "giá tour sẽ vượt 15 triệu một người"},
+    {"utt": "u004", "thread": "tet-tour", "kind": "info", "speaker": "Đăng", "content": "Vé máy bay Tết đi Phú Quốc ~5 triệu/chiều", "quote": "Vé máy bay Tết đi Phú Quốc đã lên gần 5 triệu một chiều"},
+    {"utt": "u005", "thread": "tet-tour", "kind": "propose", "speaker": "Thanh", "key": "dalat-limo", "content": "Tour Đà Lạt đi limousine 9 chỗ, đặt trước 20 xe", "quote": "làm tour Đà Lạt nhưng đi bằng xe limousine 9 chỗ"},
+    {"utt": "u007", "thread": "tet-tour", "kind": "agree", "speaker": "Hoàng", "key": "dalat-limo", "content": "Tour Đà Lạt limousine là sản phẩm chính dịp Tết; Phú Quốc để dành cho mùa hè", "quote": "Vậy làm theo hướng đó đi"},
+    {"utt": "u008", "thread": "tet-tour", "kind": "assign", "speaker": "Hoàng", "key": "giu-xe", "owner": "Thanh", "content": "Giữ chỗ và đặt cọc 20 xe limousine với nhà xe", "deadline_text": "trong tuần này", "quote": "Thanh giữ chỗ 20 xe limousine với nhà xe, trong tuần này đặt cọc nhé"},
+    {"utt": "u009", "thread": "tet-tour", "kind": "commit", "speaker": "Thanh", "key": "giu-xe", "owner": "Thanh", "deadline_text": "thứ Năm", "quote": "Dạ ok anh, thứ Năm em đặt cọc"},
+    {"utt": "u010", "thread": "tet-tour", "kind": "commit", "speaker": "Trinh", "key": "landing-page", "owner": "Trinh", "content": "Làm bộ ảnh và landing page tour Đà Lạt", "deadline_text": "trước ngày 10/11", "quote": "Em sẽ làm bộ ảnh và landing page tour Đà Lạt, xong trước ngày 10/11"},
+    {"utt": "u011", "thread": "private-tour", "kind": "request", "speaker": "Đăng", "content": "Khách đoàn Hòa An hỏi tour riêng 40 người, đi mùng 2 Tết", "quote": "Khách đoàn công ty Hòa An hỏi có làm tour riêng 40 người"},
+    {"utt": "u012", "thread": "private-tour", "kind": "assign", "speaker": "Hoàng", "key": "bao-gia-doan", "owner": "Đăng", "content": "Báo giá tour riêng cho khách đoàn Hòa An", "quote": "Đăng báo giá tour riêng cho họ nhé"},
+    {"utt": "u013", "thread": "private-tour", "kind": "commit", "speaker": "Đăng", "key": "bao-gia-doan", "owner": "Đăng", "quote": "Dạ vâng"},
+    {"utt": "u014", "thread": "hotel-deposit", "kind": "info", "speaker": "Thanh", "content": "Từ năm nay khách sạn Đà Lạt bắt buộc cọc 50% cho booking dịp Tết, không hoàn", "quote": "khách sạn ở Đà Lạt bắt buộc cọc 50% cho booking dịp Tết, không hoàn"},
+    {"utt": "u015", "thread": "hotel-deposit", "kind": "assign", "speaker": "Hoàng", "key": "dong-tien-coc", "owner": "Thanh", "content": "Tính lại dòng tiền đặt cọc cho cả mùa Tết", "quote": "Vậy Thanh tính lại dòng tiền đặt cọc cho cả mùa Tết"},
+    {"utt": "u016", "thread": "hotel-deposit", "kind": "commit", "speaker": "Thanh", "key": "dong-tien-coc", "owner": "Thanh", "deadline_text": "cuối tuần này", "quote": "Ok anh, cuối tuần này em gửi bảng"}
+  ]
+}
