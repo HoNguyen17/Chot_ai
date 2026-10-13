@@ -81,21 +81,14 @@ def _effective_agree(agrees: list[Event], tr: Transcript) -> Event | None:
 def _unresolved_co_chair(evs: list[Event], agree: Event, tr: Transcript) -> str | None:
     """Đồng chủ trì đã phản đối phương án được chọn mà chưa đồng ý lại (quy ước Nash 10)."""
     for chair in tr.chairs - {agree.speaker}:
-        objected = [
+        mine = [
             e
             for e in evs
-            if e.speaker == chair and e.kind == EventKind.OBJECT and e.key in (None, agree.key)
+            if e.speaker == chair
+            and e.key in (None, agree.key)
+            and e.kind in (EventKind.OBJECT, EventKind.AGREE)
         ]
-        if not objected:
-            continue
-        last_obj = tr.order(objected[-1].utt)
-        if not any(
-            e.speaker == chair
-            and e.kind == EventKind.AGREE
-            and e.key == agree.key
-            and tr.order(e.utt) > last_obj
-            for e in evs
-        ):
+        if mine and mine[-1].kind == EventKind.OBJECT:
             return chair
     return None
 
@@ -108,6 +101,32 @@ def _indirect_agree(evs: list[Event], tr: Transcript) -> tuple[Event, Utterance]
         if nxt and nxt.speaker in tr.chairs and is_backchannel(nxt.text):
             return e, nxt
     return None
+
+
+def _options(
+    evs: list[Event], chosen_key: str | None, status: Status, tr: Transcript, ids: _Ids
+) -> list[Item]:
+    """Mỗi phương án khác phương án được chọn → một mục option (giữ làm lịch sử)."""
+    items: list[Item] = []
+    seen: set[str | None] = {chosen_key}
+    for e in evs:
+        if e.kind in (EventKind.PROPOSE, EventKind.REVISE) and e.key not in seen:
+            seen.add(e.key)
+            items.append(
+                Item(
+                    id=ids.next(ItemType.OPTION),
+                    type=ItemType.OPTION,
+                    thread=e.thread,
+                    content=_option_content(evs, e.key),
+                    status=status,
+                    evidence=[
+                        _evidence(x, tr)
+                        for x in evs
+                        if x.key == e.key and x.kind in (EventKind.PROPOSE, EventKind.REVISE)
+                    ],
+                )
+            )
+    return items
 
 
 def _option_content(events: list[Event], key: str | None) -> str:
@@ -160,25 +179,9 @@ def resolve_thread(events: list[Event], tr: Transcript, thread_title: str, ids: 
             flags.append("đã đổi ý trong cuộc họp — xem timeline")
 
         chosen_key = last_agree.key
-        option_items: list[Item] = []
-        seen: set[str | None] = {chosen_key}
-        for e in evs:
-            if e.kind in (EventKind.PROPOSE, EventKind.REVISE) and e.key not in seen:
-                seen.add(e.key)
-                option_items.append(
-                    Item(
-                        id=ids.next(ItemType.OPTION),
-                        type=ItemType.OPTION,
-                        thread=thread_id,
-                        content=_option_content(evs, e.key),
-                        status=Status.SUPERSEDED if replaces else Status.OPEN,
-                        evidence=[
-                            _evidence(x, tr)
-                            for x in evs
-                            if x.key == e.key and x.kind in (EventKind.PROPOSE, EventKind.REVISE)
-                        ],
-                    )
-                )
+        option_items = _options(
+            evs, chosen_key, Status.SUPERSEDED if replaces else Status.OPEN, tr, ids
+        )
         chosen_proposals = [
             x
             for x in evs
@@ -220,21 +223,7 @@ def resolve_thread(events: list[Event], tr: Transcript, thread_title: str, ids: 
     indirect = _indirect_agree(evs, tr)
     if indirect:
         proposal, nod = indirect
-        others: list[Item] = []
-        seen_keys: set[str | None] = {proposal.key}
-        for e in evs:
-            if e.kind in (EventKind.PROPOSE, EventKind.REVISE) and e.key not in seen_keys:
-                seen_keys.add(e.key)
-                others.append(
-                    Item(
-                        id=ids.next(ItemType.OPTION),
-                        type=ItemType.OPTION,
-                        thread=thread_id,
-                        content=_option_content(evs, e.key),
-                        status=Status.OPEN,
-                        evidence=[_evidence(e, tr)],
-                    )
-                )
+        others = _options(evs, proposal.key, Status.OPEN, tr, ids)
         decision = Item(
             id=ids.next(ItemType.DECISION),
             type=ItemType.DECISION,
@@ -294,11 +283,10 @@ def resolve_task(events: list[Event], tr: Transcript, ids: _Ids) -> Item:
     )
     declined = any(e.kind == EventKind.DECLINE for e in replies)
 
-    if owner is None:
+    if owner is None or absent_owner:
         status = Status.NEEDS_CONFIRMATION
-        flags.append("chưa rõ ai nhận việc")
-    elif absent_owner:
-        status = Status.NEEDS_CONFIRMATION
+        if owner is None:
+            flags.append("chưa rõ ai nhận việc")
     elif declined:
         status = Status.NEEDS_CONFIRMATION
         flags.append("owner từ chối hoặc trì hoãn")
