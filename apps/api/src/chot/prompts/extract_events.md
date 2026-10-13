@@ -3,6 +3,7 @@ Bạn là bộ phân tích diễn biến cuộc họp tiếng Việt (có trộn
 ## 1. Chủ đề (threads)
 - Mỗi vấn đề cần quyết định / nhóm việc là một chủ đề. `id` dạng slug tiếng Anh ngắn (vd `payment-gateway`), `title` tiếng Việt ngắn.
 - Một chủ đề có thể quay lại nhiều lần trong cuộc họp → dùng CÙNG `id`.
+- Chủ đề = CÂU HỎI cần quyết định, không phải từng phương án. Mọi phương án trả lời cùng một câu hỏi (kể cả phương án mới xuất hiện giữa chừng, câu chốt cuối) nằm chung một `thread`. Đừng tạo thread mới chỉ vì người nói đổi cách diễn đạt.
 
 ## 2. Loại sự kiện (kind)
 Chuỗi quyết định:
@@ -12,6 +13,11 @@ Chuỗi quyết định:
 - `agree`: đồng ý / chốt một phương án. `key` = phương án được đồng ý. Gán cả khi đồng ý có rào đón (khi đó `hedged=true`).
 - `defer`: hoãn quyết định, chuyển cho người khác quyết, "để tuần sau", "chưa chốt được".
 - `reopen`: huỷ một đồng thuận trước đó ("thôi khoan", "khoan đã").
+
+Quy tắc `key` (QUAN TRỌNG — luật ghép sự kiện theo `key`):
+- Mỗi phương án có MỘT `key` duy nhất, đặt ở lần đầu nó được nêu. `object` / `agree` / `revise` nhắc lại phương án đó phải dùng ĐÚNG NGUYÊN VĂN `key` và `thread` đã đặt.
+- Một câu nêu nhiều phương án ("có hai lựa chọn: A, và B") → mỗi phương án một sự kiện `propose` riêng, mỗi cái một `key`. Không gộp thành một key kiểu "hai-phuong-an".
+- Câu chốt thêm chi tiết cho một phương án đã nêu → vẫn dùng `key` của phương án đó.
 
 Công việc:
 - `assign`: giao việc cho người khác hoặc TỰ NHẬN việc ("em sẽ…"). `owner` = người làm, `key` = nhãn ngắn của việc, `deadline_text` = cụm thời hạn nguyên văn nếu có.
@@ -29,6 +35,7 @@ Thông tin khác:
 - "dạ", "vâng", "ừ", "ừm", "ờ", "dạ vâng" đứng một mình = ĐANG NGHE. KHÔNG tạo sự kiện `agree` hay `commit`.
 - "để em xem lại", "để em tính", "để em hỏi thử" khi được giao việc = `decline` (trì hoãn lịch sự), KHÔNG phải `commit`.
 - "để chị báo giá lại", "chị sẽ hỏi legal" (hành động cụ thể, tự làm) = `assign` tự nhận.
+- Chủ trì vừa QUYẾT vừa giao việc trong cùng câu ("anh quyết…", "anh duyệt…", "từ tuần sau làm X, Y lo phần đó") → sinh HAI sự kiện cùng `utt`: `agree` (thread riêng cho quyết định, `key` = điều được quyết) và `assign` (việc được giao).
 - Đặt `hedged=true` khi câu có rào đón: "tạm thời", "nếu mà", "hay là", "chắc là", "nghiêng về", "thích … hơn", "thử", "phải hỏi lại".
 - Câu chứa chữ "chốt" chưa chắc là đồng ý: "chưa chốt được", "nếu chốt 22/11 thì…", "mình chốt … đi anh" (người không có thẩm quyền thúc giục) → lần lượt là `defer`, `object`/bỏ qua, `propose`.
 - Không suy đoán: chỉ dùng tên có trong danh sách người tham gia. Không rõ ai làm → `owner=null`. Không nói hạn → `deadline_text=null`.

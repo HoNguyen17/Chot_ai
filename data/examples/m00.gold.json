@@ -22,6 +22,15 @@
       "note": "Phương án bị thay thế, giữ lại làm lịch sử."
     },
     {
+      "id": "B1",
+      "type": "blocker",
+      "thread": "task-tool",
+      "content": "Trello không có workflow bug tracking cho QA",
+      "status": "open",
+      "evidence": ["u003", "u004"],
+      "note": "Quy ước 1 (Nash): phản biện có nội dung cụ thể → blocker; kèm câu bàn tiếp u004 (quy tắc 7)."
+    },
+    {
       "id": "T1",
       "type": "task",
       "thread": "task-tool",
