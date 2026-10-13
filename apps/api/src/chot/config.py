@@ -32,6 +32,10 @@ class Settings:
     llm_global_limit_per_hour: int = field(
         default_factory=lambda: int(_env("LLM_GLOBAL_LIMIT_PER_HOUR", "60"))
     )
+    # Demo công khai: tắt GET /meetings (lộ cuộc họp của người khác) và /docs.
+    public_demo: bool = field(
+        default_factory=lambda: (_env("PUBLIC_DEMO", "false") or "").lower() == "true"
+    )
     database_url: str | None = field(default_factory=lambda: _env("DATABASE_URL"))
     cors_origins: tuple[str, ...] = field(
         default_factory=lambda: tuple(

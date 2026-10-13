@@ -97,8 +97,8 @@ sequenceDiagram
 |---|---|---|
 | `keyword` | Câu có "chốt/thống nhất/quyết định/đồng ý" → Đã chốt | Baseline để so sánh (cố tình ngây thơ) |
 | `summary` (chỉ eval) | 1 prompt "liệt kê quyết định + action items" | Baseline giống đa số tutorial/sản phẩm |
-| `replay` | Luật chạy trên sự kiện đã lưu, thiếu thì rơi về keyword | Demo m01–m05 không cần key; sửa luật không tốn token |
-| `llm` | LLM gán sự kiện → luật → grounding | **Pipeline chính** |
+| `replay` | Luật chạy trên sự kiện đã lưu, thiếu thì rơi về keyword | Demo m01–m25 không cần key; sửa luật không tốn token |
+| `llm` | LLM gán sự kiện → luật → grounding. Transcript mẫu **nguyên văn** (`demo_events/mXX.txt`) → replay output LLM đã lưu, không gọi LLM | **Pipeline chính** (cả bản demo công khai) |
 
 ## 5. API
 
@@ -106,32 +106,51 @@ sequenceDiagram
 |---|---|---|
 | GET | `/health` | Phiên bản + builder đang dùng |
 | POST | `/meetings` | `{transcript_text, meeting_id?}` → xử lý và trả Ledger |
-| GET | `/meetings` | Danh sách cuộc họp |
+| GET | `/meetings` | Danh sách cuộc họp (tắt khi `PUBLIC_DEMO=true`) |
 | GET | `/meetings/{id}` | Transcript + Ledger + trạng thái duyệt |
 | PATCH | `/meetings/{id}/items/{item_id}` | Sửa `status/owner/deadline/content/decided_by` hoặc `approved` |
 | POST | `/meetings/{id}/publish` | 409 nếu còn mục "Cần xác nhận" chưa duyệt |
 | GET | `/meetings/{id}/export?format=md\|csv\|json` | Biên bản / task list / ledger |
 
-OpenAPI tự sinh tại `http://localhost:8000/docs`.
+Mỗi `POST /meetings` tạo record với id ngẫu nhiên (12 ký tự hex), tách khỏi `meeting_id` dùng cho replay. OpenAPI tự sinh tại `http://localhost:8000/docs` (tắt khi `PUBLIC_DEMO=true`).
 
 ## 6. Deploy
 
+Bản demo công khai: **https://chot.nashng.dev** (web) · **https://api.chot.nashng.dev** (API). Làm theo từng bước: `bash scripts/deploy_wizard.sh` (chỉ in hướng dẫn + kiểm tra bằng curl/nslookup).
+
 ```mermaid
 flowchart LR
-  GH["GitHub repo"] -->|root: apps/web| V["Vercel<br/>NEXT_PUBLIC_API_URL"]
-  GH -->|Dockerfile: apps/api| RD["Render / Railway<br/>LLM_*, DATABASE_URL, CORS_ORIGINS"]
-  RD --> SB[("Supabase Postgres<br/>chạy db/migrations/001_init.sql")]
-  RD --> L["LLM API"]
-  V -->|HTTPS| RD
+  GH["GitHub repo"] -->|root: apps/web| V["Vercel<br/>chot.nashng.dev<br/>NEXT_PUBLIC_API_URL"]
+  GH -->|Dockerfile: apps/api| RW["Railway<br/>api.chot.nashng.dev<br/>LLM_*, CORS_ORIGINS, PUBLIC_DEMO"]
+  PB["Porkbun DNS (nashng.dev)<br/>CNAME chot → Vercel<br/>CNAME api.chot → Railway"] -.-> V
+  PB -.-> RW
+  RW --> L["LLM API (gpt-4.1-mini)"]
+  V -->|HTTPS + CORS| RW
 ```
 
-1. **Supabase:** tạo project → SQL editor → chạy `db/migrations/001_init.sql` → lấy connection string (`?sslmode=require`).
-2. **API (Render/Railway):** New service từ repo, Docker, root `apps/api`. Env: `LEDGER_BUILDER=llm`, `LLM_*`, `DATABASE_URL`, `CORS_ORIGINS=https://<app>.vercel.app`.
-3. **Web (Vercel):** Import repo, Root Directory = `apps/web`. Env: `NEXT_PUBLIC_API_URL=https://<api>.onrender.com`.
+1. **API (Railway):** New Project → Deploy from GitHub repo → Root Directory `apps/api` (Dockerfile, đọc `$PORT`, chạy user không phải root). Variables:
+
+   | Biến | Giá trị |
+   |---|---|
+   | `LEDGER_BUILDER` | `llm` |
+   | `REPLAY_EVENTS_DIR` | `demo_events` |
+   | `LLM_API_KEY` / `LLM_MODEL` | key OpenAI / `gpt-4.1-mini` |
+   | `MAX_TRANSCRIPT_CHARS` | `20000` |
+   | `LLM_RATE_LIMIT_PER_HOUR` / `LLM_GLOBAL_LIMIT_PER_HOUR` | `10` / `60` |
+   | `PUBLIC_DEMO` | `true` |
+   | `CORS_ORIGINS` | `https://chot.nashng.dev` |
+
+   Custom Domain `api.chot.nashng.dev` → Railway đưa CNAME target.
+2. **Web (Vercel):** Import repo, Root Directory `apps/web`. Env `NEXT_PUBLIC_API_URL=https://api.chot.nashng.dev` (nhúng lúc build — đổi thì phải redeploy). Domain `chot.nashng.dev` → Vercel đưa CNAME.
+3. **DNS (Porkbun):** thêm 2 CNAME `chot` và `api.chot` theo giá trị ở trên (TTL 600), không sửa bản ghi cũ. SSL do Vercel/Railway tự cấp.
+
+**Không có DB:** API lưu trong RAM (`InMemoryRepository`, tối đa 500 record, cũ nhất bị xoá) → restart/redeploy là mất. Đủ cho demo; `PostgresRepository` + `db/migrations` để dành.
+
+**Giới hạn của bản demo:** transcript ≤ 20.000 ký tự (body ≤ ~120 KB), 10 lượt gọi LLM/giờ/IP và 60 lượt/giờ toàn cục (in-memory, 1 instance — đừng scale ngang khi chưa chuyển sang Redis). Trần chi phí cứng: đặt budget tháng ở OpenAI project.
 
 > **Vì sao API không đặt trên Vercel?** Một cuộc họp 90 phút có thể mất 20–60 giây gọi LLM; serverless function dễ vượt giới hạn thời gian. Khi cần chạy nền: thêm hàng đợi (Inngest / Celery + Redis) như một adapter mới.
 >
-> **Lưu ý dữ liệu:** Vercel, Render, Supabase và LLM API quốc tế đặt server ở nước ngoài → theo Luật 91/2025/QH15 đây là chuyển dữ liệu ra nước ngoài. Chỉ dùng cho demo / pilot có consent. Bán cho khách thật: host tại VN + model tự host (xem [PRD §4](PRD.md#4-quyết-định--rủi-ro)).
+> **Lưu ý dữ liệu:** Vercel, Railway và LLM API quốc tế đặt server ở nước ngoài → theo Luật 91/2025/QH15 đây là chuyển dữ liệu ra nước ngoài. Chỉ dùng cho demo / pilot có consent. Bán cho khách thật: host tại VN + model tự host (xem [PRD §4](PRD.md#4-quyết-định--rủi-ro)).
 
 ## 7. Lộ trình mở rộng — cắm vào đâu?
 

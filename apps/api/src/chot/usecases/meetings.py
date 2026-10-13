@@ -55,10 +55,10 @@ class MeetingService:
 
     def process(self, transcript_text: str, meeting_id: str | None = None) -> MeetingRecord:
         tr = self.parser(transcript_text, meeting_id)
-        if not meeting_id and tr.meeting_id == "meeting":
-            tr = tr.model_copy(update={"meeting_id": uuid.uuid4().hex[:8]})
         ledger = self.builder.build(tr)
-        record = MeetingRecord(id=tr.meeting_id, transcript=tr, ledger=ledger)
+        # id record ngẫu nhiên, tách khỏi meeting_id (dùng cho replay): không đoán được,
+        # hai người cùng chọn mẫu m01 không ghi đè record của nhau.
+        record = MeetingRecord(id=uuid.uuid4().hex[:12], transcript=tr, ledger=ledger)
         self.repo.save(record)
         return record
 

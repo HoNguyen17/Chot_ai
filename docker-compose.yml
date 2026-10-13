@@ -1,35 +1,17 @@
-# Local dev: chạy cả 3 phần bằng một lệnh.  `make up`  (hoặc `docker compose up --build`)
-# Web:  http://localhost:3000   API: http://localhost:8000/docs   DB: localhost:5432
-# Production KHÔNG dùng file này: web → Vercel, api → Render/Railway, db → Supabase (docs/ARCHITECTURE.md#deploy)
+# Local: chạy api + web bằng một lệnh.  `make up`  (hoặc `docker compose up --build`)
+# Web: http://localhost:3000   API: http://localhost:8000/docs
+# Production KHÔNG dùng file này: web → Vercel, api → Railway (docs/ARCHITECTURE.md §6).
+# Chưa có DB: API lưu trong RAM, restart là mất (db/migrations để dành cho PostgresRepository).
 
 services:
-  db:
-    image: pgvector/pgvector:pg16
-    environment:
-      POSTGRES_USER: chot
-      POSTGRES_PASSWORD: chot
-      POSTGRES_DB: chot
-    ports: ["5432:5432"]
-    volumes:
-      - dbdata:/var/lib/postgresql/data
-      - ./db/migrations:/docker-entrypoint-initdb.d:ro
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U chot"]
-      interval: 5s
-      retries: 10
-
   api:
     build: ./apps/api
     env_file:
       - path: .env
         required: false
     environment:
-      DATABASE_URL: postgresql://chot:chot@db:5432/chot
       CORS_ORIGINS: http://localhost:3000
     ports: ["8000:8000"]
-    depends_on:
-      db:
-        condition: service_healthy
 
   web:
     build:
@@ -38,6 +20,3 @@ services:
         NEXT_PUBLIC_API_URL: http://localhost:8000
     ports: ["3000:3000"]
     depends_on: [api]
-
-volumes:
-  dbdata:

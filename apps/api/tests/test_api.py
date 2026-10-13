@@ -24,19 +24,20 @@ def test_full_flow(data_dir):
     r = c.post("/meetings", json={"transcript_text": text})
     assert r.status_code == 201
     body = r.json()
-    assert body["id"] == "m01" and body["ledger"]["items"]
+    mid = body["id"]
+    assert body["ledger"]["items"]
 
     item_id = body["ledger"]["items"][0]["id"]
-    r = c.patch(f"/meetings/m01/items/{item_id}", json={"status": "needs_confirmation"})
+    r = c.patch(f"/meetings/{mid}/items/{item_id}", json={"status": "needs_confirmation"})
     assert r.status_code == 200
 
     # Còn mục "Cần xác nhận" chưa duyệt? Ở đây vừa sửa nên đã tính là duyệt → publish được.
-    assert c.post("/meetings/m01/publish").status_code == 200
+    assert c.post(f"/meetings/{mid}/publish").status_code == 200
 
-    md = c.get("/meetings/m01/export?format=md")
+    md = c.get(f"/meetings/{mid}/export?format=md")
     assert md.status_code == 200 and "BIÊN BẢN HỌP" in md.text
-    assert c.get("/meetings/m01/export?format=csv").text.startswith("id,task")
-    assert c.get("/meetings").json()[0]["id"] == "m01"
+    assert c.get(f"/meetings/{mid}/export?format=csv").text.startswith("id,task")
+    assert c.get("/meetings").json()[0]["id"] == mid
 
 
 def test_publish_blocked_until_needs_confirmation_reviewed():
@@ -66,11 +67,11 @@ def test_publish_blocked_until_needs_confirmation_reviewed():
 
     text = "# participants: Sếp (chủ trì); An\n[00:01] Sếp: An làm X nhé.\n[00:02] An: Dạ vâng."
     body = c.post("/meetings", json={"transcript_text": text, "meeting_id": "x1"}).json()
-    task = body["ledger"]["items"][0]
+    mid, task = body["id"], body["ledger"]["items"][0]
     assert task["status"] == "needs_confirmation"
-    assert c.post("/meetings/x1/publish").status_code == 409
-    c.patch(f"/meetings/x1/items/{task['id']}", json={"approved": True})
-    assert c.post("/meetings/x1/publish").status_code == 200
+    assert c.post(f"/meetings/{mid}/publish").status_code == 409
+    c.patch(f"/meetings/{mid}/items/{task['id']}", json={"approved": True})
+    assert c.post(f"/meetings/{mid}/publish").status_code == 200
 
 
 def test_bad_transcript_returns_422():
@@ -162,3 +163,33 @@ def test_edited_sample_goes_to_llm(monkeypatch, data_dir):
     text = (data_dir / "raw" / "m01.txt").read_text(encoding="utf-8") + "\n[00:30:00] Hùng: Thêm."
     r = c.post("/meetings", json={"transcript_text": text, "meeting_id": "m01"})
     assert r.status_code == 201 and fake.calls == 1
+
+
+def test_record_ids_are_random_not_meeting_id(data_dir):
+    c = _client()
+    text = (data_dir / "raw" / "m01.txt").read_text(encoding="utf-8")
+    ids = {c.post("/meetings", json={"transcript_text": text}).json()["id"] for _ in range(2)}
+    assert len(ids) == 2 and "m01" not in ids
+
+
+def test_public_demo_hides_list_and_docs(monkeypatch):
+    monkeypatch.setenv("PUBLIC_DEMO", "true")
+    c = _client()
+    assert c.get("/meetings").status_code in (404, 405)
+    assert c.get("/docs").status_code == 404 and c.get("/openapi.json").status_code == 404
+
+
+def test_rejects_oversized_body():
+    r = _client().post("/meetings", json={"transcript_text": "x" * 200_000})
+    assert r.status_code == 413 and "quá lớn" in r.json()["detail"]
+
+
+def test_memory_repo_keeps_latest_records(monkeypatch, data_dir):
+    from chot.adapters.persistence import memory
+
+    monkeypatch.setattr(memory, "MAX_RECORDS", 2)
+    repo = memory.InMemoryRepository()
+    svc = MeetingService(repo, KeywordBaseline(), parse_transcript)
+    text = (data_dir / "raw" / "m01.txt").read_text(encoding="utf-8")
+    first, *_ = [svc.process(text).id for _ in range(3)]
+    assert len(repo.list()) == 2 and repo.get(first) is None

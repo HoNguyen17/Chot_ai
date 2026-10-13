@@ -7,16 +7,16 @@
 ## Chạy thử trong 2 phút (không cần API key)
 
 ```bash
-cp .env.example .env          # LEDGER_BUILDER=replay: demo m01–m05 bằng sự kiện có sẵn
+cp .env.example .env          # LEDGER_BUILDER=replay: demo m01–m25 bằng output LLM đã lưu
 make install                  # Python venv + npm
-make test                     # 54 test, < 1 giây
+make test                     # 74 test, < 1 giây
 make dev-api                  # terminal 1 → http://localhost:8000/docs
 make dev-web                  # terminal 2 → http://localhost:3000 → "Dùng transcript mẫu"
 ```
 
 **Windows:** chạy trong **Git Bash** (không dùng PowerShell). Cài một lần: `winget install ezwinports.make` và [uv](https://docs.astral.sh/uv/) — uv tự tải Python 3.12, không cần Python hệ thống.
 
-Hoặc `make up` để chạy db + api + web bằng Docker.
+Hoặc `make up` để chạy api + web bằng Docker.
 
 Chạy pipeline thật: điền `LLM_*` trong `.env`, đặt `LEDGER_BUILDER=llm`.
 
@@ -62,8 +62,19 @@ chot/
 **Ngày 2 — dùng được & deploy**
 - [ ] `PostgresRepository` + Supabase
 - [ ] Chỉnh màn duyệt, thử luồng duyệt → xuất bản → export
-- [ ] Deploy: web → Vercel, api → Render/Railway, db → Supabase (`docs/ARCHITECTURE.md#6-deploy`)
+- [ ] Deploy: web → Vercel, api → Railway, DNS Porkbun (`bash scripts/deploy_wizard.sh`)
 - [ ] README cập nhật số eval cuối cùng
+
+## Deploy
+
+Demo công khai: **https://chot.nashng.dev** (web, Vercel) · **https://api.chot.nashng.dev** (API, Railway, Docker). Không có DB — lưu trong RAM, restart là mất.
+
+```bash
+bash scripts/deploy_wizard.sh   # Git Bash: hướng dẫn từng bước trên dashboard + kiểm tra bằng curl/nslookup
+```
+
+Script không tự tạo gì trên dịch vụ nào. Chi tiết và biến môi trường: [docs/ARCHITECTURE.md §6](docs/ARCHITECTURE.md#6-deploy).
+**Chi phí:** Vercel Hobby miễn phí. Railway hết trial thì cần gói Hobby (xem https://railway.com/pricing). LLM tính theo token — đặt budget tháng ở OpenAI project.
 
 ## Kết quả hiện tại
 

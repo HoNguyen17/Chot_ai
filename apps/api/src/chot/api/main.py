@@ -4,7 +4,7 @@ from typing import Annotated
 
 from fastapi import Depends, FastAPI, HTTPException, Query, Request
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import PlainTextResponse
+from fastapi.responses import JSONResponse, PlainTextResponse
 
 from chot import __version__
 from chot.adapters.export import to_csv_tasks, to_json, to_markdown_minutes
@@ -19,10 +19,25 @@ Svc = Annotated[MeetingService, Depends(get_service)]
 
 
 def create_app() -> FastAPI:
-    app = FastAPI(title="Chốt API", version=__version__)
+    settings = get_settings()
+    hide_docs = {"docs_url": None, "redoc_url": None, "openapi_url": None}
+    app = FastAPI(
+        title="Chốt API", version=__version__, **(hide_docs if settings.public_demo else {})
+    )
+    # Mỗi ký tự có thể bị JSON escape thành 6 byte (\uXXXX) + phần dư cho field khác.
+    max_body = settings.max_transcript_chars * 6 + 1024
+
+    @app.middleware("http")
+    async def limit_body(request: Request, call_next):
+        # ponytail: chỉ chặn theo Content-Length; body chunked không có header vẫn lọt.
+        if int(request.headers.get("content-length") or 0) > max_body:
+            return JSONResponse({"detail": "Yêu cầu quá lớn. Hãy cắt bớt transcript."}, 413)
+        return await call_next(request)
+
+    # Thêm sau → bọc ngoài middleware trên, nên phản hồi 413 vẫn có header CORS.
     app.add_middleware(
         CORSMiddleware,
-        allow_origins=list(get_settings().cors_origins),
+        allow_origins=list(settings.cors_origins),
         allow_methods=["*"],
         allow_headers=["*"],
     )
@@ -51,7 +66,6 @@ def create_app() -> FastAPI:
             ) from e
         return MeetingOut.from_record(record)
 
-    @app.get("/meetings", response_model=list[MeetingSummaryOut])
     def list_meetings(svc: Svc):
         return [
             MeetingSummaryOut(
@@ -64,6 +78,9 @@ def create_app() -> FastAPI:
             )
             for r in svc.repo.list()
         ]
+
+    if not settings.public_demo:  # demo công khai: không lộ cuộc họp của người khác
+        app.get("/meetings", response_model=list[MeetingSummaryOut])(list_meetings)
 
     @app.get("/meetings/{meeting_id}", response_model=MeetingOut)
     def get_meeting(meeting_id: str, svc: Svc):
