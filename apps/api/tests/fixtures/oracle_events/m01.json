@@ -1,0 +1,29 @@
+{
+  "threads": [
+    {"id": "payment-gateway", "title": "Cổng thanh toán khi launch"},
+    {"id": "onboarding", "title": "Flow onboarding"},
+    {"id": "launch-date", "title": "Ngày launch cụ thể"}
+  ],
+  "events": [
+    {"utt": "u002", "thread": "payment-gateway", "kind": "propose", "speaker": "Minh", "key": "VNPay", "content": "Dùng VNPay khi launch", "quote": "em đề xuất mình đi VNPay"},
+    {"utt": "u004", "thread": "payment-gateway", "kind": "object", "speaker": "Lan", "key": "VNPay", "content": "VNPay phí cao, tích hợp 3 tuần", "quote": "VNPay phí giao dịch cao hơn"},
+    {"utt": "u005", "thread": "payment-gateway", "kind": "propose", "speaker": "Lan", "key": "MoMo", "content": "Dùng MoMo khi launch", "quote": "Em đề xuất MoMo"},
+    {"utt": "u006", "thread": "payment-gateway", "kind": "object", "speaker": "Minh", "key": "MoMo", "content": "Khách lớn tuổi quen chuyển khoản", "quote": "họ quen chuyển khoản ngân hàng hơn"},
+    {"utt": "u008", "thread": "payment-gateway", "kind": "agree", "speaker": "Hùng", "key": "MoMo", "content": "Tạm thời đi MoMo", "hedged": true, "quote": "tạm thời đi MoMo nhé"},
+    {"utt": "u011", "thread": "onboarding", "kind": "propose", "speaker": "Tú", "key": "flow-3-buoc", "content": "Flow onboarding mới 3 bước, bỏ màn chọn sở thích, xác thực SĐT lên đầu", "quote": "flow mới em cắt từ năm bước còn ba bước"},
+    {"utt": "u012", "thread": "onboarding", "kind": "agree", "speaker": "Minh", "key": "flow-3-buoc", "content": "Đồng ý bỏ màn sở thích", "quote": "bỏ màn sở thích ok"},
+    {"utt": "u012", "thread": "onboarding", "kind": "feedback", "speaker": "Minh", "content": "Nút 'Tiếp tục' quá nhỏ trên Android màn hình nhỏ", "quote": "nút \"Tiếp tục\" hơi nhỏ"},
+    {"utt": "u013", "thread": "onboarding", "kind": "assign", "speaker": "Hùng", "key": "sua-nut", "owner": "Tú", "content": "Sửa nút 'Tiếp tục' và gửi bản onboarding mới", "quote": "Tú sửa lại cái nút rồi gửi bản mới nhé"},
+    {"utt": "u014", "thread": "onboarding", "kind": "commit", "speaker": "Tú", "key": "sua-nut", "owner": "Tú", "deadline_text": "thứ Năm", "quote": "thứ Năm em gửi bản mới"},
+    {"utt": "u015", "thread": "payment-gateway", "kind": "blocker", "speaker": "Lan", "content": "Sandbox MoMo lỗi: callback trả về sai mã giao dịch", "quote": "callback trả về sai mã giao dịch"},
+    {"utt": "u016", "thread": "payment-gateway", "kind": "info", "speaker": "Lan", "content": "Sandbox MoMo chỉ chạy với merchant đã xác minh → cần hồ sơ merchant trước", "quote": "sandbox của MoMo chỉ chạy được với tài khoản merchant đã xác minh"},
+    {"utt": "u017", "thread": "payment-gateway", "kind": "revise", "speaker": "Minh", "key": "VNPay", "content": "Quay lại VNPay", "hedged": true, "quote": "hay là quay lại VNPay cho chắc"},
+    {"utt": "u019", "thread": "payment-gateway", "kind": "agree", "speaker": "Hùng", "key": "MoMo", "content": "Launch tháng 11 dùng MoMo; VNPay để phase 2", "quote": "Vậy chốt nhé: launch tháng 11 dùng MoMo, VNPay để phase 2"},
+    {"utt": "u020", "thread": "payment-gateway", "kind": "assign", "speaker": "Hùng", "key": "sandbox-momo", "owner": "Lan", "deadline_text": "thứ Sáu này", "content": "Theo dõi lỗi sandbox MoMo, báo lại đã fix chưa", "quote": "Lan theo vụ sandbox MoMo, thứ Sáu này báo lại anh"},
+    {"utt": "u021", "thread": "payment-gateway", "kind": "commit", "speaker": "Lan", "key": "sandbox-momo", "owner": "Lan", "quote": "Ok anh, thứ Sáu em báo"},
+    {"utt": "u022", "thread": "payment-gateway", "kind": "assign", "speaker": "Hùng", "key": "phi-vnpay", "owner": "Minh", "deadline_text": "tuần sau", "content": "Tìm hiểu phí VNPay cho phase 2, gửi bảng so sánh", "quote": "Minh tìm hiểu phí VNPay cho phase 2, gửi anh bảng so sánh tuần sau nhé"},
+    {"utt": "u023", "thread": "payment-gateway", "kind": "decline", "speaker": "Minh", "key": "phi-vnpay", "owner": "Minh", "hedged": true, "quote": "để em xem lại ạ"},
+    {"utt": "u024", "thread": "launch-date", "kind": "question", "speaker": "Minh", "content": "Marketing hỏi ngày launch cụ thể", "quote": "bên marketing hỏi ngày cụ thể"},
+    {"utt": "u025", "thread": "launch-date", "kind": "defer", "speaker": "Hùng", "content": "Để họp tuần sau chốt ngày launch", "quote": "để họp tuần sau chốt"}
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "threads": [
+    {"id": "kol", "title": "Chọn KOL cho campaign Tết"},
+    {"id": "budget-split", "title": "Chia budget quảng cáo"},
+    {"id": "key-visual", "title": "Key visual"},
+    {"id": "landing-page", "title": "Landing page tiếng Anh"},
+    {"id": "media-plan", "title": "Media plan"},
+    {"id": "music-license", "title": "Bản quyền nhạc TikTok"}
+  ],
+  "events": [
+    {"utt": "u002", "thread": "kol", "kind": "propose", "speaker": "Phát", "key": "lily-tran", "content": "Book KOL Lily Trần", "quote": "em propose Lily Trần"},
+    {"utt": "u003", "thread": "kol", "kind": "object", "speaker": "Hân", "key": "lily-tran", "content": "Giá 80 triệu/post, vượt budget", "quote": "báo giá 80 triệu một post"},
+    {"utt": "u004", "thread": "kol", "kind": "propose", "speaker": "Hân", "key": "micro-kol", "content": "Đi nhóm 5 micro-KOL (~20 triệu/bạn)", "quote": "Em đề xuất đi nhóm 5 micro-KOL"},
+    {"utt": "u005", "thread": "kol", "kind": "object", "speaker": "Phát", "key": "micro-kol", "content": "Micro-KOL độ nhận diện thấp", "quote": "độ nhận diện thấp hơn"},
+    {"utt": "u007", "thread": "kol", "kind": "agree", "speaker": "Ngọc", "key": "micro-kol", "content": "Nghiêng về nhóm micro-KOL, chờ hỏi lại khách", "hedged": true, "quote": "Tạm thời chị nghiêng về nhóm micro-KOL"},
+    {"utt": "u009", "thread": "budget-split", "kind": "agree", "speaker": "Ngọc", "key": "60-40", "content": "Budget 60% Facebook ads / 40% TikTok", "quote": "Chốt: 60% Facebook ads, 40% TikTok"},
+    {"utt": "u010", "thread": "budget-split", "kind": "object", "speaker": "Hân", "key": "60-40", "content": "CPM TikTok tháng Chạp tăng, 40% có thể không đủ", "quote": "40% có khi không đủ reach"},
+    {"utt": "u011", "thread": "budget-split", "kind": "agree", "speaker": "Ngọc", "key": "60-40", "content": "Giữ 60-40, review lại tháng 1", "quote": "vẫn giữ 60-40 nha"},
+    {"utt": "u013", "thread": "key-visual", "kind": "propose", "speaker": "Duy", "key": "concept-1", "content": "Concept 1 tông vàng truyền thống", "quote": "concept 1 tông vàng truyền thống"},
+    {"utt": "u013", "thread": "key-visual", "kind": "propose", "speaker": "Duy", "key": "concept-2", "content": "Concept 2 tông đỏ hiện đại", "quote": "concept 2 tông đỏ hiện đại hơn"},
+    {"utt": "u014", "thread": "key-visual", "kind": "agree", "speaker": "Ngọc", "key": "concept-2", "content": "Chọn concept 2", "hedged": true, "quote": "Chị thích concept 2 hơn"},
+    {"utt": "u016", "thread": "key-visual", "kind": "assign", "speaker": "Ngọc", "key": "bien-the-1x1", "owner": "Duy", "content": "Làm biến thể vuông 1:1 cho concept 2", "quote": "Duy làm thêm biến thể vuông 1:1 cho concept 2"},
+    {"utt": "u018", "thread": "landing-page", "kind": "request", "speaker": "Phát", "content": "Khách yêu cầu thêm bản tiếng Anh cho landing page", "quote": "bên khách có request làm thêm bản tiếng Anh cho landing page"},
+    {"utt": "u019", "thread": "landing-page", "kind": "assign", "speaker": "Ngọc", "key": "bao-gia", "owner": "Ngọc", "content": "Báo giá lại với khách phần landing page tiếng Anh", "quote": "để chị báo giá lại với khách"},
+    {"utt": "u020", "thread": "media-plan", "kind": "assign", "speaker": "Hân", "key": "media-plan", "owner": "Hân", "deadline_text": "cuối tuần này", "content": "Gửi media plan chi tiết", "quote": "Em sẽ gửi media plan chi tiết cuối tuần này"},
+    {"utt": "u021", "thread": "music-license", "kind": "question", "speaker": "Phát", "content": "Có cần mua bản quyền nhạc trend TikTok không?", "quote": "mình có cần mua bản quyền không"},
+    {"utt": "u022", "thread": "music-license", "kind": "assign", "speaker": "Ngọc", "key": "hoi-legal", "owner": "Ngọc", "content": "Hỏi legal về bản quyền nhạc rồi báo lại", "quote": "chị sẽ hỏi bên legal rồi báo lại"}
+  ]
+}

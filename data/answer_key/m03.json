@@ -1,0 +1,15 @@
+{
+  "meeting_id": "m03",
+  "labeler": "answer-key",
+  "items": [
+    {"id": "D1", "type": "decision", "thread": "release-date", "content": "Release v2.0 ngày 15/11; export PDF chuyển sang v2.1", "status": "final", "decided_by": "Quân", "evidence": ["u012", "u009"], "note": "Đổi 2 lần: 15/11 → 22/11 (u006, đã đồng ý) → bị lật ở u007 → 15/11 cắt scope (u012)."},
+    {"id": "O1", "type": "option", "thread": "release-date", "content": "Dời release v2.0 sang 22/11", "status": "superseded", "evidence": ["u004", "u006"], "note": "Bẫy: chủ trì đã nói 'Ok, vậy dời' ở u006 nhưng bị lật ngay sau đó."},
+    {"id": "O2", "type": "option", "thread": "release-date", "content": "Release 15/11 với đầy đủ scope (gồm export PDF)", "status": "superseded", "evidence": ["u002"]},
+    {"id": "T1", "type": "task", "thread": "release-date", "content": "Báo khách việc export PDF chuyển sang bản 2.1", "status": "open", "owner": "Trang", "deadline": "2026-10-07", "deadline_text": "trong hôm nay", "evidence": ["u013", "u014"]},
+    {"id": "B1", "type": "blocker", "thread": "staging", "content": "Server staging hết dung lượng, không deploy được bản mới", "status": "open", "evidence": ["u015"]},
+    {"id": "T2", "type": "task", "thread": "staging", "content": "Tạo ticket trên Jira để nâng cấp ổ đĩa staging", "status": "needs_confirmation", "owner": "Bảo", "deadline": "2026-10-08", "deadline_text": "mai", "evidence": ["u016", "u017"], "note": "'Gia ra' là lỗi ASR của 'Jira'. 'Dạ để em xem lại cấu hình' = chưa nhận việc."},
+    {"id": "K1", "type": "knowledge", "thread": "client-env", "content": "Khách chỉ test được trên Chrome 109 vì máy kho chạy Windows 7", "status": "open", "evidence": ["u018"]},
+    {"id": "T3", "type": "task", "thread": "qa", "content": "Viết test plan regression, gửi team review", "status": "open", "owner": "Linh", "deadline": "2026-10-09", "deadline_text": "thứ sáu", "evidence": ["u019"]},
+    {"id": "D2", "type": "decision", "thread": "dark-mode", "content": "Có làm dark mode không — để sprint sau bàn", "status": "deferred", "evidence": ["u020"], "note": "Bẫy keyword: câu có chữ 'chốt' nhưng là 'chưa chốt được'."}
+  ]
+}

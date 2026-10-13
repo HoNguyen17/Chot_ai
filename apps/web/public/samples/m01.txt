@@ -1,0 +1,30 @@
+# meeting: m01
+# title: Weekly sync — App giao hàng Giao Nhanh
+# date: 2026-10-05
+# participants: Hùng (CEO, chủ trì); Minh (PM); Lan (Tech lead); Tú (Designer)
+[00:00:10] Hùng: Ok bắt đầu nhé. Hôm nay có ba việc: cổng thanh toán, flow onboarding, và timeline launch tháng 11.
+[00:01:05] Minh: Về thanh toán, em đề xuất mình đi VNPay, vì bên họ hỗ trợ nhiều ngân hàng nhất.
+[00:01:40] Tú: Dạ.
+[00:02:30] Lan: Em thấy VNPay phí giao dịch cao hơn, mà tích hợp theo doc của họ chắc mất tầm ba tuần, không kịp launch.
+[00:03:15] Lan: Em đề xuất MoMo, SDK của MoMo tụi em làm rồi ở dự án cũ, tầm một tuần là xong.
+[00:04:02] Minh: Nhưng tệp khách của mình nhiều người lớn tuổi, họ quen chuyển khoản ngân hàng hơn.
+[00:04:50] Hùng: Ừ, cái đó cũng đúng.
+[00:05:30] Hùng: Thôi tạm thời đi MoMo nhé, để kịp launch đã.
+[00:06:10] Minh: Dạ vâng.
+[00:06:40] Hùng: Rồi, qua phần onboarding. Tú show đi em.
+[00:07:20] Tú: Dạ, flow mới em cắt từ năm bước còn ba bước, bỏ màn hình chọn sở thích, đưa xác thực số điện thoại lên đầu.
+[00:08:45] Minh: Anh thấy bỏ màn sở thích ok, nhưng nút "Tiếp tục" hơi nhỏ, trên máy Android màn hình nhỏ khó bấm.
+[00:09:30] Hùng: Ừ anh cũng thấy vậy. Tú sửa lại cái nút rồi gửi bản mới nhé.
+[00:09:52] Tú: Dạ ok anh, thứ Năm em gửi bản mới.
+[00:11:00] Lan: Quay lại thanh toán một chút. Hôm qua em thử sandbox MoMo thì đang lỗi, callback trả về sai mã giao dịch.
+[00:11:40] Lan: Với lại sandbox của MoMo chỉ chạy được với tài khoản merchant đã xác minh, nên mình phải làm hồ sơ merchant trước.
+[00:12:30] Minh: Vậy hay là quay lại VNPay cho chắc?
+[00:13:05] Lan: Lỗi callback em nghĩ fix được, em đã mở ticket với MoMo rồi.
+[00:14:20] Hùng: Ok. Vậy chốt nhé: launch tháng 11 dùng MoMo, VNPay để phase 2.
+[00:14:35] Hùng: Lan theo vụ sandbox MoMo, thứ Sáu này báo lại anh là fix được chưa nhé.
+[00:14:48] Lan: Ok anh, thứ Sáu em báo.
+[00:15:10] Hùng: Minh tìm hiểu phí VNPay cho phase 2, gửi anh bảng so sánh tuần sau nhé?
+[00:15:22] Minh: Dạ, để em xem lại ạ.
+[00:16:00] Minh: À còn timeline launch, bên marketing hỏi ngày cụ thể.
+[00:16:30] Hùng: Ngày cụ thể thì để họp tuần sau chốt, khi có kết quả sandbox.
+[00:17:05] Hùng: Ok hết rồi, cảm ơn mọi người.

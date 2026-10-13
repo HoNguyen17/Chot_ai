@@ -1,0 +1,17 @@
+{
+  "meeting_id": "m02",
+  "labeler": "answer-key",
+  "items": [
+    {"id": "D1", "type": "decision", "thread": "kol", "content": "Đi nhóm 5 micro-KOL (~20 triệu/bạn) thay vì 1 KOL lớn", "status": "needs_confirmation", "decided_by": "Ngọc", "evidence": ["u007", "u004"], "note": "'Tạm thời chị nghiêng về… phải hỏi lại khách' = tạm chốt, hết họp không xác nhận lại."},
+    {"id": "O1", "type": "option", "thread": "kol", "content": "Book KOL Lily Trần (80 triệu/post)", "status": "open", "evidence": ["u002"], "note": "Chưa có quyết định cuối nên phương án này vẫn còn mở, chưa bị thay thế."},
+    {"id": "D2", "type": "decision", "thread": "budget-split", "content": "Budget split 60% Facebook ads / 40% TikTok; review lại tháng 1 theo số thực tế", "status": "final", "decided_by": "Ngọc", "evidence": ["u011", "u009"], "note": "Bị phản biện ở u010 nhưng chủ trì giữ nguyên ở u011 → vẫn final."},
+    {"id": "D3", "type": "decision", "thread": "key-visual", "content": "Chọn key visual concept 2 (tông đỏ hiện đại)", "status": "needs_confirmation", "decided_by": "Ngọc", "evidence": ["u014", "u013"], "note": "'Chị thích… hơn' là sở thích, chưa phải chốt; còn chờ khách duyệt."},
+    {"id": "O2", "type": "option", "thread": "key-visual", "content": "Key visual concept 1 (tông vàng truyền thống)", "status": "open", "evidence": ["u013"]},
+    {"id": "T1", "type": "task", "thread": "key-visual", "content": "Làm thêm biến thể vuông 1:1 cho concept 2 để gửi khách", "status": "needs_confirmation", "owner": "Duy", "deadline": null, "deadline_text": null, "evidence": ["u016", "u017"], "note": "'Dạ vâng' trơn không tính là nhận việc."},
+    {"id": "R1", "type": "request", "thread": "landing-page", "content": "Khách yêu cầu thêm bản tiếng Anh cho landing page (cho nhà phân phối nước ngoài)", "status": "open", "evidence": ["u018"]},
+    {"id": "T2", "type": "task", "thread": "landing-page", "content": "Báo giá lại với khách phần landing page tiếng Anh", "status": "open", "owner": "Ngọc", "deadline": null, "deadline_text": null, "evidence": ["u019"], "note": "'Để chị báo giá lại' = hành động cụ thể, tự nhận → open (khác 'để em xem lại')."},
+    {"id": "T3", "type": "task", "thread": "media-plan", "content": "Gửi media plan chi tiết", "status": "open", "owner": "Hân", "deadline": "2026-10-11", "deadline_text": "cuối tuần này", "evidence": ["u020"]},
+    {"id": "Q1", "type": "open_question", "thread": "music-license", "content": "Có cần mua bản quyền nhạc trend khi chạy TikTok không?", "status": "open", "evidence": ["u021"]},
+    {"id": "T4", "type": "task", "thread": "music-license", "content": "Hỏi bên legal về bản quyền nhạc TikTok rồi báo lại", "status": "open", "owner": "Ngọc", "deadline": null, "deadline_text": null, "evidence": ["u022"]}
+  ]
+}

@@ -1,0 +1,21 @@
+# meeting: m04
+# title: Họp xưởng hàng tuần — Nội thất gỗ Hoà Bình
+# date: 2026-10-08
+# participants: Sơn (Quản đốc xưởng, chủ trì); Hiền (Thu mua); Tài (QC); Mỹ (Kế toán)
+# absent: Phong (Giám đốc)
+[00:00:30] Sơn: Hôm nay anh Phong đi công tác, anh chủ trì. Việc đầu tiên là nhà cung cấp gỗ.
+[00:01:10] Hiền: Gỗ Tân Phát báo tăng giá 12% từ tháng 11. Em đề xuất đổi qua Lâm sản Đắk Nông Xanh, giá thấp hơn Tân Phát tầm 8%.
+[00:02:00] Tài: Bên Đắk Nông Xanh chưa có chứng nhận FSC, đơn hàng đi Nhật bắt buộc phải có.
+[00:02:45] Hiền: Họ nói đang làm hồ sơ FSC, tháng 12 có.
+[00:03:20] Mỹ: Dạ vâng.
+[00:03:50] Hiền: Vậy mình chốt đổi qua Đắk Nông Xanh luôn đi anh, chứ để lâu Tân Phát áp giá mới.
+[00:04:30] Sơn: Cái này hợp đồng giá trị lớn, phải để anh Phong quyết. Hiền làm bảng so sánh hai bên gửi anh Phong, sáng thứ Hai nhé.
+[00:04:45] Hiền: Ok anh, sáng thứ Hai em gửi.
+[00:05:20] Sơn: Mà ai đó check giúp hợp đồng cũ với Tân Phát có điều khoản phạt nếu mình đổi nhà cung cấp không.
+[00:05:30] Mỹ: Dạ vâng.
+[00:06:10] Tài: Báo cáo QC: lô gỗ nhập tuần trước đo độ ẩm 16%, vượt chuẩn 12%, em chưa cho đưa vào sản xuất.
+[00:07:00] Sơn: Đơn hàng Nhật đang trễ. Từ tuần sau xưởng làm thêm ca tối thứ Bảy cho tới khi xong đơn Nhật. Anh quyết vậy.
+[00:07:25] Tài: Dạ ok anh.
+[00:08:10] Mỹ: Em có ý này, phiếu xuất kho viết tay hay sai số, mình chuyển qua file Excel cho dễ đối chiếu.
+[00:08:30] Sơn: Ừ.
+[00:09:00] Sơn: Ok vậy thôi, giải tán.

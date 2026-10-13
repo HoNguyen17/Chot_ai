@@ -1,0 +1,28 @@
+{
+  "threads": [
+    {"id": "release-date", "title": "Ngày release v2.0"},
+    {"id": "staging", "title": "Server staging"},
+    {"id": "client-env", "title": "Môi trường của khách"},
+    {"id": "qa", "title": "Kế hoạch QA"},
+    {"id": "dark-mode", "title": "Có làm dark mode không"}
+  ],
+  "events": [
+    {"utt": "u002", "thread": "release-date", "kind": "propose", "speaker": "Trang", "key": "15-11-full", "content": "Release 15/11 đầy đủ scope", "quote": "em muốn release ngày 15/11"},
+    {"utt": "u003", "thread": "release-date", "kind": "object", "speaker": "Bảo", "key": "15-11-full", "content": "Export PDF chưa xong, 15/11 không kịp", "quote": "15/11 thì không kịp"},
+    {"utt": "u004", "thread": "release-date", "kind": "propose", "speaker": "Bảo", "key": "22-11", "content": "Dời release sang 22/11", "quote": "Em đề xuất dời qua 22/11"},
+    {"utt": "u006", "thread": "release-date", "kind": "agree", "speaker": "Quân", "key": "22-11", "content": "Dời release sang 22/11", "quote": "vậy dời release qua 22/11"},
+    {"utt": "u007", "thread": "release-date", "kind": "object", "speaker": "Trang", "key": "22-11", "content": "22/11 trùng đợt kiểm kê của khách", "quote": "22/11 trùng đợt kiểm kê cuối năm của khách"},
+    {"utt": "u009", "thread": "release-date", "kind": "revise", "speaker": "Trang", "key": "15-11-cut", "content": "Giữ 15/11, cắt export PDF sang v2.1", "hedged": true, "quote": "Hay mình giữ 15/11 nhưng cắt export PDF ra"},
+    {"utt": "u010", "thread": "release-date", "kind": "agree", "speaker": "Bảo", "key": "15-11-cut", "content": "Bỏ export PDF thì kịp 15/11", "quote": "Bỏ export PDF thì 15/11 làm kịp"},
+    {"utt": "u011", "thread": "release-date", "kind": "agree", "speaker": "Linh", "key": "15-11-cut", "content": "QA test kịp nếu scope nhỏ", "quote": "Em ok, scope nhỏ lại thì test kịp"},
+    {"utt": "u012", "thread": "release-date", "kind": "agree", "speaker": "Quân", "key": "15-11-cut", "content": "Release v2.0 ngày 15/11; export PDF chuyển sang v2.1", "quote": "Chốt lại: release v2.0 ngày 15/11, export PDF chuyển sang v2.1"},
+    {"utt": "u013", "thread": "release-date", "kind": "assign", "speaker": "Quân", "key": "bao-khach", "owner": "Trang", "deadline_text": "trong hôm nay", "content": "Báo khách export PDF chuyển sang bản 2.1", "quote": "Trang báo lại khách về việc export PDF qua bản 2.1 trong hôm nay nhé"},
+    {"utt": "u014", "thread": "release-date", "kind": "commit", "speaker": "Trang", "key": "bao-khach", "owner": "Trang", "deadline_text": "chiều nay", "quote": "Ok anh, chiều nay em gọi khách"},
+    {"utt": "u015", "thread": "staging", "kind": "blocker", "speaker": "Bảo", "content": "Server staging hết dung lượng, không deploy được", "quote": "server staging hết dung lượng"},
+    {"utt": "u016", "thread": "staging", "kind": "assign", "speaker": "Quân", "key": "ticket-o-dia", "owner": "Bảo", "deadline_text": "Mai", "content": "Tạo ticket trên Jira nâng cấp ổ đĩa staging", "quote": "Bảo tạo ticket trên Gia ra"},
+    {"utt": "u017", "thread": "staging", "kind": "decline", "speaker": "Bảo", "key": "ticket-o-dia", "owner": "Bảo", "hedged": true, "quote": "Dạ để em xem lại cấu hình rồi báo anh"},
+    {"utt": "u018", "thread": "client-env", "kind": "info", "speaker": "Linh", "content": "Khách chỉ test được trên Chrome 109 (máy kho Windows 7)", "quote": "bên khách chỉ test được trên Chrome bản cũ 109"},
+    {"utt": "u019", "thread": "qa", "kind": "assign", "speaker": "Linh", "key": "test-plan", "owner": "Linh", "deadline_text": "thứ Sáu", "content": "Viết test plan regression, gửi team review", "quote": "Em sẽ viết test plan cho regression, thứ Sáu gửi team review"},
+    {"utt": "u020", "thread": "dark-mode", "kind": "defer", "speaker": "Trang", "content": "Dark mode để sprint sau bàn", "quote": "mình chưa chốt được, để sprint sau bàn"}
+  ]
+}

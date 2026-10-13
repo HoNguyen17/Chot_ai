@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+
+# Node
+node_modules/
+.next/
+next-env.d.ts
+*.tsbuildinfo
+
+# Env & secrets
+.env
+.env.local
+
+# Kết quả chạy eval (có thể chứa nội dung cuộc họp thật)
+data/runs/
+data/synthetic/drafts/
+
+# OS
+.DS_Store

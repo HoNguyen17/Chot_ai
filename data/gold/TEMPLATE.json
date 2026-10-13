@@ -1,0 +1,27 @@
+{
+  "meeting_id": "m01",
+  "labeler": "nash",
+  "items": [
+    {
+      "id": "D1",
+      "type": "decision",
+      "thread": "payment-gateway",
+      "content": "Mô tả ngắn quyết định",
+      "status": "final",
+      "decided_by": "Tên người chốt",
+      "evidence": ["u019"],
+      "note": "Vì sao gán nhãn này (bẫy nào?)"
+    },
+    {
+      "id": "T1",
+      "type": "task",
+      "thread": "payment-gateway",
+      "content": "Việc cần làm",
+      "status": "open",
+      "owner": "Tên người làm hoặc null",
+      "deadline": "2026-10-09",
+      "deadline_text": "thứ sáu này",
+      "evidence": ["u020", "u021"]
+    }
+  ]
+}

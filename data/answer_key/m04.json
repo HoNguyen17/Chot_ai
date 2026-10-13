@@ -1,0 +1,13 @@
+{
+  "meeting_id": "m04",
+  "labeler": "answer-key",
+  "items": [
+    {"id": "D1", "type": "decision", "thread": "wood-supplier", "content": "Có đổi nhà cung cấp gỗ từ Tân Phát sang Lâm sản Đắk Nông Xanh không — chờ giám đốc Phong quyết", "status": "deferred", "evidence": ["u007", "u002", "u006"], "note": "Bẫy: Hiền nói 'mình chốt đổi…' nhưng Hiền không có thẩm quyền; chủ trì chuyển cho giám đốc vắng mặt."},
+    {"id": "K1", "type": "knowledge", "thread": "wood-supplier", "content": "Đơn hàng đi Nhật bắt buộc chứng nhận FSC; Đắk Nông Xanh chưa có (dự kiến tháng 12)", "status": "open", "evidence": ["u003", "u004"]},
+    {"id": "T1", "type": "task", "thread": "wood-supplier", "content": "Làm bảng so sánh hai nhà cung cấp gửi anh Phong", "status": "open", "owner": "Hiền", "deadline": "2026-10-12", "deadline_text": "sáng thứ hai", "evidence": ["u007", "u008"]},
+    {"id": "T2", "type": "task", "thread": "wood-supplier", "content": "Kiểm tra hợp đồng cũ với Tân Phát có điều khoản phạt khi đổi nhà cung cấp không", "status": "needs_confirmation", "owner": null, "deadline": null, "deadline_text": null, "evidence": ["u009"], "note": "'Ai đó check giúp' = không có owner. 'Dạ vâng' của Mỹ không phải nhận việc."},
+    {"id": "B1", "type": "blocker", "thread": "qc", "content": "Lô gỗ nhập tuần trước độ ẩm 16% (chuẩn 12%), chưa được đưa vào sản xuất", "status": "open", "evidence": ["u011"]},
+    {"id": "D2", "type": "decision", "thread": "overtime", "content": "Từ tuần sau xưởng làm thêm ca tối thứ Bảy cho tới khi xong đơn hàng Nhật", "status": "final", "decided_by": "Sơn", "evidence": ["u012"], "note": "Việc vận hành xưởng nằm trong thẩm quyền của quản đốc → final."},
+    {"id": "R1", "type": "request", "thread": "inventory", "content": "Chuyển phiếu xuất kho viết tay sang file Excel để dễ đối chiếu", "status": "open", "evidence": ["u014"], "note": "'Ừ.' của chủ trì chỉ là đang nghe, chưa phải đồng ý."}
+  ]
+}

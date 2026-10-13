@@ -1,0 +1,49 @@
+{
+  "meeting_id": "m00",
+  "labeler": "example",
+  "items": [
+    {
+      "id": "D1",
+      "type": "decision",
+      "thread": "task-tool",
+      "content": "Dùng Jira bản free làm tool quản lý task; bỏ Trello",
+      "status": "final",
+      "decided_by": "Thảo",
+      "evidence": ["u007", "u004"],
+      "note": "Câu 'Ừ.' (u005) chỉ là đang nghe. Chỉ u007 mới là cam kết không rào đón của chủ trì."
+    },
+    {
+      "id": "O1",
+      "type": "option",
+      "thread": "task-tool",
+      "content": "Dùng Trello",
+      "status": "superseded",
+      "evidence": ["u002"],
+      "note": "Phương án bị thay thế, giữ lại làm lịch sử."
+    },
+    {
+      "id": "T1",
+      "type": "task",
+      "thread": "task-tool",
+      "content": "Setup project Jira cho team",
+      "status": "open",
+      "owner": "Khoa",
+      "deadline": "2026-10-07",
+      "deadline_text": "thứ tư",
+      "evidence": ["u008", "u009"],
+      "note": "Khoa trả lời cam kết rõ ('Ok chị, thứ Tư em xong') → open."
+    },
+    {
+      "id": "T2",
+      "type": "task",
+      "thread": "task-tool",
+      "content": "Chuyển các bug đang mở từ Google Sheet sang Jira",
+      "status": "open",
+      "owner": "Vy",
+      "deadline": "2026-10-11",
+      "deadline_text": "cuối tuần này",
+      "evidence": ["u010"],
+      "note": "Tự nhận việc, không rào đón → open. 'Cuối tuần này' = Chủ nhật của tuần họp."
+    }
+  ]
+}

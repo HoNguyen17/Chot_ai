@@ -1,0 +1,30 @@
+{
+  "threads": [
+    {"id": "winter-dish", "title": "Món mới mùa đông"},
+    {"id": "lunch-combo", "title": "Giá combo trưa"},
+    {"id": "customer-review", "title": "Review của khách"},
+    {"id": "tiktok-reviewer", "title": "Có chạy TikTok với food reviewer không"},
+    {"id": "thu-duc-shift", "title": "Chi nhánh Thủ Đức có mở thêm ca sáng không"}
+  ],
+  "events": [
+    {"utt": "u002", "thread": "winter-dish", "kind": "propose", "speaker": "Đạt", "key": "banh-canh-cua", "content": "Bánh canh cua", "quote": "Món mới em đề xuất bánh canh cua"},
+    {"utt": "u003", "thread": "winter-dish", "kind": "propose", "speaker": "Uyên", "key": "lau-mini", "content": "Lẩu mini một người", "quote": "lẩu mini một người đang trend trên TikTok"},
+    {"utt": "u004", "thread": "winter-dish", "kind": "agree", "speaker": "Kiên", "key": "lau-mini", "content": "Chốt lẩu mini", "quote": "Ok chốt lẩu mini"},
+    {"utt": "u005", "thread": "winter-dish", "kind": "object", "speaker": "Nhi", "key": "lau-mini", "content": "Cần bếp từ mỗi bàn, ~40 triệu/chi nhánh", "quote": "lẩu mini cần bếp từ ở mỗi bàn"},
+    {"utt": "u006", "thread": "winter-dish", "kind": "reopen", "speaker": "Kiên", "key": "lau-mini", "content": "Huỷ chốt lẩu mini", "quote": "Ờ thôi khoan"},
+    {"utt": "u006", "thread": "winter-dish", "kind": "defer", "speaker": "Kiên", "content": "Món mới để tuần sau quyết", "quote": "vậy món mới chưa chốt được"},
+    {"utt": "u006", "thread": "winter-dish", "kind": "assign", "speaker": "Kiên", "key": "chi-phi-bep-tu", "owner": "Nhi", "content": "Tính chi phí bếp từ cụ thể", "quote": "Nhi tính chi phí bếp từ cụ thể"},
+    {"utt": "u007", "thread": "winter-dish", "kind": "commit", "speaker": "Nhi", "key": "chi-phi-bep-tu", "owner": "Nhi", "deadline_text": "thứ Tư", "quote": "Ok anh, thứ Tư em gửi bảng chi phí"},
+    {"utt": "u008", "thread": "lunch-combo", "kind": "propose", "speaker": "Uyên", "key": "59k", "content": "Combo trưa 59.000đ", "quote": "Combo trưa em đề xuất 59 nghìn"},
+    {"utt": "u009", "thread": "lunch-combo", "kind": "object", "speaker": "Đạt", "key": "59k", "content": "59 nghìn là lỗ", "quote": "59 nghìn là lỗ"},
+    {"utt": "u009", "thread": "lunch-combo", "kind": "info", "speaker": "Đạt", "content": "Food cost combo trưa 45%, mục tiêu dưới 35%", "quote": "Food cost combo trưa hiện tại 45%, mục tiêu công ty là dưới 35%"},
+    {"utt": "u010", "thread": "lunch-combo", "kind": "agree", "speaker": "Kiên", "key": "65k", "content": "Giá combo trưa 65.000đ", "quote": "Vậy giá combo trưa 65 nghìn, chốt"},
+    {"utt": "u012", "thread": "customer-review", "kind": "feedback", "speaker": "Nhi", "content": "Khách phàn nàn chờ món hơn 20 phút giờ trưa", "quote": "nhiều khách phàn nàn giờ trưa chờ món hơn 20 phút"},
+    {"utt": "u013", "thread": "tiktok-reviewer", "kind": "propose", "speaker": "Uyên", "key": "tiktok-reviewer", "content": "Chạy TikTok với food reviewer", "hedged": true, "quote": "Em nghĩ mình nên chạy TikTok với mấy bạn food reviewer"},
+    {"utt": "u014", "thread": "tiktok-reviewer", "kind": "defer", "speaker": "Kiên", "content": "Chờ case study trước khi quyết", "quote": "Anh chưa chắc hiệu quả"},
+    {"utt": "u014", "thread": "tiktok-reviewer", "kind": "assign", "speaker": "Kiên", "key": "case-study", "owner": "Uyên", "content": "Gửi vài case study TikTok food reviewer", "quote": "Uyên gửi anh vài case study trước đã"},
+    {"utt": "u015", "thread": "tiktok-reviewer", "kind": "commit", "speaker": "Uyên", "key": "case-study", "owner": "Uyên", "deadline_text": "thứ Hai tuần sau", "quote": "Dạ thứ Hai tuần sau em gửi anh"},
+    {"utt": "u016", "thread": "thu-duc-shift", "kind": "propose", "speaker": "Uyên", "key": "ca-sang", "content": "Mở thêm ca sáng ở Thủ Đức", "quote": "Chi nhánh Thủ Đức có nên mở thêm ca sáng không anh"},
+    {"utt": "u017", "thread": "thu-duc-shift", "kind": "object", "speaker": "Nhi", "key": "ca-sang", "content": "Thiếu người", "quote": "Mở ca sáng thì thiếu người"}
+  ]
+}

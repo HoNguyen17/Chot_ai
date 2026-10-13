@@ -1,0 +1,74 @@
+# Chốt
+
+**Biên bản họp có bằng chứng cho SME Việt Nam.** Dán transcript → Chốt tìm ra điều gì *thật sự đã chốt*, ai làm gì, hạn nào, điều gì còn treo. Mỗi dòng trỏ về đúng câu nói gốc.
+
+> Đầu họp đề xuất VNPay, giữa họp "tạm thời đi MoMo", cuối họp "chốt MoMo, VNPay để phase 2" → Chốt ghi **MoMo = Đã chốt**, **VNPay = Bị thay thế**, không có mục "tạm thời" nào bị ghi thành quyết định.
+
+## Chạy thử trong 2 phút (không cần API key)
+
+```bash
+cp .env.example .env          # LEDGER_BUILDER=replay: demo m01–m05 bằng sự kiện có sẵn
+make install                  # Python venv + npm
+make test                     # 54 test, < 1 giây
+make dev-api                  # terminal 1 → http://localhost:8000/docs
+make dev-web                  # terminal 2 → http://localhost:3000 → "Dùng transcript mẫu"
+```
+
+Hoặc `make up` để chạy db + api + web bằng Docker.
+
+Chạy pipeline thật: điền `LLM_*` trong `.env`, đặt `LEDGER_BUILDER=llm`.
+
+## Cấu trúc
+
+```
+chot/
+├── CLAUDE.md                 hướng dẫn cho Claude Code (đọc trước khi code)
+├── docs/
+│   ├── PRD.md                vấn đề, người dùng, giải pháp, rủi ro, 3 câu trả lời
+│   ├── ARCHITECTURE.md       clean architecture, pipeline, API, deploy, lộ trình mở rộng
+│   ├── DATA_DESIGN.md        transcript → events → ledger, luật trạng thái, DB, metric
+│   ├── DESIGN_SYSTEM.md      token, component, màn hình, câu chữ
+│   ├── LABELING_GUIDE.md     cách gán nhãn bộ test
+│   ├── EVAL_LOG.md           nhật ký kết quả eval
+│   └── adr/                  các quyết định kiến trúc và lý do
+├── data/                     transcript, nhãn, đáp án, kịch bản tổng hợp (xem data/README.md)
+├── apps/
+│   ├── api/                  FastAPI + pipeline + eval (Python)
+│   │   └── src/chot/
+│   │       ├── domain/       luật thuần: models, status_rules, grounding, dates, text
+│   │       ├── usecases/     điều phối: build_ledger, meetings, ports
+│   │       ├── adapters/     parsing · llm · baselines · persistence · export
+│   │       ├── api/          FastAPI routes + composition root
+│   │       ├── eval/         metrics + CLI
+│   │       └── prompts/      prompt LLM (.md)
+│   └── web/                  Next.js: upload + màn hình duyệt
+├── db/migrations/            SQL cho Postgres / Supabase
+├── scripts/                  sinh dữ liệu tổng hợp
+├── docker-compose.yml
+└── Makefile                  `make help`
+```
+
+## Kế hoạch 2 ngày
+
+**Ngày 1 — dữ liệu & lõi**
+- [ ] Đọc `docs/LABELING_GUIDE.md` + ví dụ `data/examples/m00`
+- [ ] Tự gán nhãn `data/gold/m01–m05.json` → `make agreement`
+- [ ] `make synth` → duyệt 10–15 bản nháp → chép sang `data/raw` + `data/gold`
+- [ ] Điền `LLM_*` → `make eval-llm` → chỉnh `prompts/extract_events.md` tới khi chốt nhầm ≤ 5%
+- [ ] `make eval-summary` để có baseline thứ hai → ghi `docs/EVAL_LOG.md`
+
+**Ngày 2 — dùng được & deploy**
+- [ ] `PostgresRepository` + Supabase
+- [ ] Chỉnh màn duyệt, thử luồng duyệt → xuất bản → export
+- [ ] Deploy: web → Vercel, api → Render/Railway, db → Supabase (`docs/ARCHITECTURE.md#6-deploy`)
+- [ ] README cập nhật số eval cuối cùng
+
+## Kết quả hiện tại
+
+| Hệ thống | Chốt nhầm ⭐ | Phương án cũ được gắn "bị thay thế" |
+|---|---|---|
+| Lọc keyword | 66,7% | 0% |
+| Luật + sự kiện chuẩn | 0% | 100% |
+| LLM + luật | *chạy `make eval-llm`* | |
+
+Dòng thứ hai chỉ chứng minh luật khớp hướng dẫn gán nhãn; điểm thật của sản phẩm là dòng thứ ba.

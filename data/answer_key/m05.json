@@ -1,0 +1,15 @@
+{
+  "meeting_id": "m05",
+  "labeler": "answer-key",
+  "items": [
+    {"id": "D1", "type": "decision", "thread": "winter-dish", "content": "Món mới mùa đông (lẩu mini 1 người hay bánh canh cua) — tuần sau quyết sau khi có chi phí bếp từ", "status": "deferred", "evidence": ["u006", "u004"], "note": "Bẫy: 'Ok chốt lẩu mini' (u004) bị chính chủ trì lật lại ở u006 ('thôi khoan… chưa chốt được')."},
+    {"id": "T1", "type": "task", "thread": "winter-dish", "content": "Tính chi phí bếp từ cụ thể cho 3 chi nhánh, gửi bảng chi phí", "status": "open", "owner": "Nhi", "deadline": "2026-10-14", "deadline_text": "thứ tư", "evidence": ["u006", "u007"]},
+    {"id": "D2", "type": "decision", "thread": "lunch-combo", "content": "Giá combo trưa 65.000đ", "status": "final", "decided_by": "Kiên", "evidence": ["u010"]},
+    {"id": "O1", "type": "option", "thread": "lunch-combo", "content": "Combo trưa 59.000đ", "status": "superseded", "evidence": ["u008"]},
+    {"id": "K1", "type": "knowledge", "thread": "lunch-combo", "content": "Food cost combo trưa hiện 45%, mục tiêu công ty dưới 35%", "status": "open", "evidence": ["u009"]},
+    {"id": "F1", "type": "feedback", "thread": "customer-review", "content": "Khách phàn nàn giờ trưa chờ món hơn 20 phút", "status": "open", "evidence": ["u012"]},
+    {"id": "D3", "type": "decision", "thread": "tiktok-reviewer", "content": "Có chạy TikTok với food reviewer không — chờ case study", "status": "deferred", "evidence": ["u014", "u013"]},
+    {"id": "T2", "type": "task", "thread": "tiktok-reviewer", "content": "Gửi vài case study chạy TikTok với food reviewer", "status": "open", "owner": "Uyên", "deadline": "2026-10-12", "deadline_text": "thứ hai tuần sau", "evidence": ["u014", "u015"]},
+    {"id": "Q1", "type": "open_question", "thread": "thu-duc-shift", "content": "Chi nhánh Thủ Đức có mở thêm ca sáng không?", "status": "open", "evidence": ["u016", "u017"], "note": "Có ý kiến trái chiều, chủ trì không kết luận ('Ừm… hết giờ')."}
+  ]
+}

@@ -1,0 +1,15 @@
+# meeting: m00
+# title: Họp nhanh — chọn tool quản lý task
+# date: 2026-10-05
+# participants: Thảo (Trưởng nhóm, chủ trì); Khoa (Dev); Vy (QA)
+[00:05] Thảo: Ok mọi người, hôm nay chỉ cần chốt tool quản lý task cho team thôi.
+[00:20] Khoa: Em đề xuất dùng Trello, free, setup nhanh.
+[00:41] Vy: Trello thì không có bug tracking tử tế chị ơi, em bên QA cần workflow cho bug.
+[01:02] Khoa: Vậy hay là mình thử Jira bản free, giới hạn 10 user, team mình có 6 người.
+[01:20] Thảo: Ừ.
+[01:35] Vy: Jira thì em ok, có sẵn template bug luôn.
+[01:58] Thảo: Vậy chốt dùng Jira bản free nhé. Trello bỏ.
+[02:10] Thảo: Khoa setup project Jira giúp chị, thứ Tư xong nhé?
+[02:18] Khoa: Ok chị, thứ Tư em xong.
+[02:30] Vy: Em sẽ chuyển mấy bug đang mở từ Google Sheet qua, cuối tuần này.
+[02:44] Thảo: Ok. Hết rồi, cảm ơn mọi người.
