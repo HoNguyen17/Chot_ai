@@ -22,3 +22,7 @@ data/synthetic/drafts/
 
 # OS
 .DS_Store
+
+#claude
+.claude/
+_claude/
