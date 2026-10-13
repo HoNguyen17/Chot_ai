@@ -14,6 +14,8 @@ make dev-api                  # terminal 1 → http://localhost:8000/docs
 make dev-web                  # terminal 2 → http://localhost:3000 → "Dùng transcript mẫu"
 ```
 
+**Windows:** chạy trong **Git Bash** (không dùng PowerShell). Cài một lần: `winget install ezwinports.make` và [uv](https://docs.astral.sh/uv/) — uv tự tải Python 3.12, không cần Python hệ thống.
+
 Hoặc `make up` để chạy db + api + web bằng Docker.
 
 Chạy pipeline thật: điền `LLM_*` trong `.env`, đặt `LEDGER_BUILDER=llm`.

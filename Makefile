@@ -1,5 +1,9 @@
-PY := apps/api/.venv/bin/python
 API := apps/api
+# uv chạy được trên Windows (Git Bash) / Mac / Linux; --no-sync: dùng venv do `make install` tạo, không sinh uv.lock
+UV := uv run --no-sync
+PY := $(UV) --project $(API) python
+# Console Windows mặc định cp1252 → in tiếng Việt bị UnicodeEncodeError
+export PYTHONUTF8 := 1
 
 .PHONY: help install test lint dev-api dev-web up down eval-keyword eval-oracle eval-llm eval-summary agreement synth
 
@@ -7,19 +11,19 @@ help:            ## Liệt kê lệnh
 	@grep -E '^[a-z-]+:.*##' $(MAKEFILE_LIST) | awk -F':.*## ' '{printf "  %-14s %s\n", $$1, $$2}'
 
 install:         ## Cài API (venv) + web
-	python3 -m venv $(API)/.venv
-	$(PY) -m pip install -q -e "$(API)[dev]"
+	uv venv --python 3.12 $(API)/.venv
+	uv pip install -q --python $(API)/.venv -e "$(API)[dev]"
 	cd apps/web && npm install --no-audit --no-fund
 
 test:            ## Chạy toàn bộ test API
-	cd $(API) && .venv/bin/python -m pytest -q
+	cd $(API) && $(UV) python -m pytest -q
 
 lint:            ## Lint + kiểm tra format + typecheck web
-	cd $(API) && .venv/bin/ruff check src tests && .venv/bin/ruff format --check src tests
+	cd $(API) && $(UV) ruff check src tests && $(UV) ruff format --check src tests
 	cd apps/web && npx tsc --noEmit
 
 dev-api:         ## API ở :8000 (đọc .env)
-	cd $(API) && set -a && . ../../.env 2>/dev/null; set +a; .venv/bin/uvicorn chot.api.main:app --reload --port 8000
+	cd $(API) && set -a && . ../../.env 2>/dev/null; set +a; $(UV) uvicorn chot.api.main:app --reload --port 8000
 
 dev-web:         ## Web ở :3000
 	cd apps/web && npm run dev
