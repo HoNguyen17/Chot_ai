@@ -1,0 +1,25 @@
+{
+  "threads": [
+    {"id": "promo-1111", "title": "Chương trình khuyến mãi 11.11"},
+    {"id": "livestream", "title": "Kênh livestream"},
+    {"id": "delivery", "title": "Giao hàng nội thành"}
+  ],
+  "events": [
+    {"utt": "u002", "thread": "promo-1111", "kind": "propose", "speaker": "Trúc", "key": "giam-30", "content": "Giảm giá đồng loạt 30% toàn shop, chạy 3 ngày", "quote": "11.11 em đề xuất giảm giá đồng loạt 30% toàn shop"},
+    {"utt": "u003", "thread": "promo-1111", "kind": "object", "speaker": "Khôi", "key": "giam-30", "content": "Áo khoác bị lỗ", "quote": "Giảm 30% thì mấy mẫu áo khoác lỗ"},
+    {"utt": "u003", "thread": "promo-1111", "kind": "info", "speaker": "Khôi", "content": "Giá vốn áo khoác chiếm ~65% giá bán", "quote": "giá vốn đã chiếm 65% giá bán rồi"},
+    {"utt": "u004", "thread": "promo-1111", "kind": "revise", "speaker": "Trúc", "key": "mua2-tang1", "content": "Mua 2 tặng 1 cho nhóm áo thun, áo khoác giữ giá", "quote": "Vậy làm mua 2 tặng 1 cho nhóm áo thun thôi"},
+    {"utt": "u005", "thread": "promo-1111", "kind": "agree", "speaker": "Linh", "key": "mua2-tang1", "content": "Chốt mua 2 tặng 1 áo thun cho 11.11", "quote": "Ok chốt mua 2 tặng 1 áo thun cho 11.11"},
+    {"utt": "u006", "thread": "promo-1111", "kind": "object", "speaker": "Khôi", "key": "mua2-tang1", "content": "Kho chỉ còn ~300 áo thun, ngày đầu là hết hàng", "quote": "chạy mua 2 tặng 1 thì ngày đầu là hết hàng"},
+    {"utt": "u006", "thread": "promo-1111", "kind": "info", "speaker": "Khôi", "content": "Kho áo thun hiện còn khoảng 300 cái", "quote": "kho áo thun hiện chỉ còn khoảng 300 cái"},
+    {"utt": "u007", "thread": "promo-1111", "kind": "reopen", "speaker": "Linh", "key": "mua2-tang1", "content": "Huỷ chốt mua 2 tặng 1", "quote": "Ờ thôi khoan"},
+    {"utt": "u007", "thread": "promo-1111", "kind": "defer", "speaker": "Linh", "content": "Khuyến mãi 11.11 chưa chốt, đợi số hàng về", "quote": "Vậy khuyến mãi 11.11 chưa chốt được"},
+    {"utt": "u008", "thread": "promo-1111", "kind": "commit", "speaker": "Khôi", "key": "lich-giao-hang", "owner": "Khôi", "content": "Hỏi xưởng lịch giao lô áo thun mới, báo chị Linh", "deadline_text": "thứ Ba tuần sau", "quote": "Em sẽ hỏi xưởng lịch giao lô áo thun mới, thứ Ba tuần sau báo chị"},
+    {"utt": "u009", "thread": "livestream", "kind": "info", "speaker": "Linh", "content": "Doanh thu livestream tuần này giảm 20% so với tuần trước", "quote": "Tuần này doanh thu live giảm 20% so với tuần trước"},
+    {"utt": "u010", "thread": "livestream", "kind": "info", "speaker": "Trúc", "content": "Khung live 8 giờ tối trùng giờ các shop lớn, khách bị chia", "quote": "Khung 8 giờ tối bên mình trùng giờ mấy shop lớn live"},
+    {"utt": "u011", "thread": "livestream", "kind": "commit", "speaker": "Trúc", "key": "doi-gio-live", "owner": "Trúc", "content": "Dời livestream sang 9 giờ tối từ tuần này, theo dõi số liệu", "quote": "Em sẽ dời live sang 9 giờ tối từ tuần này và theo dõi số liệu"},
+    {"utt": "u012", "thread": "delivery", "kind": "feedback", "speaker": "Khôi", "content": "Khách khen đóng gói đẹp hơn nhưng giao nội thành vẫn chậm 3–4 ngày", "quote": "Khách phản hồi đóng gói lần này đẹp hơn, nhưng giao hàng nội thành vẫn chậm 3 đến 4 ngày"},
+    {"utt": "u013", "thread": "delivery", "kind": "assign", "speaker": "Linh", "key": "giao-nhanh", "owner": "Khôi", "content": "Làm việc lại với bên vận chuyển, báo phương án giao nhanh", "deadline_text": "thứ Năm tuần sau", "quote": "Khôi làm việc lại với bên vận chuyển, thứ Năm tuần sau báo chị phương án giao nhanh"},
+    {"utt": "u014", "thread": "delivery", "kind": "commit", "speaker": "Khôi", "key": "giao-nhanh", "owner": "Khôi", "deadline_text": "thứ Năm tuần sau", "quote": "Dạ ok chị, thứ Năm tuần sau em báo"}
+  ]
+}

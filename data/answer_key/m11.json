@@ -1,0 +1,15 @@
+{
+  "meeting_id": "m11",
+  "labeler": "answer-key",
+  "items": [
+    {"id": "D1", "type": "decision", "thread": "promo-1111", "content": "Khuyến mãi 11.11 — chưa chốt, đợi số hàng áo thun về", "status": "deferred", "evidence": ["u007"], "note": "Bẫy 'Ok chốt' (u005) rồi 'thôi khoan' (u007) → hoãn."},
+    {"id": "K1", "type": "knowledge", "thread": "promo-1111", "content": "Giá vốn áo khoác chiếm ~65% giá bán", "status": "open", "evidence": ["u003"]},
+    {"id": "K2", "type": "knowledge", "thread": "promo-1111", "content": "Kho áo thun hiện còn khoảng 300 cái", "status": "open", "evidence": ["u006"]},
+    {"id": "T1", "type": "task", "thread": "promo-1111", "content": "Hỏi xưởng lịch giao lô áo thun mới, báo chị Linh", "status": "open", "owner": "Khôi", "deadline": "2026-10-20", "deadline_text": "thứ Ba tuần sau", "evidence": ["u008"], "note": "Tự nhận. Họp thứ Bảy 17/10 → thứ Ba tuần sau = 20/10."},
+    {"id": "K3", "type": "knowledge", "thread": "livestream", "content": "Doanh thu livestream tuần này giảm 20% so với tuần trước", "status": "open", "evidence": ["u009"]},
+    {"id": "K4", "type": "knowledge", "thread": "livestream", "content": "Khung live 8 giờ tối trùng giờ các shop lớn, khách bị chia", "status": "open", "evidence": ["u010"]},
+    {"id": "T2", "type": "task", "thread": "livestream", "content": "Dời livestream sang 9 giờ tối từ tuần này, theo dõi số liệu", "status": "open", "owner": "Trúc", "deadline": null, "deadline_text": null, "evidence": ["u011"]},
+    {"id": "F1", "type": "feedback", "thread": "delivery", "content": "Khách khen đóng gói đẹp hơn nhưng giao nội thành vẫn chậm 3–4 ngày", "status": "open", "evidence": ["u012"]},
+    {"id": "T3", "type": "task", "thread": "delivery", "content": "Làm việc lại với bên vận chuyển, báo phương án giao nhanh", "status": "open", "owner": "Khôi", "deadline": "2026-10-22", "deadline_text": "thứ Năm tuần sau", "evidence": ["u013", "u014"]}
+  ]
+}

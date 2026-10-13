@@ -1,0 +1,20 @@
+{
+  "threads": [
+    {"id": "salmon-set", "title": "Set menu cá hồi khi giá tăng"},
+    {"id": "order-flow", "title": "Flow order trên tablet"}
+  ],
+  "events": [
+    {"utt": "u002", "thread": "salmon-set", "kind": "info", "speaker": "Ngân", "content": "Cá hồi tăng giá 25% từ tuần này; food cost set cá hồi lên 48%", "quote": "Supplier cá hồi báo giá tăng 25% từ tuần này"},
+    {"utt": "u003", "thread": "salmon-set", "kind": "propose", "speaker": "Tùng", "key": "tang-gia", "content": "Giữ cá hồi, tăng giá set thêm 40 nghìn", "quote": "Em propose giữ cá hồi, tăng giá set thêm 40 nghìn"},
+    {"utt": "u004", "thread": "salmon-set", "kind": "object", "speaker": "Ngân", "key": "tang-gia", "content": "Food cost vẫn chưa về target 35%", "quote": "Tăng 40 nghìn thì food cost vẫn chưa về target 35%"},
+    {"utt": "u005", "thread": "salmon-set", "kind": "propose", "speaker": "Ngân", "key": "ca-chem", "content": "Thay cá hồi bằng cá chẽm áp chảo", "quote": "Em đề xuất thay cá hồi bằng cá chẽm áp chảo"},
+    {"utt": "u006", "thread": "salmon-set", "kind": "object", "speaker": "Tùng", "key": "ca-chem", "content": "Khách quen order set cá hồi, đổi đột ngột sẽ bị complain", "quote": "đổi đột ngột sẽ có complain"},
+    {"utt": "u007", "thread": "salmon-set", "kind": "agree", "speaker": "Hiếu", "key": "ca-chem", "content": "Thay cá hồi bằng cá chẽm từ thứ Hai tuần sau; tuần này vẫn bán cá hồi giá cũ", "quote": "chốt thay cá hồi bằng cá chẽm từ thứ Hai tuần sau"},
+    {"utt": "u008", "thread": "salmon-set", "kind": "assign", "speaker": "Hiếu", "key": "brief-phuc-vu", "owner": "Tùng", "content": "Brief team phục vụ cách giới thiệu món cá chẽm", "deadline_text": "chiều nay", "quote": "Tùng brief cho team phục vụ cách giới thiệu món mới trong chiều nay nhé"},
+    {"utt": "u009", "thread": "salmon-set", "kind": "commit", "speaker": "Tùng", "key": "brief-phuc-vu", "owner": "Tùng", "deadline_text": "chiều nay", "quote": "Ok anh, chiều nay em brief"},
+    {"utt": "u010", "thread": "order-flow", "kind": "blocker", "speaker": "Ly", "content": "Order bàn VIP trên tablet không in xuống bếp, tối qua sót 2 order", "quote": "order bàn VIP không in xuống bếp"},
+    {"utt": "u011", "thread": "order-flow", "kind": "assign", "speaker": "Hiếu", "key": "goi-pos", "owner": "Ly", "content": "Gọi support POS sửa lỗi order bàn VIP", "deadline_text": "trong hôm nay", "quote": "Ly gọi support bên POS trong hôm nay"},
+    {"utt": "u012", "thread": "order-flow", "kind": "commit", "speaker": "Ly", "key": "goi-pos", "owner": "Ly", "quote": "Dạ ok anh, em gọi liền"},
+    {"utt": "u013", "thread": "salmon-set", "kind": "commit", "speaker": "Ngân", "key": "recipe-card", "owner": "Ngân", "content": "Update recipe card món cá chẽm lên group bếp", "deadline_text": "trước thứ Sáu", "quote": "Em sẽ update recipe card món cá chẽm lên group bếp trước thứ Sáu"}
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "threads": [
+    {"id": "riverside-feedback", "title": "Phản hồi khách xem dự án Riverside"},
+    {"id": "ads-young", "title": "Có chạy quảng cáo Facebook nhắm khách trẻ không"},
+    {"id": "legal", "title": "Pháp lý dự án Riverside"},
+    {"id": "follow-up", "title": "Gọi lại khách đã xem nhà mẫu"}
+  ],
+  "events": [
+    {"utt": "u002", "thread": "riverside-feedback", "kind": "feedback", "speaker": "Yến", "content": "Khách khen nhà mẫu Riverside đẹp nhưng chê bãi giữ xe chật, ô tô ra vào khó", "quote": "Khách xem dự án Riverside phản hồi nhà mẫu đẹp, nhưng chê bãi giữ xe chật"},
+    {"utt": "u003", "thread": "ads-young", "kind": "propose", "speaker": "Như", "key": "fb-khach-tre", "content": "Chạy quảng cáo Facebook nhắm khách trẻ mua căn đầu, ngân sách 30 triệu", "quote": "Em đề xuất chạy thêm quảng cáo Facebook nhắm khách trẻ mua căn đầu tiên"},
+    {"utt": "u004", "thread": "ads-young", "kind": "object", "speaker": "Lộc", "key": "fb-khach-tre", "content": "Tháng 8 đã chạy, tỉ lệ ra cọc dưới 1%", "quote": "tỉ lệ ra cọc chưa tới 1%, tốn tiền"},
+    {"utt": "u004", "thread": "ads-young", "kind": "info", "speaker": "Lộc", "content": "Quảng cáo nhắm khách trẻ tháng 8: tỉ lệ ra cọc dưới 1%", "quote": "Tệp khách trẻ mình chạy hồi tháng 8 rồi, tỉ lệ ra cọc chưa tới 1%"},
+    {"utt": "u007", "thread": "legal", "kind": "info", "speaker": "Vinh", "content": "Riverside dự kiến tháng 12 mới có sổ hồng từng căn, phải nói rõ với khách", "quote": "Dự án Riverside dự kiến tháng 12 mới có sổ hồng từng căn"},
+    {"utt": "u008", "thread": "legal", "kind": "assign", "speaker": "Cường", "key": "faq-phap-ly", "owner": "Lộc", "content": "Soạn lại bộ câu hỏi thường gặp về pháp lý cho cả team", "quote": "Lộc soạn lại bộ câu hỏi thường gặp về pháp lý cho cả team nhé"},
+    {"utt": "u009", "thread": "legal", "kind": "commit", "speaker": "Lộc", "key": "faq-phap-ly", "owner": "Lộc", "quote": "Dạ vâng"},
+    {"utt": "u010", "thread": "follow-up", "kind": "commit", "speaker": "Yến", "key": "goi-lai-khach", "owner": "Yến", "content": "Gọi lại 12 khách đã xem nhà mẫu tuần trước", "deadline_text": "trong hôm nay", "quote": "Em sẽ gọi lại 12 khách đã xem nhà mẫu tuần trước trong hôm nay"}
+  ]
+}

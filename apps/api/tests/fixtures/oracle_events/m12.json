@@ -1,0 +1,22 @@
+{
+  "threads": [
+    {"id": "machine-2", "title": "Máy in offset số 2 hỏng"},
+    {"id": "tet-order", "title": "Đơn hộp quà Tết chạy máy nào"},
+    {"id": "maintenance", "title": "Bảo trì máy cắt bế"}
+  ],
+  "events": [
+    {"utt": "u002", "thread": "machine-2", "kind": "blocker", "speaker": "Tín", "content": "Máy in offset số 2 hỏng trục lô, chờ linh kiện ít nhất 5 ngày", "quote": "Máy in offset số 2 hỏng trục lô từ chiều thứ Sáu"},
+    {"utt": "u003", "thread": "tet-order", "kind": "info", "speaker": "Hạnh", "content": "Đơn hộp quà Tết khách Tân Mỹ giao ngày 30/10", "quote": "Đơn hộp quà Tết của khách Tân Mỹ giao ngày 30/10"},
+    {"utt": "u004", "thread": "tet-order", "kind": "propose", "speaker": "Hạnh", "key": "may-1", "content": "Chuyển đơn hộp quà Tết sang máy 1, đẩy đơn túi giấy xuống tuần sau", "quote": "Em đề xuất chuyển đơn đó sang máy số 1"},
+    {"utt": "u005", "thread": "tet-order", "kind": "propose", "speaker": "Tín", "key": "may-1", "content": "Thúc giục chốt chuyển sang máy 1", "quote": "Mình chốt chuyển sang máy 1 luôn đi anh"},
+    {"utt": "u006", "thread": "tet-order", "kind": "agree", "speaker": "Lực", "key": "may-1", "content": "Chuyển đơn hộp quà Tết sang máy 1, đơn túi giấy dời qua tuần sau", "quote": "Chuyển đơn hộp quà Tết sang máy 1, đơn túi giấy dời qua tuần sau"},
+    {"utt": "u007", "thread": "tet-order", "kind": "object", "speaker": "Diễm", "key": "may-1", "content": "Máy 1 in màu pha đỏ hay lệch, lô trước bị trả 2.000 hộp", "quote": "máy 1 in màu pha đỏ hay lệch"},
+    {"utt": "u008", "thread": "tet-order", "kind": "agree", "speaker": "Lực", "key": "may-1", "content": "Giữ quyết định chuyển đơn hộp quà Tết sang máy 1, đơn túi giấy dời tuần sau", "quote": "Vẫn chạy máy 1"},
+    {"utt": "u008", "thread": "tet-order", "kind": "assign", "speaker": "Lực", "key": "do-mau", "owner": "Diễm", "content": "Đo màu từng lô 500 hộp, lệch thì dừng máy", "quote": "Diễm đo màu từng lô 500 hộp"},
+    {"utt": "u009", "thread": "tet-order", "kind": "commit", "speaker": "Diễm", "key": "do-mau", "owner": "Diễm", "quote": "Dạ ok anh, em đo từng lô"},
+    {"utt": "u010", "thread": "tet-order", "kind": "commit", "speaker": "Hạnh", "key": "bao-khach", "owner": "Hạnh", "content": "Gọi báo khách Phúc Lộc việc dời đơn túi giấy", "deadline_text": "chiều nay", "quote": "Em sẽ gọi khách chiều nay"},
+    {"utt": "u011", "thread": "maintenance", "kind": "blocker", "speaker": "Tín", "content": "Bảo trì định kỳ máy cắt bế đã quá hạn hai tuần", "quote": "Lịch bảo trì định kỳ máy cắt bế tháng này mình chưa làm"},
+    {"utt": "u012", "thread": "maintenance", "kind": "assign", "speaker": "Lực", "key": "bao-tri", "owner": "Tín", "content": "Lên lịch bảo trì máy cắt bế", "deadline_text": "thứ Bảy này", "quote": "Tín lên lịch bảo trì máy cắt bế, làm vào thứ Bảy này"},
+    {"utt": "u013", "thread": "maintenance", "kind": "decline", "speaker": "Tín", "key": "bao-tri", "owner": "Tín", "quote": "Thứ Bảy này em kẹt đám cưới em gái rồi anh, khó làm được"}
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "meeting_id": "m12",
+  "labeler": "answer-key",
+  "items": [
+    {"id": "B1", "type": "blocker", "thread": "machine-2", "content": "Máy in offset số 2 hỏng trục lô, chờ linh kiện ít nhất 5 ngày", "status": "open", "evidence": ["u002"]},
+    {"id": "K1", "type": "knowledge", "thread": "tet-order", "content": "Đơn hộp quà Tết khách Tân Mỹ giao ngày 30/10", "status": "open", "evidence": ["u003"]},
+    {"id": "D1", "type": "decision", "thread": "tet-order", "content": "Chuyển đơn hộp quà Tết sang máy 1, đơn túi giấy dời qua tuần sau", "status": "final", "decided_by": "Lực", "evidence": ["u008", "u004"], "note": "Bẫy: Tín (không có thẩm quyền) nói 'mình chốt… luôn đi anh' chỉ là đề xuất. Chủ trì quyết (u006), bị phản biện (u007), vẫn giữ (u008) → final."},
+    {"id": "T1", "type": "task", "thread": "tet-order", "content": "Đo màu từng lô 500 hộp, lệch thì dừng máy", "status": "open", "owner": "Diễm", "deadline": null, "deadline_text": null, "evidence": ["u008", "u009"]},
+    {"id": "T2", "type": "task", "thread": "tet-order", "content": "Gọi báo khách Phúc Lộc việc dời đơn túi giấy", "status": "open", "owner": "Hạnh", "deadline": "2026-10-18", "deadline_text": "chiều nay", "evidence": ["u010"]},
+    {"id": "B2", "type": "blocker", "thread": "maintenance", "content": "Bảo trì định kỳ máy cắt bế đã quá hạn hai tuần", "status": "open", "evidence": ["u011"]},
+    {"id": "T3", "type": "task", "thread": "maintenance", "content": "Lên lịch bảo trì máy cắt bế", "status": "needs_confirmation", "owner": "Tín", "deadline": "2026-10-24", "deadline_text": "thứ Bảy này", "evidence": ["u012", "u013"], "note": "Từ chối khéo ('kẹt đám cưới… khó làm được') → cần xác nhận lại."}
+  ]
+}

@@ -1,0 +1,16 @@
+# meeting: m15
+# title: Họp tech tuần — startup fintech
+# date: 2026-10-21
+# participants: Quang (CTO, chủ trì); Hằng (Backend lead); Định (Mobile lead); Thùy (DevOps)
+[00:00:10] Quang: Họp tech tuần. Chủ đề chính là migrate database và bản app tháng 11.
+[00:00:55] Thùy: Database Postgres hiện tại là bản 12, đã hết hỗ trợ bảo mật từ tháng 11 năm ngoái.
+[00:01:40] Hằng: Em đề xuất migrate lên Postgres 16 bằng logical replication, downtime gần như bằng không.
+[00:02:25] Thùy: Logical replication với database 2 TB thì sync lần đầu mất khoảng 3 ngày, phải canh lúc ít giao dịch.
+[00:03:10] Quang: Tạm thời mình đi logical replication nhé, anh cần xem thêm số liệu tải.
+[00:03:25] Hằng: Dạ.
+[00:04:05] Quang: Theo quy định của ngân hàng đối tác, mọi thay đổi hạ tầng phải báo trước 14 ngày.
+[00:04:45] Quang: Thùy viết runbook migrate rồi gửi anh trước thứ Sáu nhé.
+[00:05:05] Thùy: Tuần này em không kịp anh ơi, em đang trực sự cố cho bên payment.
+[00:05:50] Định: Bản app tháng 11 bên mobile xong 80%, còn màn hình eKYC đang chờ SDK mới của đối tác.
+[00:06:30] Định: Em sẽ build bản beta cho team QA vào thứ Hai tuần sau.
+[00:07:00] Quang: Ok, hết. Cảm ơn mọi người.

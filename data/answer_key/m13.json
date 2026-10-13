@@ -1,0 +1,12 @@
+{
+  "meeting_id": "m13",
+  "labeler": "answer-key",
+  "items": [
+    {"id": "F1", "type": "feedback", "thread": "riverside-feedback", "content": "Khách khen nhà mẫu Riverside đẹp nhưng chê bãi giữ xe chật, ô tô ra vào khó", "status": "open", "evidence": ["u002"]},
+    {"id": "Q1", "type": "open_question", "thread": "ads-young", "content": "Có chạy quảng cáo Facebook nhắm khách trẻ không?", "status": "open", "evidence": ["u003", "u004"], "note": "Có ý kiến trái chiều, chủ trì 'mỗi người một ý', không kết luận."},
+    {"id": "K1", "type": "knowledge", "thread": "ads-young", "content": "Quảng cáo nhắm khách trẻ tháng 8: tỉ lệ ra cọc dưới 1%", "status": "open", "evidence": ["u004"]},
+    {"id": "K2", "type": "knowledge", "thread": "legal", "content": "Riverside dự kiến tháng 12 mới có sổ hồng từng căn, phải nói rõ với khách", "status": "open", "evidence": ["u007"]},
+    {"id": "T1", "type": "task", "thread": "legal", "content": "Soạn lại bộ câu hỏi thường gặp về pháp lý cho cả team", "status": "needs_confirmation", "owner": "Lộc", "deadline": null, "deadline_text": null, "evidence": ["u008", "u009"], "note": "Chỉ đáp 'Dạ vâng.' → chưa nhận việc."},
+    {"id": "T2", "type": "task", "thread": "follow-up", "content": "Gọi lại 12 khách đã xem nhà mẫu tuần trước", "status": "open", "owner": "Yến", "deadline": "2026-10-19", "deadline_text": "trong hôm nay", "evidence": ["u010"]}
+  ]
+}

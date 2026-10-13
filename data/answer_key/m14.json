@@ -1,0 +1,13 @@
+{
+  "meeting_id": "m14",
+  "labeler": "answer-key",
+  "items": [
+    {"id": "K1", "type": "knowledge", "thread": "salmon-set", "content": "Cá hồi tăng giá 25% từ tuần này; food cost set cá hồi lên 48%", "status": "open", "evidence": ["u002"]},
+    {"id": "D1", "type": "decision", "thread": "salmon-set", "content": "Thay cá hồi bằng cá chẽm từ thứ Hai tuần sau; tuần này vẫn bán cá hồi giá cũ", "status": "final", "decided_by": "Hiếu", "evidence": ["u007", "u005"], "note": "Bẫy A→B: tăng giá set (A) bị loại, chốt cá chẽm (B)."},
+    {"id": "O1", "type": "option", "thread": "salmon-set", "content": "Giữ cá hồi, tăng giá set thêm 40 nghìn", "status": "superseded", "evidence": ["u003"]},
+    {"id": "T1", "type": "task", "thread": "salmon-set", "content": "Brief team phục vụ cách giới thiệu món cá chẽm", "status": "open", "owner": "Tùng", "deadline": "2026-10-20", "deadline_text": "chiều nay", "evidence": ["u008", "u009"]},
+    {"id": "B1", "type": "blocker", "thread": "order-flow", "content": "Order bàn VIP trên tablet không in xuống bếp, tối qua sót 2 order", "status": "open", "evidence": ["u010"]},
+    {"id": "T2", "type": "task", "thread": "order-flow", "content": "Gọi support POS sửa lỗi order bàn VIP", "status": "open", "owner": "Ly", "deadline": "2026-10-20", "deadline_text": "trong hôm nay", "evidence": ["u011", "u012"], "note": "'chưa fix thì quay lại ghi order giấy' là câu điều kiện dự phòng, không thành quyết định."},
+    {"id": "T3", "type": "task", "thread": "salmon-set", "content": "Update recipe card món cá chẽm lên group bếp", "status": "open", "owner": "Ngân", "deadline": "2026-10-23", "deadline_text": "trước thứ Sáu", "evidence": ["u013"]}
+  ]
+}

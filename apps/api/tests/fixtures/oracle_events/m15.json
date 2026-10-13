@@ -1,0 +1,17 @@
+{
+  "threads": [
+    {"id": "db-migration", "title": "Phương án migrate database"},
+    {"id": "app-release", "title": "Bản app tháng 11"}
+  ],
+  "events": [
+    {"utt": "u002", "thread": "db-migration", "kind": "info", "speaker": "Thùy", "content": "Postgres 12 đang dùng đã hết hỗ trợ bảo mật", "quote": "Database Postgres hiện tại là bản 12, đã hết hỗ trợ bảo mật"},
+    {"utt": "u003", "thread": "db-migration", "kind": "propose", "speaker": "Hằng", "key": "logical-replication", "content": "Migrate lên Postgres 16 bằng logical replication", "quote": "Em đề xuất migrate lên Postgres 16 bằng logical replication"},
+    {"utt": "u004", "thread": "db-migration", "kind": "info", "speaker": "Thùy", "content": "Database 2 TB: sync lần đầu bằng logical replication mất ~3 ngày, phải canh lúc ít giao dịch", "quote": "Logical replication với database 2 TB thì sync lần đầu mất khoảng 3 ngày"},
+    {"utt": "u005", "thread": "db-migration", "kind": "agree", "speaker": "Quang", "key": "logical-replication", "content": "Tạm đi logical replication", "hedged": true, "quote": "Tạm thời mình đi logical replication nhé"},
+    {"utt": "u007", "thread": "db-migration", "kind": "info", "speaker": "Quang", "content": "Ngân hàng đối tác yêu cầu báo trước 14 ngày mọi thay đổi hạ tầng", "quote": "mọi thay đổi hạ tầng phải báo trước 14 ngày"},
+    {"utt": "u008", "thread": "db-migration", "kind": "assign", "speaker": "Quang", "key": "runbook", "owner": "Thùy", "content": "Viết runbook migrate database", "deadline_text": "trước thứ Sáu", "quote": "Thùy viết runbook migrate rồi gửi anh trước thứ Sáu nhé"},
+    {"utt": "u009", "thread": "db-migration", "kind": "decline", "speaker": "Thùy", "key": "runbook", "owner": "Thùy", "quote": "Tuần này em không kịp anh ơi"},
+    {"utt": "u010", "thread": "app-release", "kind": "blocker", "speaker": "Định", "content": "Màn hình eKYC chờ SDK mới của đối tác, app tháng 11 mới xong 80%", "quote": "còn màn hình eKYC đang chờ SDK mới của đối tác"},
+    {"utt": "u011", "thread": "app-release", "kind": "commit", "speaker": "Định", "key": "beta-qa", "owner": "Định", "content": "Build bản beta cho team QA", "deadline_text": "thứ Hai tuần sau", "quote": "Em sẽ build bản beta cho team QA vào thứ Hai tuần sau"}
+  ]
+}
