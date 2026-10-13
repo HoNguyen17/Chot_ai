@@ -54,6 +54,11 @@ class Transcript(BaseModel):
     def names(self) -> set[str]:
         return {p.name for p in self.participants}
 
+    @property
+    def known_names(self) -> set[str]:
+        """Người có tên trong header (dự họp + vắng mặt) — giao việc cho người vắng không phải bịa."""
+        return self.names | {p.name for p in self.absent}
+
 
 class Thread(BaseModel):
     id: str  # slug, vd "payment-gateway"

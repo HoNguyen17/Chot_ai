@@ -24,8 +24,16 @@ from chot.domain.enums import (
     ItemType,
     Status,
 )
-from chot.domain.models import Event, Evidence, ExtractionResult, Item, Ledger, Transcript
-from chot.domain.text import is_backchannel, is_hedged
+from chot.domain.models import (
+    Event,
+    Evidence,
+    ExtractionResult,
+    Item,
+    Ledger,
+    Transcript,
+    Utterance,
+)
+from chot.domain.text import has_fallback, is_backchannel, is_hedged
 
 _CONTRADICTING = {EventKind.PROPOSE, EventKind.REVISE, EventKind.REOPEN, EventKind.DEFER}
 
@@ -51,7 +59,55 @@ def _evidence(e: Event, tr: Transcript) -> Evidence:
 
 
 def _hedged(e: Event) -> bool:
+    # Câu chốt kèm điều kiện dự phòng ("nếu … thì quay về A"): chỉ tin dấu hiệu trong văn bản,
+    # vì LLM hay gắn hedged=true chỉ vì thấy chữ "nếu" (quy ước Nash 11).
+    if has_fallback(e.quote):
+        return is_hedged(e.quote)
     return e.hedged or is_hedged(e.quote)
+
+
+def _effective_agree(agrees: list[Event], tr: Transcript) -> Event | None:
+    """Agree sau cùng; nếu đó chỉ là người không chủ trì 'ok' theo CÙNG phương án mà chủ trì
+    đã đồng ý trước đó, thì lấy agree của chủ trì (người khác hưởng ứng không làm yếu quyết định)."""
+    if not agrees:
+        return None
+    last = agrees[-1]
+    if last.speaker in tr.chairs:
+        return last
+    by_chair = [a for a in agrees if a.speaker in tr.chairs and a.key == last.key]
+    return by_chair[-1] if by_chair else last
+
+
+def _unresolved_co_chair(evs: list[Event], agree: Event, tr: Transcript) -> str | None:
+    """Đồng chủ trì đã phản đối phương án được chọn mà chưa đồng ý lại (quy ước Nash 10)."""
+    for chair in tr.chairs - {agree.speaker}:
+        objected = [
+            e
+            for e in evs
+            if e.speaker == chair and e.kind == EventKind.OBJECT and e.key in (None, agree.key)
+        ]
+        if not objected:
+            continue
+        last_obj = tr.order(objected[-1].utt)
+        if not any(
+            e.speaker == chair
+            and e.kind == EventKind.AGREE
+            and e.key == agree.key
+            and tr.order(e.utt) > last_obj
+            for e in evs
+        ):
+            return chair
+    return None
+
+
+def _indirect_agree(evs: list[Event], tr: Transcript) -> tuple[Event, Utterance] | None:
+    """Chủ trì chỉ 'Ừ.' ngay sau một đề xuất = đồng ý gián tiếp (quy ước Nash 5)."""
+    for e in reversed([x for x in evs if x.kind in (EventKind.PROPOSE, EventKind.REVISE)]):
+        u = tr.utt(e.utt)
+        nxt = tr.utterances[u.index] if u and u.index < len(tr.utterances) else None  # index từ 1
+        if nxt and nxt.speaker in tr.chairs and is_backchannel(nxt.text):
+            return e, nxt
+    return None
 
 
 def _option_content(events: list[Event], key: str | None) -> str:
@@ -69,7 +125,7 @@ def resolve_thread(events: list[Event], tr: Transcript, thread_title: str, ids: 
     """Suy các mục Ledger từ chuỗi sự kiện quyết định của MỘT chủ đề."""
     evs = sorted(events, key=lambda e: tr.order(e.utt))
     agrees = [e for e in evs if e.kind == EventKind.AGREE]
-    last_agree = agrees[-1] if agrees else None
+    last_agree = _effective_agree(agrees, tr)
 
     contradicted = False
     if last_agree:
@@ -84,12 +140,22 @@ def resolve_thread(events: list[Event], tr: Transcript, thread_title: str, ids: 
     if last_agree and not contradicted:
         authority = last_agree.speaker in tr.chairs
         hedged = _hedged(last_agree)
-        status = Status.FINAL if authority and not hedged else Status.NEEDS_CONFIRMATION
+        co_chair = _unresolved_co_chair(evs, last_agree, tr) if authority else None
+        fallback = has_fallback(last_agree.quote)
+        status = (
+            Status.FINAL if authority and not hedged and not co_chair else Status.NEEDS_CONFIRMATION
+        )
         flags = []
         if not authority:
             flags.append("người đồng ý không phải người chủ trì")
         if hedged:
             flags.append("đồng thuận có rào đón")
+        if co_chair:
+            flags.append(f"đồng chủ trì {co_chair} đã phản đối, chưa đồng ý lại")
+        if fallback:
+            flags.append("có điều kiện quay lại phương án cũ — phương án cũ vẫn mở")
+        # Có điều kiện quay lại → phương án cũ chưa bị loại hẳn (quy ước Nash 11)
+        replaces = status == Status.FINAL and not fallback
         if status == Status.FINAL and len(agrees) > 1:
             flags.append("đã đổi ý trong cuộc họp — xem timeline")
 
@@ -105,7 +171,7 @@ def resolve_thread(events: list[Event], tr: Transcript, thread_title: str, ids: 
                         type=ItemType.OPTION,
                         thread=thread_id,
                         content=_option_content(evs, e.key),
-                        status=Status.SUPERSEDED if status == Status.FINAL else Status.OPEN,
+                        status=Status.SUPERSEDED if replaces else Status.OPEN,
                         evidence=[
                             _evidence(x, tr)
                             for x in evs
@@ -128,7 +194,7 @@ def resolve_thread(events: list[Event], tr: Transcript, thread_title: str, ids: 
             else (_option_content(evs, chosen_key) or last_agree.content),
             status=status,
             decided_by=last_agree.speaker,
-            supersedes=[o.id for o in option_items] if status == Status.FINAL else [],
+            supersedes=[o.id for o in option_items] if replaces else [],
             # Bằng chứng: câu AGREE sau cùng đứng đầu, sau đó là câu đề xuất gốc.
             evidence=[_evidence(last_agree, tr)] + [_evidence(x, tr) for x in chosen_proposals[:1]],
             flags=flags,
@@ -150,7 +216,41 @@ def resolve_thread(events: list[Event], tr: Transcript, thread_title: str, ids: 
             )
         ]
 
-    # Trường hợp 3: chưa ai đồng ý → câu hỏi mở
+    # Trường hợp 3: chủ trì chỉ "Ừ." ngay sau một đề xuất → đồng ý gián tiếp, CẦN XÁC NHẬN
+    indirect = _indirect_agree(evs, tr)
+    if indirect:
+        proposal, nod = indirect
+        others: list[Item] = []
+        seen_keys: set[str | None] = {proposal.key}
+        for e in evs:
+            if e.kind in (EventKind.PROPOSE, EventKind.REVISE) and e.key not in seen_keys:
+                seen_keys.add(e.key)
+                others.append(
+                    Item(
+                        id=ids.next(ItemType.OPTION),
+                        type=ItemType.OPTION,
+                        thread=thread_id,
+                        content=_option_content(evs, e.key),
+                        status=Status.OPEN,
+                        evidence=[_evidence(e, tr)],
+                    )
+                )
+        decision = Item(
+            id=ids.next(ItemType.DECISION),
+            type=ItemType.DECISION,
+            thread=thread_id,
+            content=_option_content(evs, proposal.key),
+            status=Status.NEEDS_CONFIRMATION,
+            decided_by=nod.speaker,
+            evidence=[
+                Evidence(utt=nod.id, quote=nod.text, ts=nod.ts_label, speaker=nod.speaker),
+                _evidence(proposal, tr),
+            ],
+            flags=["chủ trì chỉ đáp 'Ừ.' — đồng ý gián tiếp, cần xác nhận"],
+        )
+        return [decision, *others]
+
+    # Trường hợp 4: chưa ai đồng ý → câu hỏi mở
     firsts = [e for e in evs if e.kind in (EventKind.PROPOSE, EventKind.REVISE, EventKind.OBJECT)]
     return [
         Item(
@@ -172,7 +272,11 @@ def resolve_task(events: list[Event], tr: Transcript, ids: _Ids) -> Item:
     owner = assign.owner or (assign.speaker if assign.kind == EventKind.COMMIT else None)
     flags: list[str] = []
 
-    if owner and owner not in tr.names:
+    absent_owner = bool(owner) and owner not in tr.names and owner in tr.known_names
+    if absent_owner:
+        # Quy ước Nash 12: giữ tên người vắng mặt, nhưng họ chưa thể nhận việc trong họp
+        flags.append(f"owner '{owner}' vắng mặt — cần xác nhận lại với người đó")
+    elif owner and owner not in tr.names:
         flags.append(f"owner '{owner}' không có trong danh sách người tham gia")
         owner = None
 
@@ -193,6 +297,8 @@ def resolve_task(events: list[Event], tr: Transcript, ids: _Ids) -> Item:
     if owner is None:
         status = Status.NEEDS_CONFIRMATION
         flags.append("chưa rõ ai nhận việc")
+    elif absent_owner:
+        status = Status.NEEDS_CONFIRMATION
     elif declined:
         status = Status.NEEDS_CONFIRMATION
         flags.append("owner từ chối hoặc trì hoãn")

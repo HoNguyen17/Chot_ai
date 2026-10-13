@@ -59,3 +59,22 @@ def test_valid_final_passes(mini):
     )
     led, report = apply_grounding(_ledger(mini, item), mini)
     assert led.items[0].status == Status.FINAL and report.tier1_rate == 1.0
+
+
+def test_tier2_keeps_absent_owner():
+    # Quy tắc 12: người vắng mặt có tên trong header — không phải người bịa
+    from chot.adapters.parsing import parse_transcript
+
+    tr = parse_transcript(
+        "# participants: Sếp (chủ trì); An\n# absent: Chi (Kế toán)\n[00:01] Sếp: Chi làm báo cáo nhé."
+    )
+    item = Item(
+        id="T1",
+        type=ItemType.TASK,
+        content="Làm báo cáo",
+        status=Status.NEEDS_CONFIRMATION,
+        owner="Chi",
+        evidence=[Evidence(utt="u001", quote="Chi làm báo cáo nhé")],
+    )
+    led, _ = apply_grounding(_ledger(tr, item), tr)
+    assert led.items[0].owner == "Chi"

@@ -29,7 +29,7 @@ _HEDGE_PATTERNS = [
     r"hay là",
     r"chắc là",
     r"có lẽ",
-    r"\bthử\b",
+    r"(?<!dùng )\bthử\b",  # "dùng thử" = bản trial (danh từ), không phải rào đón
     r"để (em|anh|chị|mình|tôi) xem",
     r"xem lại",
     r"tính sau",
@@ -43,14 +43,26 @@ _HEDGE_PATTERNS = [
 ]
 _HEDGE_RE = re.compile("|".join(_HEDGE_PATTERNS))
 
+# "Chốt B. Nếu … thì quay về A" — điều kiện dự phòng sau một lời chốt, không phải rào đón
+# (quy ước Nash 11). Chỉ mệnh đề "nếu … thì quay về/lại / trở lại" được miễn.
+_FALLBACK_RE = re.compile(r"\bnếu\b[^.;!?]*?\bthì (quay (về|lại)|trở lại)\b[^.;!?]*")
+
+
+def _without_fallback(text: str) -> str:
+    return _FALLBACK_RE.sub(" ", normalize(text))
+
 
 def is_backchannel(text: str) -> bool:
     return bool(_BACKCHANNEL_RE.match(normalize(text)))
 
 
+def has_fallback(text: str) -> bool:
+    return bool(_FALLBACK_RE.search(normalize(text)))
+
+
 def is_hedged(text: str) -> bool:
-    return bool(_HEDGE_RE.search(normalize(text)))
+    return bool(_HEDGE_RE.search(_without_fallback(text)))
 
 
 def hedge_markers(text: str) -> list[str]:
-    return [m.group(0) for m in _HEDGE_RE.finditer(normalize(text))]
+    return [m.group(0) for m in _HEDGE_RE.finditer(_without_fallback(text))]

@@ -3,7 +3,7 @@ import datetime as dt
 import pytest
 
 from chot.domain.dates import extract_deadline_phrase, resolve_deadline
-from chot.domain.text import is_backchannel, is_hedged
+from chot.domain.text import has_fallback, is_backchannel, is_hedged
 
 MON = dt.date(2026, 10, 5)  # thứ Hai
 FRI = dt.date(2026, 10, 9)  # thứ Sáu
@@ -66,3 +66,19 @@ def test_resolve_deadline(phrase, meeting, expected):
 def test_extract_phrase_from_sentence():
     assert extract_deadline_phrase("Lan theo vụ sandbox, thứ Sáu này báo lại anh") == "thứ sáu này"
     assert extract_deadline_phrase("Không có hạn gì cả") is None
+
+
+# --- P3 vòng 2 ---
+def test_trial_noun_is_not_hedge():
+    # "dùng thử" = bản dùng thử (danh từ), không phải rào đón
+    assert not is_hedged("Chốt gói tháng, có 14 ngày dùng thử.")
+    assert is_hedged("Mình thử gói tháng xem sao")
+
+
+def test_fallback_clause_is_not_hedge():
+    # Quy tắc 11: "Chốt B. Nếu … thì quay về A" — điều kiện dự phòng, không phải rào đón
+    text = "Chốt nhà cung cấp B. Nếu thứ Năm B giao trễ thì quay lại A."
+    assert not is_hedged(text)
+    assert has_fallback(text)
+    assert not has_fallback("Nếu mà sếp duyệt thì làm B")
+    assert is_hedged("Nếu mà sếp duyệt thì làm B")

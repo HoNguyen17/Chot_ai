@@ -2,8 +2,8 @@
   "meeting_id": "m23",
   "labeler": "answer-key",
   "items": [
-    {"id": "D1", "type": "decision", "thread": "sales-channel", "content": "Đi TikTok Shop trước, mở tháng 12; Shopee Mall để quý sau", "status": "final", "decided_by": "Vân", "evidence": ["u006", "u004"], "note": "Quy ước cũ: một người chủ trì chốt không rào đón, không ai lật lại → final (dù co-founder Khánh chỉ đáp 'Ờ.')."},
-    {"id": "O1", "type": "option", "thread": "sales-channel", "content": "Mở Shopee Mall", "status": "superseded", "evidence": ["u002"]},
+    {"id": "D1", "type": "decision", "thread": "sales-channel", "content": "Đi TikTok Shop trước, mở tháng 12; Shopee Mall để quý sau", "status": "needs_confirmation", "decided_by": "Vân", "evidence": ["u006", "u004"], "note": "Quy ước mới (P3, quy tắc 10): đồng chủ trì Khánh đã phản đối TikTok (u005) và chỉ đáp 'Ờ.' → chưa đồng ý lại → needs_confirmation."},
+    {"id": "O1", "type": "option", "thread": "sales-channel", "content": "Mở Shopee Mall", "status": "open", "evidence": ["u002"], "note": "Quy ước mới (P3): D1 chưa chốt → phương án khác còn mở."},
     {"id": "K1", "type": "knowledge", "thread": "sales-channel", "content": "Phí Shopee Mall (cố định + thanh toán) ~12% doanh thu", "status": "open", "evidence": ["u003"]},
     {"id": "T1", "type": "task", "thread": "sales-channel", "content": "Lên kế hoạch 30 video cho tháng đầu TikTok Shop", "status": "open", "owner": "Hảo", "deadline": "2026-11-02", "deadline_text": "thứ Hai", "evidence": ["u008", "u009"]},
     {"id": "D2", "type": "decision", "thread": "freeship", "content": "Freeship cho đơn từ 299 nghìn, áp dụng từ 1/11", "status": "final", "decided_by": "Vân", "evidence": ["u012", "u010"]},

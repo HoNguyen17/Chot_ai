@@ -189,7 +189,7 @@ def score_meeting(
                 u = tr.utt(ev.utt)
                 c.quotes_valid += bool(u and quote_in_utterance(ev.quote, u.text))
             for person in (item.owner, item.decided_by):
-                if person and person not in tr.names:
+                if person and person not in tr.known_names:
                     c.hallucinated_people += 1
     return c
 

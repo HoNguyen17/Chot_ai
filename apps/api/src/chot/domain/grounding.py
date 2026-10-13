@@ -41,7 +41,7 @@ def _tier2_violation(item: Item, tr: Transcript) -> str | None:
             return "bằng chứng mới nhất không phải câu của người chốt"
         if is_hedged(latest.quote):
             return "câu chốt có rào đón"
-    if item.owner and item.owner not in tr.names:
+    if item.owner and item.owner not in tr.known_names:
         return "owner không có trong danh sách người tham gia"
     if item.decided_by and item.decided_by not in tr.names:
         return "người quyết định không có trong danh sách người tham gia"
@@ -70,7 +70,7 @@ def apply_grounding(ledger: Ledger, tr: Transcript) -> tuple[Ledger, GroundingRe
             if item.status == Status.FINAL:
                 update["status"] = Status.NEEDS_CONFIRMATION
                 report.items_downgraded.append(item.id)
-            if item.owner and item.owner not in tr.names:
+            if item.owner and item.owner not in tr.known_names:
                 update["owner"] = None
             item = item.model_copy(update=update)
         kept.append(item)
