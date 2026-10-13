@@ -1,0 +1,18 @@
+{
+  "threads": [
+    {"id": "export-volume", "title": "Nhận bao nhiêu tấn cho đơn xuất khẩu"},
+    {"id": "inspection", "title": "Kiểm định dư lượng thuốc"},
+    {"id": "harvest", "title": "Lịch thu hoạch"}
+  ],
+  "events": [
+    {"utt": "u002", "thread": "export-volume", "kind": "info", "speaker": "Tiến", "content": "Đối tác đặt 20 tấn, giao trước 15/11, giá 95 nghìn/kg", "quote": "Đối tác bên kia đặt 20 tấn, giao trước ngày 15/11, giá 95 nghìn một ký"},
+    {"utt": "u005", "thread": "export-volume", "kind": "info", "speaker": "Sáu", "content": "Vườn xã viên đợt này gom được ~14 tấn đạt chuẩn", "quote": "Vườn của xã viên đợt này chỉ gom được khoảng 14 tấn đạt chuẩn"},
+    {"utt": "u006", "thread": "export-volume", "kind": "object", "speaker": "Hương", "key": "mua-vuon-ngoai", "content": "Khó kiểm soát dư lượng thuốc, lô bị trả là mất cả đơn", "quote": "Mua vườn ngoài thì khó kiểm soát dư lượng thuốc"},
+    {"utt": "u007", "thread": "export-volume", "kind": "propose", "speaker": "Tiến", "key": "nhan-14-tan", "content": "Nhận 14 tấn, phần còn lại giao đợt sau", "quote": "Em đề xuất nhận 14 tấn thôi"},
+    {"utt": "u008", "thread": "export-volume", "kind": "agree", "speaker": "Bảy", "key": "nhan-14-tan", "content": "Nhận 14 tấn, phần còn lại thương lượng giao đợt tháng 12", "quote": "nhận 14 tấn, phần còn lại thương lượng giao đợt tháng 12. Chốt vậy"},
+    {"utt": "u009", "thread": "export-volume", "kind": "assign", "speaker": "Bảy", "key": "hop-dong", "owner": "Tiến", "content": "Báo lại đối tác và gửi hợp đồng sửa đổi", "deadline_text": "trước ngày 30/10", "quote": "Tiến báo lại đối tác và gửi hợp đồng sửa đổi trước ngày 30/10"},
+    {"utt": "u010", "thread": "export-volume", "kind": "commit", "speaker": "Tiến", "key": "hop-dong", "owner": "Tiến", "quote": "Dạ"},
+    {"utt": "u011", "thread": "inspection", "kind": "info", "speaker": "Hương", "content": "Phí kiểm định dư lượng thuốc 4 triệu/lô; 14 tấn chia 2 lô là 8 triệu", "quote": "Phí kiểm định dư lượng thuốc mỗi lô 4 triệu"},
+    {"utt": "u012", "thread": "harvest", "kind": "commit", "speaker": "Sáu", "key": "lich-thu-hoach", "owner": "Sáu", "content": "Lên lịch thu hoạch từng vườn, gửi nhóm Zalo", "deadline_text": "cuối tuần này", "quote": "Em sẽ lên lịch thu hoạch cho từng vườn, gửi nhóm Zalo cuối tuần này"}
+  ]
+}

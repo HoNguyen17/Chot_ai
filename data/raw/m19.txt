@@ -1,0 +1,22 @@
+# meeting: m19
+# title: Sprint review — studio game indie
+# date: 2026-10-25
+# participants: Huy (Producer, chủ trì); Nhàn (Game designer); Lâm (Programmer); Oanh (Artist)
+[00:00:10] Huy: Sprint review. Chủ đề chính: demo ra ở đâu, và art của boss cuối.
+[00:00:55] Nhàn: Demo em đề xuất đăng Steam Next Fest tháng 2, lượng wishlist tăng mạnh nhất.
+[00:01:40] Lâm: Next Fest hạn nộp build là 15/12, mà build hiện tại còn crash ở màn 3.
+[00:02:15] Lâm: Hay mình đăng itch.io trước cho kịp, không cần chờ duyệt.
+[00:02:45] Huy: Ok vậy mình đi itch.io trước.
+[00:03:25] Oanh: itch.io thì gần như không có traffic, tụi mình mất công làm trang mà không ai chơi.
+[00:04:10] Nhàn: Hay mình làm bản demo mobile trên TestFlight, gửi thẳng cho cộng đồng Discord 3.000 người?
+[00:04:55] Lâm: Port sang mobile mất ít nhất một tháng, input điều khiển phải làm lại.
+[00:05:35] Nhàn: Vậy quay lại Steam Next Fest, Lâm fix crash màn 3 trước 15/12 được không?
+[00:06:10] Lâm: Crash đó em đã tìm ra nguyên nhân rồi, một tuần là fix xong.
+[00:06:45] Huy: Được. Chốt demo đăng Steam Next Fest tháng 2, bỏ itch.io và mobile.
+[00:07:10] Huy: Lâm fix crash màn 3 trong tuần này, xong báo anh.
+[00:07:20] Lâm: Ok anh, em làm luôn.
+[00:08:05] Oanh: Về art boss cuối, em làm hai bản: bản tối màu kiểu gothic và bản màu pastel dễ thương.
+[00:08:40] Huy: Anh thích bản gothic hơn, hợp với tone game.
+[00:09:25] Nhàn: Playtester tuần rồi nói boss màn 2 quá khó, 70% người chơi bỏ cuộc ở đó.
+[00:10:05] Lâm: Máy build của studio hết license Unity Pro từ hôm qua, không export được bản release.
+[00:10:40] Huy: Ok, hôm nay vậy thôi, cảm ơn mọi người.

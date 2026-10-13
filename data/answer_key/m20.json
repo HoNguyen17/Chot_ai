@@ -1,0 +1,13 @@
+{
+  "meeting_id": "m20",
+  "labeler": "answer-key",
+  "items": [
+    {"id": "D1", "type": "decision", "thread": "branch-location", "content": "Mặt bằng chi nhánh thứ 5 — chưa chốt, để nhà đầu tư Diệp quyết", "status": "deferred", "evidence": ["u006"], "note": "Bẫy 'Ok chốt Lê Văn Sỹ' (u004) rồi 'thôi khoan' (u006), đẩy cho người vắng mặt."},
+    {"id": "K1", "type": "knowledge", "thread": "branch-location", "content": "Chủ nhà Lê Văn Sỹ đòi cọc 6 tháng (270 triệu)", "status": "open", "evidence": ["u005"]},
+    {"id": "T1", "type": "task", "thread": "branch-location", "content": "Làm bảng dòng tiền hai phương án mặt bằng gửi chị Diệp", "status": "open", "owner": "Quốc", "deadline": "2026-10-30", "deadline_text": "thứ Sáu", "evidence": ["u007", "u008"]},
+    {"id": "Q1", "type": "open_question", "thread": "banh-mi", "content": "Có bán thêm bánh mì buổi sáng không?", "status": "open", "evidence": ["u009", "u010"], "note": "Ý kiến trái chiều, chủ trì chỉ 'Ừm...' → không kết luận."},
+    {"id": "K2", "type": "knowledge", "thread": "banh-mi", "content": "Khảo sát khách quen: 60% muốn có bánh mì buổi sáng", "status": "open", "evidence": ["u009"]},
+    {"id": "B1", "type": "blocker", "thread": "espresso-machine", "content": "Máy pha cà phê Quận 3 lỗi áp suất, đang dùng máy dự phòng", "status": "open", "evidence": ["u012"]},
+    {"id": "T2", "type": "task", "thread": "espresso-machine", "content": "Gọi kỹ thuật bên hãng qua kiểm tra máy pha cà phê", "status": "open", "owner": "Ánh", "deadline": "2026-10-27", "deadline_text": "mai", "evidence": ["u013", "u014"]}
+  ]
+}

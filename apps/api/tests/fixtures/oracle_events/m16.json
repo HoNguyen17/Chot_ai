@@ -1,0 +1,20 @@
+{
+  "threads": [
+    {"id": "curriculum", "title": "Có đổi giáo trình lớp Kids không"},
+    {"id": "midterm", "title": "Lịch thi giữa kỳ"},
+    {"id": "weekend-class", "title": "Lớp sáng thứ Bảy cho Starters 3"}
+  ],
+  "events": [
+    {"utt": "u002", "thread": "curriculum", "kind": "info", "speaker": "Trâm", "content": "Lớp Kids dùng giáo trình cũ từ 2019, nhiều bài nghe chất lượng kém", "quote": "Lớp Kids hiện dùng giáo trình cũ từ 2019"},
+    {"utt": "u003", "thread": "curriculum", "kind": "propose", "speaker": "Trâm", "key": "gt-2025", "content": "Đổi sang giáo trình mới bản 2025, học viên tự mua sách ~450 nghìn/bộ", "quote": "Em đề xuất đổi sang bộ giáo trình mới bản 2025"},
+    {"utt": "u004", "thread": "curriculum", "kind": "object", "speaker": "Đông", "key": "gt-2025", "content": "Phụ huynh sẽ hỏi nhiều khi tăng 450 nghìn, sắp tuyển sinh", "quote": "Tăng thêm 450 nghìn thì phụ huynh sẽ hỏi nhiều"},
+    {"utt": "u005", "thread": "curriculum", "kind": "object", "speaker": "Kiều", "key": "gt-2025", "content": "Đổi giữa khóa giáo viên phải soạn lại bài, mất ít nhất 3 tuần", "quote": "Đổi giáo trình giữa khóa thì giáo viên phải soạn lại bài"},
+    {"utt": "u006", "thread": "curriculum", "kind": "defer", "speaker": "Hà", "content": "Họp tháng sau quyết, khi có báo giá chính thức", "quote": "Vụ giáo trình để họp tháng sau quyết"},
+    {"utt": "u007", "thread": "curriculum", "kind": "commit", "speaker": "Trâm", "key": "bao-gia-sach", "owner": "Trâm", "content": "Liên hệ nhà sách xin báo giá giáo trình cho trung tâm", "hedged": true, "quote": "Để em thử liên hệ nhà sách xin báo giá cho trung tâm xem"},
+    {"utt": "u008", "thread": "midterm", "kind": "info", "speaker": "Kiều", "content": "Thi giữa kỳ từ 2/11 đến 6/11; phòng 3 đang sửa, dồn sang phòng 1 và 2", "quote": "thi từ 2/11 đến 6/11, phòng 3 đang sửa nên dồn sang phòng 1 và 2"},
+    {"utt": "u009", "thread": "midterm", "kind": "assign", "speaker": "Hà", "key": "gui-lich-thi", "owner": "Kiều", "content": "Gửi lịch thi giữa kỳ cho giáo viên và phụ huynh", "deadline_text": "trước thứ Tư", "quote": "Kiều gửi lịch thi cho giáo viên và phụ huynh trước thứ Tư nhé"},
+    {"utt": "u010", "thread": "midterm", "kind": "commit", "speaker": "Kiều", "key": "gui-lich-thi", "owner": "Kiều", "deadline_text": "thứ Tư", "quote": "Ok chị, thứ Tư em gửi"},
+    {"utt": "u011", "thread": "weekend-class", "kind": "request", "speaker": "Đông", "content": "Phụ huynh Starters 3 yêu cầu mở thêm lớp sáng thứ Bảy (9 phụ huynh đã ký tên)", "quote": "Phụ huynh lớp Starters 3 yêu cầu mở thêm lớp sáng thứ Bảy"},
+    {"utt": "u013", "thread": "weekend-class", "kind": "blocker", "speaker": "Hà", "content": "Chưa có giáo viên trống lịch sáng thứ Bảy để mở lớp mới", "quote": "Mở lớp mới phải có giáo viên trống lịch sáng thứ Bảy, giờ chưa có ai"}
+  ]
+}

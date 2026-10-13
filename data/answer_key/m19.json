@@ -1,0 +1,15 @@
+{
+  "meeting_id": "m19",
+  "labeler": "answer-key",
+  "items": [
+    {"id": "D1", "type": "decision", "thread": "demo-platform", "content": "Demo đăng Steam Next Fest tháng 2; bỏ itch.io và mobile", "status": "final", "decided_by": "Huy", "evidence": ["u011", "u002"], "note": "Bẫy đổi ý 3 lần: Next Fest → itch.io (chủ trì đã 'Ok' ở u005) → bị lật u006 → mobile → quay lại Next Fest → chốt u011."},
+    {"id": "O1", "type": "option", "thread": "demo-platform", "content": "Đăng demo trên itch.io trước", "status": "superseded", "evidence": ["u004"]},
+    {"id": "O2", "type": "option", "thread": "demo-platform", "content": "Demo mobile trên TestFlight gửi cộng đồng Discord", "status": "superseded", "evidence": ["u007"]},
+    {"id": "K1", "type": "knowledge", "thread": "demo-platform", "content": "Hạn nộp build Steam Next Fest là 15/12", "status": "open", "evidence": ["u003"]},
+    {"id": "T1", "type": "task", "thread": "demo-platform", "content": "Fix crash màn 3", "status": "open", "owner": "Lâm", "deadline": null, "deadline_text": "trong tuần này", "evidence": ["u012", "u013"], "note": "'trong tuần này' không có ngày cụ thể."},
+    {"id": "D2", "type": "decision", "thread": "boss-art", "content": "Art boss tối màu kiểu gothic", "status": "needs_confirmation", "decided_by": "Huy", "evidence": ["u015", "u014"], "note": "Bẫy 'thích' ≠ chốt."},
+    {"id": "O3", "type": "option", "thread": "boss-art", "content": "Art boss màu pastel dễ thương", "status": "open", "evidence": ["u014"]},
+    {"id": "F1", "type": "feedback", "thread": "playtest", "content": "Playtester: boss màn 2 quá khó, 70% người chơi bỏ cuộc", "status": "open", "evidence": ["u016"]},
+    {"id": "B1", "type": "blocker", "thread": "build-machine", "content": "Máy build hết license Unity Pro, không export được bản release", "status": "open", "evidence": ["u017"]}
+  ]
+}

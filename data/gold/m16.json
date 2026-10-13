@@ -1,0 +1,103 @@
+{
+  "meeting_id": "m16",
+  "labeler": "claude",
+  "items": [
+    {
+      "id": "K1",
+      "type": "knowledge",
+      "thread": "curriculum",
+      "content": "Lớp Kids dùng giáo trình cũ từ 2019, nhiều bài nghe chất lượng kém",
+      "status": "open",
+      "evidence": ["u002"],
+      "note": "Tình trạng giáo trình hiện tại — lý do của đề xuất, không phải phản biện."
+    },
+    {
+      "id": "D1",
+      "type": "decision",
+      "thread": "curriculum",
+      "content": "Có đổi giáo trình lớp Kids không — họp tháng sau quyết khi có báo giá",
+      "status": "deferred",
+      "decided_by": "Hà",
+      "evidence": ["u006"],
+      "note": "Bẫy defer_next_meeting. Chưa từng chốt → không áp quy tắc 4, không tạo option."
+    },
+    {
+      "id": "B1",
+      "type": "blocker",
+      "thread": "curriculum",
+      "content": "Giáo trình mới làm tăng ~450 nghìn/học viên, phụ huynh sẽ hỏi nhiều khi sắp tuyển sinh",
+      "status": "open",
+      "evidence": ["u004"],
+      "note": "Quy tắc 1: phản biện cụ thể (chi phí)."
+    },
+    {
+      "id": "B2",
+      "type": "blocker",
+      "thread": "curriculum",
+      "content": "Đổi giáo trình giữa khóa giáo viên phải soạn lại bài, mất ít nhất 3 tuần",
+      "status": "open",
+      "evidence": ["u005"],
+      "note": "Quy tắc 2: phản biện có số liệu → blocker + K2."
+    },
+    {
+      "id": "K2",
+      "type": "knowledge",
+      "thread": "curriculum",
+      "content": "Đổi giáo trình giữa khóa cần ít nhất 3 tuần để giáo viên soạn lại bài",
+      "status": "open",
+      "evidence": ["u005"],
+      "note": "Số liệu trong phản biện u005 → đi kèm B2 (quy tắc 2)."
+    },
+    {
+      "id": "T1",
+      "type": "task",
+      "thread": "curriculum",
+      "content": "Liên hệ nhà sách xin báo giá giáo trình cho trung tâm",
+      "status": "needs_confirmation",
+      "owner": "Trâm",
+      "deadline": null,
+      "deadline_text": null,
+      "evidence": ["u007"],
+      "note": "Bẫy 'Để em thử… xem' → tự nhận nhưng rào đón → needs_confirmation (khác quy tắc 13: đây là chính câu nhận việc có rào đón)."
+    },
+    {
+      "id": "K3",
+      "type": "knowledge",
+      "thread": "midterm",
+      "content": "Thi giữa kỳ từ 2/11 đến 6/11; phòng 3 đang sửa, dồn sang phòng 1 và 2",
+      "status": "open",
+      "evidence": ["u008"],
+      "note": "Lịch thi và ràng buộc phòng thi, đáng lưu."
+    },
+    {
+      "id": "T2",
+      "type": "task",
+      "thread": "midterm",
+      "content": "Gửi lịch thi giữa kỳ cho giáo viên và phụ huynh",
+      "status": "open",
+      "owner": "Kiều",
+      "deadline": "2026-10-28",
+      "deadline_text": "thứ Tư",
+      "evidence": ["u009", "u010"],
+      "note": "Họp thứ Năm 22/10 → thứ Tư 28/10."
+    },
+    {
+      "id": "R1",
+      "type": "request",
+      "thread": "weekend-class",
+      "content": "Phụ huynh Starters 3 yêu cầu mở thêm lớp sáng thứ Bảy (9 phụ huynh đã ký tên)",
+      "status": "open",
+      "evidence": ["u011", "u012"],
+      "note": "Bẫy request_parent."
+    },
+    {
+      "id": "B3",
+      "type": "blocker",
+      "thread": "weekend-class",
+      "content": "Chưa có giáo viên trống lịch sáng thứ Bảy để mở lớp mới",
+      "status": "open",
+      "evidence": ["u013"],
+      "note": "Vướng mắc chặn yêu cầu mở lớp (R1): chưa có giáo viên."
+    }
+  ]
+}

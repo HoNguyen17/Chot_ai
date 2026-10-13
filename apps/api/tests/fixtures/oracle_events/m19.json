@@ -1,0 +1,27 @@
+{
+  "threads": [
+    {"id": "demo-platform", "title": "Demo ra ở nền tảng nào"},
+    {"id": "boss-art", "title": "Art boss cuối"},
+    {"id": "playtest", "title": "Phản hồi playtest"},
+    {"id": "build-machine", "title": "Máy build"}
+  ],
+  "events": [
+    {"utt": "u002", "thread": "demo-platform", "kind": "propose", "speaker": "Nhàn", "key": "next-fest", "content": "Đăng demo ở Steam Next Fest tháng 2", "quote": "Demo em đề xuất đăng Steam Next Fest tháng 2"},
+    {"utt": "u003", "thread": "demo-platform", "kind": "object", "speaker": "Lâm", "key": "next-fest", "content": "Build còn crash ở màn 3", "quote": "build hiện tại còn crash ở màn 3"},
+    {"utt": "u003", "thread": "demo-platform", "kind": "info", "speaker": "Lâm", "content": "Hạn nộp build Steam Next Fest là 15/12", "quote": "Next Fest hạn nộp build là 15/12"},
+    {"utt": "u004", "thread": "demo-platform", "kind": "revise", "speaker": "Lâm", "key": "itch-io", "content": "Đăng demo trên itch.io trước", "hedged": true, "quote": "Hay mình đăng itch.io trước cho kịp"},
+    {"utt": "u005", "thread": "demo-platform", "kind": "agree", "speaker": "Huy", "key": "itch-io", "content": "Đi itch.io trước", "quote": "Ok vậy mình đi itch.io trước"},
+    {"utt": "u006", "thread": "demo-platform", "kind": "object", "speaker": "Oanh", "key": "itch-io", "content": "itch.io gần như không có traffic", "quote": "itch.io thì gần như không có traffic"},
+    {"utt": "u007", "thread": "demo-platform", "kind": "revise", "speaker": "Nhàn", "key": "mobile", "content": "Demo mobile trên TestFlight gửi cộng đồng Discord", "hedged": true, "quote": "Hay mình làm bản demo mobile trên TestFlight"},
+    {"utt": "u008", "thread": "demo-platform", "kind": "object", "speaker": "Lâm", "key": "mobile", "content": "Port mobile mất ít nhất một tháng", "quote": "Port sang mobile mất ít nhất một tháng"},
+    {"utt": "u009", "thread": "demo-platform", "kind": "revise", "speaker": "Nhàn", "key": "next-fest", "content": "Quay lại Steam Next Fest", "quote": "Vậy quay lại Steam Next Fest"},
+    {"utt": "u011", "thread": "demo-platform", "kind": "agree", "speaker": "Huy", "key": "next-fest", "content": "Demo đăng Steam Next Fest tháng 2; bỏ itch.io và mobile", "quote": "Chốt demo đăng Steam Next Fest tháng 2"},
+    {"utt": "u012", "thread": "demo-platform", "kind": "assign", "speaker": "Huy", "key": "fix-crash", "owner": "Lâm", "content": "Fix crash màn 3", "deadline_text": "trong tuần này", "quote": "Lâm fix crash màn 3 trong tuần này"},
+    {"utt": "u013", "thread": "demo-platform", "kind": "commit", "speaker": "Lâm", "key": "fix-crash", "owner": "Lâm", "quote": "Ok anh, em làm luôn"},
+    {"utt": "u014", "thread": "boss-art", "kind": "propose", "speaker": "Oanh", "key": "gothic", "content": "Art boss tối màu kiểu gothic", "quote": "bản tối màu kiểu gothic"},
+    {"utt": "u014", "thread": "boss-art", "kind": "propose", "speaker": "Oanh", "key": "pastel", "content": "Art boss màu pastel dễ thương", "quote": "bản màu pastel dễ thương"},
+    {"utt": "u015", "thread": "boss-art", "kind": "agree", "speaker": "Huy", "key": "gothic", "content": "Thích bản gothic", "hedged": true, "quote": "Anh thích bản gothic hơn"},
+    {"utt": "u016", "thread": "playtest", "kind": "feedback", "speaker": "Nhàn", "content": "Playtester: boss màn 2 quá khó, 70% người chơi bỏ cuộc", "quote": "Playtester tuần rồi nói boss màn 2 quá khó"},
+    {"utt": "u017", "thread": "build-machine", "kind": "blocker", "speaker": "Lâm", "content": "Máy build hết license Unity Pro, không export được bản release", "quote": "Máy build của studio hết license Unity Pro từ hôm qua"}
+  ]
+}

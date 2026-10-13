@@ -1,0 +1,14 @@
+{
+  "meeting_id": "m17",
+  "labeler": "answer-key",
+  "items": [
+    {"id": "D1", "type": "decision", "thread": "venue", "content": "Trung tâm hội nghị quận 7, giữ ngày 12/12, thuê thêm xe đưa đón", "status": "final", "decided_by": "Thắng", "evidence": ["u009", "u006"], "note": "Bẫy 2 chủ đề xen kẽ: địa điểm quay lại ở u006 sau phần biểu diễn. A (khách sạn quận 1) → B (quận 7)."},
+    {"id": "O1", "type": "option", "thread": "venue", "content": "Khách sạn quận 1, sảnh 400 chỗ, giá thuê 180 triệu", "status": "superseded", "evidence": ["u002"]},
+    {"id": "T1", "type": "task", "thread": "venue", "content": "Đặt cọc trung tâm hội nghị quận 7", "status": "open", "owner": "Vũ", "deadline": "2026-10-26", "deadline_text": "thứ Hai", "evidence": ["u011", "u012"]},
+    {"id": "D2", "type": "decision", "thread": "entertainment", "content": "Ban nhạc acoustic, thêm ảo thuật vào phần bốc thăm", "status": "final", "decided_by": "Thắng", "evidence": ["u013", "u004"]},
+    {"id": "R1", "type": "request", "thread": "entertainment", "content": "Khách hỏi thêm tiết mục ảo thuật cho phần bốc thăm", "status": "open", "evidence": ["u008"]},
+    {"id": "B1", "type": "blocker", "thread": "led", "content": "Màn LED đang cho thuê sự kiện khác tới 11/12, chưa chắc tháo về kịp", "status": "open", "evidence": ["u014"]},
+    {"id": "T2", "type": "task", "thread": "led", "content": "Check lịch tháo dỡ màn LED với đối tác", "status": "needs_confirmation", "owner": null, "deadline": null, "deadline_text": null, "evidence": ["u015"], "note": "Bẫy 'ai đó…': 'Dạ.' của Thoa chỉ là đang nghe."},
+    {"id": "T3", "type": "task", "thread": "entertainment", "content": "Gửi kịch bản chương trình bản nháp cho khách", "status": "open", "owner": "Thoa", "deadline": "2026-10-30", "deadline_text": "trước 30/10", "evidence": ["u017"]}
+  ]
+}

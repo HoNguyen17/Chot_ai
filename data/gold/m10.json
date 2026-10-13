@@ -2,20 +2,151 @@
   "meeting_id": "m10",
   "labeler": "claude",
   "items": [
-    {"id": "D1", "type": "decision", "thread": "login", "content": "Đăng nhập OTP SMS, chỉ gửi khi đăng nhập trên thiết bị mới; bỏ email và Zalo", "status": "final", "decided_by": "Nam", "evidence": ["u011", "u009"], "note": "Bẫy đổi ý 3 lần; chỉ u011 là câu chốt sau cùng không bị lật. 'Ok em.' của khách (u012) không phải sự kiện mới."},
-    {"id": "O1", "type": "option", "thread": "login", "content": "Đăng nhập bằng OTP SMS mọi lần", "status": "superseded", "evidence": ["u002"]},
-    {"id": "O2", "type": "option", "thread": "login", "content": "Đăng nhập bằng email kèm mật khẩu (tạm chốt giữa họp)", "status": "superseded", "evidence": ["u004", "u005"], "note": "Quy tắc 3: chủ trì đã 'Ok vậy đi email' (u005) rồi bị thay."},
-    {"id": "O3", "type": "option", "thread": "login", "content": "Đăng nhập bằng Zalo", "status": "superseded", "evidence": ["u007"]},
-    {"id": "B1", "type": "blocker", "thread": "login", "content": "OTP SMS mọi lần tốn ~40 triệu/tháng tiền SMS", "status": "open", "evidence": ["u003"], "note": "Quy tắc 2: phản biện có số liệu → blocker + K1."},
-    {"id": "K1", "type": "knowledge", "thread": "login", "content": "OTP SMS ~800 đồng/tin; 50 nghìn user/tháng ≈ 40 triệu", "status": "open", "evidence": ["u003"]},
-    {"id": "B2", "type": "blocker", "thread": "login", "content": "Khách phần lớn là người bán hàng ở chợ, ít dùng email", "status": "open", "evidence": ["u006"], "note": "Quy tắc 2: phản biện kèm thông tin về khách → blocker + K2."},
-    {"id": "K2", "type": "knowledge", "thread": "login", "content": "Người dùng cuối phần lớn là người bán hàng ở chợ, ít dùng email", "status": "open", "evidence": ["u006"]},
-    {"id": "B3", "type": "blocker", "thread": "login", "content": "Đăng nhập Zalo phải chờ duyệt Zalo Developer ~3 tuần, trễ UAT", "status": "open", "evidence": ["u008", "u009"], "note": "Quy tắc 2 + 7: blocker + K3, kèm câu bàn tiếp."},
-    {"id": "K3", "type": "knowledge", "thread": "login", "content": "Đăng nhập Zalo cần duyệt trên Zalo Developer, lần trước chờ 3 tuần", "status": "open", "evidence": ["u008"]},
-    {"id": "T1", "type": "task", "thread": "login", "content": "Cập nhật tài liệu kiến trúc phần đăng nhập, gửi chị Tuyết", "status": "open", "owner": "Đức", "deadline": "2026-10-19", "deadline_text": "thứ Hai", "evidence": ["u013", "u014"]},
-    {"id": "B4", "type": "blocker", "thread": "uat", "content": "Chưa có môi trường staging có dữ liệu thật đã ẩn danh để UAT", "status": "open", "evidence": ["u015"]},
-    {"id": "D2", "type": "decision", "thread": "uat", "content": "Ngày bắt đầu UAT — chưa chốt, chờ lịch nghỉ lễ phía khách", "status": "deferred", "decided_by": null, "evidence": ["u016"], "note": "Bẫy keyword 'chưa chốt được'. Người hoãn là khách, không phải chủ trì → decided_by null."},
-    {"id": "T2", "type": "task", "thread": "uat", "content": "Hỏi lại sếp phía khách về lịch nghỉ lễ để chốt ngày UAT", "status": "open", "owner": "Tuyết", "deadline": null, "deadline_text": null, "evidence": ["u016"], "note": "Như m02 T1: hành động tự nhận nằm trong câu rào đón vẫn tách task."},
-    {"id": "T3", "type": "task", "thread": "uat", "content": "Cập nhật user story đăng nhập lên Jira", "status": "open", "owner": "Kim", "deadline": "2026-10-16", "deadline_text": "trong hôm nay", "evidence": ["u017"], "note": "Bẫy ASR: 'Gi ra' = Jira."}
+    {
+      "id": "D1",
+      "type": "decision",
+      "thread": "login",
+      "content": "Đăng nhập OTP SMS, chỉ gửi khi đăng nhập trên thiết bị mới; bỏ email và Zalo",
+      "status": "final",
+      "decided_by": "Nam",
+      "evidence": ["u011", "u009"],
+      "note": "Bẫy đổi ý 3 lần; chỉ u011 là câu chốt sau cùng không bị lật. 'Ok em.' của khách (u012) không phải sự kiện mới."
+    },
+    {
+      "id": "O1",
+      "type": "option",
+      "thread": "login",
+      "content": "Đăng nhập bằng OTP SMS mọi lần",
+      "status": "superseded",
+      "evidence": ["u002"],
+      "note": "Đề xuất gốc của khách (OTP mọi lần), bị thay bởi biến thể chỉ gửi trên thiết bị mới → superseded."
+    },
+    {
+      "id": "O2",
+      "type": "option",
+      "thread": "login",
+      "content": "Đăng nhập bằng email kèm mật khẩu (tạm chốt giữa họp)",
+      "status": "superseded",
+      "evidence": ["u004", "u005"],
+      "note": "Quy tắc 3: chủ trì đã 'Ok vậy đi email' (u005) rồi bị thay."
+    },
+    {
+      "id": "O3",
+      "type": "option",
+      "thread": "login",
+      "content": "Đăng nhập bằng Zalo",
+      "status": "superseded",
+      "evidence": ["u007"],
+      "note": "Đề xuất bị phản biện (u008) rồi bị loại; D1 final → superseded."
+    },
+    {
+      "id": "B1",
+      "type": "blocker",
+      "thread": "login",
+      "content": "OTP SMS mọi lần tốn ~40 triệu/tháng tiền SMS",
+      "status": "open",
+      "evidence": ["u003"],
+      "note": "Quy tắc 2: phản biện có số liệu → blocker + K1."
+    },
+    {
+      "id": "K1",
+      "type": "knowledge",
+      "thread": "login",
+      "content": "OTP SMS ~800 đồng/tin; 50 nghìn user/tháng ≈ 40 triệu",
+      "status": "open",
+      "evidence": ["u003"],
+      "note": "Số liệu trong phản biện u003 → đi kèm B1 (quy tắc 2)."
+    },
+    {
+      "id": "B2",
+      "type": "blocker",
+      "thread": "login",
+      "content": "Khách phần lớn là người bán hàng ở chợ, ít dùng email",
+      "status": "open",
+      "evidence": ["u006"],
+      "note": "Quy tắc 2: phản biện kèm thông tin về khách → blocker + K2."
+    },
+    {
+      "id": "K2",
+      "type": "knowledge",
+      "thread": "login",
+      "content": "Người dùng cuối phần lớn là người bán hàng ở chợ, ít dùng email",
+      "status": "open",
+      "evidence": ["u006"],
+      "note": "Thông tin về người dùng cuối trong phản biện u006 → đi kèm B2 (quy tắc 2)."
+    },
+    {
+      "id": "B3",
+      "type": "blocker",
+      "thread": "login",
+      "content": "Đăng nhập Zalo phải chờ duyệt Zalo Developer ~3 tuần, trễ UAT",
+      "status": "open",
+      "evidence": ["u008", "u009"],
+      "note": "Quy tắc 2 + 7: blocker + K3, kèm câu bàn tiếp."
+    },
+    {
+      "id": "K3",
+      "type": "knowledge",
+      "thread": "login",
+      "content": "Đăng nhập Zalo cần duyệt trên Zalo Developer, lần trước chờ 3 tuần",
+      "status": "open",
+      "evidence": ["u008"],
+      "note": "Ràng buộc quy trình duyệt trong phản biện u008 → đi kèm B3 (quy tắc 2)."
+    },
+    {
+      "id": "T1",
+      "type": "task",
+      "thread": "login",
+      "content": "Cập nhật tài liệu kiến trúc phần đăng nhập, gửi chị Tuyết",
+      "status": "open",
+      "owner": "Đức",
+      "deadline": "2026-10-19",
+      "deadline_text": "thứ Hai",
+      "evidence": ["u013", "u014"],
+      "note": "'Dạ ok anh, thứ Hai em gửi' = nhận rõ → open. Họp thứ Sáu 16/10 → thứ Hai 19/10."
+    },
+    {
+      "id": "B4",
+      "type": "blocker",
+      "thread": "uat",
+      "content": "Chưa có môi trường staging có dữ liệu thật đã ẩn danh để UAT",
+      "status": "open",
+      "evidence": ["u015"],
+      "note": "Vướng mắc đang chặn UAT."
+    },
+    {
+      "id": "D2",
+      "type": "decision",
+      "thread": "uat",
+      "content": "Ngày bắt đầu UAT — chưa chốt, chờ lịch nghỉ lễ phía khách",
+      "status": "deferred",
+      "decided_by": null,
+      "evidence": ["u016"],
+      "note": "Bẫy keyword 'chưa chốt được'. Người hoãn là khách, không phải chủ trì → decided_by null."
+    },
+    {
+      "id": "T2",
+      "type": "task",
+      "thread": "uat",
+      "content": "Hỏi lại sếp phía khách về lịch nghỉ lễ để chốt ngày UAT",
+      "status": "open",
+      "owner": "Tuyết",
+      "deadline": null,
+      "deadline_text": null,
+      "evidence": ["u016"],
+      "note": "Như m02 T1: hành động tự nhận nằm trong câu rào đón vẫn tách task."
+    },
+    {
+      "id": "T3",
+      "type": "task",
+      "thread": "uat",
+      "content": "Cập nhật user story đăng nhập lên Jira",
+      "status": "open",
+      "owner": "Kim",
+      "deadline": "2026-10-16",
+      "deadline_text": "trong hôm nay",
+      "evidence": ["u017"],
+      "note": "Bẫy ASR: 'Gi ra' = Jira."
+    }
   ]
 }

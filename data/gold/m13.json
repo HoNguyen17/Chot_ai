@@ -2,12 +2,74 @@
   "meeting_id": "m13",
   "labeler": "claude",
   "items": [
-    {"id": "F1", "type": "feedback", "thread": "riverside-feedback", "content": "Khách khen nhà mẫu Riverside đẹp nhưng chê bãi giữ xe chật, ô tô ra vào khó", "status": "open", "evidence": ["u002"], "note": "Bẫy feedback_customer."},
-    {"id": "Q1", "type": "open_question", "thread": "ads-young", "content": "Có chạy quảng cáo Facebook nhắm khách trẻ không?", "status": "open", "evidence": ["u003", "u004"], "note": "Bẫy câu hỏi bỏ ngỏ: 'Ừm, mỗi người một ý' (u006) không phải đồng ý một đề xuất → không áp quy tắc 5."},
-    {"id": "B1", "type": "blocker", "thread": "ads-young", "content": "Quảng cáo nhắm khách trẻ tháng 8 có tỉ lệ ra cọc dưới 1%, tốn tiền", "status": "open", "evidence": ["u004", "u005"], "note": "Quy tắc 2 + 7: phản biện có số liệu → blocker + K1, kèm câu bàn tiếp (u005)."},
-    {"id": "K1", "type": "knowledge", "thread": "ads-young", "content": "Quảng cáo nhắm khách trẻ tháng 8: tỉ lệ ra cọc dưới 1%", "status": "open", "evidence": ["u004"]},
-    {"id": "K2", "type": "knowledge", "thread": "legal", "content": "Riverside dự kiến tháng 12 mới có sổ hồng từng căn, phải nói rõ với khách", "status": "open", "evidence": ["u007"]},
-    {"id": "T1", "type": "task", "thread": "legal", "content": "Soạn lại bộ câu hỏi thường gặp về pháp lý cho cả team", "status": "needs_confirmation", "owner": "Lộc", "deadline": null, "deadline_text": null, "evidence": ["u008", "u009"], "note": "Bẫy 'Dạ vâng.' khi được giao việc → needs_confirmation."},
-    {"id": "T2", "type": "task", "thread": "follow-up", "content": "Gọi lại 12 khách đã xem nhà mẫu tuần trước", "status": "open", "owner": "Yến", "deadline": "2026-10-19", "deadline_text": "trong hôm nay", "evidence": ["u010"]}
+    {
+      "id": "F1",
+      "type": "feedback",
+      "thread": "riverside-feedback",
+      "content": "Khách khen nhà mẫu Riverside đẹp nhưng chê bãi giữ xe chật, ô tô ra vào khó",
+      "status": "open",
+      "evidence": ["u002"],
+      "note": "Bẫy feedback_customer."
+    },
+    {
+      "id": "Q1",
+      "type": "open_question",
+      "thread": "ads-young",
+      "content": "Có chạy quảng cáo Facebook nhắm khách trẻ không?",
+      "status": "open",
+      "evidence": ["u003", "u004"],
+      "note": "Bẫy câu hỏi bỏ ngỏ: 'Ừm, mỗi người một ý' (u006) không phải đồng ý một đề xuất → không áp quy tắc 5."
+    },
+    {
+      "id": "B1",
+      "type": "blocker",
+      "thread": "ads-young",
+      "content": "Quảng cáo nhắm khách trẻ tháng 8 có tỉ lệ ra cọc dưới 1%, tốn tiền",
+      "status": "open",
+      "evidence": ["u004", "u005"],
+      "note": "Quy tắc 2 + 7: phản biện có số liệu → blocker + K1, kèm câu bàn tiếp (u005)."
+    },
+    {
+      "id": "K1",
+      "type": "knowledge",
+      "thread": "ads-young",
+      "content": "Quảng cáo nhắm khách trẻ tháng 8: tỉ lệ ra cọc dưới 1%",
+      "status": "open",
+      "evidence": ["u004"],
+      "note": "Số liệu trong phản biện u004 → đi kèm B1 (quy tắc 2)."
+    },
+    {
+      "id": "K2",
+      "type": "knowledge",
+      "thread": "legal",
+      "content": "Riverside dự kiến tháng 12 mới có sổ hồng từng căn, phải nói rõ với khách",
+      "status": "open",
+      "evidence": ["u007"],
+      "note": "Ràng buộc pháp lý dự án, phải nói rõ với khách."
+    },
+    {
+      "id": "T1",
+      "type": "task",
+      "thread": "legal",
+      "content": "Soạn lại bộ câu hỏi thường gặp về pháp lý cho cả team",
+      "status": "needs_confirmation",
+      "owner": "Lộc",
+      "deadline": null,
+      "deadline_text": null,
+      "evidence": ["u008", "u009"],
+      "note": "Bẫy 'Dạ vâng.' khi được giao việc → needs_confirmation."
+    },
+    {
+      "id": "T2",
+      "type": "task",
+      "thread": "follow-up",
+      "content": "Gọi lại 12 khách đã xem nhà mẫu tuần trước",
+      "status": "open",
+      "owner": "Yến",
+      "deadline": "2026-10-19",
+      "deadline_text": "trong hôm nay",
+      "evidence": ["u010"],
+      "note": "Tự nhận, không rào đón → open, hạn hôm nay 19/10."
+    }
   ]
 }

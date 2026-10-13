@@ -1,0 +1,13 @@
+{
+  "meeting_id": "m16",
+  "labeler": "answer-key",
+  "items": [
+    {"id": "K1", "type": "knowledge", "thread": "curriculum", "content": "Lớp Kids dùng giáo trình cũ từ 2019, nhiều bài nghe chất lượng kém", "status": "open", "evidence": ["u002"]},
+    {"id": "D1", "type": "decision", "thread": "curriculum", "content": "Có đổi giáo trình lớp Kids không — họp tháng sau quyết khi có báo giá", "status": "deferred", "evidence": ["u006"], "note": "Bẫy defer_next_meeting."},
+    {"id": "T1", "type": "task", "thread": "curriculum", "content": "Liên hệ nhà sách xin báo giá giáo trình cho trung tâm", "status": "needs_confirmation", "owner": "Trâm", "deadline": null, "deadline_text": null, "evidence": ["u007"], "note": "Bẫy 'Để em thử… xem' → tự nhận nhưng có rào đón."},
+    {"id": "K2", "type": "knowledge", "thread": "midterm", "content": "Thi giữa kỳ từ 2/11 đến 6/11; phòng 3 đang sửa, dồn sang phòng 1 và 2", "status": "open", "evidence": ["u008"]},
+    {"id": "T2", "type": "task", "thread": "midterm", "content": "Gửi lịch thi giữa kỳ cho giáo viên và phụ huynh", "status": "open", "owner": "Kiều", "deadline": "2026-10-28", "deadline_text": "thứ Tư", "evidence": ["u009", "u010"], "note": "Họp thứ Năm 22/10 → thứ Tư 28/10."},
+    {"id": "R1", "type": "request", "thread": "weekend-class", "content": "Phụ huynh Starters 3 yêu cầu mở thêm lớp sáng thứ Bảy (9 phụ huynh đã ký tên)", "status": "open", "evidence": ["u011"]},
+    {"id": "B1", "type": "blocker", "thread": "weekend-class", "content": "Chưa có giáo viên trống lịch sáng thứ Bảy để mở lớp mới", "status": "open", "evidence": ["u013"]}
+  ]
+}

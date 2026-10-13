@@ -1,0 +1,112 @@
+{
+  "meeting_id": "m20",
+  "labeler": "claude",
+  "items": [
+    {
+      "id": "D1",
+      "type": "decision",
+      "thread": "branch-location",
+      "content": "Mặt bằng chi nhánh thứ 5 — chưa chốt, để nhà đầu tư Diệp quyết",
+      "status": "deferred",
+      "decided_by": "Nhân",
+      "evidence": ["u006"],
+      "note": "Bẫy 'Ok chốt Lê Văn Sỹ' (u004) rồi 'thôi khoan' (u006), đẩy cho người vắng mặt."
+    },
+    {
+      "id": "O1",
+      "type": "option",
+      "thread": "branch-location",
+      "content": "Mặt bằng Lê Văn Sỹ 80 m², 45 triệu/tháng (đã chốt rồi bị lật)",
+      "status": "open",
+      "evidence": ["u002", "u004"],
+      "note": "Quy tắc 4: chốt rồi bị lật thành hoãn → mọi phương án open."
+    },
+    {
+      "id": "O2",
+      "type": "option",
+      "thread": "branch-location",
+      "content": "Mặt bằng Thảo Điền 120 m², 70 triệu/tháng",
+      "status": "open",
+      "evidence": ["u003"],
+      "note": "Quy tắc 4: chốt rồi bị lật thành hoãn → phương án còn lại cũng open."
+    },
+    {
+      "id": "B1",
+      "type": "blocker",
+      "thread": "branch-location",
+      "content": "Chủ nhà Lê Văn Sỹ đòi cọc 6 tháng 270 triệu, dòng tiền quý này không kham nổi",
+      "status": "open",
+      "evidence": ["u005", "u006"],
+      "note": "Quy tắc 2 + 7: phản biện có số liệu → blocker + K1, kèm câu bàn tiếp."
+    },
+    {
+      "id": "K1",
+      "type": "knowledge",
+      "thread": "branch-location",
+      "content": "Chủ nhà Lê Văn Sỹ đòi cọc 6 tháng (270 triệu)",
+      "status": "open",
+      "evidence": ["u005"],
+      "note": "Số liệu trong phản biện u005 → đi kèm B1 (quy tắc 2)."
+    },
+    {
+      "id": "T1",
+      "type": "task",
+      "thread": "branch-location",
+      "content": "Làm bảng dòng tiền hai phương án mặt bằng gửi chị Diệp",
+      "status": "open",
+      "owner": "Quốc",
+      "deadline": "2026-10-30",
+      "deadline_text": "thứ Sáu",
+      "evidence": ["u007", "u008"],
+      "note": "Giao cho Quốc (có mặt), gửi người vắng mặt → không áp quy tắc 12."
+    },
+    {
+      "id": "Q1",
+      "type": "open_question",
+      "thread": "banh-mi",
+      "content": "Có bán thêm bánh mì buổi sáng không?",
+      "status": "open",
+      "evidence": ["u009", "u010"],
+      "note": "Bẫy câu hỏi bỏ ngỏ: 'Ừm...' của chủ trì trong lúc tranh luận, không phải đồng ý một đề xuất → không áp quy tắc 5."
+    },
+    {
+      "id": "K2",
+      "type": "knowledge",
+      "thread": "banh-mi",
+      "content": "Khảo sát khách quen: 60% muốn có bánh mì buổi sáng",
+      "status": "open",
+      "evidence": ["u009"],
+      "note": "Số liệu khảo sát đi kèm đề xuất, không phải phản biện."
+    },
+    {
+      "id": "B2",
+      "type": "blocker",
+      "thread": "banh-mi",
+      "content": "Bán bánh mì phải thêm người ca sáng và tủ trưng bày, bếp hiện tại chật",
+      "status": "open",
+      "evidence": ["u010"],
+      "note": "Quy tắc 1: phản biện cụ thể (nguồn lực)."
+    },
+    {
+      "id": "B3",
+      "type": "blocker",
+      "thread": "espresso-machine",
+      "content": "Máy pha cà phê Quận 3 lỗi áp suất, đang dùng máy dự phòng",
+      "status": "open",
+      "evidence": ["u012", "u013"],
+      "note": "Vướng mắc đang ảnh hưởng vận hành; quy tắc 7: kèm câu bàn tiếp u013."
+    },
+    {
+      "id": "T2",
+      "type": "task",
+      "thread": "espresso-machine",
+      "content": "Gọi kỹ thuật bên hãng qua kiểm tra máy pha cà phê",
+      "status": "open",
+      "owner": "Ánh",
+      "deadline": "2026-10-27",
+      "deadline_text": "mai",
+      "evidence": ["u013", "u014"],
+      "note": "'Dạ ok anh, mai em gọi' = nhận rõ → open. Họp thứ Hai 26/10 → mai = 27/10."
+    }
+  ]
+}

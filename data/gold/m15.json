@@ -2,13 +2,84 @@
   "meeting_id": "m15",
   "labeler": "claude",
   "items": [
-    {"id": "K1", "type": "knowledge", "thread": "db-migration", "content": "Postgres 12 đang dùng đã hết hỗ trợ bảo mật", "status": "open", "evidence": ["u002"], "note": "Bẫy knowledge_constraint."},
-    {"id": "D1", "type": "decision", "thread": "db-migration", "content": "Migrate lên Postgres 16 bằng logical replication", "status": "needs_confirmation", "decided_by": "Quang", "evidence": ["u005", "u003"], "note": "Bẫy 'tạm thời…, anh cần xem thêm' rồi hết họp không nhắc lại → needs_confirmation. 'Dạ.' (u006) chỉ là đang nghe."},
-    {"id": "B1", "type": "blocker", "thread": "db-migration", "content": "Logical replication với DB 2 TB sync lần đầu mất ~3 ngày, phải canh lúc ít giao dịch", "status": "open", "evidence": ["u004", "u005"], "note": "[Nash xem lại] Lưu ý rủi ro có số liệu về phương án đang bàn → coi như phản biện cụ thể: blocker + K2, kèm câu bàn tiếp."},
-    {"id": "K2", "type": "knowledge", "thread": "db-migration", "content": "Database 2 TB: sync lần đầu bằng logical replication mất ~3 ngày", "status": "open", "evidence": ["u004"]},
-    {"id": "K3", "type": "knowledge", "thread": "db-migration", "content": "Ngân hàng đối tác yêu cầu báo trước 14 ngày mọi thay đổi hạ tầng", "status": "open", "evidence": ["u007"], "note": "Bẫy knowledge_constraint (quy định đối tác)."},
-    {"id": "T1", "type": "task", "thread": "db-migration", "content": "Viết runbook migrate database", "status": "needs_confirmation", "owner": "Thùy", "deadline": "2026-10-23", "deadline_text": "trước thứ Sáu", "evidence": ["u008", "u009"], "note": "Bẫy từ chối khéo ('tuần này em không kịp') → needs_confirmation."},
-    {"id": "B2", "type": "blocker", "thread": "app-release", "content": "Màn hình eKYC chờ SDK mới của đối tác, app tháng 11 mới xong 80%", "status": "open", "evidence": ["u010"]},
-    {"id": "T2", "type": "task", "thread": "app-release", "content": "Build bản beta cho team QA", "status": "open", "owner": "Định", "deadline": "2026-10-26", "deadline_text": "thứ Hai tuần sau", "evidence": ["u011"]}
+    {
+      "id": "K1",
+      "type": "knowledge",
+      "thread": "db-migration",
+      "content": "Postgres 12 đang dùng đã hết hỗ trợ bảo mật",
+      "status": "open",
+      "evidence": ["u002"],
+      "note": "Bẫy knowledge_constraint."
+    },
+    {
+      "id": "D1",
+      "type": "decision",
+      "thread": "db-migration",
+      "content": "Migrate lên Postgres 16 bằng logical replication",
+      "status": "needs_confirmation",
+      "decided_by": "Quang",
+      "evidence": ["u005", "u003"],
+      "note": "Bẫy 'tạm thời…, anh cần xem thêm' rồi hết họp không nhắc lại → needs_confirmation. 'Dạ.' (u006) chỉ là đang nghe."
+    },
+    {
+      "id": "B1",
+      "type": "blocker",
+      "thread": "db-migration",
+      "content": "Logical replication với DB 2 TB sync lần đầu mất ~3 ngày, phải canh lúc ít giao dịch",
+      "status": "open",
+      "evidence": ["u004", "u005"],
+      "note": "[Nash xem lại] Lưu ý rủi ro có số liệu về phương án đang bàn → coi như phản biện cụ thể: blocker + K2, kèm câu bàn tiếp."
+    },
+    {
+      "id": "K2",
+      "type": "knowledge",
+      "thread": "db-migration",
+      "content": "Database 2 TB: sync lần đầu bằng logical replication mất ~3 ngày",
+      "status": "open",
+      "evidence": ["u004"],
+      "note": "Số liệu trong lưu ý rủi ro u004 → đi kèm B1 (quy tắc 2)."
+    },
+    {
+      "id": "K3",
+      "type": "knowledge",
+      "thread": "db-migration",
+      "content": "Ngân hàng đối tác yêu cầu báo trước 14 ngày mọi thay đổi hạ tầng",
+      "status": "open",
+      "evidence": ["u007"],
+      "note": "Bẫy knowledge_constraint (quy định đối tác)."
+    },
+    {
+      "id": "T1",
+      "type": "task",
+      "thread": "db-migration",
+      "content": "Viết runbook migrate database",
+      "status": "needs_confirmation",
+      "owner": "Thùy",
+      "deadline": "2026-10-23",
+      "deadline_text": "trước thứ Sáu",
+      "evidence": ["u008", "u009"],
+      "note": "Bẫy từ chối khéo ('tuần này em không kịp') → needs_confirmation."
+    },
+    {
+      "id": "B2",
+      "type": "blocker",
+      "thread": "app-release",
+      "content": "Màn hình eKYC chờ SDK mới của đối tác, app tháng 11 mới xong 80%",
+      "status": "open",
+      "evidence": ["u010"],
+      "note": "Vướng mắc đang chặn bản app tháng 11 (chờ SDK đối tác)."
+    },
+    {
+      "id": "T2",
+      "type": "task",
+      "thread": "app-release",
+      "content": "Build bản beta cho team QA",
+      "status": "open",
+      "owner": "Định",
+      "deadline": "2026-10-26",
+      "deadline_text": "thứ Hai tuần sau",
+      "evidence": ["u011"],
+      "note": "Tự nhận, không rào đón → open. Họp thứ Tư 21/10 → thứ Hai tuần sau = 26/10."
+    }
   ]
 }

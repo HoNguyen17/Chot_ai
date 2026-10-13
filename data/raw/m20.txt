@@ -1,0 +1,20 @@
+# meeting: m20
+# title: Họp mở chi nhánh thứ 5 — chuỗi cà phê
+# date: 2026-10-26
+# participants: Nhân (Founder, chủ trì); Ánh (Vận hành); Quốc (Tài chính); My (Marketing)
+# absent: Diệp (Nhà đầu tư)
+[00:00:10] Nhân: Họp bàn chi nhánh thứ 5. Có hai mặt bằng đang cân nhắc.
+[00:00:50] Ánh: Mặt bằng đường Lê Văn Sỹ 80 mét vuông, thuê 45 triệu một tháng, gần hai trường đại học.
+[00:01:35] My: Mặt bằng ở Thảo Điền 120 mét vuông, 70 triệu, khách nước ngoài nhiều, bán được giá cao.
+[00:02:15] Nhân: Ok chốt Lê Văn Sỹ, chi phí thuê thấp hơn.
+[00:02:55] Quốc: Anh ơi chủ nhà Lê Văn Sỹ đòi cọc 6 tháng, 270 triệu, dòng tiền quý này không kham nổi.
+[00:03:40] Nhân: Ờ thôi khoan, vậy chưa chốt mặt bằng được. Cọc lớn vậy phải để chị Diệp quyết.
+[00:04:15] Nhân: Quốc làm bảng dòng tiền hai phương án gửi chị Diệp trước thứ Sáu.
+[00:04:30] Quốc: Ok anh, thứ Sáu em gửi.
+[00:05:15] My: Chi nhánh mới có nên bán thêm bánh mì buổi sáng không anh? Khảo sát khách quen thì 60% muốn.
+[00:06:00] Ánh: Bán bánh mì thì phải thêm một người ca sáng và tủ trưng bày, bếp hiện tại cũng chật.
+[00:06:30] Nhân: Ừm...
+[00:07:10] Ánh: Máy pha cà phê chi nhánh Quận 3 báo lỗi áp suất từ thứ Bảy, đang phải dùng máy dự phòng.
+[00:07:45] Nhân: Ánh gọi kỹ thuật bên hãng qua kiểm tra ngày mai nhé.
+[00:08:00] Ánh: Dạ ok anh, mai em gọi.
+[00:08:35] Nhân: Ok, hết.

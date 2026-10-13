@@ -2,17 +2,124 @@
   "meeting_id": "m07",
   "labeler": "claude",
   "items": [
-    {"id": "K1", "type": "knowledge", "thread": "picking-layout", "content": "Volume tháng 11 dự báo tăng 40%, khu picking sẽ nghẽn ở dock 2", "status": "open", "evidence": ["u002"], "note": "Số liệu mới, không phải phản biện."},
-    {"id": "D1", "type": "decision", "thread": "picking-layout", "content": "Dời khu hàng fast-moving lên sát dock 1", "status": "needs_confirmation", "decided_by": "Tâm", "evidence": ["u006", "u003"], "note": "Bẫy 'tạm thời…, để anh xem lại' rồi hết họp không nhắc lại → needs_confirmation. Không có chốt cuối nên không áp quy tắc 3."},
-    {"id": "B1", "type": "blocker", "thread": "picking-layout", "content": "Dời khu thì phải mapping lại ~1.200 SKU trên WMS, mất ~3 ngày", "status": "open", "evidence": ["u004"], "note": "Quy tắc 2: phản biện có số liệu → blocker + K2."},
-    {"id": "K2", "type": "knowledge", "thread": "picking-layout", "content": "Dời khu picking phải mapping lại ~1.200 SKU trên WMS, mất ~3 ngày", "status": "open", "evidence": ["u004"]},
-    {"id": "K3", "type": "knowledge", "thread": "picking-layout", "content": "Lối thoát hiểm cạnh dock 1 phải trống tối thiểu 1,2 m (quy định PCCC)", "status": "open", "evidence": ["u005"], "note": "[Nash xem lại] Quy định nêu trung tính, không phản đối trực tiếp phương án → chỉ knowledge. Nếu coi là phản biện thì thêm blocker."},
-    {"id": "D2", "type": "decision", "thread": "shift-plan", "content": "Lịch ca mùa peak (thêm ca đêm hay tăng ca) — tính với HR, tuần sau quyết", "status": "deferred", "decided_by": "Tâm", "evidence": ["u011"], "note": "Chưa từng chốt → không áp quy tắc 4, không tạo option."},
-    {"id": "B2", "type": "blocker", "thread": "shift-plan", "content": "Thời vụ training mất cả tuần, KPI picking accuracy sẽ tụt", "status": "open", "evidence": ["u010", "u011"], "note": "Quy tắc 1 + 7: phản biện cụ thể, kèm câu bàn tiếp."},
-    {"id": "B3", "type": "blocker", "thread": "scanner", "content": "Máy quét barcode dock 2 lỗi kết nối Wi-Fi, picker phải nhập tay", "status": "open", "evidence": ["u012", "u013"]},
-    {"id": "T1", "type": "task", "thread": "scanner", "content": "Gọi vendor check máy quét barcode", "status": "needs_confirmation", "owner": null, "deadline": null, "deadline_text": null, "evidence": ["u013", "u014"], "note": "Bẫy 'ai đó…': 'Dạ vâng.' của Hải không phải nhận việc → owner null."},
-    {"id": "T2", "type": "task", "thread": "wms-update", "content": "Deploy bản update WMS lên môi trường test", "status": "open", "owner": "Nga", "deadline": "2026-10-13", "deadline_text": "trong hôm nay", "evidence": ["u015"]},
-    {"id": "R1", "type": "request", "thread": "client-report", "content": "Khách Minh Khoa yêu cầu report tồn kho hàng ngày, gửi trước 9 giờ sáng", "status": "open", "evidence": ["u016"]},
-    {"id": "T3", "type": "task", "thread": "client-report", "content": "Làm template report tồn kho daily, gửi anh Tâm xem", "status": "open", "owner": "Quyên", "deadline": "2026-10-15", "deadline_text": "thứ Năm", "evidence": ["u017", "u018"]}
+    {
+      "id": "K1",
+      "type": "knowledge",
+      "thread": "picking-layout",
+      "content": "Volume tháng 11 dự báo tăng 40%, khu picking sẽ nghẽn ở dock 2",
+      "status": "open",
+      "evidence": ["u002"],
+      "note": "Số liệu mới, không phải phản biện."
+    },
+    {
+      "id": "D1",
+      "type": "decision",
+      "thread": "picking-layout",
+      "content": "Dời khu hàng fast-moving lên sát dock 1",
+      "status": "needs_confirmation",
+      "decided_by": "Tâm",
+      "evidence": ["u006", "u003"],
+      "note": "Bẫy 'tạm thời…, để anh xem lại' rồi hết họp không nhắc lại → needs_confirmation. Không có chốt cuối nên không áp quy tắc 3."
+    },
+    {
+      "id": "B1",
+      "type": "blocker",
+      "thread": "picking-layout",
+      "content": "Dời khu thì phải mapping lại ~1.200 SKU trên WMS, mất ~3 ngày",
+      "status": "open",
+      "evidence": ["u004"],
+      "note": "Quy tắc 2: phản biện có số liệu → blocker + K2."
+    },
+    {
+      "id": "K2",
+      "type": "knowledge",
+      "thread": "picking-layout",
+      "content": "Dời khu picking phải mapping lại ~1.200 SKU trên WMS, mất ~3 ngày",
+      "status": "open",
+      "evidence": ["u004"],
+      "note": "Số liệu trong phản biện u004 → đi kèm B1 (quy tắc 2)."
+    },
+    {
+      "id": "K3",
+      "type": "knowledge",
+      "thread": "picking-layout",
+      "content": "Lối thoát hiểm cạnh dock 1 phải trống tối thiểu 1,2 m (quy định PCCC)",
+      "status": "open",
+      "evidence": ["u005"],
+      "note": "[Nash xem lại] Quy định nêu trung tính, không phản đối trực tiếp phương án → chỉ knowledge. Nếu coi là phản biện thì thêm blocker."
+    },
+    {
+      "id": "D2",
+      "type": "decision",
+      "thread": "shift-plan",
+      "content": "Lịch ca mùa peak (thêm ca đêm hay tăng ca) — tính với HR, tuần sau quyết",
+      "status": "deferred",
+      "decided_by": "Tâm",
+      "evidence": ["u011"],
+      "note": "Chưa từng chốt → không áp quy tắc 4, không tạo option."
+    },
+    {
+      "id": "B2",
+      "type": "blocker",
+      "thread": "shift-plan",
+      "content": "Thời vụ training mất cả tuần, KPI picking accuracy sẽ tụt",
+      "status": "open",
+      "evidence": ["u010", "u011"],
+      "note": "Quy tắc 1 + 7: phản biện cụ thể, kèm câu bàn tiếp."
+    },
+    {
+      "id": "B3",
+      "type": "blocker",
+      "thread": "scanner",
+      "content": "Máy quét barcode dock 2 lỗi kết nối Wi-Fi, picker phải nhập tay",
+      "status": "open",
+      "evidence": ["u012", "u013"],
+      "note": "Vướng mắc đang chặn; quy tắc 7: kèm câu bàn tiếp u013."
+    },
+    {
+      "id": "T1",
+      "type": "task",
+      "thread": "scanner",
+      "content": "Gọi vendor check máy quét barcode",
+      "status": "needs_confirmation",
+      "owner": null,
+      "deadline": null,
+      "deadline_text": null,
+      "evidence": ["u013", "u014"],
+      "note": "Bẫy 'ai đó…': 'Dạ vâng.' của Hải không phải nhận việc → owner null."
+    },
+    {
+      "id": "T2",
+      "type": "task",
+      "thread": "wms-update",
+      "content": "Deploy bản update WMS lên môi trường test",
+      "status": "open",
+      "owner": "Nga",
+      "deadline": "2026-10-13",
+      "deadline_text": "trong hôm nay",
+      "evidence": ["u015"],
+      "note": "Tự nhận, không rào đón → open, hạn hôm nay 13/10. 'test flow' không phải rào đón."
+    },
+    {
+      "id": "R1",
+      "type": "request",
+      "thread": "client-report",
+      "content": "Khách Minh Khoa yêu cầu report tồn kho hàng ngày, gửi trước 9 giờ sáng",
+      "status": "open",
+      "evidence": ["u016"],
+      "note": "Yêu cầu từ khách hàng bên ngoài."
+    },
+    {
+      "id": "T3",
+      "type": "task",
+      "thread": "client-report",
+      "content": "Làm template report tồn kho daily, gửi anh Tâm xem",
+      "status": "open",
+      "owner": "Quyên",
+      "deadline": "2026-10-15",
+      "deadline_text": "thứ Năm",
+      "evidence": ["u017", "u018"],
+      "note": "'Ok anh, thứ Năm em gửi' = nhận rõ → open. Họp thứ Ba 13/10 → thứ Năm 15/10."
+    }
   ]
 }

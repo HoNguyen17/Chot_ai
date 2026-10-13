@@ -1,0 +1,76 @@
+{
+  "meeting_id": "m18",
+  "labeler": "claude",
+  "items": [
+    {
+      "id": "K1",
+      "type": "knowledge",
+      "thread": "export-volume",
+      "content": "Đối tác đặt 20 tấn, giao trước 15/11, giá 95 nghìn/kg",
+      "status": "open",
+      "evidence": ["u002"],
+      "note": "'Dạ.' (u003) chỉ là đang nghe."
+    },
+    {
+      "id": "K2",
+      "type": "knowledge",
+      "thread": "export-volume",
+      "content": "Vườn xã viên đợt này gom được ~14 tấn đạt chuẩn",
+      "status": "open",
+      "evidence": ["u005"],
+      "note": "Số liệu năng lực cung ứng, là lý do của đề xuất nhận 14 tấn."
+    },
+    {
+      "id": "B1",
+      "type": "blocker",
+      "thread": "export-volume",
+      "content": "Mua sầu riêng vườn ngoài khó kiểm soát dư lượng thuốc, lô bị trả là mất cả đơn",
+      "status": "open",
+      "evidence": ["u006"],
+      "note": "Quy tắc 1: phản biện cụ thể (rủi ro)."
+    },
+    {
+      "id": "D1",
+      "type": "decision",
+      "thread": "export-volume",
+      "content": "Nhận 14 tấn, phần còn lại thương lượng giao đợt tháng 12",
+      "status": "final",
+      "decided_by": "Bảy",
+      "evidence": ["u008", "u007"],
+      "note": "Bẫy 'Nếu chốt 20 tấn thì…' (u004) là câu điều kiện, không gán. 'Đặt 20 tấn' của đối tác là thông tin, không phải phương án được đề xuất → không tạo option."
+    },
+    {
+      "id": "T1",
+      "type": "task",
+      "thread": "export-volume",
+      "content": "Báo lại đối tác và gửi hợp đồng sửa đổi",
+      "status": "needs_confirmation",
+      "owner": "Tiến",
+      "deadline": "2026-10-30",
+      "deadline_text": "trước ngày 30/10",
+      "evidence": ["u009", "u010"],
+      "note": "Bẫy 'Dạ.' khi được giao việc → needs_confirmation. Bẫy deadline_ngay_cu_the."
+    },
+    {
+      "id": "K3",
+      "type": "knowledge",
+      "thread": "inspection",
+      "content": "Phí kiểm định dư lượng thuốc 4 triệu/lô; 14 tấn chia 2 lô là 8 triệu",
+      "status": "open",
+      "evidence": ["u011"],
+      "note": "Chi phí kiểm định đáng lưu."
+    },
+    {
+      "id": "T2",
+      "type": "task",
+      "thread": "harvest",
+      "content": "Lên lịch thu hoạch từng vườn, gửi nhóm Zalo",
+      "status": "open",
+      "owner": "Sáu",
+      "deadline": "2026-10-25",
+      "deadline_text": "cuối tuần này",
+      "evidence": ["u012"],
+      "note": "Họp thứ Bảy 24/10 → cuối tuần này = Chủ nhật 25/10."
+    }
+  ]
+}

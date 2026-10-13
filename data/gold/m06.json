@@ -2,20 +2,153 @@
   "meeting_id": "m06",
   "labeler": "claude",
   "items": [
-    {"id": "D1", "type": "decision", "thread": "pricing", "content": "Thu phí thuê bao tháng 149 nghìn, 7 ngày dùng thử; bỏ gói trọn đời và gói 6 tháng", "status": "final", "decided_by": "Vy", "evidence": ["u011", "u006"], "note": "Bẫy A→B: chủ trì chốt rõ ở u011, không ai lật lại. 'Ừ.' (u008) trong lúc tranh luận → không gán."},
-    {"id": "O1", "type": "option", "thread": "pricing", "content": "Gói trọn đời 990 nghìn", "status": "superseded", "evidence": ["u002"]},
-    {"id": "O2", "type": "option", "thread": "pricing", "content": "Gói 6 tháng 690 nghìn", "status": "superseded", "evidence": ["u009"]},
-    {"id": "B1", "type": "blocker", "thread": "pricing", "content": "Gói trọn đời làm doanh thu dồn hết tháng đầu, không có tiền đều làm content", "status": "open", "evidence": ["u004"], "note": "Quy tắc 1: phản biện cụ thể → blocker."},
-    {"id": "B2", "type": "blocker", "thread": "pricing", "content": "Gói trọn đời phải tích hợp lại cổng thanh toán, mất hai tuần", "status": "open", "evidence": ["u005"], "note": "Quy tắc 2: phản biện kèm ràng buộc → blocker + K1."},
-    {"id": "K1", "type": "knowledge", "thread": "pricing", "content": "Cổng thanh toán hiện chỉ hỗ trợ trả theo tháng", "status": "open", "evidence": ["u005"]},
-    {"id": "B3", "type": "blocker", "thread": "pricing", "content": "Phụ huynh ngại đăng ký trả tháng vì sợ bị trừ tiền tự động", "status": "open", "evidence": ["u007"], "note": "Quy tắc 2: phản biện kèm thông tin về khách → blocker + K2."},
-    {"id": "K2", "type": "knowledge", "thread": "pricing", "content": "Phụ huynh hay ngại đăng ký trả tháng, sợ bị trừ tiền tự động", "status": "open", "evidence": ["u007"]},
-    {"id": "B4", "type": "blocker", "thread": "pricing", "content": "Gói 6 tháng cũng phải sửa cổng thanh toán", "status": "open", "evidence": ["u010"]},
-    {"id": "T1", "type": "task", "thread": "pricing", "content": "Viết lại màn hình paywall theo giá mới, gửi chị Vy duyệt", "status": "open", "owner": "Khang", "deadline": "2026-10-18", "deadline_text": "cuối tuần này", "evidence": ["u013", "u014"], "note": "Cuối tuần này = Chủ nhật tuần họp (họp thứ Hai 12/10)."},
-    {"id": "B5", "type": "blocker", "thread": "lesson-plan", "content": "Freelancer thu âm giọng bản xứ trễ hẹn, mới xong 8/20 bài", "status": "open", "evidence": ["u016"]},
-    {"id": "T2", "type": "task", "thread": "lesson-plan", "content": "Dựng công cụ upload bài học hàng loạt", "status": "needs_confirmation", "owner": "Long", "deadline": null, "deadline_text": null, "evidence": ["u017", "u018"], "note": "Bẫy: chỉ đáp 'Dạ.' → needs_confirmation."},
-    {"id": "T3", "type": "task", "thread": "lesson-plan", "content": "Gửi danh sách 20 bài kèm tiến độ cho cả team", "status": "open", "owner": "Thư", "deadline": "2026-10-14", "deadline_text": "trước thứ Tư", "evidence": ["u019"]},
-    {"id": "F1", "type": "feedback", "thread": "app-crash", "content": "Phụ huynh phản ánh app hay văng khi mở bài nghe trên Android cũ", "status": "open", "evidence": ["u020", "u021"], "note": "Quy tắc 7: câu nêu + câu bàn tiếp."},
-    {"id": "T4", "type": "task", "thread": "app-crash", "content": "Nâng cấp thư viện audio để sửa lỗi văng app", "status": "open", "owner": "Long", "deadline": "2026-10-16", "deadline_text": "thứ Sáu này", "evidence": ["u021"]}
+    {
+      "id": "D1",
+      "type": "decision",
+      "thread": "pricing",
+      "content": "Thu phí thuê bao tháng 149 nghìn, 7 ngày dùng thử; bỏ gói trọn đời và gói 6 tháng",
+      "status": "final",
+      "decided_by": "Vy",
+      "evidence": ["u011", "u006"],
+      "note": "Bẫy A→B: chủ trì chốt rõ ở u011, không ai lật lại. 'Ừ.' (u008) trong lúc tranh luận → không gán."
+    },
+    {
+      "id": "O1",
+      "type": "option",
+      "thread": "pricing",
+      "content": "Gói trọn đời 990 nghìn",
+      "status": "superseded",
+      "evidence": ["u002"],
+      "note": "Phương án bị loại; D1 final → superseded."
+    },
+    {
+      "id": "O2",
+      "type": "option",
+      "thread": "pricing",
+      "content": "Gói 6 tháng 690 nghìn",
+      "status": "superseded",
+      "evidence": ["u009"],
+      "note": "Đề xuất thay thế ('Hay là…') bị loại; D1 final → superseded."
+    },
+    {
+      "id": "B1",
+      "type": "blocker",
+      "thread": "pricing",
+      "content": "Gói trọn đời làm doanh thu dồn hết tháng đầu, không có tiền đều làm content",
+      "status": "open",
+      "evidence": ["u004"],
+      "note": "Quy tắc 1: phản biện cụ thể → blocker."
+    },
+    {
+      "id": "B2",
+      "type": "blocker",
+      "thread": "pricing",
+      "content": "Gói trọn đời phải tích hợp lại cổng thanh toán, mất hai tuần",
+      "status": "open",
+      "evidence": ["u005"],
+      "note": "Quy tắc 2: phản biện kèm ràng buộc → blocker + K1."
+    },
+    {
+      "id": "K1",
+      "type": "knowledge",
+      "thread": "pricing",
+      "content": "Cổng thanh toán hiện chỉ hỗ trợ trả theo tháng",
+      "status": "open",
+      "evidence": ["u005"],
+      "note": "Ràng buộc kỹ thuật nằm trong phản biện u005 → đi kèm B2 (quy tắc 2)."
+    },
+    {
+      "id": "B3",
+      "type": "blocker",
+      "thread": "pricing",
+      "content": "Phụ huynh ngại đăng ký trả tháng vì sợ bị trừ tiền tự động",
+      "status": "open",
+      "evidence": ["u007"],
+      "note": "Quy tắc 2: phản biện kèm thông tin về khách → blocker + K2."
+    },
+    {
+      "id": "K2",
+      "type": "knowledge",
+      "thread": "pricing",
+      "content": "Phụ huynh hay ngại đăng ký trả tháng, sợ bị trừ tiền tự động",
+      "status": "open",
+      "evidence": ["u007"],
+      "note": "Thông tin về hành vi khách nằm trong phản biện u007 → đi kèm B3 (quy tắc 2)."
+    },
+    {
+      "id": "B4",
+      "type": "blocker",
+      "thread": "pricing",
+      "content": "Gói 6 tháng cũng phải sửa cổng thanh toán",
+      "status": "open",
+      "evidence": ["u010"],
+      "note": "Quy tắc 1: phản biện cụ thể với gói 6 tháng."
+    },
+    {
+      "id": "T1",
+      "type": "task",
+      "thread": "pricing",
+      "content": "Viết lại màn hình paywall theo giá mới, gửi chị Vy duyệt",
+      "status": "open",
+      "owner": "Khang",
+      "deadline": "2026-10-18",
+      "deadline_text": "cuối tuần này",
+      "evidence": ["u013", "u014"],
+      "note": "Cuối tuần này = Chủ nhật tuần họp (họp thứ Hai 12/10)."
+    },
+    {
+      "id": "B5",
+      "type": "blocker",
+      "thread": "lesson-plan",
+      "content": "Freelancer thu âm giọng bản xứ trễ hẹn, mới xong 8/20 bài",
+      "status": "open",
+      "evidence": ["u016"],
+      "note": "Vướng mắc đang chặn tiến độ ra bài; 'mới xong 8/20' là tình trạng, không tách knowledge."
+    },
+    {
+      "id": "T2",
+      "type": "task",
+      "thread": "lesson-plan",
+      "content": "Dựng công cụ upload bài học hàng loạt",
+      "status": "needs_confirmation",
+      "owner": "Long",
+      "deadline": null,
+      "deadline_text": null,
+      "evidence": ["u017", "u018"],
+      "note": "Bẫy: chỉ đáp 'Dạ.' → needs_confirmation."
+    },
+    {
+      "id": "T3",
+      "type": "task",
+      "thread": "lesson-plan",
+      "content": "Gửi danh sách 20 bài kèm tiến độ cho cả team",
+      "status": "open",
+      "owner": "Thư",
+      "deadline": "2026-10-14",
+      "deadline_text": "trước thứ Tư",
+      "evidence": ["u019"],
+      "note": "Tự nhận, không rào đón → open. Họp thứ Hai 12/10 → trước thứ Tư = 14/10."
+    },
+    {
+      "id": "F1",
+      "type": "feedback",
+      "thread": "app-crash",
+      "content": "Phụ huynh phản ánh app hay văng khi mở bài nghe trên Android cũ",
+      "status": "open",
+      "evidence": ["u020", "u021"],
+      "note": "Quy tắc 7: câu nêu + câu bàn tiếp."
+    },
+    {
+      "id": "T4",
+      "type": "task",
+      "thread": "app-crash",
+      "content": "Nâng cấp thư viện audio để sửa lỗi văng app",
+      "status": "open",
+      "owner": "Long",
+      "deadline": "2026-10-16",
+      "deadline_text": "thứ Sáu này",
+      "evidence": ["u021"],
+      "note": "Tự nhận, không rào đón → open. Thứ Sáu này = 16/10."
+    }
   ]
 }

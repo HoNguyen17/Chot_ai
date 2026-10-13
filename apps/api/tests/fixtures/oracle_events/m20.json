@@ -1,0 +1,24 @@
+{
+  "threads": [
+    {"id": "branch-location", "title": "Mặt bằng chi nhánh thứ 5"},
+    {"id": "banh-mi", "title": "Có bán thêm bánh mì buổi sáng không"},
+    {"id": "espresso-machine", "title": "Máy pha cà phê chi nhánh Quận 3"}
+  ],
+  "events": [
+    {"utt": "u002", "thread": "branch-location", "kind": "propose", "speaker": "Ánh", "key": "le-van-sy", "content": "Mặt bằng Lê Văn Sỹ 80 m², 45 triệu/tháng, gần hai trường đại học", "quote": "Mặt bằng đường Lê Văn Sỹ 80 mét vuông, thuê 45 triệu một tháng"},
+    {"utt": "u003", "thread": "branch-location", "kind": "propose", "speaker": "My", "key": "thao-dien", "content": "Mặt bằng Thảo Điền 120 m², 70 triệu/tháng, nhiều khách nước ngoài", "quote": "Mặt bằng ở Thảo Điền 120 mét vuông, 70 triệu"},
+    {"utt": "u004", "thread": "branch-location", "kind": "agree", "speaker": "Nhân", "key": "le-van-sy", "content": "Chốt Lê Văn Sỹ", "quote": "Ok chốt Lê Văn Sỹ"},
+    {"utt": "u005", "thread": "branch-location", "kind": "object", "speaker": "Quốc", "key": "le-van-sy", "content": "Cọc 6 tháng 270 triệu, dòng tiền quý này không kham nổi", "quote": "dòng tiền quý này không kham nổi"},
+    {"utt": "u005", "thread": "branch-location", "kind": "info", "speaker": "Quốc", "content": "Chủ nhà Lê Văn Sỹ đòi cọc 6 tháng (270 triệu)", "quote": "chủ nhà Lê Văn Sỹ đòi cọc 6 tháng, 270 triệu"},
+    {"utt": "u006", "thread": "branch-location", "kind": "reopen", "speaker": "Nhân", "key": "le-van-sy", "content": "Huỷ chốt Lê Văn Sỹ", "quote": "Ờ thôi khoan"},
+    {"utt": "u006", "thread": "branch-location", "kind": "defer", "speaker": "Nhân", "content": "Chưa chốt mặt bằng, để nhà đầu tư Diệp quyết", "quote": "Cọc lớn vậy phải để chị Diệp quyết"},
+    {"utt": "u007", "thread": "branch-location", "kind": "assign", "speaker": "Nhân", "key": "dong-tien", "owner": "Quốc", "content": "Làm bảng dòng tiền hai phương án mặt bằng gửi chị Diệp", "deadline_text": "trước thứ Sáu", "quote": "Quốc làm bảng dòng tiền hai phương án gửi chị Diệp trước thứ Sáu"},
+    {"utt": "u008", "thread": "branch-location", "kind": "commit", "speaker": "Quốc", "key": "dong-tien", "owner": "Quốc", "deadline_text": "thứ Sáu", "quote": "Ok anh, thứ Sáu em gửi"},
+    {"utt": "u009", "thread": "banh-mi", "kind": "propose", "speaker": "My", "key": "banh-mi-sang", "content": "Bán thêm bánh mì buổi sáng ở chi nhánh mới", "quote": "Chi nhánh mới có nên bán thêm bánh mì buổi sáng không anh"},
+    {"utt": "u009", "thread": "banh-mi", "kind": "info", "speaker": "My", "content": "Khảo sát khách quen: 60% muốn có bánh mì buổi sáng", "quote": "Khảo sát khách quen thì 60% muốn"},
+    {"utt": "u010", "thread": "banh-mi", "kind": "object", "speaker": "Ánh", "key": "banh-mi-sang", "content": "Phải thêm người ca sáng và tủ trưng bày, bếp chật", "quote": "Bán bánh mì thì phải thêm một người ca sáng và tủ trưng bày"},
+    {"utt": "u012", "thread": "espresso-machine", "kind": "blocker", "speaker": "Ánh", "content": "Máy pha cà phê Quận 3 lỗi áp suất, đang dùng máy dự phòng", "quote": "Máy pha cà phê chi nhánh Quận 3 báo lỗi áp suất từ thứ Bảy"},
+    {"utt": "u013", "thread": "espresso-machine", "kind": "assign", "speaker": "Nhân", "key": "goi-ky-thuat", "owner": "Ánh", "content": "Gọi kỹ thuật bên hãng qua kiểm tra máy pha cà phê", "deadline_text": "ngày mai", "quote": "Ánh gọi kỹ thuật bên hãng qua kiểm tra ngày mai nhé"},
+    {"utt": "u014", "thread": "espresso-machine", "kind": "commit", "speaker": "Ánh", "key": "goi-ky-thuat", "owner": "Ánh", "deadline_text": "mai", "quote": "Dạ ok anh, mai em gọi"}
+  ]
+}
