@@ -1,0 +1,166 @@
+{
+  "threads": [
+    {
+      "id": "wood-supplier",
+      "title": "Nhà cung cấp gỗ"
+    },
+    {
+      "id": "contract-check",
+      "title": "Kiểm tra hợp đồng cũ"
+    },
+    {
+      "id": "production-shift",
+      "title": "Ca sản xuất thêm thứ Bảy"
+    },
+    {
+      "id": "warehouse-record",
+      "title": "Phiếu xuất kho"
+    }
+  ],
+  "events": [
+    {
+      "utt": "u002",
+      "thread": "wood-supplier",
+      "kind": "propose",
+      "speaker": "Hiền",
+      "key": "dak-nong-xanh",
+      "content": "Đề xuất đổi nhà cung cấp gỗ sang Lâm sản Đắk Nông Xanh giá thấp hơn",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Em đề xuất đổi qua Lâm sản Đắk Nông Xanh"
+    },
+    {
+      "utt": "u003",
+      "thread": "wood-supplier",
+      "kind": "object",
+      "speaker": "Tài",
+      "key": "dak-nong-xanh",
+      "content": "Đắk Nông Xanh chưa có chứng nhận FSC, đơn hàng Nhật bắt buộc phải có",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Bên Đắk Nông Xanh chưa có chứng nhận FSC"
+    },
+    {
+      "utt": "u004",
+      "thread": "wood-supplier",
+      "kind": "info",
+      "speaker": "Hiền",
+      "key": null,
+      "content": "Đắk Nông Xanh đang làm hồ sơ FSC, tháng 12 có",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Họ nói đang làm hồ sơ FSC, tháng 12 có"
+    },
+    {
+      "utt": "u006",
+      "thread": "wood-supplier",
+      "kind": "propose",
+      "speaker": "Hiền",
+      "key": "chot-doi-nha-cung-cap",
+      "content": "Đề xuất chốt đổi sang Đắk Nông Xanh ngay để tránh giá tăng Tân Phát",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Vậy mình chốt đổi qua Đắk Nông Xanh luôn đi anh"
+    },
+    {
+      "utt": "u007",
+      "thread": "wood-supplier",
+      "kind": "defer",
+      "speaker": "Sơn",
+      "key": null,
+      "content": "Hoãn quyết định đổi nhà cung cấp, để anh Phong quyết",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "phải để anh Phong quyết"
+    },
+    {
+      "utt": "u007",
+      "thread": "wood-supplier",
+      "kind": "assign",
+      "speaker": "Sơn",
+      "key": "so-sanh-nha-cung-cap",
+      "content": "Giao Hiền làm bảng so sánh hai nhà cung cấp gửi anh Phong",
+      "hedged": false,
+      "owner": "Hiền",
+      "deadline_text": "sáng thứ Hai",
+      "quote": "Hiền làm bảng so sánh hai bên gửi anh Phong, sáng thứ Hai nhé"
+    },
+    {
+      "utt": "u009",
+      "thread": "contract-check",
+      "kind": "request",
+      "speaker": "Sơn",
+      "key": null,
+      "content": "Yêu cầu kiểm tra hợp đồng cũ với Tân Phát có điều khoản phạt khi đổi nhà cung cấp",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Mà ai đó check giúp hợp đồng cũ với Tân Phát có điều khoản phạt nếu mình đổi nhà cung cấp không"
+    },
+    {
+      "utt": "u011",
+      "thread": "production-shift",
+      "kind": "info",
+      "speaker": "Tài",
+      "key": null,
+      "content": "Lô gỗ nhập tuần trước độ ẩm 16%, vượt chuẩn 12%, chưa cho sản xuất",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "lô gỗ nhập tuần trước đo độ ẩm 16%, vượt chuẩn 12%, em chưa cho đưa vào sản xuất"
+    },
+    {
+      "utt": "u012",
+      "thread": "production-shift",
+      "kind": "agree",
+      "speaker": "Sơn",
+      "key": "them-ca-toi-thu-bay",
+      "content": "Quyết làm thêm ca tối thứ Bảy từ tuần sau cho đến khi xong đơn hàng Nhật",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Từ tuần sau xưởng làm thêm ca tối thứ Bảy cho tới khi xong đơn Nhật. Anh quyết vậy"
+    },
+    {
+      "utt": "u013",
+      "thread": "production-shift",
+      "kind": "commit",
+      "speaker": "Tài",
+      "key": "them-ca-toi-thu-bay",
+      "content": "Tài đồng ý làm thêm ca tối thứ Bảy",
+      "hedged": false,
+      "owner": "Tài",
+      "deadline_text": null,
+      "quote": "Dạ ok anh"
+    },
+    {
+      "utt": "u014",
+      "thread": "warehouse-record",
+      "kind": "propose",
+      "speaker": "Mỹ",
+      "key": "chuyen-phieu-xuat-kho-excel",
+      "content": "Đề xuất chuyển phiếu xuất kho viết tay sang file Excel để dễ đối chiếu",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "phiếu xuất kho viết tay hay sai số, mình chuyển qua file Excel cho dễ đối chiếu"
+    },
+    {
+      "utt": "u015",
+      "thread": "warehouse-record",
+      "kind": "agree",
+      "speaker": "Sơn",
+      "key": "chuyen-phieu-xuat-kho-excel",
+      "content": "Đồng ý chuyển phiếu xuất kho sang file Excel",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Ừ"
+    }
+  ]
+}

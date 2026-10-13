@@ -2,14 +2,14 @@ from __future__ import annotations
 
 from typing import Annotated
 
-from fastapi import Depends, FastAPI, HTTPException, Query
+from fastapi import Depends, FastAPI, HTTPException, Query, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import PlainTextResponse
 
 from chot import __version__
 from chot.adapters.export import to_csv_tasks, to_json, to_markdown_minutes
 from chot.adapters.parsing.transcript_txt import TranscriptParseError
-from chot.api.deps import get_service
+from chot.api.deps import RateLimitExceeded, client_ip, get_service
 from chot.api.schemas import CreateMeetingIn, MeetingOut, MeetingSummaryOut, ReviewItemIn
 from chot.config import get_settings
 from chot.domain.enums import Status
@@ -32,11 +32,23 @@ def create_app() -> FastAPI:
         return {"ok": True, "version": __version__, "builder": svc.builder.name}
 
     @app.post("/meetings", response_model=MeetingOut, status_code=201)
-    def create_meeting(body: CreateMeetingIn, svc: Svc):
+    def create_meeting(body: CreateMeetingIn, request: Request, svc: Svc):
+        limit, size = get_settings().max_transcript_chars, len(body.transcript_text)
+        if size > limit:
+            msg = f"Transcript dài {size:,} ký tự (tối đa {limit:,}). Hãy cắt bớt rồi thử lại."
+            raise HTTPException(413, msg.replace(",", "."))
+        # Endpoint sync: builder chạy cùng thread nên đọc được IP này.
+        client_ip.set(request.client.host if request.client else "?")
         try:
             record = svc.process(body.transcript_text, body.meeting_id)
         except TranscriptParseError as e:
             raise HTTPException(422, str(e)) from e
+        except RateLimitExceeded as e:
+            raise HTTPException(
+                429,
+                "Đã hết lượt phân tích bằng AI trong giờ này. Thử lại sau, "
+                "hoặc chọn một transcript mẫu (không giới hạn).",
+            ) from e
         return MeetingOut.from_record(record)
 
     @app.get("/meetings", response_model=list[MeetingSummaryOut])

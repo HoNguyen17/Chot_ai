@@ -1,3 +1,5 @@
+from pathlib import Path
+
 from fastapi.testclient import TestClient
 
 from chot.adapters.baselines import KeywordBaseline
@@ -85,3 +87,78 @@ def test_replay_builder_falls_back_to_keyword(data_dir, monkeypatch):
     assert builder.build(tr).generated_by.startswith("rules-v1+replay")
     other = parse_transcript("# meeting: zz\n[00:01] A: Chốt luôn.")
     assert builder.build(other).generated_by == "keyword-baseline"
+
+
+DEMO_EVENTS = Path(__file__).resolve().parents[1] / "demo_events"
+
+
+class FakeClient:
+    """Client LLM giả: đếm số lần gọi, trả về không sự kiện nào."""
+
+    def __init__(self) -> None:
+        self.calls = 0
+
+    def complete_json(self, prompt, schema):
+        self.calls += 1
+        return '{"threads": [], "events": []}'
+
+
+def _llm_client(monkeypatch, **env):
+    from chot.api.deps import make_builder
+    from chot.config import Settings
+
+    monkeypatch.setenv("LEDGER_BUILDER", "llm")
+    monkeypatch.setenv("REPLAY_EVENTS_DIR", str(DEMO_EVENTS))
+    for k, v in env.items():
+        monkeypatch.setenv(k, v)
+    fake = FakeClient()
+    app = create_app()
+    svc = MeetingService(InMemoryRepository(), make_builder(Settings(), fake), parse_transcript)
+    app.dependency_overrides[get_service] = lambda: svc
+    return TestClient(app), fake
+
+
+def test_rejects_transcript_over_max_chars(monkeypatch):
+    monkeypatch.setenv("MAX_TRANSCRIPT_CHARS", "50")
+    r = _client().post("/meetings", json={"transcript_text": "[00:01] A: " + "x" * 60})
+    assert r.status_code == 413 and "tối đa 50" in r.json()["detail"]
+
+
+def test_llm_rate_limit_per_ip(monkeypatch):
+    c, fake = _llm_client(monkeypatch, LLM_RATE_LIMIT_PER_HOUR="2")
+    body = {"transcript_text": "[00:01] A: Chốt luôn.", "meeting_id": "zz1"}
+    codes = [c.post("/meetings", json=body).status_code for _ in range(3)]
+    assert codes == [201, 201, 429] and fake.calls == 2
+
+
+def test_sample_meeting_replays_without_llm(monkeypatch, data_dir):
+    c, fake = _llm_client(monkeypatch)
+    text = (data_dir / "raw" / "m01.txt").read_text(encoding="utf-8")
+    r = c.post("/meetings", json={"transcript_text": text, "meeting_id": "m01"})
+    assert r.status_code == 201 and fake.calls == 0
+    assert r.json()["ledger"]["generated_by"].startswith("rules-v1+replay")
+
+
+def test_meeting_id_cannot_escape_replay_dir(tmp_path):
+    import pytest
+
+    from chot.usecases.build_ledger import DirectoryReplayExtractor
+
+    assert (
+        _client()
+        .post("/meetings", json={"transcript_text": "[00:01] A: x", "meeting_id": "../x"})
+        .status_code
+        == 422
+    )
+    (tmp_path / "secret.json").write_text('{"threads": [], "events": []}', encoding="utf-8")
+    (tmp_path / "events").mkdir()
+    tr = parse_transcript("# meeting: ../secret\n[00:01] A: x")
+    with pytest.raises(LookupError):
+        DirectoryReplayExtractor(tmp_path / "events").extract(tr)
+
+
+def test_edited_sample_goes_to_llm(monkeypatch, data_dir):
+    c, fake = _llm_client(monkeypatch)
+    text = (data_dir / "raw" / "m01.txt").read_text(encoding="utf-8") + "\n[00:30:00] Hùng: Thêm."
+    r = c.post("/meetings", json={"transcript_text": text, "meeting_id": "m01"})
+    assert r.status_code == 201 and fake.calls == 1

@@ -50,8 +50,8 @@ class DirectoryReplayExtractor:
         self.directory = Path(directory)
 
     def extract(self, tr: Transcript) -> ExtractionResult:
-        path = self.directory / f"{tr.meeting_id}.json"
-        if not path.exists():
+        path = (self.directory / f"{tr.meeting_id}.json").resolve()
+        if not path.is_relative_to(self.directory.resolve()) or not path.exists():
             raise LookupError(
                 f"Không có sự kiện đã lưu cho cuộc họp '{tr.meeting_id}' trong {path.parent}"
             )

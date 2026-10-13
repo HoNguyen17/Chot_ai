@@ -1,0 +1,110 @@
+{
+  "threads": [
+    {
+      "id": "db-migration",
+      "title": "Di chuyển cơ sở dữ liệu"
+    },
+    {
+      "id": "app-release-nov",
+      "title": "Phát hành bản app tháng 11"
+    }
+  ],
+  "events": [
+    {
+      "utt": "u003",
+      "thread": "db-migration",
+      "kind": "propose",
+      "speaker": "Hằng",
+      "key": "logical-replication",
+      "content": "Đề xuất migrate lên Postgres 16 bằng logical replication với downtime gần như bằng không",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Em đề xuất migrate lên Postgres 16 bằng logical replication, downtime gần như bằng không"
+    },
+    {
+      "utt": "u004",
+      "thread": "db-migration",
+      "kind": "object",
+      "speaker": "Thùy",
+      "key": "logical-replication",
+      "content": "Logical replication với database 2 TB thì sync lần đầu mất khoảng 3 ngày, phải canh lúc ít giao dịch",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Logical replication với database 2 TB thì sync lần đầu mất khoảng 3 ngày, phải canh lúc ít giao dịch"
+    },
+    {
+      "utt": "u005",
+      "thread": "db-migration",
+      "kind": "agree",
+      "speaker": "Quang",
+      "key": "logical-replication",
+      "content": "Tạm thời đi logical replication, cần xem thêm số liệu tải",
+      "hedged": true,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Tạm thời mình đi logical replication nhé, anh cần xem thêm số liệu tải"
+    },
+    {
+      "utt": "u007",
+      "thread": "db-migration",
+      "kind": "info",
+      "speaker": "Quang",
+      "key": null,
+      "content": "Theo quy định ngân hàng đối tác, mọi thay đổi hạ tầng phải báo trước 14 ngày",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Theo quy định của ngân hàng đối tác, mọi thay đổi hạ tầng phải báo trước 14 ngày"
+    },
+    {
+      "utt": "u008",
+      "thread": "db-migration",
+      "kind": "assign",
+      "speaker": "Quang",
+      "key": "write-runbook",
+      "content": "Giao Thùy viết runbook migrate và gửi trước thứ Sáu",
+      "hedged": false,
+      "owner": "Thùy",
+      "deadline_text": "trước thứ Sáu",
+      "quote": "Thùy viết runbook migrate rồi gửi anh trước thứ Sáu nhé"
+    },
+    {
+      "utt": "u009",
+      "thread": "db-migration",
+      "kind": "decline",
+      "speaker": "Thùy",
+      "key": "write-runbook",
+      "content": "Thùy không kịp viết runbook tuần này do trực sự cố payment",
+      "hedged": false,
+      "owner": "Thùy",
+      "deadline_text": null,
+      "quote": "Tuần này em không kịp anh ơi, em đang trực sự cố cho bên payment"
+    },
+    {
+      "utt": "u010",
+      "thread": "app-release-nov",
+      "kind": "info",
+      "speaker": "Định",
+      "key": null,
+      "content": "Bản app tháng 11 bên mobile xong 80%, màn hình eKYC đang chờ SDK mới của đối tác",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Bản app tháng 11 bên mobile xong 80%, còn màn hình eKYC đang chờ SDK mới của đối tác"
+    },
+    {
+      "utt": "u011",
+      "thread": "app-release-nov",
+      "kind": "assign",
+      "speaker": "Định",
+      "key": "build-beta",
+      "content": "Định sẽ build bản beta cho team QA vào thứ Hai tuần sau",
+      "hedged": false,
+      "owner": "Định",
+      "deadline_text": "thứ Hai tuần sau",
+      "quote": "Em sẽ build bản beta cho team QA vào thứ Hai tuần sau"
+    }
+  ]
+}

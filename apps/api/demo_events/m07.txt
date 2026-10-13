@@ -1,0 +1,23 @@
+# meeting: m07
+# title: Họp điều phối kho — chuẩn bị peak season
+# date: 2026-10-13
+# participants: Tâm (Trưởng kho, chủ trì); Quyên (Điều phối); Hải (Trưởng ca); Nga (IT); Phúc (An toàn lao động)
+[00:00:12] Tâm: Họp nhanh nha. Peak season sắp tới, mình cần bàn layout khu picking với lịch ca.
+[00:00:55] Quyên: Volume dự báo tháng 11 tăng 40%, khu picking hiện tại sẽ nghẽn ở dock số 2.
+[00:01:40] Hải: Em propose dời khu hàng fast-moving lên sát dock 1, giảm quãng đường picker đi.
+[00:02:25] Nga: Dời thì phải update lại location trên WMS, mapping lại khoảng 1.200 SKU, tầm ba ngày.
+[00:03:05] Phúc: Lối thoát hiểm cạnh dock 1 phải giữ trống tối thiểu 1,2 mét, đó là quy định PCCC.
+[00:03:50] Tâm: Tạm thời mình đi phương án dời fast-moving lên dock 1 nha, để anh xem lại mặt bằng đã.
+[00:04:10] Hải: Dạ.
+[00:04:50] Tâm: Còn lịch ca. Peak thì mình chạy 3 ca hay tăng ca 2 ca hiện tại?
+[00:05:30] Hải: Em nghĩ thêm ca đêm, tuyển thời vụ khoảng 15 người.
+[00:06:15] Quyên: Thời vụ thì training mất cả tuần, KPI picking accuracy sẽ tụt.
+[00:06:50] Tâm: Ừm, cái này để anh tính với HR rồi tuần sau quyết.
+[00:07:30] Nga: À máy quét barcode ở dock 2 bị lỗi kết nối Wi-Fi từ hôm qua, picker phải nhập tay.
+[00:08:05] Tâm: Ai đó gọi bên vendor check giúp cái máy quét nhé.
+[00:08:20] Hải: Dạ vâng.
+[00:09:00] Nga: Em sẽ deploy bản update WMS lên môi trường test trong hôm nay, mai mọi người test flow nhập kho.
+[00:09:45] Quyên: Bên khách Minh Khoa request report tồn kho hàng ngày thay vì hàng tuần, gửi trước 9 giờ sáng.
+[00:10:20] Tâm: Quyên làm template report daily rồi gửi anh xem trước thứ Năm nha.
+[00:10:35] Quyên: Ok anh, thứ Năm em gửi.
+[00:11:10] Tâm: Ok vậy thôi, giải tán.

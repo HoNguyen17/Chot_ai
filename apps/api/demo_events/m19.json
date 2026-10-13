@@ -1,0 +1,206 @@
+{
+  "threads": [
+    {
+      "id": "demo-platform",
+      "title": "Nền tảng demo game"
+    },
+    {
+      "id": "boss-art-style",
+      "title": "Phong cách art boss cuối"
+    }
+  ],
+  "events": [
+    {
+      "utt": "u002",
+      "thread": "demo-platform",
+      "kind": "propose",
+      "speaker": "Nhàn",
+      "key": "steam-next-fest",
+      "content": "Đề xuất demo đăng Steam Next Fest tháng 2",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Demo em đề xuất đăng Steam Next Fest tháng 2"
+    },
+    {
+      "utt": "u003",
+      "thread": "demo-platform",
+      "kind": "object",
+      "speaker": "Lâm",
+      "key": "steam-next-fest",
+      "content": "Build hiện tại còn crash ở màn 3, hạn nộp build 15/12",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": "15/12",
+      "quote": "Next Fest hạn nộp build là 15/12, mà build hiện tại còn crash ở màn 3"
+    },
+    {
+      "utt": "u004",
+      "thread": "demo-platform",
+      "kind": "propose",
+      "speaker": "Lâm",
+      "key": "itch-io",
+      "content": "Đăng demo trên itch.io trước cho kịp, không cần chờ duyệt",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Hay mình đăng itch.io trước cho kịp, không cần chờ duyệt"
+    },
+    {
+      "utt": "u005",
+      "thread": "demo-platform",
+      "kind": "agree",
+      "speaker": "Huy",
+      "key": "itch-io",
+      "content": "Đồng ý đăng demo trên itch.io trước",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Ok vậy mình đi itch.io trước"
+    },
+    {
+      "utt": "u006",
+      "thread": "demo-platform",
+      "kind": "object",
+      "speaker": "Oanh",
+      "key": "itch-io",
+      "content": "itch.io gần như không có traffic, làm trang mà không ai chơi",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "itch.io thì gần như không có traffic, tụi mình mất công làm trang mà không ai chơi"
+    },
+    {
+      "utt": "u007",
+      "thread": "demo-platform",
+      "kind": "propose",
+      "speaker": "Nhàn",
+      "key": "mobile-demo",
+      "content": "Làm bản demo mobile trên TestFlight gửi cho cộng đồng Discord 3.000 người",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Hay mình làm bản demo mobile trên TestFlight, gửi thẳng cho cộng đồng Discord 3.000 người?"
+    },
+    {
+      "utt": "u008",
+      "thread": "demo-platform",
+      "kind": "object",
+      "speaker": "Lâm",
+      "key": "mobile-demo",
+      "content": "Port sang mobile mất ít nhất một tháng, input điều khiển phải làm lại",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": "1 tháng",
+      "quote": "Port sang mobile mất ít nhất một tháng, input điều khiển phải làm lại"
+    },
+    {
+      "utt": "u009",
+      "thread": "demo-platform",
+      "kind": "revise",
+      "speaker": "Nhàn",
+      "key": "steam-next-fest",
+      "content": "Quay lại demo đăng Steam Next Fest, Lâm fix crash màn 3 trước 15/12",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": "15/12",
+      "quote": "Vậy quay lại Steam Next Fest, Lâm fix crash màn 3 trước 15/12 được không?"
+    },
+    {
+      "utt": "u010",
+      "thread": "demo-platform",
+      "kind": "info",
+      "speaker": "Lâm",
+      "key": null,
+      "content": "Đã tìm ra nguyên nhân crash màn 3, một tuần là fix xong",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Crash đó em đã tìm ra nguyên nhân rồi, một tuần là fix xong"
+    },
+    {
+      "utt": "u011",
+      "thread": "demo-platform",
+      "kind": "agree",
+      "speaker": "Huy",
+      "key": "steam-next-fest",
+      "content": "Chốt demo đăng Steam Next Fest tháng 2, bỏ itch.io và mobile",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Chốt demo đăng Steam Next Fest tháng 2, bỏ itch.io và mobile"
+    },
+    {
+      "utt": "u012",
+      "thread": "demo-platform",
+      "kind": "assign",
+      "speaker": "Huy",
+      "key": "fix-crash-m3",
+      "content": "Giao Lâm fix crash màn 3 trong tuần này và báo cáo",
+      "hedged": false,
+      "owner": "Lâm",
+      "deadline_text": "trong tuần này",
+      "quote": "Lâm fix crash màn 3 trong tuần này, xong báo anh"
+    },
+    {
+      "utt": "u013",
+      "thread": "demo-platform",
+      "kind": "commit",
+      "speaker": "Lâm",
+      "key": "fix-crash-m3",
+      "content": "Lâm nhận việc fix crash màn 3",
+      "hedged": false,
+      "owner": "Lâm",
+      "deadline_text": "trong tuần này",
+      "quote": "Ok anh, em làm luôn"
+    },
+    {
+      "utt": "u014",
+      "thread": "boss-art-style",
+      "kind": "propose",
+      "speaker": "Oanh",
+      "key": "boss-art-options",
+      "content": "Làm hai bản art boss cuối: gothic tối màu và pastel dễ thương",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Em làm hai bản: bản tối màu kiểu gothic và bản màu pastel dễ thương"
+    },
+    {
+      "utt": "u015",
+      "thread": "boss-art-style",
+      "kind": "agree",
+      "speaker": "Huy",
+      "key": "boss-art-options",
+      "content": "Thích bản gothic hơn, hợp tone game",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Anh thích bản gothic hơn, hợp với tone game"
+    },
+    {
+      "utt": "u016",
+      "thread": "boss-art-style",
+      "kind": "feedback",
+      "speaker": "Nhàn",
+      "key": null,
+      "content": "Playtester tuần rồi nói boss màn 2 quá khó, 70% người chơi bỏ cuộc",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Playtester tuần rồi nói boss màn 2 quá khó, 70% người chơi bỏ cuộc ở đó"
+    },
+    {
+      "utt": "u017",
+      "thread": "demo-platform",
+      "kind": "blocker",
+      "speaker": "Lâm",
+      "key": null,
+      "content": "Máy build studio hết license Unity Pro, không export được bản release",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Máy build của studio hết license Unity Pro từ hôm qua, không export được bản release"
+    }
+  ]
+}

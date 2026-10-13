@@ -1,0 +1,150 @@
+{
+  "threads": [
+    {
+      "id": "kids-textbook",
+      "title": "Giáo trình lớp Kids"
+    },
+    {
+      "id": "midterm-schedule",
+      "title": "Lịch thi giữa kỳ"
+    },
+    {
+      "id": "parents-feedback",
+      "title": "Phản ánh của phụ huynh"
+    }
+  ],
+  "events": [
+    {
+      "utt": "u003",
+      "thread": "kids-textbook",
+      "kind": "propose",
+      "speaker": "Trâm",
+      "key": "new-2025",
+      "content": "Đề xuất đổi sang bộ giáo trình mới bản 2025, học viên tự mua sách 450 nghìn",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Em đề xuất đổi sang bộ giáo trình mới bản 2025"
+    },
+    {
+      "utt": "u004",
+      "thread": "kids-textbook",
+      "kind": "object",
+      "speaker": "Đông",
+      "key": "new-2025",
+      "content": "Phụ huynh sẽ hỏi nhiều vì tăng thêm 450 nghìn",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Tăng thêm 450 nghìn thì phụ huynh sẽ hỏi nhiều"
+    },
+    {
+      "utt": "u005",
+      "thread": "kids-textbook",
+      "kind": "object",
+      "speaker": "Kiều",
+      "key": "new-2025",
+      "content": "Đổi giáo trình giữa khóa làm giáo viên phải soạn lại bài mất ít nhất 3 tuần",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Đổi giáo trình giữa khóa thì giáo viên phải soạn lại bài, mất ít nhất 3 tuần"
+    },
+    {
+      "utt": "u006",
+      "thread": "kids-textbook",
+      "kind": "defer",
+      "speaker": "Hà",
+      "key": null,
+      "content": "Hoãn quyết định giáo trình đến họp tháng sau khi có báo giá chính thức",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Vụ giáo trình để họp tháng sau quyết, khi có báo giá chính thức từ nhà sách"
+    },
+    {
+      "utt": "u007",
+      "thread": "kids-textbook",
+      "kind": "assign",
+      "speaker": "Trâm",
+      "key": "get-quote",
+      "content": "Liên hệ nhà sách xin báo giá cho trung tâm",
+      "hedged": false,
+      "owner": "Trâm",
+      "deadline_text": null,
+      "quote": "Để em thử liên hệ nhà sách xin báo giá cho trung tâm xem"
+    },
+    {
+      "utt": "u008",
+      "thread": "midterm-schedule",
+      "kind": "propose",
+      "speaker": "Kiều",
+      "key": "midterm-2-6-11",
+      "content": "Lịch thi giữa kỳ từ 2/11 đến 6/11, phòng 3 sửa nên dồn sang phòng 1 và 2",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Lịch thi giữa kỳ em xếp xong rồi, thi từ 2/11 đến 6/11, phòng 3 đang sửa nên dồn sang phòng 1 và 2"
+    },
+    {
+      "utt": "u009",
+      "thread": "midterm-schedule",
+      "kind": "assign",
+      "speaker": "Hà",
+      "key": "send-schedule",
+      "content": "Giao Kiều gửi lịch thi cho giáo viên và phụ huynh trước thứ Tư",
+      "hedged": false,
+      "owner": "Kiều",
+      "deadline_text": "trước thứ Tư",
+      "quote": "Kiều gửi lịch thi cho giáo viên và phụ huynh trước thứ Tư nhé"
+    },
+    {
+      "utt": "u010",
+      "thread": "midterm-schedule",
+      "kind": "commit",
+      "speaker": "Kiều",
+      "key": "send-schedule",
+      "content": "Kiều nhận gửi lịch thi trước thứ Tư",
+      "hedged": false,
+      "owner": "Kiều",
+      "deadline_text": "trước thứ Tư",
+      "quote": "Ok chị, thứ Tư em gửi"
+    },
+    {
+      "utt": "u011",
+      "thread": "parents-feedback",
+      "kind": "propose",
+      "speaker": "Đông",
+      "key": "open-sat-morning",
+      "content": "Phụ huynh lớp Starters 3 yêu cầu mở thêm lớp sáng thứ Bảy",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Phụ huynh lớp Starters 3 yêu cầu mở thêm lớp sáng thứ Bảy"
+    },
+    {
+      "utt": "u012",
+      "thread": "parents-feedback",
+      "kind": "info",
+      "speaker": "Đông",
+      "key": null,
+      "content": "Có 9 phụ huynh đã ký tên, đủ mở một lớp mới",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Có 9 phụ huynh đã ký tên, đủ mở một lớp mới"
+    },
+    {
+      "utt": "u013",
+      "thread": "parents-feedback",
+      "kind": "blocker",
+      "speaker": "Hà",
+      "key": "open-sat-morning",
+      "content": "Chưa có giáo viên trống lịch sáng thứ Bảy để mở lớp mới",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Mở lớp mới phải có giáo viên trống lịch sáng thứ Bảy, giờ chưa có ai"
+    }
+  ]
+}

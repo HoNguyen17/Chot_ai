@@ -6,12 +6,16 @@ import { useEffect, useState } from "react";
 import { api } from "@/lib/api";
 import type { MeetingSummary } from "@/lib/types";
 
+// Transcript mẫu (bản sao data/raw) — API replay output LLM đã lưu, không tốn token.
+const SAMPLES = Array.from({ length: 25 }, (_, i) => `m${String(i + 1).padStart(2, "0")}`);
+
 export default function UploadPage() {
   const router = useRouter();
   const [text, setText] = useState("");
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [recent, setRecent] = useState<MeetingSummary[]>([]);
+  const [sample, setSample] = useState<{ id: string; text: string; title: string } | null>(null);
 
   useEffect(() => {
     api.listMeetings().then(setRecent).catch(() => setRecent([]));
@@ -21,9 +25,13 @@ export default function UploadPage() {
     setText(await file.text());
   }
 
-  async function loadSample() {
-    const res = await fetch("/samples/m01.txt");
-    setText(await res.text());
+  async function loadSample(id: string) {
+    if (!id) return;
+    const res = await fetch(`/samples/${id}.txt`);
+    const body = await res.text();
+    const title = body.match(/^# title:\s*(.+)$/m)?.[1] ?? id;
+    setSample({ id, text: body, title });
+    setText(body);
   }
 
   async function submit() {
@@ -34,7 +42,8 @@ export default function UploadPage() {
     setBusy(true);
     setError(null);
     try {
-      const meeting = await api.createMeeting(text);
+      // Chỉ gửi meeting_id khi transcript mẫu chưa bị sửa — sửa rồi thì để LLM xử lý.
+      const meeting = await api.createMeeting(text, text === sample?.text ? sample.id : undefined);
       router.push(`/meetings/${meeting.id}`);
     } catch (e) {
       setError(e instanceof Error ? e.message : "Không xử lý được transcript.");
@@ -72,14 +81,32 @@ export default function UploadPage() {
                 onChange={(e) => e.target.files?.[0] && loadFile(e.target.files[0])}
               />
             </label>
-            <button className="btn btn-sm" onClick={loadSample}>
-              Dùng transcript mẫu
-            </button>
+            <select
+              aria-label="Dùng transcript mẫu"
+              value={sample?.id ?? ""}
+              onChange={(e) => loadSample(e.target.value)}
+            >
+              <option value="">Dùng transcript mẫu…</option>
+              {SAMPLES.map((id) => (
+                <option key={id} value={id}>
+                  {id}
+                </option>
+              ))}
+            </select>
           </div>
           <button className="btn btn-primary" onClick={submit} disabled={busy}>
             {busy ? "Đang phân tích…" : "Chốt biên bản"}
           </button>
         </div>
+        {sample && text === sample.text && (
+          <p className="faint" style={{ marginTop: 12 }}>
+            <b>{sample.title}</b> — kết quả mẫu là output đã lưu của LLM (gpt-4.1-mini, ngày
+            14/10/2026), không phải đáp án.
+          </p>
+        )}
+        <p className="faint" style={{ marginTop: 8 }}>
+          Bản demo: đừng dán nội dung cuộc họp thật.
+        </p>
         {error && (
           <p className="alert" role="alert" style={{ marginTop: 12 }}>
             {error}

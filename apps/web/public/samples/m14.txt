@@ -1,0 +1,18 @@
+# meeting: m14
+# title: Briefing trước ca — bếp và phục vụ
+# date: 2026-10-20
+# participants: Hiếu (Quản lý nhà hàng, chủ trì); Ngân (Bếp trưởng); Tùng (Trưởng ca phục vụ); Ly (Thu ngân)
+[00:00:10] Hiếu: Ok team, briefing nhanh trước ca tối. Hai việc: set menu cá hồi và flow order.
+[00:00:50] Ngân: Supplier cá hồi báo giá tăng 25% từ tuần này, set cá hồi giờ food cost lên 48%.
+[00:01:35] Tùng: Em propose giữ cá hồi, tăng giá set thêm 40 nghìn, khách quen vẫn order.
+[00:02:15] Ngân: Tăng 40 nghìn thì food cost vẫn chưa về target 35%.
+[00:02:55] Ngân: Em đề xuất thay cá hồi bằng cá chẽm áp chảo, giá vốn thấp hơn gần một nửa.
+[00:03:35] Tùng: Khách quen hay order set cá hồi, đổi đột ngột sẽ có complain.
+[00:04:20] Hiếu: Ok, chốt thay cá hồi bằng cá chẽm từ thứ Hai tuần sau, tuần này vẫn bán cá hồi giá cũ.
+[00:04:50] Hiếu: Tùng brief cho team phục vụ cách giới thiệu món mới trong chiều nay nhé.
+[00:05:05] Tùng: Ok anh, chiều nay em brief.
+[00:05:45] Ly: Flow order trên tablet đang lỗi, order bàn VIP không in xuống bếp, tối qua bị sót 2 order.
+[00:06:30] Hiếu: Ly gọi support bên POS trong hôm nay, chưa fix thì quay lại ghi order giấy cho bàn VIP.
+[00:06:45] Ly: Dạ ok anh, em gọi liền.
+[00:07:20] Ngân: Em sẽ update recipe card món cá chẽm lên group bếp trước thứ Sáu.
+[00:07:50] Hiếu: Ok, vô ca thôi.

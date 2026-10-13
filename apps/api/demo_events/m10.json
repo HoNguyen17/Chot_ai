@@ -1,0 +1,194 @@
+{
+  "threads": [
+    {
+      "id": "login-method",
+      "title": "Phương án đăng nhập app"
+    },
+    {
+      "id": "uat-schedule",
+      "title": "Lịch UAT"
+    }
+  ],
+  "events": [
+    {
+      "utt": "u002",
+      "thread": "login-method",
+      "kind": "propose",
+      "speaker": "Tuyết",
+      "key": "OTP-SMS",
+      "content": "Đăng nhập bằng OTP qua SMS",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Bên chị muốn đăng nhập bằng OTP qua SMS"
+    },
+    {
+      "utt": "u003",
+      "thread": "login-method",
+      "kind": "object",
+      "speaker": "Đức",
+      "key": "OTP-SMS",
+      "content": "Chi phí OTP SMS khoảng 40 triệu một tháng",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "OTP SMS mỗi tin khoảng 800 đồng, 50 nghìn user một tháng là 40 triệu tiền SMS"
+    },
+    {
+      "utt": "u004",
+      "thread": "login-method",
+      "kind": "propose",
+      "speaker": "Kim",
+      "key": "Email-Password",
+      "content": "Đăng nhập bằng email và mật khẩu, không tốn phí",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Em đề xuất đăng nhập bằng email kèm mật khẩu, không tốn phí"
+    },
+    {
+      "utt": "u005",
+      "thread": "login-method",
+      "kind": "agree",
+      "speaker": "Nam",
+      "key": "Email-Password",
+      "content": "Chọn phương án đăng nhập bằng email và mật khẩu",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Ok vậy đi email với mật khẩu"
+    },
+    {
+      "utt": "u006",
+      "thread": "login-method",
+      "kind": "object",
+      "speaker": "Tuyết",
+      "key": "Email-Password",
+      "content": "Khách hàng chủ yếu là người bán hàng chợ, ít dùng email",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "khách của chị phần lớn là người bán hàng ở chợ, ít ai dùng email"
+    },
+    {
+      "utt": "u007",
+      "thread": "login-method",
+      "kind": "revise",
+      "speaker": "Đức",
+      "key": "Zalo",
+      "content": "Đăng nhập bằng Zalo, miễn phí và phổ biến",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Vậy dùng đăng nhập bằng Zalo, gần như ai cũng có, mà miễn phí"
+    },
+    {
+      "utt": "u008",
+      "thread": "login-method",
+      "kind": "object",
+      "speaker": "Hòa",
+      "key": "Zalo",
+      "content": "Đăng nhập Zalo cần app được duyệt, mất ba tuần chờ",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Đăng nhập Zalo cần app được duyệt trên Zalo Developer, lần trước bên em chờ ba tuần"
+    },
+    {
+      "utt": "u009",
+      "thread": "login-method",
+      "kind": "revise",
+      "speaker": "Tuyết",
+      "key": "OTP-SMS-new",
+      "content": "Chỉ gửi OTP SMS khi đăng nhập trên máy mới",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Thôi quay lại OTP SMS, nhưng chỉ gửi OTP khi đăng nhập trên máy mới thôi"
+    },
+    {
+      "utt": "u010",
+      "thread": "login-method",
+      "kind": "info",
+      "speaker": "Đức",
+      "key": "OTP-SMS-new",
+      "content": "Gửi OTP khi đổi máy giảm chi phí còn khoảng 4 triệu một tháng",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Chỉ gửi khi đổi máy thì số SMS giảm còn khoảng một phần mười, tầm 4 triệu một tháng"
+    },
+    {
+      "utt": "u011",
+      "thread": "login-method",
+      "kind": "agree",
+      "speaker": "Nam",
+      "key": "OTP-SMS-new",
+      "content": "Chốt đăng nhập OTP SMS, chỉ gửi khi đăng nhập trên thiết bị mới; bỏ email và Zalo",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Chốt đăng nhập OTP SMS, chỉ gửi khi đăng nhập trên thiết bị mới. Email và Zalo bỏ"
+    },
+    {
+      "utt": "u013",
+      "thread": "login-method",
+      "kind": "assign",
+      "speaker": "Nam",
+      "key": "update-login-doc",
+      "content": "Đức cập nhật tài liệu kiến trúc phần đăng nhập, gửi chị Tuyết thứ Hai tuần sau",
+      "hedged": false,
+      "owner": "Đức",
+      "deadline_text": "thứ Hai tuần sau",
+      "quote": "Đức cập nhật lại tài liệu kiến trúc phần đăng nhập, thứ Hai tuần sau gửi chị Tuyết"
+    },
+    {
+      "utt": "u014",
+      "thread": "login-method",
+      "kind": "commit",
+      "speaker": "Đức",
+      "key": "update-login-doc",
+      "content": "Đức nhận cập nhật tài liệu kiến trúc phần đăng nhập, gửi thứ Hai tuần sau",
+      "hedged": false,
+      "owner": "Đức",
+      "deadline_text": "thứ Hai tuần sau",
+      "quote": "Dạ ok anh, thứ Hai em gửi"
+    },
+    {
+      "utt": "u015",
+      "thread": "uat-schedule",
+      "kind": "blocker",
+      "speaker": "Hòa",
+      "key": null,
+      "content": "Chưa có môi trường staging có dữ liệu thật đã ẩn danh để test UAT",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "team em chưa có môi trường staging có dữ liệu thật đã ẩn danh, nên chưa test được"
+    },
+    {
+      "utt": "u016",
+      "thread": "uat-schedule",
+      "kind": "defer",
+      "speaker": "Tuyết",
+      "key": null,
+      "content": "Chưa chốt ngày bắt đầu UAT, phải hỏi lại sếp về lịch nghỉ lễ",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Ngày bắt đầu UAT thì mình chưa chốt được, chị phải hỏi lại sếp bên chị về lịch nghỉ lễ"
+    },
+    {
+      "utt": "u017",
+      "thread": "uat-schedule",
+      "kind": "assign",
+      "speaker": "Kim",
+      "key": "update-user-story",
+      "content": "Kim cập nhật user story đăng nhập lên Jira trong hôm nay để Hòa viết test case",
+      "hedged": false,
+      "owner": "Kim",
+      "deadline_text": "trong hôm nay",
+      "quote": "Em sẽ cập nhật user story đăng nhập lên Gi ra trong hôm nay để Hòa viết test case"
+    }
+  ]
+}

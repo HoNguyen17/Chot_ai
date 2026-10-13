@@ -1,0 +1,214 @@
+{
+  "threads": [
+    {
+      "id": "sales-channel",
+      "title": "Kênh bán hàng mới"
+    },
+    {
+      "id": "freeship-policy",
+      "title": "Chính sách freeship"
+    },
+    {
+      "id": "warehouse-storage",
+      "title": "Kho và kệ hàng"
+    },
+    {
+      "id": "product-feedback",
+      "title": "Phản hồi sản phẩm"
+    }
+  ],
+  "events": [
+    {
+      "utt": "u002",
+      "thread": "sales-channel",
+      "kind": "propose",
+      "speaker": "Hảo",
+      "key": "ShopeeMall",
+      "content": "Đề xuất mở Shopee Mall vì lượng khách lớn",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Em đề xuất mở Shopee Mall"
+    },
+    {
+      "utt": "u003",
+      "thread": "sales-channel",
+      "kind": "info",
+      "speaker": "Phụng",
+      "key": null,
+      "content": "Shopee Mall phí cố định cộng phí thanh toán khoảng 12% doanh thu",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Shopee Mall phí cố định cộng phí thanh toán tổng khoảng 12% doanh thu"
+    },
+    {
+      "utt": "u004",
+      "thread": "sales-channel",
+      "kind": "propose",
+      "speaker": "Hảo",
+      "key": "TikTokShop",
+      "content": "Đề xuất dùng TikTok Shop vì phí thấp hơn và có sẵn nhân sự làm video",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "TikTok Shop thì phí thấp hơn, khoảng 8%, mà bên mình có sẵn 3 bạn làm video"
+    },
+    {
+      "utt": "u005",
+      "thread": "sales-channel",
+      "kind": "object",
+      "speaker": "Khánh",
+      "key": "TikTokShop",
+      "content": "Phản đối TikTok Shop vì đổi chính sách liên tục",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Anh thì thấy Shopee Mall an toàn hơn, TikTok Shop đổi chính sách liên tục"
+    },
+    {
+      "utt": "u006",
+      "thread": "sales-channel",
+      "kind": "agree",
+      "speaker": "Vân",
+      "key": "TikTokShop",
+      "content": "Chốt mở kênh TikTok Shop trước tháng 12, Shopee Mall để quý sau",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Chị quyết đi TikTok Shop trước, tháng 12 mở. Shopee Mall để quý sau"
+    },
+    {
+      "utt": "u008",
+      "thread": "sales-channel",
+      "kind": "assign",
+      "speaker": "Vân",
+      "key": "video-plan",
+      "content": "Giao Hảo lên kế hoạch 30 video cho tháng đầu, gửi thứ Hai tuần sau",
+      "hedged": false,
+      "owner": "Hảo",
+      "deadline_text": "thứ Hai tuần sau",
+      "quote": "Hảo lên kế hoạch 30 video cho tháng đầu, thứ Hai tuần sau gửi chị"
+    },
+    {
+      "utt": "u009",
+      "thread": "sales-channel",
+      "kind": "commit",
+      "speaker": "Hảo",
+      "key": "video-plan",
+      "content": "Hảo nhận làm kế hoạch video và sẽ gửi đúng hạn",
+      "hedged": false,
+      "owner": "Hảo",
+      "deadline_text": "thứ Hai tuần sau",
+      "quote": "Dạ ok chị, thứ Hai em gửi"
+    },
+    {
+      "utt": "u010",
+      "thread": "freeship-policy",
+      "kind": "propose",
+      "speaker": "Khánh",
+      "key": "freeship-299k",
+      "content": "Đề xuất freeship cho đơn từ 299 nghìn thay vì 199 nghìn",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Anh đề xuất freeship cho đơn từ 299 nghìn thay vì 199 nghìn như hiện tại"
+    },
+    {
+      "utt": "u011",
+      "thread": "freeship-policy",
+      "kind": "object",
+      "speaker": "Phụng",
+      "key": "freeship-299k",
+      "content": "Phản đối nâng freeship lên 299 nghìn vì đơn trung bình hiện tại 260 nghìn, khách phải mua thêm",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Đơn trung bình bên mình đang là 260 nghìn, nâng lên 299 thì nhiều khách phải mua thêm"
+    },
+    {
+      "utt": "u012",
+      "thread": "freeship-policy",
+      "kind": "agree",
+      "speaker": "Vân",
+      "key": "freeship-299k",
+      "content": "Chốt chính sách freeship từ 299 nghìn áp dụng từ 1/11",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": "1/11",
+      "quote": "Ok, chốt freeship từ 299 nghìn, áp dụng từ 1/11"
+    },
+    {
+      "utt": "u013",
+      "thread": "freeship-policy",
+      "kind": "agree",
+      "speaker": "Khánh",
+      "key": "freeship-299k",
+      "content": "Đồng ý chính sách freeship từ 299 nghìn",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": "1/11",
+      "quote": "Ok"
+    },
+    {
+      "utt": "u014",
+      "thread": "warehouse-storage",
+      "kind": "blocker",
+      "speaker": "Phụng",
+      "key": null,
+      "content": "Kho thiếu kệ, 2 pallet đang để dưới sàn",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Kho hiện thiếu kệ cho hàng mới về, 2 pallet đang để dưới sàn"
+    },
+    {
+      "utt": "u015",
+      "thread": "warehouse-storage",
+      "kind": "assign",
+      "speaker": "Khánh",
+      "key": "add-racks",
+      "content": "Giao Phụng đặt thêm 4 kệ sắt, lắp xong thứ Bảy",
+      "hedged": false,
+      "owner": "Phụng",
+      "deadline_text": "thứ Bảy",
+      "quote": "Phụng đặt thêm 4 kệ sắt, thứ Bảy này lắp xong nhé"
+    },
+    {
+      "utt": "u016",
+      "thread": "warehouse-storage",
+      "kind": "commit",
+      "speaker": "Phụng",
+      "key": "add-racks",
+      "content": "Phụng nhận đặt và lắp 4 kệ sắt xong thứ Bảy",
+      "hedged": false,
+      "owner": "Phụng",
+      "deadline_text": "thứ Bảy",
+      "quote": "Ok anh, thứ Bảy em lắp"
+    },
+    {
+      "utt": "u017",
+      "thread": "product-feedback",
+      "kind": "info",
+      "speaker": "Hảo",
+      "key": null,
+      "content": "Khách review sữa rửa mặt mới mùi hơi nồng, có 15 đánh giá 3 sao trong tuần",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Khách review sữa rửa mặt mới nói mùi hơi nồng, có 15 đánh giá 3 sao trong tuần này"
+    },
+    {
+      "utt": "u018",
+      "thread": "product-feedback",
+      "kind": "assign",
+      "speaker": "Vân",
+      "key": "send-reviews",
+      "content": "Giao Hảo gom review gửi nhà máy",
+      "hedged": false,
+      "owner": "Hảo",
+      "deadline_text": null,
+      "quote": "Hảo gom lại các review đó gửi bên nhà máy nhé"
+    }
+  ]
+}

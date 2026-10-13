@@ -10,7 +10,7 @@ from chot.usecases.meetings import MeetingRecord
 
 class CreateMeetingIn(BaseModel):
     transcript_text: str = Field(min_length=1)
-    meeting_id: str | None = None
+    meeting_id: str | None = Field(None, pattern=r"^[A-Za-z0-9_-]{1,64}$")
 
 
 class ReviewItemIn(BaseModel):

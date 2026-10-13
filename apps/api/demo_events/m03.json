@@ -1,0 +1,242 @@
+{
+  "threads": [
+    {
+      "id": "release-date",
+      "title": "Ngày phát hành v2.0"
+    },
+    {
+      "id": "export-pdf-scope",
+      "title": "Phạm vi export PDF"
+    },
+    {
+      "id": "staging-server",
+      "title": "Server staging"
+    },
+    {
+      "id": "test-plan",
+      "title": "Kế hoạch test regression"
+    },
+    {
+      "id": "dark-mode",
+      "title": "Tính năng dark mode"
+    }
+  ],
+  "events": [
+    {
+      "utt": "u002",
+      "thread": "release-date",
+      "kind": "propose",
+      "speaker": "Trang",
+      "key": "15/11",
+      "content": "Đề xuất release ngày 15/11 như cam kết ban đầu",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "em muốn release ngày 15/11 như cam kết ban đầu"
+    },
+    {
+      "utt": "u003",
+      "thread": "release-date",
+      "kind": "object",
+      "speaker": "Bảo",
+      "key": "15/11",
+      "content": "15/11 không kịp do module export PDF còn nhiều việc",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "15/11 thì không kịp"
+    },
+    {
+      "utt": "u004",
+      "thread": "release-date",
+      "kind": "propose",
+      "speaker": "Bảo",
+      "key": "22/11",
+      "content": "Đề xuất dời release sang 22/11",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Em đề xuất dời qua 22/11"
+    },
+    {
+      "utt": "u005",
+      "thread": "release-date",
+      "kind": "object",
+      "speaker": "Linh",
+      "key": "22/11",
+      "content": "QA chỉ có một tuần để regression test nếu chốt 22/11",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Nếu chốt 22/11 thì QA mới đủ một tuần regression test"
+    },
+    {
+      "utt": "u006",
+      "thread": "release-date",
+      "kind": "agree",
+      "speaker": "Quân",
+      "key": "22/11",
+      "content": "Đồng ý dời release sang 22/11",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Ok, vậy dời release qua 22/11"
+    },
+    {
+      "utt": "u007",
+      "thread": "release-date",
+      "kind": "object",
+      "speaker": "Trang",
+      "key": "22/11",
+      "content": "22/11 trùng đợt kiểm kê cuối năm khách không nhận bản mới",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "22/11 trùng đợt kiểm kê cuối năm của khách, họ không nhận bản mới tuần đó đâu"
+    },
+    {
+      "utt": "u009",
+      "thread": "release-date",
+      "kind": "revise",
+      "speaker": "Trang",
+      "key": "15/11",
+      "content": "Giữ release 15/11 nhưng cắt export PDF sang bản 2.1",
+      "hedged": true,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Hay mình giữ 15/11 nhưng cắt export PDF ra, đưa qua bản 2.1?"
+    },
+    {
+      "utt": "u010",
+      "thread": "export-pdf-scope",
+      "kind": "agree",
+      "speaker": "Bảo",
+      "key": "cut-export-pdf",
+      "content": "Đồng ý bỏ export PDF để kịp 15/11",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Bỏ export PDF thì 15/11 làm kịp"
+    },
+    {
+      "utt": "u011",
+      "thread": "export-pdf-scope",
+      "kind": "agree",
+      "speaker": "Linh",
+      "key": "cut-export-pdf",
+      "content": "QA đồng ý scope nhỏ lại để test kịp",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Em ok, scope nhỏ lại thì test kịp"
+    },
+    {
+      "utt": "u012",
+      "thread": "release-date",
+      "kind": "agree",
+      "speaker": "Quân",
+      "key": "15/11",
+      "content": "Chốt release v2.0 ngày 15/11, export PDF chuyển sang v2.1, bỏ phương án 22/11",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Chốt lại: release v2.0 ngày 15/11, export PDF chuyển sang v2.1. Bỏ phương án 22/11"
+    },
+    {
+      "utt": "u013",
+      "thread": "export-pdf-scope",
+      "kind": "assign",
+      "speaker": "Quân",
+      "key": "inform-client",
+      "content": "Giao Trang báo khách về việc export PDF sang bản 2.1 trong hôm nay",
+      "hedged": false,
+      "owner": "Trang",
+      "deadline_text": "trong hôm nay",
+      "quote": "Trang báo lại khách về việc export PDF qua bản 2.1 trong hôm nay nhé"
+    },
+    {
+      "utt": "u014",
+      "thread": "export-pdf-scope",
+      "kind": "commit",
+      "speaker": "Trang",
+      "key": "inform-client",
+      "content": "Trang nhận việc gọi khách chiều nay",
+      "hedged": false,
+      "owner": "Trang",
+      "deadline_text": "chiều nay",
+      "quote": "Ok anh, chiều nay em gọi khách"
+    },
+    {
+      "utt": "u015",
+      "thread": "staging-server",
+      "kind": "object",
+      "speaker": "Bảo",
+      "key": "staging-server-capacity",
+      "content": "Server staging hết dung lượng, không deploy được bản mới",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "server staging hết dung lượng, deploy bản mới lên không được"
+    },
+    {
+      "utt": "u016",
+      "thread": "staging-server",
+      "kind": "assign",
+      "speaker": "Quân",
+      "key": "upgrade-storage",
+      "content": "Giao Bảo tạo ticket Gia ra, anh duyệt nâng cấp ổ đĩa, làm ngày mai",
+      "hedged": false,
+      "owner": "Bảo",
+      "deadline_text": "Mai",
+      "quote": "Bảo tạo ticket trên Gia ra, anh duyệt nâng cấp ổ đĩa. Mai làm luôn nhé"
+    },
+    {
+      "utt": "u017",
+      "thread": "staging-server",
+      "kind": "decline",
+      "speaker": "Bảo",
+      "key": "upgrade-storage",
+      "content": "Bảo cần xem lại cấu hình rồi báo lại",
+      "hedged": false,
+      "owner": "Bảo",
+      "deadline_text": null,
+      "quote": "Dạ để em xem lại cấu hình rồi báo anh"
+    },
+    {
+      "utt": "u018",
+      "thread": "test-plan",
+      "kind": "info",
+      "speaker": "Linh",
+      "key": null,
+      "content": "Khách chỉ test trên Chrome cũ 109 do máy kho chạy Windows 7",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "bên khách chỉ test được trên Chrome bản cũ 109 vì máy kho chạy Windows 7"
+    },
+    {
+      "utt": "u019",
+      "thread": "test-plan",
+      "kind": "assign",
+      "speaker": "Linh",
+      "key": "write-test-plan",
+      "content": "Linh viết test plan cho regression, gửi team review thứ Sáu",
+      "hedged": false,
+      "owner": "Linh",
+      "deadline_text": "thứ Sáu",
+      "quote": "Em sẽ viết test plan cho regression, thứ Sáu gửi team review"
+    },
+    {
+      "utt": "u020",
+      "thread": "dark-mode",
+      "kind": "defer",
+      "speaker": "Trang",
+      "key": null,
+      "content": "Chưa chốt làm dark mode, để sprint sau bàn",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Còn chuyện có làm dark mode không, mình chưa chốt được, để sprint sau bàn"
+    }
+  ]
+}

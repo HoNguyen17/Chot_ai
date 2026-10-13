@@ -1,0 +1,25 @@
+# meeting: m03
+# title: Sprint planning — Release v2.0 phần mềm quản lý kho
+# date: 2026-10-07
+# participants: Quân (Engineering Manager, chủ trì); Trang (Product Owner); Bảo (Backend dev); Linh (QA)
+[00:00:20] Quân: Rồi, sprint planning. Việc lớn nhất là ngày release v2.0.
+[00:00:55] Trang: Khách đang chờ, em muốn release ngày 15/11 như cam kết ban đầu.
+[00:01:40] Bảo: Module export PDF còn khá nhiều, em ước tính thêm hai tuần nữa. 15/11 thì không kịp.
+[00:02:25] Bảo: Em đề xuất dời qua 22/11.
+[00:03:00] Linh: Nếu chốt 22/11 thì QA mới đủ một tuần regression test.
+[00:03:30] Quân: Ok, vậy dời release qua 22/11.
+[00:03:45] Trang: Khoan đã anh. 22/11 trùng đợt kiểm kê cuối năm của khách, họ không nhận bản mới tuần đó đâu.
+[00:04:30] Quân: À cái đó anh không biết. Vậy quyết định sao đây?
+[00:05:10] Trang: Hay mình giữ 15/11 nhưng cắt export PDF ra, đưa qua bản 2.1?
+[00:05:40] Bảo: Bỏ export PDF thì 15/11 làm kịp, phần còn lại gần xong rồi.
+[00:06:05] Linh: Em ok, scope nhỏ lại thì test kịp.
+[00:06:30] Quân: Được. Chốt lại: release v2.0 ngày 15/11, export PDF chuyển sang v2.1. Bỏ phương án 22/11.
+[00:07:10] Quân: Trang báo lại khách về việc export PDF qua bản 2.1 trong hôm nay nhé.
+[00:07:18] Trang: Ok anh, chiều nay em gọi khách.
+[00:08:00] Bảo: Còn một vấn đề, server staging hết dung lượng, deploy bản mới lên không được.
+[00:08:40] Quân: Bảo tạo ticket trên Gia ra, anh duyệt nâng cấp ổ đĩa. Mai làm luôn nhé.
+[00:08:50] Bảo: Dạ để em xem lại cấu hình rồi báo anh.
+[00:09:30] Linh: Em note lại: bên khách chỉ test được trên Chrome bản cũ 109 vì máy kho chạy Windows 7.
+[00:10:15] Linh: Em sẽ viết test plan cho regression, thứ Sáu gửi team review.
+[00:11:00] Trang: Còn chuyện có làm dark mode không, mình chưa chốt được, để sprint sau bàn.
+[00:11:30] Quân: Ok. Hết, cảm ơn mọi người.

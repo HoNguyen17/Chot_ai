@@ -1,0 +1,55 @@
+# meeting: m22
+# title: Giao ban tuần — công trình chung cư 12 tầng
+# date: 2026-10-28
+# participants: Đạo (Chỉ huy trưởng, chủ trì); Sinh (Kỹ sư kết cấu); Toản (Giám sát an toàn); Lam (Kế toán công trường); Quý (Đội trưởng thi công)
+[00:00:10] Đạo: Họp giao ban tuần. Hôm nay nhiều việc: lịch đổ sàn tầng 5, thép, an toàn, và tiền lương công nhân.
+[00:00:45] Quý: Cốp pha sàn tầng 5 bên em lắp xong 90%, thứ Sáu là xong hết.
+[00:01:20] Sinh: Em đề xuất đổ bê tông sàn tầng 5 sáng thứ Bảy 31/10, đúng tiến độ.
+[00:01:55] Toản: Thứ Bảy dự báo có mưa lớn từ trưa, đổ dở dang là phải xử lý mạch ngừng.
+[00:02:30] Quý: Mưa thì em che bạt được, tụi em làm nhiều rồi.
+[00:03:10] Lam: Anh ơi về thép, lô thép phi 16 đợt này giao trễ 5 ngày rồi, nhà cung cấp hẹn tới thứ Hai.
+[00:03:45] Sinh: Thép phi 16 là cho cột tầng 6, chưa cần gấp, nhưng trễ nữa thì vướng.
+[00:04:00] Đạo: Ừ.
+[00:04:40] Toản: Về an toàn, hôm thứ Hai em bắt được 3 công nhân làm trên giàn giáo tầng 4 không đeo dây an toàn.
+[00:05:15] Toản: Theo quy định công ty, vi phạm lần đầu phạt 500 nghìn, lần hai cho nghỉ việc.
+[00:05:50] Quý: Mấy anh em đó mới vô, chưa được training kỹ, phạt luôn thì tội.
+[00:06:30] Đạo: Quay lại vụ đổ sàn. Mưa thật thì chất lượng bê tông bề mặt có bị ảnh hưởng không?
+[00:07:10] Sinh: Mưa lúc bê tông chưa ninh kết thì bề mặt bị rỗ, phải mài lại, tốn thêm khoảng hai ngày.
+[00:07:50] Toản: Em đề xuất dời qua sáng thứ Ba 3/11, dự báo mấy ngày đó nắng.
+[00:08:30] Quý: Dời qua thứ Ba thì tổ đổ bê tông bên em phải chờ, mất hai ngày công khoảng 12 triệu.
+[00:09:05] Đạo: Ok vậy đổ thứ Bảy.
+[00:09:15] Quý: Dạ.
+[00:09:55] Lam: Về lương, công nhân hỏi ứng trước một nửa lương tháng 11 để về quê đám giỗ.
+[00:10:35] Lam: Quỹ công trình hiện còn khoảng 300 triệu, ứng cho 40 người thì hết khoảng 200 triệu.
+[00:11:10] Đạo: Cái đó để anh hỏi giám đốc dự án rồi trả lời sau.
+[00:11:50] Sinh: Anh Đạo, em xem dự báo mới cập nhật lúc 9 giờ, thứ Bảy mưa từ 10 giờ sáng chứ không phải trưa.
+[00:12:25] Sinh: Sàn tầng 5 diện tích lớn, đổ từ 6 giờ tới 10 giờ không kịp xong.
+[00:13:00] Đạo: Vậy thôi, không đổ thứ Bảy nữa.
+[00:13:20] Toản: Vậy chốt thứ Ba 3/11 luôn đi anh.
+[00:13:55] Quý: Thứ Ba thì em lo được, nhưng mất tiền chờ của tổ đổ.
+[00:14:35] Đạo: Đổ sàn tầng 5 sáng thứ Ba 3/11. Tiền chờ của tổ đổ công trình chịu. Làm vậy.
+[00:14:50] Lam: Dạ, em ghi chi phí phát sinh 12 triệu.
+[00:15:30] Đạo: Sinh gửi lại phiếu yêu cầu bê tông cho trạm trộn, đổi ngày giao sang thứ Ba, trong hôm nay nhé.
+[00:15:45] Sinh: Ok anh, chiều nay em gửi.
+[00:16:30] Đạo: Rồi, vụ an toàn. Anh nghĩ phạt thì vẫn phạt, quy định là quy định.
+[00:17:10] Quý: Anh cho em xin lần này nhắc nhở thôi, em cam kết training lại cả tổ.
+[00:17:50] Toản: Bỏ qua lần này thì mấy tổ khác cũng làm theo, khó quản lý.
+[00:18:30] Đạo: Phạt đúng quy định 500 nghìn mỗi người. Thêm nữa, toàn bộ công nhân mới phải học an toàn trước khi lên giàn giáo.
+[00:19:00] Đạo: Toản tổ chức buổi training an toàn cho công nhân mới, sáng thứ Năm này.
+[00:19:15] Toản: Ok anh, sáng thứ Năm em tổ chức.
+[00:19:55] Quý: Em sẽ cho tổ trưởng kiểm tra dây an toàn đầu mỗi ca, bắt đầu từ mai.
+[00:20:40] Lam: Quay lại thép, nhà cung cấp Hòa Bình vừa nhắn là thứ Hai cũng chưa chắc có, nhà máy đang bảo trì.
+[00:21:20] Sinh: Em đề xuất mua lô phi 16 của nhà cung cấp Đông Á, giá cao hơn 3%, giao được trong 2 ngày.
+[00:22:00] Lam: Cao hơn 3% thì lô 25 tấn đội thêm khoảng 15 triệu.
+[00:22:35] Quý: Nhưng trễ thép thì cột tầng 6 đứng, cả đội nằm chờ còn tốn hơn.
+[00:23:10] Đạo: Mua của Đông Á lô này. Hòa Bình giao lô sau thì tính tiếp.
+[00:23:50] Lam: Hợp đồng mua thép trên 10 triệu phải có chữ ký giám đốc dự án, anh Khải đang ở công trường Bình Dương.
+[00:24:25] Đạo: Lam soạn hợp đồng Đông Á rồi gửi anh Khải ký online trong hôm nay.
+[00:24:35] Lam: Dạ, em gửi liền.
+[00:25:20] Toản: Thêm một việc, máy vận thăng chở người kêu lạ từ hôm qua, em đã cho dừng chạy.
+[00:25:55] Đạo: Ai đó gọi bên cho thuê vận thăng xuống kiểm tra giúp anh.
+[00:26:05] Quý: Dạ.
+[00:26:45] Sinh: Bản vẽ điều chỉnh cầu thang bộ tầng 6 em gửi tư vấn thiết kế từ tuần trước, chưa ai phản hồi.
+[00:27:20] Đạo: Sinh gọi thẳng chủ trì thiết kế hối, thứ Sáu này phải có bản vẽ.
+[00:27:40] Sinh: Em gọi rồi anh, họ hẹn thứ Sáu, nhưng em chưa chắc.
+[00:28:15] Đạo: Ok, hôm nay vậy thôi. Cảm ơn anh em.

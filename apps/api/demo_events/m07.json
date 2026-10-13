@@ -1,0 +1,178 @@
+{
+  "threads": [
+    {
+      "id": "layout-picking",
+      "title": "Layout khu picking"
+    },
+    {
+      "id": "shift-schedule",
+      "title": "Lịch ca làm việc"
+    },
+    {
+      "id": "barcode-scanner",
+      "title": "Máy quét barcode dock 2"
+    },
+    {
+      "id": "inventory-report",
+      "title": "Báo cáo tồn kho hàng ngày"
+    }
+  ],
+  "events": [
+    {
+      "utt": "u003",
+      "thread": "layout-picking",
+      "kind": "propose",
+      "speaker": "Hải",
+      "key": "move-fast-moving",
+      "content": "Đề xuất dời khu hàng fast-moving lên sát dock 1",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Em propose dời khu hàng fast-moving lên sát dock 1"
+    },
+    {
+      "utt": "u004",
+      "thread": "layout-picking",
+      "kind": "info",
+      "speaker": "Nga",
+      "key": null,
+      "content": "Dời khu hàng fast-moving phải update location trên WMS, mapping lại khoảng 1.200 SKU, mất khoảng 3 ngày",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Dời thì phải update lại location trên WMS, mapping lại khoảng 1.200 SKU, tầm ba ngày"
+    },
+    {
+      "utt": "u005",
+      "thread": "layout-picking",
+      "kind": "info",
+      "speaker": "Phúc",
+      "key": null,
+      "content": "Lối thoát hiểm cạnh dock 1 phải giữ trống tối thiểu 1,2 mét theo quy định PCCC",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Lối thoát hiểm cạnh dock 1 phải giữ trống tối thiểu 1,2 mét, đó là quy định PCCC"
+    },
+    {
+      "utt": "u006",
+      "thread": "layout-picking",
+      "kind": "agree",
+      "speaker": "Tâm",
+      "key": "move-fast-moving",
+      "content": "Tạm thời đồng ý phương án dời fast-moving lên dock 1, để xem lại mặt bằng",
+      "hedged": true,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Tạm thời mình đi phương án dời fast-moving lên dock 1 nha, để anh xem lại mặt bằng đã"
+    },
+    {
+      "utt": "u009",
+      "thread": "shift-schedule",
+      "kind": "propose",
+      "speaker": "Hải",
+      "key": "add-night-shift",
+      "content": "Đề xuất thêm ca đêm, tuyển thời vụ khoảng 15 người",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Em nghĩ thêm ca đêm, tuyển thời vụ khoảng 15 người"
+    },
+    {
+      "utt": "u010",
+      "thread": "shift-schedule",
+      "kind": "object",
+      "speaker": "Quyên",
+      "key": "add-night-shift",
+      "content": "Thời vụ cần training mất cả tuần, KPI picking accuracy sẽ giảm",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Thời vụ thì training mất cả tuần, KPI picking accuracy sẽ tụt"
+    },
+    {
+      "utt": "u011",
+      "thread": "shift-schedule",
+      "kind": "defer",
+      "speaker": "Tâm",
+      "key": null,
+      "content": "Hoãn quyết định lịch ca, để tính với HR rồi tuần sau quyết",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Ừm, cái này để anh tính với HR rồi tuần sau quyết"
+    },
+    {
+      "utt": "u012",
+      "thread": "barcode-scanner",
+      "kind": "blocker",
+      "speaker": "Nga",
+      "key": null,
+      "content": "Máy quét barcode dock 2 bị lỗi kết nối Wi-Fi từ hôm qua, picker phải nhập tay",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "À máy quét barcode ở dock 2 bị lỗi kết nối Wi-Fi từ hôm qua, picker phải nhập tay"
+    },
+    {
+      "utt": "u013",
+      "thread": "barcode-scanner",
+      "kind": "request",
+      "speaker": "Tâm",
+      "key": null,
+      "content": "Yêu cầu gọi vendor kiểm tra máy quét barcode dock 2",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Ai đó gọi bên vendor check giúp cái máy quét nhé"
+    },
+    {
+      "utt": "u015",
+      "thread": "barcode-scanner",
+      "kind": "assign",
+      "speaker": "Nga",
+      "key": "deploy-wms-update",
+      "content": "Nga sẽ deploy bản update WMS lên môi trường test hôm nay",
+      "hedged": false,
+      "owner": "Nga",
+      "deadline_text": "hôm nay",
+      "quote": "Em sẽ deploy bản update WMS lên môi trường test trong hôm nay"
+    },
+    {
+      "utt": "u016",
+      "thread": "inventory-report",
+      "kind": "request",
+      "speaker": "Quyên",
+      "key": null,
+      "content": "Khách Minh Khoa yêu cầu báo cáo tồn kho hàng ngày thay vì hàng tuần, gửi trước 9 giờ sáng",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Bên khách Minh Khoa request report tồn kho hàng ngày thay vì hàng tuần, gửi trước 9 giờ sáng"
+    },
+    {
+      "utt": "u017",
+      "thread": "inventory-report",
+      "kind": "assign",
+      "speaker": "Tâm",
+      "key": "daily-report-template",
+      "content": "Giao Quyên làm template báo cáo tồn kho hàng ngày, gửi xem trước thứ Năm",
+      "hedged": false,
+      "owner": "Quyên",
+      "deadline_text": "thứ Năm",
+      "quote": "Quyên làm template report daily rồi gửi anh xem trước thứ Năm nha"
+    },
+    {
+      "utt": "u018",
+      "thread": "inventory-report",
+      "kind": "commit",
+      "speaker": "Quyên",
+      "key": "daily-report-template",
+      "content": "Quyên nhận làm template báo cáo tồn kho hàng ngày, gửi trước thứ Năm",
+      "hedged": false,
+      "owner": "Quyên",
+      "deadline_text": "thứ Năm",
+      "quote": "Ok anh, thứ Năm em gửi"
+    }
+  ]
+}

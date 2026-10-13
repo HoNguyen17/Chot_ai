@@ -1,0 +1,26 @@
+# meeting: m06
+# title: Họp sản phẩm — App học tiếng Anh cho trẻ em
+# date: 2026-10-12
+# participants: Vy (CEO, chủ trì); Khang (Product manager); Thư (Content lead); Long (Dev lead)
+[00:00:08] Vy: Ok mình bắt đầu. Hôm nay bàn mô hình thu phí cho bản mới, với lịch ra bài học tháng 11.
+[00:00:50] Khang: Về thu phí, em đề xuất bán gói trọn đời 990 nghìn, phụ huynh trả một lần cho dễ quyết.
+[00:01:35] Long: Dạ.
+[00:02:10] Thư: Gói trọn đời thì doanh thu dồn hết tháng đầu, sau đó mình không có tiền đều để làm content mới.
+[00:02:55] Long: Với lại cổng thanh toán bên mình hiện chỉ hỗ trợ trả theo tháng, làm gói trọn đời phải tích hợp lại mất hai tuần.
+[00:03:40] Thư: Em đề xuất thuê bao tháng 149 nghìn, có dùng thử 7 ngày.
+[00:04:20] Khang: Nhưng phụ huynh hay ngại đăng ký trả tháng, sợ bị trừ tiền tự động.
+[00:04:45] Vy: Ừ.
+[00:05:30] Khang: Hay là làm gói 6 tháng 690 nghìn, ở giữa hai cái?
+[00:06:15] Long: Gói 6 tháng thì cũng phải sửa cổng thanh toán như gói trọn đời.
+[00:07:00] Vy: Ok vậy chốt: bản mới thu phí theo thuê bao tháng 149 nghìn, có 7 ngày dùng thử. Gói trọn đời và gói 6 tháng bỏ.
+[00:07:20] Thư: Dạ.
+[00:07:45] Vy: Khang viết lại màn hình paywall theo giá mới, cuối tuần này gửi chị duyệt nhé.
+[00:08:05] Khang: Ok chị, cuối tuần này em gửi.
+[00:08:40] Vy: Rồi, lịch ra bài học tháng 11. Thư cập nhật đi em.
+[00:09:20] Thư: Tháng 11 mình ra 20 bài chủ đề Giáng sinh. Hiện mới thu âm xong 8 bài, giọng đọc bản xứ bên freelancer đang trễ hẹn.
+[00:10:05] Vy: Long hỗ trợ Thư dựng công cụ upload bài học hàng loạt được không?
+[00:10:25] Long: Dạ.
+[00:11:00] Thư: Em sẽ gửi danh sách 20 bài kèm tiến độ từng bài cho cả team trước thứ Tư.
+[00:11:40] Khang: Chị ơi phụ huynh trong group Zalo phản ánh app hay văng khi mở bài nghe trên máy Android cũ.
+[00:12:15] Long: Cái đó do thư viện audio cũ. Em sẽ nâng cấp thư viện, thứ Sáu này có bản sửa.
+[00:12:50] Vy: Ok, hết rồi. Cảm ơn mọi người.

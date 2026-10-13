@@ -7,8 +7,9 @@ COPY pyproject.toml ./
 COPY src ./src
 RUN pip install --no-cache-dir .
 
-# Sự kiện mẫu cho chế độ LEDGER_BUILDER=replay (demo không cần API key)
-COPY tests/fixtures/oracle_events ./tests/fixtures/oracle_events
+# Sự kiện LLM đã lưu cho m01–m25: transcript mẫu replay, không tốn token (REPLAY_EVENTS_DIR)
+COPY demo_events ./demo_events
 
 EXPOSE 8000
-CMD ["sh", "-c", "uvicorn chot.api.main:app --host 0.0.0.0 --port ${PORT:-8000}"]
+# --proxy-headers: lấy IP thật của khách sau proxy (Railway) cho giới hạn theo IP
+CMD ["sh", "-c", "uvicorn chot.api.main:app --host 0.0.0.0 --port ${PORT:-8000} --proxy-headers --forwarded-allow-ips='*'"]

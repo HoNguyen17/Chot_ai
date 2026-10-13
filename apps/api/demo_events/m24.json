@@ -1,0 +1,210 @@
+{
+  "threads": [
+    {
+      "id": "release-date-3.2",
+      "title": "Ngày phát hành bản 3.2"
+    },
+    {
+      "id": "bug-fix-3.2",
+      "title": "Sửa lỗi bản 3.2"
+    },
+    {
+      "id": "customer-communication",
+      "title": "Thông báo khách hàng"
+    },
+    {
+      "id": "feature-reporting",
+      "title": "Tính năng báo cáo nâng cao"
+    },
+    {
+      "id": "bug-tracking",
+      "title": "Theo dõi bug mức cao"
+    },
+    {
+      "id": "ssl-certificate",
+      "title": "Gia hạn chứng chỉ SSL server staging"
+    }
+  ],
+  "events": [
+    {
+      "utt": "u001",
+      "thread": "release-date-3.2",
+      "kind": "agree",
+      "speaker": "Bình",
+      "key": "release-1-11",
+      "content": "Chốt release bản 3.2 ngày 1/11, báo cáo nâng cao sang 3.3",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "bản 3.2 release ngày 1/11, còn tính năng báo cáo nâng cao để sang bản 3.3"
+    },
+    {
+      "utt": "u002",
+      "thread": "bug-fix-3.2",
+      "kind": "info",
+      "speaker": "Thơ",
+      "key": null,
+      "content": "Bản 3.2 còn 4 bug mức cao, có bug mất dữ liệu khi đồng bộ offline",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Regression bản 3.2 còn 4 bug mức cao, trong đó có bug mất dữ liệu khi đồng bộ offline"
+    },
+    {
+      "utt": "u003",
+      "thread": "bug-fix-3.2",
+      "kind": "info",
+      "speaker": "Giang",
+      "key": null,
+      "content": "Cần thêm 3 ngày để chắc chắn fix bug đồng bộ offline",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Bug đồng bộ offline em cần thêm 3 ngày mới fix chắc chắn được"
+    },
+    {
+      "utt": "u004",
+      "thread": "release-date-3.2",
+      "kind": "propose",
+      "speaker": "Thơ",
+      "key": "release-5-11",
+      "content": "Đề xuất dời release 3.2 sang thứ Năm 5/11",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Em đề xuất dời release 3.2 sang thứ Năm 5/11"
+    },
+    {
+      "utt": "u005",
+      "thread": "customer-communication",
+      "kind": "question",
+      "speaker": "Nhật",
+      "key": null,
+      "content": "Khách Minh Long được hứa bản mới đầu tháng 11, cần xác nhận có thể dời sang 5/11 không",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Khách Minh Long được hứa bản mới đầu tháng 11, dời sang 5/11 thì em báo lại được"
+    },
+    {
+      "utt": "u006",
+      "thread": "release-date-3.2",
+      "kind": "agree",
+      "speaker": "Bình",
+      "key": "release-5-11",
+      "content": "Chốt dời release 3.2 sang thứ Năm 5/11",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Ok, release 3.2 dời sang thứ Năm 5/11"
+    },
+    {
+      "utt": "u008",
+      "thread": "customer-communication",
+      "kind": "assign",
+      "speaker": "Bình",
+      "key": "notify-minh-long",
+      "content": "Nhật báo khách Minh Long lịch release mới trong hôm nay",
+      "hedged": false,
+      "owner": "Nhật",
+      "deadline_text": "trong hôm nay",
+      "quote": "Nhật báo khách Minh Long lịch mới trong hôm nay nhé"
+    },
+    {
+      "utt": "u009",
+      "thread": "customer-communication",
+      "kind": "commit",
+      "speaker": "Nhật",
+      "key": "notify-minh-long",
+      "content": "Nhật nhận gửi email báo khách Minh Long trong hôm nay",
+      "hedged": false,
+      "owner": "Nhật",
+      "deadline_text": "trong hôm nay",
+      "quote": "Ok chị, em gửi email ngay"
+    },
+    {
+      "utt": "u010",
+      "thread": "feature-reporting",
+      "kind": "question",
+      "speaker": "Nhật",
+      "key": null,
+      "content": "Khách Minh Long hỏi có thể đưa báo cáo nâng cao vào bản 3.2 không",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Khách Minh Long cũng hỏi có đưa được báo cáo nâng cao vào 3.2 luôn không"
+    },
+    {
+      "utt": "u011",
+      "thread": "feature-reporting",
+      "kind": "object",
+      "speaker": "Bình",
+      "key": "release-5-11",
+      "content": "Báo cáo nâng cao vẫn giữ ở bản 3.3 như đã chốt",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Không, báo cáo nâng cao vẫn ở bản 3.3 như đã chốt"
+    },
+    {
+      "utt": "u012",
+      "thread": "bug-tracking",
+      "kind": "info",
+      "speaker": "Nhật",
+      "key": null,
+      "content": "Tuần này có 6 khách phàn nàn app chậm khi mở báo cáo tháng",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Tuần này có 6 khách phàn nàn app chậm khi mở báo cáo tháng"
+    },
+    {
+      "utt": "u013",
+      "thread": "bug-tracking",
+      "kind": "assign",
+      "speaker": "Thơ",
+      "key": "daily-bug-report",
+      "content": "Gửi danh sách 4 bug mức cao kèm trạng thái lên kênh release mỗi sáng đến ngày release",
+      "hedged": false,
+      "owner": "Thơ",
+      "deadline_text": "mỗi sáng cho tới ngày release",
+      "quote": "Em sẽ gửi danh sách 4 bug mức cao kèm trạng thái lên kênh release mỗi sáng cho tới ngày release"
+    },
+    {
+      "utt": "u014",
+      "thread": "ssl-certificate",
+      "kind": "info",
+      "speaker": "Giang",
+      "key": null,
+      "content": "Server staging hết hạn chứng chỉ SSL từ hôm qua, QA không truy cập được HTTPS",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Server staging hết hạn chứng chỉ SSL từ hôm qua, QA không truy cập được bằng HTTPS"
+    },
+    {
+      "utt": "u015",
+      "thread": "ssl-certificate",
+      "kind": "assign",
+      "speaker": "Bình",
+      "key": "renew-ssl",
+      "content": "Giao Giang gia hạn chứng chỉ SSL server staging trong hôm nay",
+      "hedged": false,
+      "owner": "Giang",
+      "deadline_text": "trong hôm nay",
+      "quote": "Giang gia hạn chứng chỉ trong hôm nay nhé"
+    },
+    {
+      "utt": "u016",
+      "thread": "ssl-certificate",
+      "kind": "commit",
+      "speaker": "Giang",
+      "key": "renew-ssl",
+      "content": "Giang nhận gia hạn chứng chỉ SSL trong hôm nay",
+      "hedged": false,
+      "owner": "Giang",
+      "deadline_text": "trong hôm nay",
+      "quote": "Ok chị, em làm liền"
+    }
+  ]
+}

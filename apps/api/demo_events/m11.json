@@ -1,0 +1,162 @@
+{
+  "threads": [
+    {
+      "id": "promotion-1111",
+      "title": "Chương trình khuyến mãi 11.11"
+    },
+    {
+      "id": "livestream-schedule",
+      "title": "Lịch livestream"
+    },
+    {
+      "id": "delivery-speed",
+      "title": "Tốc độ giao hàng"
+    }
+  ],
+  "events": [
+    {
+      "utt": "u002",
+      "thread": "promotion-1111",
+      "kind": "propose",
+      "speaker": "Trúc",
+      "key": "30percent",
+      "content": "Giảm giá đồng loạt 30% toàn shop, chạy 3 ngày",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "11.11 em đề xuất giảm giá đồng loạt 30% toàn shop, chạy 3 ngày"
+    },
+    {
+      "utt": "u003",
+      "thread": "promotion-1111",
+      "kind": "object",
+      "speaker": "Khôi",
+      "key": "30percent",
+      "content": "Giảm 30% làm lỗ mẫu áo khoác do giá vốn cao",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Giảm 30% thì mấy mẫu áo khoác lỗ, giá vốn đã chiếm 65% giá bán rồi chị"
+    },
+    {
+      "utt": "u004",
+      "thread": "promotion-1111",
+      "kind": "revise",
+      "speaker": "Trúc",
+      "key": "buy2get1",
+      "content": "Khuyến mãi mua 2 tặng 1 cho nhóm áo thun, áo khoác giữ giá",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Vậy làm mua 2 tặng 1 cho nhóm áo thun thôi, áo khoác giữ giá"
+    },
+    {
+      "utt": "u005",
+      "thread": "promotion-1111",
+      "kind": "agree",
+      "speaker": "Linh",
+      "key": "buy2get1",
+      "content": "Chốt mua 2 tặng 1 áo thun cho 11.11",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Ok chốt mua 2 tặng 1 áo thun cho 11.11"
+    },
+    {
+      "utt": "u006",
+      "thread": "promotion-1111",
+      "kind": "object",
+      "speaker": "Khôi",
+      "key": "buy2get1",
+      "content": "Kho áo thun chỉ còn 300 cái, mua 2 tặng 1 sẽ hết hàng ngày đầu",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Chị ơi kho áo thun hiện chỉ còn khoảng 300 cái, chạy mua 2 tặng 1 thì ngày đầu là hết hàng"
+    },
+    {
+      "utt": "u007",
+      "thread": "promotion-1111",
+      "kind": "defer",
+      "speaker": "Linh",
+      "key": null,
+      "content": "Chưa chốt được khuyến mãi 11.11, đợi Khôi báo số hàng về rồi tính",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Vậy khuyến mãi 11.11 chưa chốt được, đợi Khôi báo số hàng về rồi tính"
+    },
+    {
+      "utt": "u008",
+      "thread": "promotion-1111",
+      "kind": "assign",
+      "speaker": "Khôi",
+      "key": "check-stock",
+      "content": "Hỏi xưởng lịch giao lô áo thun mới, báo thứ Ba tuần sau",
+      "hedged": false,
+      "owner": "Khôi",
+      "deadline_text": "thứ Ba tuần sau",
+      "quote": "Em sẽ hỏi xưởng lịch giao lô áo thun mới, thứ Ba tuần sau báo chị"
+    },
+    {
+      "utt": "u010",
+      "thread": "livestream-schedule",
+      "kind": "object",
+      "speaker": "Trúc",
+      "key": null,
+      "content": "Khung 8 giờ tối trùng giờ mấy shop lớn, khách bị chia",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Khung 8 giờ tối bên mình trùng giờ mấy shop lớn live, khách bị chia"
+    },
+    {
+      "utt": "u011",
+      "thread": "livestream-schedule",
+      "kind": "assign",
+      "speaker": "Trúc",
+      "key": "shift-livestream",
+      "content": "Dời live sang 9 giờ tối từ tuần này và theo dõi số liệu",
+      "hedged": false,
+      "owner": "Trúc",
+      "deadline_text": null,
+      "quote": "Em sẽ dời live sang 9 giờ tối từ tuần này và theo dõi số liệu"
+    },
+    {
+      "utt": "u012",
+      "thread": "delivery-speed",
+      "kind": "feedback",
+      "speaker": "Khôi",
+      "key": null,
+      "content": "Khách phản hồi đóng gói đẹp hơn nhưng giao hàng nội thành vẫn chậm 3-4 ngày",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Khách phản hồi đóng gói lần này đẹp hơn, nhưng giao hàng nội thành vẫn chậm 3 đến 4 ngày"
+    },
+    {
+      "utt": "u013",
+      "thread": "delivery-speed",
+      "kind": "assign",
+      "speaker": "Linh",
+      "key": "improve-delivery",
+      "content": "Khôi làm việc lại với bên vận chuyển, báo phương án giao nhanh thứ Năm tuần sau",
+      "hedged": false,
+      "owner": "Khôi",
+      "deadline_text": "thứ Năm tuần sau",
+      "quote": "Khôi làm việc lại với bên vận chuyển, thứ Năm tuần sau báo chị phương án giao nhanh"
+    },
+    {
+      "utt": "u014",
+      "thread": "delivery-speed",
+      "kind": "commit",
+      "speaker": "Khôi",
+      "key": "improve-delivery",
+      "content": "Khôi nhận làm việc với bên vận chuyển, báo phương án giao nhanh thứ Năm tuần sau",
+      "hedged": false,
+      "owner": "Khôi",
+      "deadline_text": "thứ Năm tuần sau",
+      "quote": "Dạ ok chị, thứ Năm tuần sau em báo"
+    }
+  ]
+}

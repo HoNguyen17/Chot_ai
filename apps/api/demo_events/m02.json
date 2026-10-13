@@ -1,0 +1,254 @@
+{
+  "threads": [
+    {
+      "id": "kol-selection",
+      "title": "Chọn KOL cho chiến dịch"
+    },
+    {
+      "id": "budget-split",
+      "title": "Phân bổ ngân sách quảng cáo"
+    },
+    {
+      "id": "key-visual",
+      "title": "Thiết kế key visual"
+    },
+    {
+      "id": "english-landing",
+      "title": "Bản tiếng Anh landing page"
+    },
+    {
+      "id": "music-rights",
+      "title": "Bản quyền nhạc TikTok"
+    }
+  ],
+  "events": [
+    {
+      "utt": "u002",
+      "thread": "kol-selection",
+      "kind": "propose",
+      "speaker": "Phát",
+      "key": "Lily-Tran",
+      "content": "Đề xuất KOL Lily Trần với tệp follower đúng target mẹ bỉm 25-35",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "em propose Lily Trần"
+    },
+    {
+      "utt": "u003",
+      "thread": "kol-selection",
+      "kind": "object",
+      "speaker": "Hân",
+      "key": "Lily-Tran",
+      "content": "Giá Lily Trần 80 triệu một post, vượt ngân sách KOL 120 triệu",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Booking Lily Trần báo giá 80 triệu một post"
+    },
+    {
+      "utt": "u004",
+      "thread": "kol-selection",
+      "kind": "propose",
+      "speaker": "Hân",
+      "key": "micro-KOL",
+      "content": "Đề xuất nhóm 5 micro-KOL, mỗi bạn 20 triệu, tổng reach cao hơn",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Em đề xuất đi nhóm 5 micro-KOL, mỗi bạn tầm 20 triệu"
+    },
+    {
+      "utt": "u005",
+      "thread": "kol-selection",
+      "kind": "object",
+      "speaker": "Phát",
+      "key": "micro-KOL",
+      "content": "Micro-KOL engagement tốt nhưng độ nhận diện thấp, khách thích tên tuổi lớn",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Micro thì engagement tốt nhưng độ nhận diện thấp hơn"
+    },
+    {
+      "utt": "u007",
+      "thread": "kol-selection",
+      "kind": "agree",
+      "speaker": "Ngọc",
+      "key": "micro-KOL",
+      "content": "Ưng nhóm micro-KOL nhưng cần hỏi lại khách",
+      "hedged": true,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Tạm thời chị nghiêng về nhóm micro-KOL, nhưng chị phải hỏi lại khách"
+    },
+    {
+      "utt": "u009",
+      "thread": "budget-split",
+      "kind": "agree",
+      "speaker": "Ngọc",
+      "key": "budget-60-40",
+      "content": "Chốt phân bổ ngân sách 60% Facebook ads, 40% TikTok",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Chốt: 60% Facebook ads, 40% TikTok"
+    },
+    {
+      "utt": "u010",
+      "thread": "budget-split",
+      "kind": "object",
+      "speaker": "Hân",
+      "key": "budget-60-40",
+      "content": "CPM TikTok tháng Chạp tăng, 40% có thể không đủ reach",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "tháng Chạp CPM TikTok thường tăng mạnh, 40% có khi không đủ reach"
+    },
+    {
+      "utt": "u011",
+      "thread": "budget-split",
+      "kind": "agree",
+      "speaker": "Ngọc",
+      "key": "budget-60-40",
+      "content": "Giữ nguyên 60-40, sẽ review lại tháng 1 theo thực tế",
+      "hedged": true,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "nhưng vẫn giữ 60-40 nha, sang tháng 1 mình review lại"
+    },
+    {
+      "utt": "u013",
+      "thread": "key-visual",
+      "kind": "propose",
+      "speaker": "Duy",
+      "key": "concept-1",
+      "content": "Thiết kế concept 1 tông vàng truyền thống",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Key visual em làm hai concept: concept 1 tông vàng truyền thống"
+    },
+    {
+      "utt": "u013",
+      "thread": "key-visual",
+      "kind": "propose",
+      "speaker": "Duy",
+      "key": "concept-2",
+      "content": "Thiết kế concept 2 tông đỏ hiện đại hơn",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "concept 2 tông đỏ hiện đại hơn"
+    },
+    {
+      "utt": "u014",
+      "thread": "key-visual",
+      "kind": "agree",
+      "speaker": "Ngọc",
+      "key": "concept-2",
+      "content": "Ưng concept 2 hơn vì nhìn trẻ trung",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Chị thích concept 2 hơn, nhìn trẻ"
+    },
+    {
+      "utt": "u015",
+      "thread": "key-visual",
+      "kind": "propose",
+      "speaker": "Phát",
+      "key": "caption-young",
+      "content": "Nếu khách duyệt concept 2 thì viết caption hướng trẻ trung",
+      "hedged": true,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Nếu mà khách duyệt concept 2 thì em viết caption theo hướng trẻ trung"
+    },
+    {
+      "utt": "u016",
+      "thread": "key-visual",
+      "kind": "assign",
+      "speaker": "Ngọc",
+      "key": "key-visual-variant",
+      "content": "Giao Duy làm biến thể vuông 1:1 cho concept 2 để gửi khách",
+      "hedged": false,
+      "owner": "Duy",
+      "deadline_text": null,
+      "quote": "Duy làm thêm biến thể vuông 1:1 cho concept 2 để chị gửi khách nha"
+    },
+    {
+      "utt": "u017",
+      "thread": "key-visual",
+      "kind": "commit",
+      "speaker": "Duy",
+      "key": "key-visual-variant",
+      "content": "Duy nhận làm biến thể vuông 1:1 cho concept 2",
+      "hedged": false,
+      "owner": "Duy",
+      "deadline_text": null,
+      "quote": "Dạ vâng"
+    },
+    {
+      "utt": "u018",
+      "thread": "english-landing",
+      "kind": "request",
+      "speaker": "Phát",
+      "key": null,
+      "content": "Khách yêu cầu làm thêm bản tiếng Anh cho landing page cho nhà phân phối nước ngoài",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "bên khách có request làm thêm bản tiếng Anh cho landing page"
+    },
+    {
+      "utt": "u019",
+      "thread": "english-landing",
+      "kind": "assign",
+      "speaker": "Ngọc",
+      "key": "quote-english-landing",
+      "content": "Giao Ngọc báo giá thêm phí bản tiếng Anh với khách",
+      "hedged": false,
+      "owner": "Ngọc",
+      "deadline_text": null,
+      "quote": "để chị báo giá lại với khách"
+    },
+    {
+      "utt": "u020",
+      "thread": "budget-split",
+      "kind": "assign",
+      "speaker": "Hân",
+      "key": "media-plan",
+      "content": "Hân gửi media plan chi tiết cuối tuần",
+      "hedged": false,
+      "owner": "Hân",
+      "deadline_text": "cuối tuần này",
+      "quote": "Em sẽ gửi media plan chi tiết cuối tuần này"
+    },
+    {
+      "utt": "u021",
+      "thread": "music-rights",
+      "kind": "question",
+      "speaker": "Phát",
+      "key": null,
+      "content": "Có cần mua bản quyền nhạc trend TikTok không? Lần trước bị đánh gậy",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "mình có cần mua bản quyền không? Lần trước bị đánh gậy"
+    },
+    {
+      "utt": "u022",
+      "thread": "music-rights",
+      "kind": "assign",
+      "speaker": "Ngọc",
+      "key": "ask-legal-music",
+      "content": "Ngọc sẽ hỏi bên legal về bản quyền nhạc rồi báo lại",
+      "hedged": false,
+      "owner": "Ngọc",
+      "deadline_text": null,
+      "quote": "chị sẽ hỏi bên legal rồi báo lại"
+    }
+  ]
+}

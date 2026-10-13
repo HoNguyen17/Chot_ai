@@ -1,0 +1,174 @@
+{
+  "threads": [
+    {
+      "id": "machine-2-failure",
+      "title": "Sửa máy in số 2"
+    },
+    {
+      "id": "tet-gift-box-order",
+      "title": "Đơn hộp quà Tết"
+    },
+    {
+      "id": "maintenance-schedule",
+      "title": "Lịch bảo trì máy cắt bế"
+    }
+  ],
+  "events": [
+    {
+      "utt": "u002",
+      "thread": "machine-2-failure",
+      "kind": "info",
+      "speaker": "Tín",
+      "key": null,
+      "content": "Máy in số 2 hỏng trục lô, chờ linh kiện từ Đài Loan ít nhất 5 ngày",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Máy in offset số 2 hỏng trục lô từ chiều thứ Sáu, đang chờ linh kiện từ Đài Loan, ít nhất 5 ngày"
+    },
+    {
+      "utt": "u003",
+      "thread": "tet-gift-box-order",
+      "kind": "info",
+      "speaker": "Hạnh",
+      "key": null,
+      "content": "Đơn hộp quà Tết giao ngày 30/10, máy 2 hỏng 5 ngày sẽ trễ",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Đơn hộp quà Tết của khách Tân Mỹ giao ngày 30/10, máy 2 nằm 5 ngày là trễ"
+    },
+    {
+      "utt": "u004",
+      "thread": "tet-gift-box-order",
+      "kind": "propose",
+      "speaker": "Hạnh",
+      "key": "move-to-machine-1",
+      "content": "Chuyển đơn hộp quà Tết sang máy 1, dời đơn túi giấy sang tuần sau",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Em đề xuất chuyển đơn đó sang máy số 1, đẩy đơn túi giấy xuống tuần sau"
+    },
+    {
+      "utt": "u005",
+      "thread": "tet-gift-box-order",
+      "kind": "agree",
+      "speaker": "Tín",
+      "key": "move-to-machine-1",
+      "content": "Đồng ý chuyển đơn hộp quà Tết sang máy 1",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Mình chốt chuyển sang máy 1 luôn đi anh"
+    },
+    {
+      "utt": "u006",
+      "thread": "tet-gift-box-order",
+      "kind": "agree",
+      "speaker": "Lực",
+      "key": "move-to-machine-1",
+      "content": "Chốt chuyển đơn hộp quà Tết sang máy 1, dời đơn túi giấy sang tuần sau",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Chuyển đơn hộp quà Tết sang máy 1, đơn túi giấy dời qua tuần sau. Anh quyết vậy"
+    },
+    {
+      "utt": "u007",
+      "thread": "tet-gift-box-order",
+      "kind": "object",
+      "speaker": "Diễm",
+      "key": "move-to-machine-1",
+      "content": "Máy 1 in màu đỏ lệch, khách trả 2.000 hộp",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Anh ơi máy 1 in màu pha đỏ hay lệch, lô trước bị khách trả 2.000 hộp"
+    },
+    {
+      "utt": "u008",
+      "thread": "tet-gift-box-order",
+      "kind": "agree",
+      "speaker": "Lực",
+      "key": "move-to-machine-1",
+      "content": "Vẫn chạy máy 1, Diễm đo màu từng lô 500 hộp, lệch thì dừng máy",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Anh biết. Vẫn chạy máy 1, Diễm đo màu từng lô 500 hộp, lệch là dừng máy"
+    },
+    {
+      "utt": "u009",
+      "thread": "tet-gift-box-order",
+      "kind": "commit",
+      "speaker": "Diễm",
+      "key": "move-to-machine-1",
+      "content": "Diễm nhận đo màu từng lô 500 hộp",
+      "hedged": false,
+      "owner": "Diễm",
+      "deadline_text": null,
+      "quote": "Dạ ok anh, em đo từng lô"
+    },
+    {
+      "utt": "u010",
+      "thread": "tet-gift-box-order",
+      "kind": "assign",
+      "speaker": "Hạnh",
+      "key": "notify-phuc-loc",
+      "content": "Gọi khách Phúc Lộc báo dời đơn túi giấy",
+      "hedged": false,
+      "owner": "Hạnh",
+      "deadline_text": "chiều nay",
+      "quote": "Em sẽ gọi khách chiều nay"
+    },
+    {
+      "utt": "u011",
+      "thread": "maintenance-schedule",
+      "kind": "info",
+      "speaker": "Tín",
+      "key": null,
+      "content": "Lịch bảo trì máy cắt bế tháng này chưa làm, quá hạn 2 tuần",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Lịch bảo trì định kỳ máy cắt bế tháng này mình chưa làm, đã quá hạn hai tuần"
+    },
+    {
+      "utt": "u012",
+      "thread": "maintenance-schedule",
+      "kind": "assign",
+      "speaker": "Lực",
+      "key": "maintain-cutter",
+      "content": "Lên lịch bảo trì máy cắt bế làm thứ Bảy này",
+      "hedged": false,
+      "owner": "Tín",
+      "deadline_text": "thứ Bảy này",
+      "quote": "Tín lên lịch bảo trì máy cắt bế, làm vào thứ Bảy này"
+    },
+    {
+      "utt": "u013",
+      "thread": "maintenance-schedule",
+      "kind": "decline",
+      "speaker": "Tín",
+      "key": "maintain-cutter",
+      "content": "Tín không làm được thứ Bảy này do kẹt đám cưới em gái",
+      "hedged": false,
+      "owner": "Tín",
+      "deadline_text": null,
+      "quote": "Thứ Bảy này em kẹt đám cưới em gái rồi anh, khó làm được"
+    },
+    {
+      "utt": "u014",
+      "thread": "maintenance-schedule",
+      "kind": "defer",
+      "speaker": "Lực",
+      "key": null,
+      "content": "Hoãn lịch bảo trì máy cắt bế",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Ok vậy thôi"
+    }
+  ]
+}

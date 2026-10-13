@@ -1,0 +1,18 @@
+# meeting: m12
+# title: Họp sản xuất — xưởng in bao bì
+# date: 2026-10-18
+# participants: Lực (Quản đốc, chủ trì); Hạnh (Kế hoạch); Tín (Trưởng máy); Diễm (QC)
+[00:00:10] Lực: Họp sản xuất nhanh. Có ba việc: máy in số 2, đơn hộp quà Tết, và lịch bảo trì.
+[00:00:50] Tín: Máy in offset số 2 hỏng trục lô từ chiều thứ Sáu, đang chờ linh kiện từ Đài Loan, ít nhất 5 ngày.
+[00:01:40] Hạnh: Đơn hộp quà Tết của khách Tân Mỹ giao ngày 30/10, máy 2 nằm 5 ngày là trễ.
+[00:02:20] Hạnh: Em đề xuất chuyển đơn đó sang máy số 1, đẩy đơn túi giấy xuống tuần sau.
+[00:02:55] Tín: Mình chốt chuyển sang máy 1 luôn đi anh, em sắp xếp được.
+[00:03:30] Lực: Chuyển đơn hộp quà Tết sang máy 1, đơn túi giấy dời qua tuần sau. Anh quyết vậy.
+[00:04:10] Diễm: Anh ơi máy 1 in màu pha đỏ hay lệch, lô trước bị khách trả 2.000 hộp.
+[00:04:50] Lực: Anh biết. Vẫn chạy máy 1, Diễm đo màu từng lô 500 hộp, lệch là dừng máy.
+[00:05:10] Diễm: Dạ ok anh, em đo từng lô.
+[00:05:50] Hạnh: Đơn túi giấy dời thì em phải báo khách Phúc Lộc. Em sẽ gọi khách chiều nay.
+[00:06:35] Tín: Lịch bảo trì định kỳ máy cắt bế tháng này mình chưa làm, đã quá hạn hai tuần.
+[00:07:10] Lực: Tín lên lịch bảo trì máy cắt bế, làm vào thứ Bảy này.
+[00:07:30] Tín: Thứ Bảy này em kẹt đám cưới em gái rồi anh, khó làm được.
+[00:08:05] Lực: Ok vậy thôi.

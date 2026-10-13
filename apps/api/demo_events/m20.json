@@ -1,0 +1,174 @@
+{
+  "threads": [
+    {
+      "id": "branch-location",
+      "title": "Chọn mặt bằng chi nhánh thứ 5"
+    },
+    {
+      "id": "morning-bread",
+      "title": "Bán bánh mì buổi sáng chi nhánh mới"
+    },
+    {
+      "id": "coffee-machine",
+      "title": "Sửa máy pha cà phê chi nhánh Quận 3"
+    }
+  ],
+  "events": [
+    {
+      "utt": "u001",
+      "thread": "branch-location",
+      "kind": "question",
+      "speaker": "Nhân",
+      "key": null,
+      "content": "Cân nhắc chọn mặt bằng chi nhánh thứ 5 giữa hai phương án",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Có hai mặt bằng đang cân nhắc"
+    },
+    {
+      "utt": "u002",
+      "thread": "branch-location",
+      "kind": "propose",
+      "speaker": "Ánh",
+      "key": "LeVanSy",
+      "content": "Mặt bằng Lê Văn Sỹ 80m2, thuê 45 triệu/tháng, gần hai trường đại học",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Mặt bằng đường Lê Văn Sỹ 80 mét vuông, thuê 45 triệu một tháng, gần hai trường đại học"
+    },
+    {
+      "utt": "u003",
+      "thread": "branch-location",
+      "kind": "propose",
+      "speaker": "My",
+      "key": "ThaoDien",
+      "content": "Mặt bằng Thảo Điền 120m2, thuê 70 triệu, khách nước ngoài nhiều, bán giá cao",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Mặt bằng ở Thảo Điền 120 mét vuông, 70 triệu, khách nước ngoài nhiều, bán được giá cao"
+    },
+    {
+      "utt": "u004",
+      "thread": "branch-location",
+      "kind": "agree",
+      "speaker": "Nhân",
+      "key": "LeVanSy",
+      "content": "Chốt chọn mặt bằng Lê Văn Sỹ vì chi phí thuê thấp hơn",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Ok chốt Lê Văn Sỹ, chi phí thuê thấp hơn"
+    },
+    {
+      "utt": "u005",
+      "thread": "branch-location",
+      "kind": "object",
+      "speaker": "Quốc",
+      "key": "LeVanSy",
+      "content": "Chủ nhà Lê Văn Sỹ đòi cọc 6 tháng, 270 triệu, dòng tiền quý này không kham nổi",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Anh ơi chủ nhà Lê Văn Sỹ đòi cọc 6 tháng, 270 triệu, dòng tiền quý này không kham nổi"
+    },
+    {
+      "utt": "u006",
+      "thread": "branch-location",
+      "kind": "reopen",
+      "speaker": "Nhân",
+      "key": "LeVanSy",
+      "content": "Chưa chốt mặt bằng do cọc lớn, để chị Diệp quyết",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Ờ thôi khoan, vậy chưa chốt mặt bằng được. Cọc lớn vậy phải để chị Diệp quyết"
+    },
+    {
+      "utt": "u007",
+      "thread": "branch-location",
+      "kind": "assign",
+      "speaker": "Nhân",
+      "key": "cashflow-analysis",
+      "content": "Quốc làm bảng dòng tiền hai phương án gửi chị Diệp trước thứ Sáu",
+      "hedged": false,
+      "owner": "Quốc",
+      "deadline_text": "trước thứ Sáu",
+      "quote": "Quốc làm bảng dòng tiền hai phương án gửi chị Diệp trước thứ Sáu"
+    },
+    {
+      "utt": "u008",
+      "thread": "branch-location",
+      "kind": "commit",
+      "speaker": "Quốc",
+      "key": "cashflow-analysis",
+      "content": "Quốc nhận làm bảng dòng tiền hai phương án gửi chị Diệp trước thứ Sáu",
+      "hedged": false,
+      "owner": "Quốc",
+      "deadline_text": "trước thứ Sáu",
+      "quote": "Ok anh, thứ Sáu em gửi"
+    },
+    {
+      "utt": "u009",
+      "thread": "morning-bread",
+      "kind": "question",
+      "speaker": "My",
+      "key": null,
+      "content": "Có nên bán thêm bánh mì buổi sáng chi nhánh mới không? Khảo sát khách quen 60% muốn",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Chi nhánh mới có nên bán thêm bánh mì buổi sáng không anh? Khảo sát khách quen thì 60% muốn"
+    },
+    {
+      "utt": "u010",
+      "thread": "morning-bread",
+      "kind": "object",
+      "speaker": "Ánh",
+      "key": "morning-bread",
+      "content": "Bán bánh mì cần thêm người ca sáng, tủ trưng bày, bếp hiện tại chật",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Bán bánh mì thì phải thêm một người ca sáng và tủ trưng bày, bếp hiện tại cũng chật"
+    },
+    {
+      "utt": "u012",
+      "thread": "coffee-machine",
+      "kind": "info",
+      "speaker": "Ánh",
+      "key": null,
+      "content": "Máy pha cà phê chi nhánh Quận 3 báo lỗi áp suất từ thứ Bảy, đang dùng máy dự phòng",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Máy pha cà phê chi nhánh Quận 3 báo lỗi áp suất từ thứ Bảy, đang phải dùng máy dự phòng"
+    },
+    {
+      "utt": "u013",
+      "thread": "coffee-machine",
+      "kind": "assign",
+      "speaker": "Nhân",
+      "key": "call-tech",
+      "content": "Ánh gọi kỹ thuật hãng kiểm tra máy pha cà phê ngày mai",
+      "hedged": false,
+      "owner": "Ánh",
+      "deadline_text": "ngày mai",
+      "quote": "Ánh gọi kỹ thuật bên hãng qua kiểm tra ngày mai nhé"
+    },
+    {
+      "utt": "u014",
+      "thread": "coffee-machine",
+      "kind": "commit",
+      "speaker": "Ánh",
+      "key": "call-tech",
+      "content": "Ánh nhận gọi kỹ thuật hãng kiểm tra máy pha cà phê ngày mai",
+      "hedged": false,
+      "owner": "Ánh",
+      "deadline_text": "ngày mai",
+      "quote": "Dạ ok anh, mai em gọi"
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "threads": [
+    {
+      "id": "venue-selection",
+      "title": "Chọn địa điểm tổ chức"
+    },
+    {
+      "id": "performance-program",
+      "title": "Chương trình biểu diễn"
+    },
+    {
+      "id": "led-screen",
+      "title": "Màn LED sự kiện"
+    },
+    {
+      "id": "program-script",
+      "title": "Kịch bản chương trình"
+    }
+  ],
+  "events": [
+    {
+      "utt": "u002",
+      "thread": "venue-selection",
+      "kind": "propose",
+      "speaker": "Nhung",
+      "key": "hotel-q1",
+      "content": "Đề xuất khách sạn quận 1, sảnh 400 chỗ, giá 180 triệu",
+      "hedged": true,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "khách nghiêng về khách sạn ở quận 1, sảnh 400 chỗ, giá thuê 180 triệu"
+    },
+    {
+      "utt": "u003",
+      "thread": "venue-selection",
+      "kind": "object",
+      "speaker": "Vũ",
+      "key": "hotel-q1",
+      "content": "Sảnh khách sạn quận 1 tháng 12 kín lịch cuối tuần, chỉ còn trống 10/12",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Sảnh đó tháng 12 kín lịch cuối tuần, chỉ còn trống thứ Năm 10/12"
+    },
+    {
+      "utt": "u006",
+      "thread": "venue-selection",
+      "kind": "propose",
+      "speaker": "Nhung",
+      "key": "convention-center-q7",
+      "content": "Đề xuất trung tâm hội nghị quận 7, sảnh 500 chỗ, giá 150 triệu, còn trống 12/12",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "em đề xuất trung tâm hội nghị ở quận 7, sảnh 500 chỗ, giá 150 triệu, còn trống ngày 12/12"
+    },
+    {
+      "utt": "u007",
+      "thread": "venue-selection",
+      "kind": "object",
+      "speaker": "Vũ",
+      "key": "convention-center-q7",
+      "content": "Trung tâm hội nghị quận 7 xa khách quận 1, phải thuê thêm xe đưa đón 15 triệu",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Quận 7 thì xa khách ở quận 1, phải thuê thêm 6 xe đưa đón, khoảng 15 triệu"
+    },
+    {
+      "utt": "u009",
+      "thread": "venue-selection",
+      "kind": "agree",
+      "speaker": "Thắng",
+      "key": "convention-center-q7",
+      "content": "Chốt địa điểm trung tâm hội nghị quận 7 ngày 12/12, thuê thêm xe đưa đón",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "chốt địa điểm trung tâm hội nghị quận 7, giữ đúng ngày 12/12, thuê thêm xe đưa đón"
+    },
+    {
+      "utt": "u011",
+      "thread": "venue-selection",
+      "kind": "assign",
+      "speaker": "Thắng",
+      "key": "deposit-convention-center",
+      "content": "Giao Vũ đặt cọc trung tâm hội nghị trước thứ Hai",
+      "hedged": false,
+      "owner": "Vũ",
+      "deadline_text": "trước thứ Hai",
+      "quote": "Vũ đặt cọc trung tâm hội nghị trước thứ Hai nhé"
+    },
+    {
+      "utt": "u012",
+      "thread": "venue-selection",
+      "kind": "commit",
+      "speaker": "Vũ",
+      "key": "deposit-convention-center",
+      "content": "Vũ nhận đặt cọc trung tâm hội nghị trước thứ Hai",
+      "hedged": false,
+      "owner": "Vũ",
+      "deadline_text": "trước thứ Hai",
+      "quote": "thứ Hai em đặt cọc"
+    },
+    {
+      "utt": "u004",
+      "thread": "performance-program",
+      "kind": "propose",
+      "speaker": "Thoa",
+      "key": "acoustic-band",
+      "content": "Đề xuất mời ban nhạc acoustic 5 người",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "em đề xuất mời ban nhạc acoustic 5 người"
+    },
+    {
+      "utt": "u005",
+      "thread": "performance-program",
+      "kind": "info",
+      "speaker": "Hậu",
+      "key": null,
+      "content": "Ban nhạc acoustic phù hợp sân khấu nhỏ, tiết kiệm chi phí âm thanh ánh sáng",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Acoustic thì sân khấu nhỏ là được, tiết kiệm chi phí âm thanh ánh sáng"
+    },
+    {
+      "utt": "u008",
+      "thread": "performance-program",
+      "kind": "propose",
+      "speaker": "Thoa",
+      "key": "magic-show",
+      "content": "Khách hỏi thêm tiết mục ảo thuật cho phần bốc thăm",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "khách có hỏi thêm tiết mục ảo thuật cho phần bốc thăm"
+    },
+    {
+      "utt": "u013",
+      "thread": "performance-program",
+      "kind": "agree",
+      "speaker": "Thắng",
+      "key": "acoustic-band",
+      "content": "Chốt ban nhạc acoustic, thêm ảo thuật phần bốc thăm",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Phần biểu diễn chốt ban nhạc acoustic, thêm ảo thuật vào phần bốc thăm"
+    },
+    {
+      "utt": "u014",
+      "thread": "led-screen",
+      "kind": "blocker",
+      "speaker": "Hậu",
+      "key": null,
+      "content": "Màn LED đang cho thuê sự kiện khác đến 11/12, chưa chắc tháo kịp",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Màn LED bên mình đang cho thuê ở sự kiện khác tới ngày 11/12, tháo về kịp không thì chưa chắc"
+    },
+    {
+      "utt": "u015",
+      "thread": "led-screen",
+      "kind": "request",
+      "speaker": "Thắng",
+      "key": null,
+      "content": "Yêu cầu kiểm tra lịch tháo dỡ màn LED với đối tác",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Ai đó check lại lịch tháo dỡ màn LED với bên đối tác giúp anh"
+    },
+    {
+      "utt": "u017",
+      "thread": "program-script",
+      "kind": "assign",
+      "speaker": "Thoa",
+      "key": "draft-script",
+      "content": "Thoa gửi kịch bản chương trình bản nháp cho khách trước 30/10",
+      "hedged": false,
+      "owner": "Thoa",
+      "deadline_text": "trước 30/10",
+      "quote": "Em sẽ gửi kịch bản chương trình bản nháp cho khách trước 30/10"
+    }
+  ]
+}

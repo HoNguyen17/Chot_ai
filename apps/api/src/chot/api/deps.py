@@ -2,10 +2,15 @@
 
 from __future__ import annotations
 
+import threading
+import time
+from collections import deque
+from contextvars import ContextVar
 from functools import lru_cache
+from pathlib import Path
 
 from chot.adapters.baselines import KeywordBaseline
-from chot.adapters.llm import LLMEventExtractor, OpenAICompatibleClient
+from chot.adapters.llm import LLMClient, LLMEventExtractor, OpenAICompatibleClient
 from chot.adapters.parsing import parse_transcript
 from chot.adapters.persistence import InMemoryRepository
 from chot.config import Settings, get_settings
@@ -29,12 +34,77 @@ class FallbackBuilder:
             return self.fallback.build(tr)
 
 
-def make_builder(settings: Settings) -> LedgerBuilder:
+class ExactSampleReplay:
+    """Chỉ replay khi transcript giống hệt mẫu đã lưu (<dir>/<id>.txt).
+
+    Mẫu bị sửa (dù còn header `# meeting: m01`) → LookupError → FallbackBuilder gọi LLM,
+    nên kết quả đã lưu không bị gán cho transcript khác và record mẫu không bị ghi đè.
+    """
+
+    def __init__(self, builder: LedgerBuilder, directory: str) -> None:
+        self.builder, self.name = builder, builder.name
+        self.samples = {
+            p.stem: parse_transcript(p.read_text(encoding="utf-8"))
+            for p in Path(directory).glob("*.txt")
+        }
+
+    def build(self, tr: Transcript) -> Ledger:
+        if self.samples.get(tr.meeting_id) != tr:
+            raise LookupError(f"'{tr.meeting_id}' không phải transcript mẫu nguyên văn")
+        return self.builder.build(tr)
+
+
+# IP của request hiện tại — api/main.py đặt trước khi xử lý.
+client_ip: ContextVar[str] = ContextVar("client_ip", default="?")
+
+
+class RateLimitExceeded(Exception):
+    """Hết lượt gọi LLM trong cửa sổ hiện tại (theo IP hoặc toàn cục)."""
+
+
+class RateLimiter:
+    """Cửa sổ trượt: tối đa `per_key` lượt mỗi IP và `total` lượt toàn cục trong `window` giây."""
+
+    # ponytail: in-memory, 1 instance — đổi sang Redis nếu scale
+    def __init__(self, per_key: int, total: int, window: float = 3600.0) -> None:
+        self.per_key, self.total, self.window = per_key, total, window
+        self.hits: dict[str, deque[float]] = {}
+        self.lock = threading.Lock()
+
+    def hit(self, key: str) -> None:
+        now = time.monotonic()
+        with self.lock:
+            for k, limit in (("*", self.total), (key, self.per_key)):
+                q = self.hits.get(k, deque())
+                while q and q[0] <= now - self.window:
+                    q.popleft()
+                if len(q) >= limit:
+                    raise RateLimitExceeded("Hết lượt gọi LLM")
+            # Chỉ tạo key khi lượt được chấp nhận → IP giả bị từ chối không làm phình bộ nhớ.
+            for k in (key, "*"):
+                self.hits.setdefault(k, deque()).append(now)
+
+
+class LimitedBuilder:
+    """Chỉ tính lượt khi thật sự gọi builder bên trong (LLM) — replay không bị tính."""
+
+    def __init__(self, builder: LedgerBuilder, limiter: RateLimiter) -> None:
+        self.builder, self.limiter, self.name = builder, limiter, builder.name
+
+    def build(self, tr: Transcript) -> Ledger:
+        self.limiter.hit(client_ip.get())
+        return self.builder.build(tr)
+
+
+def make_builder(settings: Settings, client: LLMClient | None = None) -> LedgerBuilder:
     if settings.ledger_builder == "llm":
-        client = OpenAICompatibleClient(
+        client = client or OpenAICompatibleClient(
             model=settings.llm_model, api_key=settings.llm_api_key, base_url=settings.llm_base_url
         )
-        return RulesLedgerBuilder(LLMEventExtractor(client))
+        limiter = RateLimiter(settings.llm_rate_limit_per_hour, settings.llm_global_limit_per_hour)
+        llm = LimitedBuilder(RulesLedgerBuilder(LLMEventExtractor(client)), limiter)
+        replay = RulesLedgerBuilder(DirectoryReplayExtractor(settings.replay_events_dir))
+        return FallbackBuilder(ExactSampleReplay(replay, settings.replay_events_dir), llm)
     if settings.ledger_builder == "replay":
         replay = RulesLedgerBuilder(DirectoryReplayExtractor(settings.replay_events_dir))
         return FallbackBuilder(replay, KeywordBaseline())

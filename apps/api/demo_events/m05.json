@@ -1,0 +1,214 @@
+{
+  "threads": [
+    {
+      "id": "new-dish",
+      "title": "Món mới mùa đông"
+    },
+    {
+      "id": "lunch-combo-price",
+      "title": "Giá combo trưa"
+    },
+    {
+      "id": "customer-review",
+      "title": "Review của khách"
+    },
+    {
+      "id": "thu-duc-morning-shift",
+      "title": "Mở ca sáng chi nhánh Thủ Đức"
+    }
+  ],
+  "events": [
+    {
+      "utt": "u002",
+      "thread": "new-dish",
+      "kind": "propose",
+      "speaker": "Đạt",
+      "key": "banh-canh-cua",
+      "content": "Đề xuất món bánh canh cua",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Món mới em đề xuất bánh canh cua"
+    },
+    {
+      "utt": "u003",
+      "thread": "new-dish",
+      "kind": "propose",
+      "speaker": "Uyên",
+      "key": "lau-mini",
+      "content": "Đề xuất món lẩu mini một người",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Em thấy lẩu mini một người đang trend trên TikTok"
+    },
+    {
+      "utt": "u004",
+      "thread": "new-dish",
+      "kind": "agree",
+      "speaker": "Kiên",
+      "key": "lau-mini",
+      "content": "Chốt dùng món lẩu mini",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Ok chốt lẩu mini"
+    },
+    {
+      "utt": "u005",
+      "thread": "new-dish",
+      "kind": "object",
+      "speaker": "Nhi",
+      "key": "lau-mini",
+      "content": "Lẩu mini cần bếp từ mỗi bàn, đầu tư 40 triệu một chi nhánh",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "lẩu mini cần bếp từ ở mỗi bàn, ba chi nhánh mình chưa có, đầu tư tầm 40 triệu một chi nhánh"
+    },
+    {
+      "utt": "u006",
+      "thread": "new-dish",
+      "kind": "reopen",
+      "speaker": "Kiên",
+      "key": "lau-mini",
+      "content": "Chưa chốt món lẩu mini do chi phí bếp từ, quyết tuần sau",
+      "hedged": true,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "thôi khoan, vậy món mới chưa chốt được"
+    },
+    {
+      "utt": "u006",
+      "thread": "new-dish",
+      "kind": "assign",
+      "speaker": "Kiên",
+      "key": "cost-estimate-bep-tu",
+      "content": "Giao Nhi tính chi phí bếp từ cụ thể",
+      "hedged": false,
+      "owner": "Nhi",
+      "deadline_text": "tuần sau",
+      "quote": "Nhi tính chi phí bếp từ cụ thể rồi tuần sau quyết"
+    },
+    {
+      "utt": "u007",
+      "thread": "new-dish",
+      "kind": "commit",
+      "speaker": "Nhi",
+      "key": "cost-estimate-bep-tu",
+      "content": "Nhi nhận làm bảng chi phí bếp từ, gửi thứ Tư",
+      "hedged": false,
+      "owner": "Nhi",
+      "deadline_text": "thứ Tư",
+      "quote": "thứ Tư em gửi bảng chi phí"
+    },
+    {
+      "utt": "u008",
+      "thread": "lunch-combo-price",
+      "kind": "propose",
+      "speaker": "Uyên",
+      "key": "combo-59k",
+      "content": "Đề xuất giá combo trưa 59 nghìn để cạnh tranh",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Combo trưa em đề xuất 59 nghìn"
+    },
+    {
+      "utt": "u009",
+      "thread": "lunch-combo-price",
+      "kind": "object",
+      "speaker": "Đạt",
+      "key": "combo-59k",
+      "content": "Giá 59 nghìn combo trưa lỗ do food cost 45% cao hơn mục tiêu 35%",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "59 nghìn là lỗ"
+    },
+    {
+      "utt": "u010",
+      "thread": "lunch-combo-price",
+      "kind": "agree",
+      "speaker": "Kiên",
+      "key": "combo-65k",
+      "content": "Chốt giá combo trưa 65 nghìn",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Vậy giá combo trưa 65 nghìn, chốt"
+    },
+    {
+      "utt": "u012",
+      "thread": "customer-review",
+      "kind": "info",
+      "speaker": "Nhi",
+      "key": null,
+      "content": "Khách phàn nàn giờ trưa chờ món hơn 20 phút",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Review tuần này nhiều khách phàn nàn giờ trưa chờ món hơn 20 phút"
+    },
+    {
+      "utt": "u013",
+      "thread": "customer-review",
+      "kind": "propose",
+      "speaker": "Uyên",
+      "key": "tiktok-food-reviewer",
+      "content": "Đề xuất chạy TikTok với food reviewer",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "mình nên chạy TikTok với mấy bạn food reviewer"
+    },
+    {
+      "utt": "u014",
+      "thread": "customer-review",
+      "kind": "object",
+      "speaker": "Kiên",
+      "key": "tiktok-food-reviewer",
+      "content": "Chưa chắc hiệu quả, cần case study",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Anh chưa chắc hiệu quả"
+    },
+    {
+      "utt": "u015",
+      "thread": "customer-review",
+      "kind": "assign",
+      "speaker": "Uyên",
+      "key": "send-case-study",
+      "content": "Uyên gửi case study cho Kiên thứ Hai tuần sau",
+      "hedged": false,
+      "owner": "Uyên",
+      "deadline_text": "thứ Hai tuần sau",
+      "quote": "thứ Hai tuần sau em gửi anh"
+    },
+    {
+      "utt": "u016",
+      "thread": "thu-duc-morning-shift",
+      "kind": "question",
+      "speaker": "Uyên",
+      "key": null,
+      "content": "Có nên mở ca sáng chi nhánh Thủ Đức không?",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Chi nhánh Thủ Đức có nên mở thêm ca sáng không anh?"
+    },
+    {
+      "utt": "u017",
+      "thread": "thu-duc-morning-shift",
+      "kind": "object",
+      "speaker": "Nhi",
+      "key": null,
+      "content": "Mở ca sáng thiếu người do đang tuyển chưa được",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Mở ca sáng thì thiếu người, đang tuyển chưa được"
+    }
+  ]
+}

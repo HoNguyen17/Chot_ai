@@ -1,0 +1,122 @@
+{
+  "threads": [
+    {
+      "id": "set-menu-fish",
+      "title": "Set menu cá hồi"
+    },
+    {
+      "id": "order-flow",
+      "title": "Flow order"
+    }
+  ],
+  "events": [
+    {
+      "utt": "u003",
+      "thread": "set-menu-fish",
+      "kind": "propose",
+      "speaker": "Tùng",
+      "key": "keep-salmon",
+      "content": "Giữ cá hồi, tăng giá set thêm 40 nghìn",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Em propose giữ cá hồi, tăng giá set thêm 40 nghìn"
+    },
+    {
+      "utt": "u005",
+      "thread": "set-menu-fish",
+      "kind": "propose",
+      "speaker": "Ngân",
+      "key": "replace-seabass",
+      "content": "Thay cá hồi bằng cá chẽm áp chảo, giá vốn thấp hơn gần một nửa",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Em đề xuất thay cá hồi bằng cá chẽm áp chảo"
+    },
+    {
+      "utt": "u006",
+      "thread": "set-menu-fish",
+      "kind": "object",
+      "speaker": "Tùng",
+      "key": "replace-seabass",
+      "content": "Đổi đột ngột sang cá chẽm sẽ có complain khách quen",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "đổi đột ngột sẽ có complain"
+    },
+    {
+      "utt": "u007",
+      "thread": "set-menu-fish",
+      "kind": "agree",
+      "speaker": "Hiếu",
+      "key": "replace-seabass",
+      "content": "Chốt thay cá hồi bằng cá chẽm từ thứ Hai tuần sau, tuần này vẫn bán cá hồi giá cũ",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "chốt thay cá hồi bằng cá chẽm từ thứ Hai tuần sau"
+    },
+    {
+      "utt": "u008",
+      "thread": "set-menu-fish",
+      "kind": "assign",
+      "speaker": "Hiếu",
+      "key": "brief-serving",
+      "content": "Tùng brief team phục vụ cách giới thiệu món mới trong chiều nay",
+      "hedged": false,
+      "owner": "Tùng",
+      "deadline_text": "chiều nay",
+      "quote": "Tùng brief cho team phục vụ cách giới thiệu món mới trong chiều nay nhé"
+    },
+    {
+      "utt": "u010",
+      "thread": "order-flow",
+      "kind": "object",
+      "speaker": "Ly",
+      "key": "tablet-order-error",
+      "content": "Flow order trên tablet lỗi, order bàn VIP không in xuống bếp, tối qua sót 2 order",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Flow order trên tablet đang lỗi, order bàn VIP không in xuống bếp, tối qua bị sót 2 order"
+    },
+    {
+      "utt": "u011",
+      "thread": "order-flow",
+      "kind": "assign",
+      "speaker": "Hiếu",
+      "key": "call-pos-support",
+      "content": "Ly gọi support bên POS trong hôm nay, chưa fix thì quay lại ghi order giấy cho bàn VIP",
+      "hedged": false,
+      "owner": "Ly",
+      "deadline_text": "trong hôm nay",
+      "quote": "Ly gọi support bên POS trong hôm nay, chưa fix thì quay lại ghi order giấy cho bàn VIP"
+    },
+    {
+      "utt": "u012",
+      "thread": "order-flow",
+      "kind": "commit",
+      "speaker": "Ly",
+      "key": "call-pos-support",
+      "content": "Ly nhận gọi support POS",
+      "hedged": false,
+      "owner": "Ly",
+      "deadline_text": "trong hôm nay",
+      "quote": "Dạ ok anh, em gọi liền"
+    },
+    {
+      "utt": "u013",
+      "thread": "set-menu-fish",
+      "kind": "assign",
+      "speaker": "Ngân",
+      "key": "update-recipe-card",
+      "content": "Ngân sẽ update recipe card món cá chẽm lên group bếp trước thứ Sáu",
+      "hedged": false,
+      "owner": "Ngân",
+      "deadline_text": "trước thứ Sáu",
+      "quote": "Em sẽ update recipe card món cá chẽm lên group bếp trước thứ Sáu"
+    }
+  ]
+}

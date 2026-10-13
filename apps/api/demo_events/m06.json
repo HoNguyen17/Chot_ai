@@ -1,0 +1,226 @@
+{
+  "threads": [
+    {
+      "id": "pricing-model",
+      "title": "Mô hình thu phí"
+    },
+    {
+      "id": "lesson-schedule",
+      "title": "Lịch ra bài học tháng 11"
+    },
+    {
+      "id": "payment-gateway",
+      "title": "Cổng thanh toán"
+    },
+    {
+      "id": "app-bug-android",
+      "title": "Lỗi app trên Android cũ"
+    }
+  ],
+  "events": [
+    {
+      "utt": "u002",
+      "thread": "pricing-model",
+      "kind": "propose",
+      "speaker": "Khang",
+      "key": "lifetime-990k",
+      "content": "Đề xuất bán gói trọn đời 990 nghìn, trả một lần",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Em đề xuất bán gói trọn đời 990 nghìn"
+    },
+    {
+      "utt": "u004",
+      "thread": "pricing-model",
+      "kind": "object",
+      "speaker": "Thư",
+      "key": "lifetime-990k",
+      "content": "Gói trọn đời gây doanh thu dồn hết tháng đầu, không có tiền đều để làm content mới",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Gói trọn đời thì doanh thu dồn hết tháng đầu"
+    },
+    {
+      "utt": "u005",
+      "thread": "payment-gateway",
+      "kind": "object",
+      "speaker": "Long",
+      "key": "lifetime-990k",
+      "content": "Cổng thanh toán hiện chỉ hỗ trợ trả theo tháng, làm gói trọn đời phải tích hợp lại mất hai tuần",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "cổng thanh toán bên mình hiện chỉ hỗ trợ trả theo tháng"
+    },
+    {
+      "utt": "u006",
+      "thread": "pricing-model",
+      "kind": "propose",
+      "speaker": "Thư",
+      "key": "monthly-149k",
+      "content": "Đề xuất thuê bao tháng 149 nghìn, có dùng thử 7 ngày",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Em đề xuất thuê bao tháng 149 nghìn, có dùng thử 7 ngày"
+    },
+    {
+      "utt": "u007",
+      "thread": "pricing-model",
+      "kind": "object",
+      "speaker": "Khang",
+      "key": "monthly-149k",
+      "content": "Phụ huynh ngại đăng ký trả tháng, sợ bị trừ tiền tự động",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "phụ huynh hay ngại đăng ký trả tháng"
+    },
+    {
+      "utt": "u009",
+      "thread": "pricing-model",
+      "kind": "revise",
+      "speaker": "Khang",
+      "key": "six-month-690k",
+      "content": "Đề xuất gói 6 tháng 690 nghìn, ở giữa hai gói",
+      "hedged": true,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Hay là làm gói 6 tháng 690 nghìn"
+    },
+    {
+      "utt": "u010",
+      "thread": "payment-gateway",
+      "kind": "object",
+      "speaker": "Long",
+      "key": "six-month-690k",
+      "content": "Gói 6 tháng cũng phải sửa cổng thanh toán như gói trọn đời",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Gói 6 tháng thì cũng phải sửa cổng thanh toán như gói trọn đời"
+    },
+    {
+      "utt": "u011",
+      "thread": "pricing-model",
+      "kind": "agree",
+      "speaker": "Vy",
+      "key": "monthly-149k",
+      "content": "Chốt thu phí theo thuê bao tháng 149 nghìn, có 7 ngày dùng thử; bỏ gói trọn đời và gói 6 tháng",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Vậy chốt: bản mới thu phí theo thuê bao tháng 149 nghìn, có 7 ngày dùng thử"
+    },
+    {
+      "utt": "u013",
+      "thread": "pricing-model",
+      "kind": "assign",
+      "speaker": "Vy",
+      "key": "rewrite-paywall",
+      "content": "Giao Khang viết lại màn hình paywall theo giá mới, cuối tuần gửi duyệt",
+      "hedged": false,
+      "owner": "Khang",
+      "deadline_text": "cuối tuần này",
+      "quote": "Khang viết lại màn hình paywall theo giá mới, cuối tuần này gửi chị duyệt nhé"
+    },
+    {
+      "utt": "u014",
+      "thread": "pricing-model",
+      "kind": "commit",
+      "speaker": "Khang",
+      "key": "rewrite-paywall",
+      "content": "Khang nhận viết lại màn hình paywall, cuối tuần gửi duyệt",
+      "hedged": false,
+      "owner": "Khang",
+      "deadline_text": "cuối tuần này",
+      "quote": "Ok chị, cuối tuần này em gửi"
+    },
+    {
+      "utt": "u015",
+      "thread": "lesson-schedule",
+      "kind": "assign",
+      "speaker": "Vy",
+      "key": "update-nov-lessons",
+      "content": "Giao Thư cập nhật lịch ra bài học tháng 11",
+      "hedged": false,
+      "owner": "Thư",
+      "deadline_text": null,
+      "quote": "Thư cập nhật đi em"
+    },
+    {
+      "utt": "u016",
+      "thread": "lesson-schedule",
+      "kind": "info",
+      "speaker": "Thư",
+      "key": null,
+      "content": "Tháng 11 ra 20 bài chủ đề Giáng sinh, mới thu âm xong 8 bài, giọng đọc bản xứ freelancer trễ hẹn",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Tháng 11 mình ra 20 bài chủ đề Giáng sinh. Hiện mới thu âm xong 8 bài, giọng đọc bản xứ bên freelancer đang trễ hẹn"
+    },
+    {
+      "utt": "u017",
+      "thread": "lesson-schedule",
+      "kind": "request",
+      "speaker": "Vy",
+      "key": null,
+      "content": "Yêu cầu Long hỗ trợ Thư dựng công cụ upload bài học hàng loạt",
+      "hedged": false,
+      "owner": "Long",
+      "deadline_text": null,
+      "quote": "Long hỗ trợ Thư dựng công cụ upload bài học hàng loạt được không"
+    },
+    {
+      "utt": "u018",
+      "thread": "lesson-schedule",
+      "kind": "agree",
+      "speaker": "Long",
+      "key": null,
+      "content": "Đồng ý hỗ trợ dựng công cụ upload bài học hàng loạt",
+      "hedged": false,
+      "owner": "Long",
+      "deadline_text": null,
+      "quote": "Dạ"
+    },
+    {
+      "utt": "u019",
+      "thread": "lesson-schedule",
+      "kind": "assign",
+      "speaker": "Thư",
+      "key": "send-lesson-progress",
+      "content": "Thư sẽ gửi danh sách 20 bài kèm tiến độ từng bài cho team trước thứ Tư",
+      "hedged": false,
+      "owner": "Thư",
+      "deadline_text": "trước thứ Tư",
+      "quote": "Em sẽ gửi danh sách 20 bài kèm tiến độ từng bài cho cả team trước thứ Tư"
+    },
+    {
+      "utt": "u020",
+      "thread": "app-bug-android",
+      "kind": "info",
+      "speaker": "Khang",
+      "key": null,
+      "content": "Phụ huynh phản ánh app hay văng khi mở bài nghe trên máy Android cũ",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "phụ huynh trong group Zalo phản ánh app hay văng khi mở bài nghe trên máy Android cũ"
+    },
+    {
+      "utt": "u021",
+      "thread": "app-bug-android",
+      "kind": "assign",
+      "speaker": "Long",
+      "key": "upgrade-audio-lib",
+      "content": "Long sẽ nâng cấp thư viện audio, thứ Sáu có bản sửa",
+      "hedged": false,
+      "owner": "Long",
+      "deadline_text": "thứ Sáu",
+      "quote": "Em sẽ nâng cấp thư viện, thứ Sáu này có bản sửa"
+    }
+  ]
+}

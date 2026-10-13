@@ -1,0 +1,222 @@
+{
+  "threads": [
+    {
+      "id": "logo-design",
+      "title": "Thiết kế logo"
+    },
+    {
+      "id": "slogan-selection",
+      "title": "Chọn slogan"
+    },
+    {
+      "id": "menu-board",
+      "title": "Menu board"
+    }
+  ],
+  "events": [
+    {
+      "utt": "u002",
+      "thread": "logo-design",
+      "kind": "info",
+      "speaker": "Toàn",
+      "key": null,
+      "content": "Khách yêu cầu thêm bản logo chữ đơn giản để in ly",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Họ request thêm một bản logo dạng chữ đơn giản để in lên ly giấy"
+    },
+    {
+      "utt": "u003",
+      "thread": "logo-design",
+      "kind": "propose",
+      "speaker": "Mai",
+      "key": "leaf-logo",
+      "content": "Phương án logo lá trà cách điệu",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Phương án 1 là lá trà cách điệu"
+    },
+    {
+      "utt": "u003",
+      "thread": "logo-design",
+      "kind": "propose",
+      "speaker": "Mai",
+      "key": "handwritten-logo",
+      "content": "Phương án logo chữ viết tay",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "phương án 2 là chữ viết tay"
+    },
+    {
+      "utt": "u003",
+      "thread": "logo-design",
+      "kind": "propose",
+      "speaker": "Mai",
+      "key": "round-seal-logo",
+      "content": "Phương án logo con dấu tròn",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "phương án 3 là con dấu tròn"
+    },
+    {
+      "utt": "u004",
+      "thread": "logo-design",
+      "kind": "object",
+      "speaker": "Kha",
+      "key": "handwritten-logo",
+      "content": "Phương án chữ viết tay in nhỏ trên ly dễ bị nhòe",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Phương án 2 in nhỏ trên ly thì nét chữ viết tay dễ bị nhòe"
+    },
+    {
+      "utt": "u005",
+      "thread": "logo-design",
+      "kind": "agree",
+      "speaker": "Duyên",
+      "key": "handwritten-logo",
+      "content": "Ưa thích phương án chữ viết tay hơn",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Chị vẫn thích phương án 2 hơn"
+    },
+    {
+      "utt": "u006",
+      "thread": "logo-design",
+      "kind": "info",
+      "speaker": "Toàn",
+      "key": null,
+      "content": "Nếu khách chọn phương án chữ viết tay thì phải làm thêm bản đơn giản cho ly",
+      "hedged": true,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Nếu mà khách chọn phương án 2 thì mình phải làm thêm bản đơn giản cho ly như họ request luôn"
+    },
+    {
+      "utt": "u007",
+      "thread": "logo-design",
+      "kind": "assign",
+      "speaker": "Duyên",
+      "key": "simple-logo-for-cup",
+      "content": "Mai làm thêm bản logo chữ đơn giản cho ly",
+      "hedged": false,
+      "owner": "Mai",
+      "deadline_text": "thứ Sáu",
+      "quote": "Mai làm thêm bản logo chữ đơn giản cho ly, thứ Sáu này gửi chị"
+    },
+    {
+      "utt": "u008",
+      "thread": "logo-design",
+      "kind": "commit",
+      "speaker": "Mai",
+      "key": "simple-logo-for-cup",
+      "content": "Mai nhận làm bản logo chữ đơn giản cho ly",
+      "hedged": false,
+      "owner": "Mai",
+      "deadline_text": "thứ Sáu",
+      "quote": "Dạ ok chị, thứ Sáu em gửi"
+    },
+    {
+      "utt": "u009",
+      "thread": "slogan-selection",
+      "kind": "propose",
+      "speaker": "Kha",
+      "key": "tra-moc-vi-that",
+      "content": "Slogan Trà mộc vị thật",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "em có hai câu: Trà mộc vị thật"
+    },
+    {
+      "utt": "u009",
+      "thread": "slogan-selection",
+      "kind": "propose",
+      "speaker": "Kha",
+      "key": "uong-cham-song-cham",
+      "content": "Slogan Uống chậm sống chậm",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "và Uống chậm sống chậm"
+    },
+    {
+      "utt": "u010",
+      "thread": "slogan-selection",
+      "kind": "object",
+      "speaker": "Toàn",
+      "key": "uong-cham-song-cham",
+      "content": "Khách phản hồi slogan Uống chậm sống chậm nghe hơi buồn, muốn năng động hơn",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Khách feedback là câu Uống chậm sống chậm nghe hơi buồn"
+    },
+    {
+      "utt": "u011",
+      "thread": "slogan-selection",
+      "kind": "agree",
+      "speaker": "Duyên",
+      "key": "tra-moc-vi-that",
+      "content": "Chốt dùng slogan Trà mộc vị thật",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Vậy chốt dùng Trà mộc vị thật làm slogan chính nhé"
+    },
+    {
+      "utt": "u013",
+      "thread": "menu-board",
+      "kind": "question",
+      "speaker": "Toàn",
+      "key": null,
+      "content": "Khách hỏi có làm bộ menu board, cần xong trước 1/12",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": "1/12",
+      "quote": "Bên khách cũng hỏi có làm được bộ menu board luôn không, cần xong trước khai trương ngày 1/12"
+    },
+    {
+      "utt": "u014",
+      "thread": "menu-board",
+      "kind": "assign",
+      "speaker": "Duyên",
+      "key": "quote-menu-board",
+      "content": "Toàn báo giá menu board cho khách",
+      "hedged": false,
+      "owner": "Toàn",
+      "deadline_text": null,
+      "quote": "Toàn báo giá phần đó cho khách nha"
+    },
+    {
+      "utt": "u015",
+      "thread": "menu-board",
+      "kind": "decline",
+      "speaker": "Toàn",
+      "key": "quote-menu-board",
+      "content": "Toàn sẽ xem lại hợp đồng rồi báo giá menu board",
+      "hedged": true,
+      "owner": "Toàn",
+      "deadline_text": null,
+      "quote": "Dạ để em xem lại hợp đồng rồi báo giá"
+    },
+    {
+      "utt": "u016",
+      "thread": "logo-design",
+      "kind": "info",
+      "speaker": "Mai",
+      "key": null,
+      "content": "Font chữ phương án 2 đang dùng bản trial, chưa mua license thương mại",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Font chữ phương án 2 bên mình đang dùng bản trial, chưa mua license thương mại"
+    }
+  ]
+}

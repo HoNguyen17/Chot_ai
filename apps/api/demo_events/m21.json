@@ -1,0 +1,158 @@
+{
+  "threads": [
+    {
+      "id": "tour-product",
+      "title": "Sản phẩm tour Tết"
+    },
+    {
+      "id": "vehicle-booking",
+      "title": "Đặt xe limousine Đà Lạt"
+    },
+    {
+      "id": "marketing-material",
+      "title": "Marketing tour Đà Lạt"
+    },
+    {
+      "id": "custom-tour",
+      "title": "Tour riêng khách đoàn"
+    },
+    {
+      "id": "deposit-policy",
+      "title": "Chính sách đặt cọc khách sạn"
+    }
+  ],
+  "events": [
+    {
+      "utt": "u003",
+      "thread": "tour-product",
+      "kind": "propose",
+      "speaker": "Trinh",
+      "key": "phu-quoc",
+      "content": "Đề xuất đẩy tour Phú Quốc bay thẳng 3 ngày 2 đêm",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Em đề xuất năm nay đẩy tour Phú Quốc bay thẳng"
+    },
+    {
+      "utt": "u005",
+      "thread": "tour-product",
+      "kind": "propose",
+      "speaker": "Thanh",
+      "key": "da-lat-limousine",
+      "content": "Làm tour Đà Lạt đi bằng xe limousine 9 chỗ, đặt trước 20 xe",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Em thấy làm tour Đà Lạt nhưng đi bằng xe limousine 9 chỗ, đặt trước 20 xe từ bây giờ"
+    },
+    {
+      "utt": "u007",
+      "thread": "tour-product",
+      "kind": "agree",
+      "speaker": "Hoàng",
+      "key": "da-lat-limousine",
+      "content": "Chốt tour Đà Lạt limousine là sản phẩm chính dịp Tết, Phú Quốc để dành cho mùa hè",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Vậy làm theo hướng đó đi. Đà Lạt limousine là sản phẩm chính dịp Tết, Phú Quốc để dành cho mùa hè"
+    },
+    {
+      "utt": "u008",
+      "thread": "vehicle-booking",
+      "kind": "assign",
+      "speaker": "Hoàng",
+      "key": "book-limousine",
+      "content": "Giao Thanh giữ chỗ 20 xe limousine và đặt cọc trong tuần này",
+      "hedged": false,
+      "owner": "Thanh",
+      "deadline_text": "trong tuần này",
+      "quote": "Thanh giữ chỗ 20 xe limousine với nhà xe, trong tuần này đặt cọc nhé"
+    },
+    {
+      "utt": "u009",
+      "thread": "vehicle-booking",
+      "kind": "commit",
+      "speaker": "Thanh",
+      "key": "book-limousine",
+      "content": "Thanh nhận việc đặt cọc xe limousine, sẽ làm vào thứ Năm",
+      "hedged": false,
+      "owner": "Thanh",
+      "deadline_text": "thứ Năm",
+      "quote": "Dạ ok anh, thứ Năm em đặt cọc"
+    },
+    {
+      "utt": "u010",
+      "thread": "marketing-material",
+      "kind": "assign",
+      "speaker": "Trinh",
+      "key": "marketing-da-lat",
+      "content": "Trinh làm bộ ảnh và landing page tour Đà Lạt, xong trước ngày 10/11",
+      "hedged": false,
+      "owner": "Trinh",
+      "deadline_text": "trước ngày 10/11",
+      "quote": "Em sẽ làm bộ ảnh và landing page tour Đà Lạt, xong trước ngày 10/11"
+    },
+    {
+      "utt": "u012",
+      "thread": "custom-tour",
+      "kind": "assign",
+      "speaker": "Hoàng",
+      "key": "quote-custom-tour",
+      "content": "Giao Đăng báo giá tour riêng cho khách đoàn công ty Hòa An",
+      "hedged": false,
+      "owner": "Đăng",
+      "deadline_text": null,
+      "quote": "Đăng báo giá tour riêng cho họ nhé"
+    },
+    {
+      "utt": "u013",
+      "thread": "custom-tour",
+      "kind": "commit",
+      "speaker": "Đăng",
+      "key": "quote-custom-tour",
+      "content": "Đăng nhận việc báo giá tour riêng cho khách đoàn",
+      "hedged": false,
+      "owner": "Đăng",
+      "deadline_text": null,
+      "quote": "Dạ vâng"
+    },
+    {
+      "utt": "u014",
+      "thread": "deposit-policy",
+      "kind": "info",
+      "speaker": "Thanh",
+      "key": null,
+      "content": "Khách sạn Đà Lạt bắt buộc cọc 50% booking dịp Tết, không hoàn",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Một lưu ý: từ năm nay khách sạn ở Đà Lạt bắt buộc cọc 50% cho booking dịp Tết, không hoàn"
+    },
+    {
+      "utt": "u015",
+      "thread": "deposit-policy",
+      "kind": "assign",
+      "speaker": "Hoàng",
+      "key": "calculate-deposit",
+      "content": "Giao Thanh tính lại dòng tiền đặt cọc cho cả mùa Tết",
+      "hedged": false,
+      "owner": "Thanh",
+      "deadline_text": null,
+      "quote": "Vậy Thanh tính lại dòng tiền đặt cọc cho cả mùa Tết"
+    },
+    {
+      "utt": "u016",
+      "thread": "deposit-policy",
+      "kind": "commit",
+      "speaker": "Thanh",
+      "key": "calculate-deposit",
+      "content": "Thanh nhận việc gửi bảng tính dòng tiền đặt cọc cuối tuần này",
+      "hedged": false,
+      "owner": "Thanh",
+      "deadline_text": "cuối tuần này",
+      "quote": "Ok anh, cuối tuần này em gửi bảng"
+    }
+  ]
+}

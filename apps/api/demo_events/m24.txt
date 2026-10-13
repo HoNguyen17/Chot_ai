@@ -1,0 +1,21 @@
+# meeting: m24
+# title: Họp release tuần — phần mềm quản lý bán hàng
+# date: 2026-10-30
+# participants: Bình (Head of product, chủ trì); Giang (Tech lead); Thơ (QA lead); Nhật (Customer success)
+[00:00:10] Bình: Họp release tuần. Như tuần trước đã chốt, bản 3.2 release ngày 1/11, còn tính năng báo cáo nâng cao để sang bản 3.3.
+[00:00:55] Thơ: Regression bản 3.2 còn 4 bug mức cao, trong đó có bug mất dữ liệu khi đồng bộ offline.
+[00:01:35] Giang: Bug đồng bộ offline em cần thêm 3 ngày mới fix chắc chắn được.
+[00:02:10] Thơ: Em đề xuất dời release 3.2 sang thứ Năm 5/11.
+[00:02:50] Nhật: Khách Minh Long được hứa bản mới đầu tháng 11, dời sang 5/11 thì em báo lại được.
+[00:03:25] Bình: Ok, release 3.2 dời sang thứ Năm 5/11.
+[00:03:35] Giang: Dạ.
+[00:04:10] Bình: Nhật báo khách Minh Long lịch mới trong hôm nay nhé.
+[00:04:20] Nhật: Ok chị, em gửi email ngay.
+[00:05:00] Nhật: Khách Minh Long cũng hỏi có đưa được báo cáo nâng cao vào 3.2 luôn không.
+[00:05:35] Bình: Không, báo cáo nâng cao vẫn ở bản 3.3 như đã chốt.
+[00:06:15] Nhật: Tuần này có 6 khách phàn nàn app chậm khi mở báo cáo tháng.
+[00:06:55] Thơ: Em sẽ gửi danh sách 4 bug mức cao kèm trạng thái lên kênh release mỗi sáng cho tới ngày release.
+[00:07:40] Giang: Server staging hết hạn chứng chỉ SSL từ hôm qua, QA không truy cập được bằng HTTPS.
+[00:08:10] Bình: Giang gia hạn chứng chỉ trong hôm nay nhé.
+[00:08:20] Giang: Ok chị, em làm liền.
+[00:08:55] Bình: Ok, hết.

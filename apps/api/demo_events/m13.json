@@ -1,0 +1,78 @@
+{
+  "threads": [
+    {
+      "id": "marketing-budget",
+      "title": "Ngân sách quảng cáo Facebook"
+    },
+    {
+      "id": "legal-faq",
+      "title": "Bộ câu hỏi pháp lý"
+    },
+    {
+      "id": "customer-followup",
+      "title": "Gọi lại khách hàng đã xem nhà mẫu"
+    }
+  ],
+  "events": [
+    {
+      "utt": "u003",
+      "thread": "marketing-budget",
+      "kind": "propose",
+      "speaker": "Như",
+      "key": "fb-ads-30m",
+      "content": "Đề xuất chạy quảng cáo Facebook nhắm khách trẻ, ngân sách 30 triệu",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Em đề xuất chạy thêm quảng cáo Facebook nhắm khách trẻ mua căn đầu tiên, ngân sách 30 triệu"
+    },
+    {
+      "utt": "u004",
+      "thread": "marketing-budget",
+      "kind": "object",
+      "speaker": "Lộc",
+      "key": "fb-ads-30m",
+      "content": "Tệp khách trẻ chạy tháng 8 tỉ lệ ra cọc thấp, tốn tiền",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Tệp khách trẻ mình chạy hồi tháng 8 rồi, tỉ lệ ra cọc chưa tới 1%, tốn tiền"
+    },
+    {
+      "utt": "u005",
+      "thread": "marketing-budget",
+      "kind": "revise",
+      "speaker": "Như",
+      "key": "fb-ads-30m",
+      "content": "Lần này có gói hỗ trợ lãi suất nên khác",
+      "hedged": true,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "giờ có rồi thì khác"
+    },
+    {
+      "utt": "u008",
+      "thread": "legal-faq",
+      "kind": "assign",
+      "speaker": "Cường",
+      "key": "legal-faq-prep",
+      "content": "Lộc soạn bộ câu hỏi thường gặp về pháp lý cho team",
+      "hedged": false,
+      "owner": "Lộc",
+      "deadline_text": null,
+      "quote": "Lộc soạn lại bộ câu hỏi thường gặp về pháp lý cho cả team nhé"
+    },
+    {
+      "utt": "u010",
+      "thread": "customer-followup",
+      "kind": "assign",
+      "speaker": "Yến",
+      "key": "call-back-12clients",
+      "content": "Yến gọi lại 12 khách đã xem nhà mẫu trong hôm nay",
+      "hedged": false,
+      "owner": "Yến",
+      "deadline_text": "trong hôm nay",
+      "quote": "Em sẽ gọi lại 12 khách đã xem nhà mẫu tuần trước trong hôm nay"
+    }
+  ]
+}

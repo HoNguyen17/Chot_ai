@@ -1,0 +1,194 @@
+{
+  "threads": [
+    {
+      "id": "appointment-scheduling",
+      "title": "Đặt lịch hẹn qua Zalo"
+    },
+    {
+      "id": "budget-approval",
+      "title": "Duyệt chi phí phần mềm"
+    },
+    {
+      "id": "medical-record-storage",
+      "title": "Lưu hồ sơ bệnh án điện tử"
+    },
+    {
+      "id": "printer-maintenance",
+      "title": "Sửa máy in hóa đơn"
+    },
+    {
+      "id": "nurse-procedure-update",
+      "title": "Cập nhật quy trình tiếp nhận điều dưỡng"
+    }
+  ],
+  "events": [
+    {
+      "utt": "u002",
+      "thread": "appointment-scheduling",
+      "kind": "question",
+      "speaker": "Bích",
+      "key": null,
+      "content": "Bệnh nhân phàn nàn về thời gian chờ buổi sáng lâu",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Bệnh nhân phàn nàn nhiều về thời gian chờ buổi sáng"
+    },
+    {
+      "utt": "u003",
+      "thread": "appointment-scheduling",
+      "kind": "propose",
+      "speaker": "Loan",
+      "key": "Zalo-appointment",
+      "content": "Đề xuất đặt lịch hẹn qua Zalo, mỗi khung 15 phút tối đa 4 bệnh nhân",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Em đề xuất chuyển sang đặt lịch hẹn qua Zalo, mỗi khung 15 phút tối đa 4 bệnh nhân"
+    },
+    {
+      "utt": "u004",
+      "thread": "budget-approval",
+      "kind": "info",
+      "speaker": "Sang",
+      "key": null,
+      "content": "Phần mềm đặt lịch tốn khoảng 3 triệu một tháng, chưa có trong ngân sách năm nay",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Phần mềm đặt lịch tốn khoảng 3 triệu một tháng, chưa có trong ngân sách năm nay"
+    },
+    {
+      "utt": "u005",
+      "thread": "budget-approval",
+      "kind": "defer",
+      "speaker": "Hưng",
+      "key": null,
+      "content": "Chi phí phần mềm phải để anh Thịnh duyệt",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Khoản chi mới này phải để anh Thịnh duyệt"
+    },
+    {
+      "utt": "u005",
+      "thread": "budget-approval",
+      "kind": "assign",
+      "speaker": "Hưng",
+      "key": "proposal-budget",
+      "content": "Giao Loan làm đề xuất chi tiết gửi anh Thịnh",
+      "hedged": false,
+      "owner": "Loan",
+      "deadline_text": null,
+      "quote": "Loan làm đề xuất chi tiết gửi anh Thịnh nhé"
+    },
+    {
+      "utt": "u006",
+      "thread": "budget-approval",
+      "kind": "decline",
+      "speaker": "Loan",
+      "key": "proposal-budget",
+      "content": "Loan trì hoãn làm đề xuất chi tiết để xem lại số liệu",
+      "hedged": false,
+      "owner": "Loan",
+      "deadline_text": null,
+      "quote": "Dạ để em xem lại số liệu rồi làm"
+    },
+    {
+      "utt": "u007",
+      "thread": "medical-record-storage",
+      "kind": "info",
+      "speaker": "Loan",
+      "key": null,
+      "content": "Từ tháng 11 Sở Y tế yêu cầu lưu hồ sơ bệnh án điện tử tối thiểu 10 năm",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "từ tháng 11 Sở Y tế yêu cầu lưu hồ sơ bệnh án điện tử tối thiểu 10 năm"
+    },
+    {
+      "utt": "u008",
+      "thread": "medical-record-storage",
+      "kind": "info",
+      "speaker": "Sang",
+      "key": null,
+      "content": "Server hiện tại chỉ còn trống khoảng 20%, không đủ cho 10 năm lưu trữ",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Server hiện tại chỉ còn trống khoảng 20%, không đủ cho 10 năm"
+    },
+    {
+      "utt": "u009",
+      "thread": "medical-record-storage",
+      "kind": "assign",
+      "speaker": "Hưng",
+      "key": "cloud-quote",
+      "content": "Giao Sang hỏi báo giá lưu trữ cloud ba bên, gửi trước thứ Ba tuần sau",
+      "hedged": false,
+      "owner": "Sang",
+      "deadline_text": "trước thứ Ba tuần sau",
+      "quote": "Sang hỏi báo giá lưu trữ cloud ba bên, trước thứ Ba tuần sau gửi anh"
+    },
+    {
+      "utt": "u010",
+      "thread": "medical-record-storage",
+      "kind": "commit",
+      "speaker": "Sang",
+      "key": "cloud-quote",
+      "content": "Sang nhận việc hỏi báo giá lưu trữ cloud, gửi trước thứ Ba tuần sau",
+      "hedged": false,
+      "owner": "Sang",
+      "deadline_text": "trước thứ Ba tuần sau",
+      "quote": "Ok anh, thứ Ba em gửi"
+    },
+    {
+      "utt": "u011",
+      "thread": "printer-maintenance",
+      "kind": "question",
+      "speaker": "Bích",
+      "key": null,
+      "content": "Máy in hóa đơn kẹt giấy liên tục, nhiều hôm phải viết tay",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Máy in hóa đơn ở quầy lễ tân kẹt giấy liên tục, nhiều hôm phải viết tay"
+    },
+    {
+      "utt": "u012",
+      "thread": "printer-maintenance",
+      "kind": "assign",
+      "speaker": "Hưng",
+      "key": "printer-repair",
+      "content": "Giao Bích liên hệ bên bảo hành sửa máy in trong tuần này",
+      "hedged": false,
+      "owner": "Bích",
+      "deadline_text": "trong tuần này",
+      "quote": "Bích liên hệ bên bảo hành sửa máy in trong tuần này nhé"
+    },
+    {
+      "utt": "u013",
+      "thread": "printer-maintenance",
+      "kind": "commit",
+      "speaker": "Bích",
+      "key": "printer-repair",
+      "content": "Bích đồng ý nhận việc liên hệ bảo hành sửa máy in",
+      "hedged": false,
+      "owner": "Bích",
+      "deadline_text": "trong tuần này",
+      "quote": "Dạ vâng"
+    },
+    {
+      "utt": "u014",
+      "thread": "nurse-procedure-update",
+      "kind": "assign",
+      "speaker": "Loan",
+      "key": "update-procedure",
+      "content": "Loan sẽ cập nhật quy trình tiếp nhận mới cho điều dưỡng, phổ biến thứ Hai tuần sau",
+      "hedged": false,
+      "owner": "Loan",
+      "deadline_text": "thứ Hai tuần sau",
+      "quote": "Em sẽ cập nhật quy trình tiếp nhận mới cho điều dưỡng, thứ Hai tuần sau phổ biến"
+    }
+  ]
+}

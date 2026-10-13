@@ -1,0 +1,226 @@
+{
+  "threads": [
+    {
+      "id": "fabric-supplier-selection",
+      "title": "Chọn nhà cung cấp vải"
+    }
+  ],
+  "events": [
+    {
+      "utt": "u002",
+      "thread": "fabric-supplier-selection",
+      "kind": "propose",
+      "speaker": "Tuấn",
+      "key": "ThanhCong",
+      "content": "Giữ nhà cung cấp cũ Thành Công, giá 68 nghìn/m, giao 10 ngày",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Phương án một là giữ nhà cung cấp cũ Thành Công, 68 nghìn một mét, giao trong 10 ngày"
+    },
+    {
+      "utt": "u003",
+      "thread": "fabric-supplier-selection",
+      "kind": "propose",
+      "speaker": "Tuấn",
+      "key": "PhuThinh",
+      "content": "Chuyển sang Phú Thịnh, giá 61 nghìn/m, rẻ hơn 10%, giao 7 ngày",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Phương án hai là chuyển sang Phú Thịnh, 61 nghìn một mét, rẻ hơn 10%, giao trong 7 ngày"
+    },
+    {
+      "utt": "u003",
+      "thread": "fabric-supplier-selection",
+      "kind": "agree",
+      "speaker": "Tuấn",
+      "key": "PhuThinh",
+      "content": "Đề xuất dùng Phú Thịnh",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Em đề xuất Phú Thịnh"
+    },
+    {
+      "utt": "u004",
+      "thread": "fabric-supplier-selection",
+      "kind": "object",
+      "speaker": "Hồng",
+      "key": "PhuThinh",
+      "content": "Chưa có kết quả test độ co rút vải của Phú Thịnh",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Phú Thịnh mình chưa làm bao giờ, chưa có kết quả test độ co rút vải"
+    },
+    {
+      "utt": "u005",
+      "thread": "fabric-supplier-selection",
+      "kind": "info",
+      "speaker": "Tuấn",
+      "key": null,
+      "content": "Phú Thịnh nhận làm mẫu test trong 2 ngày, không tính phí",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Phú Thịnh nhận làm mẫu test trong 2 ngày, không tính phí"
+    },
+    {
+      "utt": "u006",
+      "thread": "fabric-supplier-selection",
+      "kind": "info",
+      "speaker": "Vĩnh",
+      "key": null,
+      "content": "Đơn giao khách ngày 5/12, vải về trễ làm cả chuyền đứng",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Đơn này giao khách ngày 5/12, vải về trễ là cả chuyền đứng"
+    },
+    {
+      "utt": "u007",
+      "thread": "fabric-supplier-selection",
+      "kind": "agree",
+      "speaker": "Liên",
+      "key": "PhuThinh",
+      "content": "Chốt dùng vải Phú Thịnh cho đơn này, nếu mẫu test không đạt thì quay về Thành Công",
+      "hedged": true,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Chốt dùng vải Phú Thịnh cho đơn này. Nếu thứ Ba Phú Thịnh không gửi được mẫu test đạt thì quay về Thành Công"
+    },
+    {
+      "utt": "u008",
+      "thread": "fabric-supplier-selection",
+      "kind": "assign",
+      "speaker": "Liên",
+      "key": "send-sample",
+      "content": "Tuấn báo Phú Thịnh gửi mẫu test ngay",
+      "hedged": false,
+      "owner": "Tuấn",
+      "deadline_text": null,
+      "quote": "em báo Phú Thịnh gửi mẫu ngay"
+    },
+    {
+      "utt": "u009",
+      "thread": "fabric-supplier-selection",
+      "kind": "assign",
+      "speaker": "Liên",
+      "key": "test-shrinkage",
+      "content": "Hồng test độ co rút mẫu vải ngay khi về, có kết quả trước thứ Ba",
+      "hedged": false,
+      "owner": "Hồng",
+      "deadline_text": "trước thứ Ba",
+      "quote": "Hồng test độ co rút mẫu vải ngay khi về, có kết quả trước thứ Ba"
+    },
+    {
+      "utt": "u010",
+      "thread": "fabric-supplier-selection",
+      "kind": "commit",
+      "speaker": "Hồng",
+      "key": "test-shrinkage",
+      "content": "Hồng nhận test độ co rút mẫu vải, có kết quả trước thứ Ba",
+      "hedged": false,
+      "owner": "Hồng",
+      "deadline_text": "trước thứ Ba",
+      "quote": "Dạ ok chị, thứ Ba có kết quả"
+    },
+    {
+      "utt": "u011",
+      "thread": "fabric-supplier-selection",
+      "kind": "assign",
+      "speaker": "Liên",
+      "key": "cost-comparison",
+      "content": "Phương làm bảng so sánh chi phí hai nhà cung cấp, nộp thứ Sáu",
+      "hedged": false,
+      "owner": "Phương",
+      "deadline_text": "thứ Sáu",
+      "quote": "Phương làm bảng so sánh chi phí hai nhà cung cấp, thứ Sáu nộp chị"
+    },
+    {
+      "utt": "u012",
+      "thread": "fabric-supplier-selection",
+      "kind": "info",
+      "speaker": "Vĩnh",
+      "key": null,
+      "content": "Phương nghỉ phép tới thứ Năm, Vĩnh sẽ nhắn",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Chị Phương nghỉ phép tới thứ Năm, em sẽ nhắn chị ấy"
+    },
+    {
+      "utt": "u013",
+      "thread": "fabric-supplier-selection",
+      "kind": "blocker",
+      "speaker": "Hồng",
+      "key": null,
+      "content": "Máy kiểm tra độ bền màu phòng QC hỏng, gửi mẫu ngoài test mất 3 ngày",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Máy kiểm tra độ bền màu của phòng QC hỏng từ tuần trước, đang gửi mẫu ra ngoài test, mất 3 ngày"
+    },
+    {
+      "utt": "u014",
+      "thread": "fabric-supplier-selection",
+      "kind": "request",
+      "speaker": "Liên",
+      "key": null,
+      "content": "Tuấn hỏi giá sửa máy kiểm tra độ bền màu",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Tuấn hỏi giá sửa máy kiểm tra độ bền màu nha"
+    },
+    {
+      "utt": "u015",
+      "thread": "fabric-supplier-selection",
+      "kind": "info",
+      "speaker": "Tuấn",
+      "key": null,
+      "content": "Tuấn đang nghe",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Dạ"
+    },
+    {
+      "utt": "u016",
+      "thread": "fabric-supplier-selection",
+      "kind": "feedback",
+      "speaker": "Hồng",
+      "key": null,
+      "content": "Khách phản hồi 3% sản phẩm áo sơ mi cổ áo bị lệch",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Lô áo sơ mi giao tuần trước khách phản hồi đường may cổ áo bị lệch ở khoảng 3% sản phẩm"
+    },
+    {
+      "utt": "u017",
+      "thread": "fabric-supplier-selection",
+      "kind": "info",
+      "speaker": "Vĩnh",
+      "key": null,
+      "content": "Khách Nhật yêu cầu thêm nhãn mác song ngữ Nhật–Việt cho đơn áo khoác",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Khách Nhật vừa yêu cầu thêm nhãn mác song ngữ Nhật–Việt cho đơn áo khoác"
+    },
+    {
+      "utt": "u018",
+      "thread": "fabric-supplier-selection",
+      "kind": "info",
+      "speaker": "Liên",
+      "key": null,
+      "content": "Kết thúc họp",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Ok, hết"
+    }
+  ]
+}

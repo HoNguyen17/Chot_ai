@@ -1,0 +1,21 @@
+# meeting: m21
+# title: Họp sản phẩm tour Tết — công ty du lịch
+# date: 2026-10-27
+# participants: Hoàng (Giám đốc kinh doanh, chủ trì); Thanh (Điều hành tour); Trinh (Marketing); Đăng (Sales)
+[00:00:10] Hoàng: Mình bàn sản phẩm tour Tết năm nay. Đầu tháng 11 là phải mở bán rồi.
+[00:00:55] Thanh: Năm ngoái tour Đà Lạt 4 ngày bán hết sớm nhất, 12 đoàn, nhưng xe giường nằm dịp Tết rất khó thuê.
+[00:01:40] Trinh: Em đề xuất năm nay đẩy tour Phú Quốc bay thẳng, 3 ngày 2 đêm, khách gia đình đang chuộng.
+[00:02:25] Đăng: Vé máy bay Tết đi Phú Quốc đã lên gần 5 triệu một chiều, giá tour sẽ vượt 15 triệu một người.
+[00:03:10] Thanh: Em thấy làm tour Đà Lạt nhưng đi bằng xe limousine 9 chỗ, đặt trước 20 xe từ bây giờ thì vẫn giữ được giá.
+[00:03:50] Đăng: Limousine thì khách gia đình rất thích, năm ngoái nhiều người hỏi.
+[00:04:30] Hoàng: Vậy làm theo hướng đó đi. Đà Lạt limousine là sản phẩm chính dịp Tết, Phú Quốc để dành cho mùa hè.
+[00:05:10] Hoàng: Thanh giữ chỗ 20 xe limousine với nhà xe, trong tuần này đặt cọc nhé.
+[00:05:25] Thanh: Dạ ok anh, thứ Năm em đặt cọc.
+[00:06:05] Trinh: Em sẽ làm bộ ảnh và landing page tour Đà Lạt, xong trước ngày 10/11.
+[00:06:50] Đăng: Khách đoàn công ty Hòa An hỏi có làm tour riêng 40 người, đi ngày mùng 2 Tết được không.
+[00:07:25] Hoàng: Đăng báo giá tour riêng cho họ nhé.
+[00:07:35] Đăng: Dạ vâng.
+[00:08:15] Thanh: Một lưu ý: từ năm nay khách sạn ở Đà Lạt bắt buộc cọc 50% cho booking dịp Tết, không hoàn.
+[00:08:55] Hoàng: Vậy Thanh tính lại dòng tiền đặt cọc cho cả mùa Tết.
+[00:09:10] Thanh: Ok anh, cuối tuần này em gửi bảng.
+[00:09:45] Hoàng: Ok, hết.

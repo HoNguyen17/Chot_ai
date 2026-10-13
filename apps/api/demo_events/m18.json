@@ -1,0 +1,138 @@
+{
+  "threads": [
+    {
+      "id": "export-quantity",
+      "title": "Số lượng xuất khẩu sầu riêng đông lạnh"
+    },
+    {
+      "id": "contract-and-communication",
+      "title": "Hợp đồng và giao tiếp với đối tác"
+    },
+    {
+      "id": "harvest-schedule",
+      "title": "Lịch thu hoạch và kiểm định"
+    }
+  ],
+  "events": [
+    {
+      "utt": "u002",
+      "thread": "export-quantity",
+      "kind": "info",
+      "speaker": "Tiến",
+      "key": null,
+      "content": "Đối tác đặt 20 tấn, giao trước 15/11, giá 95 nghìn/kg",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Đối tác bên kia đặt 20 tấn, giao trước ngày 15/11, giá 95 nghìn một ký"
+    },
+    {
+      "utt": "u004",
+      "thread": "export-quantity",
+      "kind": "object",
+      "speaker": "Sáu",
+      "key": "20-tan",
+      "content": "Nếu chốt 20 tấn thì phải mua thêm sầu riêng ngoài HTX",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Nếu chốt 20 tấn thì phải mua thêm sầu riêng của vườn ngoài HTX"
+    },
+    {
+      "utt": "u005",
+      "thread": "export-quantity",
+      "kind": "info",
+      "speaker": "Sáu",
+      "key": null,
+      "content": "Vườn xã viên chỉ gom được khoảng 14 tấn đạt chuẩn",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Vườn của xã viên đợt này chỉ gom được khoảng 14 tấn đạt chuẩn"
+    },
+    {
+      "utt": "u006",
+      "thread": "export-quantity",
+      "kind": "object",
+      "speaker": "Hương",
+      "key": "mua-ngoai",
+      "content": "Mua vườn ngoài khó kiểm soát dư lượng thuốc, rủi ro bị trả về",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Mua vườn ngoài thì khó kiểm soát dư lượng thuốc, lô bị trả về là mất cả đơn"
+    },
+    {
+      "utt": "u007",
+      "thread": "export-quantity",
+      "kind": "propose",
+      "speaker": "Tiến",
+      "key": "14-tan",
+      "content": "Đề xuất nhận 14 tấn, phần còn lại giao đợt sau",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Em đề xuất nhận 14 tấn thôi, báo đối tác phần còn lại giao đợt sau"
+    },
+    {
+      "utt": "u008",
+      "thread": "export-quantity",
+      "kind": "agree",
+      "speaker": "Bảy",
+      "key": "14-tan",
+      "content": "Chốt nhận 14 tấn, phần còn lại giao tháng 12",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Ừ, nhận 14 tấn, phần còn lại thương lượng giao đợt tháng 12. Chốt vậy"
+    },
+    {
+      "utt": "u009",
+      "thread": "contract-and-communication",
+      "kind": "assign",
+      "speaker": "Bảy",
+      "key": "contract-modify",
+      "content": "Tiến báo lại đối tác và gửi hợp đồng sửa đổi trước 30/10",
+      "hedged": false,
+      "owner": "Tiến",
+      "deadline_text": "trước ngày 30/10",
+      "quote": "Tiến báo lại đối tác và gửi hợp đồng sửa đổi trước ngày 30/10"
+    },
+    {
+      "utt": "u010",
+      "thread": "contract-and-communication",
+      "kind": "commit",
+      "speaker": "Tiến",
+      "key": "contract-modify",
+      "content": "Tiến nhận việc báo đối tác và gửi hợp đồng sửa đổi",
+      "hedged": false,
+      "owner": "Tiến",
+      "deadline_text": "trước ngày 30/10",
+      "quote": "Dạ"
+    },
+    {
+      "utt": "u011",
+      "thread": "harvest-schedule",
+      "kind": "info",
+      "speaker": "Hương",
+      "key": null,
+      "content": "Phí kiểm định dư lượng thuốc mỗi lô 4 triệu, đơn 14 tấn chia 2 lô là 8 triệu",
+      "hedged": false,
+      "owner": null,
+      "deadline_text": null,
+      "quote": "Phí kiểm định dư lượng thuốc mỗi lô 4 triệu, đơn 14 tấn chia 2 lô là 8 triệu"
+    },
+    {
+      "utt": "u012",
+      "thread": "harvest-schedule",
+      "kind": "assign",
+      "speaker": "Sáu",
+      "key": "harvest-schedule",
+      "content": "Sáu lên lịch thu hoạch từng vườn, gửi nhóm Zalo cuối tuần",
+      "hedged": false,
+      "owner": "Sáu",
+      "deadline_text": "cuối tuần này",
+      "quote": "Em sẽ lên lịch thu hoạch cho từng vườn, gửi nhóm Zalo cuối tuần này"
+    }
+  ]
+}

@@ -14,16 +14,24 @@ def _env(name: str, default: str | None = None) -> str | None:
 @dataclass(frozen=True)
 class Settings:
     # "llm"     = pipeline chính: LLM gán sự kiện + luật (cần LLM_*).
-    # "replay"  = luật chạy trên sự kiện đã lưu ở REPLAY_EVENTS_DIR (demo m01–m05 không cần key);
+    #             Cuộc họp có file sự kiện ở REPLAY_EVENTS_DIR → replay, không gọi LLM.
+    # "replay"  = luật chạy trên sự kiện đã lưu ở REPLAY_EVENTS_DIR (demo m01–m25 không cần key);
     #             cuộc họp không có file sự kiện → rơi về baseline keyword.
     # "keyword" = baseline lọc keyword.
     ledger_builder: str = field(default_factory=lambda: _env("LEDGER_BUILDER", "keyword"))
-    replay_events_dir: str = field(
-        default_factory=lambda: _env("REPLAY_EVENTS_DIR", "tests/fixtures/oracle_events")
-    )
+    replay_events_dir: str = field(default_factory=lambda: _env("REPLAY_EVENTS_DIR", "demo_events"))
     llm_base_url: str | None = field(default_factory=lambda: _env("LLM_BASE_URL"))
     llm_api_key: str | None = field(default_factory=lambda: _env("LLM_API_KEY"))
     llm_model: str = field(default_factory=lambda: _env("LLM_MODEL", "gpt-4.1-mini"))
+    max_transcript_chars: int = field(
+        default_factory=lambda: int(_env("MAX_TRANSCRIPT_CHARS", "20000"))
+    )
+    llm_rate_limit_per_hour: int = field(
+        default_factory=lambda: int(_env("LLM_RATE_LIMIT_PER_HOUR", "10"))
+    )
+    llm_global_limit_per_hour: int = field(
+        default_factory=lambda: int(_env("LLM_GLOBAL_LIMIT_PER_HOUR", "60"))
+    )
     database_url: str | None = field(default_factory=lambda: _env("DATABASE_URL"))
     cors_origins: tuple[str, ...] = field(
         default_factory=lambda: tuple(
