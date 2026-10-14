@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import hmac
 import threading
 import time
 from collections import deque
@@ -54,12 +55,17 @@ class ExactSampleReplay:
         return self.builder.build(tr)
 
 
-# IP của request hiện tại — api/main.py đặt trước khi xử lý.
+# IP và mã truy cập của request hiện tại — api/main.py đặt trước khi xử lý.
 client_ip: ContextVar[str] = ContextVar("client_ip", default="?")
+access_code: ContextVar[str] = ContextVar("access_code", default="")
 
 
 class RateLimitExceeded(Exception):
     """Hết lượt gọi LLM trong cửa sổ hiện tại (theo IP hoặc toàn cục)."""
+
+
+class AccessDenied(Exception):
+    """Thiếu hoặc sai mã truy cập khi transcript cần gọi LLM."""
 
 
 class RateLimiter:
@@ -86,12 +92,28 @@ class RateLimiter:
 
 
 class LimitedBuilder:
-    """Chỉ tính lượt khi thật sự gọi builder bên trong (LLM) — replay không bị tính."""
+    """Chỉ kiểm mã + tính lượt khi thật sự gọi builder bên trong (LLM) — replay thì không.
 
-    def __init__(self, builder: LedgerBuilder, limiter: RateLimiter) -> None:
+    `code` = mã truy cập cấu hình; `required` = bắt buộc có mã (demo công khai), nên
+    quên đặt mã thì từ chối hết thay vì để lộ key.
+    """
+
+    def __init__(
+        self,
+        builder: LedgerBuilder,
+        limiter: RateLimiter,
+        code: str | None = None,
+        required: bool = False,
+    ) -> None:
         self.builder, self.limiter, self.name = builder, limiter, builder.name
+        self.code, self.required = code, required
 
     def build(self, tr: Transcript) -> Ledger:
+        # Kiểm mã trước khi tính lượt → đoán sai không ăn vào lượt của người dùng thật.
+        if self.code or self.required:
+            given = access_code.get().encode()
+            if not self.code or not hmac.compare_digest(given, self.code.encode()):
+                raise AccessDenied("Thiếu hoặc sai mã truy cập")
         self.limiter.hit(client_ip.get())
         return self.builder.build(tr)
 
@@ -102,7 +124,12 @@ def make_builder(settings: Settings, client: LLMClient | None = None) -> LedgerB
             model=settings.llm_model, api_key=settings.llm_api_key, base_url=settings.llm_base_url
         )
         limiter = RateLimiter(settings.llm_rate_limit_per_hour, settings.llm_global_limit_per_hour)
-        llm = LimitedBuilder(RulesLedgerBuilder(LLMEventExtractor(client)), limiter)
+        llm = LimitedBuilder(
+            RulesLedgerBuilder(LLMEventExtractor(client)),
+            limiter,
+            code=settings.llm_access_code,
+            required=settings.public_demo,
+        )
         replay = RulesLedgerBuilder(DirectoryReplayExtractor(settings.replay_events_dir))
         return FallbackBuilder(ExactSampleReplay(replay, settings.replay_events_dir), llm)
     if settings.ledger_builder == "replay":

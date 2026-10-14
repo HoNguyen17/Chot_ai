@@ -151,7 +151,7 @@ h2 { font-size: 17px; margin: 0; }
 .utt:target { background: var(--st-confirm-bg); }
 .utt .who { font-weight: 600; }
 
-textarea, input[type="text"], select {
+textarea, input[type="text"], input[type="password"], select {
   width: 100%; font: inherit; color: var(--ink); background: var(--surface);
   border: 1px solid var(--line-strong); border-radius: var(--r-sm); padding: 10px 12px;
 }

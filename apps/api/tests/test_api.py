@@ -140,6 +140,34 @@ def test_sample_meeting_replays_without_llm(monkeypatch, data_dir):
     assert r.json()["ledger"]["generated_by"].startswith("rules-v1+replay")
 
 
+CODE = "ma-truy-cap-16-ky-tu"
+
+
+def test_new_transcript_requires_access_code(monkeypatch):
+    c, fake = _llm_client(monkeypatch, LLM_ACCESS_CODE=CODE)
+    body = {"transcript_text": "[00:01] A: Chốt luôn.", "meeting_id": "zz1"}
+    assert c.post("/meetings", json=body).status_code == 401
+    wrong = c.post("/meetings", json=body, headers={"X-Access-Code": "sai"})
+    assert wrong.status_code == 401 and "mã truy cập" in wrong.json()["detail"]
+    assert fake.calls == 0
+    ok = c.post("/meetings", json=body, headers={"X-Access-Code": CODE})
+    assert ok.status_code == 201 and fake.calls == 1
+
+
+def test_sample_replays_without_access_code(monkeypatch, data_dir):
+    c, fake = _llm_client(monkeypatch, LLM_ACCESS_CODE=CODE)
+    text = (data_dir / "raw" / "m01.txt").read_text(encoding="utf-8")
+    r = c.post("/meetings", json={"transcript_text": text, "meeting_id": "m01"})
+    assert r.status_code == 201 and fake.calls == 0
+
+
+def test_public_demo_without_code_refuses_llm(monkeypatch):
+    c, fake = _llm_client(monkeypatch, PUBLIC_DEMO="true")
+    body = {"transcript_text": "[00:01] A: Chốt luôn.", "meeting_id": "zz1"}
+    r = c.post("/meetings", json=body, headers={"X-Access-Code": ""})
+    assert r.status_code == 401 and fake.calls == 0
+
+
 def test_meeting_id_cannot_escape_replay_dir(tmp_path):
     import pytest
 

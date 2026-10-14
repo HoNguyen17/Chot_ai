@@ -4,6 +4,7 @@ export const API_URL = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000
 
 // Thông báo dự phòng khi API trả detail không phải chuỗi (vd. lỗi validate của pydantic).
 const STATUS_MESSAGES: Record<number, string> = {
+  401: "Transcript mới cần mã truy cập để phân tích bằng AI. Transcript mẫu không cần mã.",
   413: "Transcript quá dài. Hãy cắt bớt rồi thử lại.",
   422: "Transcript không đúng định dạng [mm:ss] Tên: câu nói.",
   429: "Đã hết lượt phân tích bằng AI trong giờ này. Thử lại sau, hoặc chọn một transcript mẫu.",
@@ -29,9 +30,10 @@ async function request<T>(path: string, init?: RequestInit): Promise<T> {
 export const api = {
   listMeetings: () => request<MeetingSummary[]>("/meetings"),
   getMeeting: (id: string) => request<Meeting>(`/meetings/${id}`),
-  createMeeting: (transcript_text: string, meeting_id?: string) =>
+  createMeeting: (transcript_text: string, meeting_id?: string, accessCode?: string) =>
     request<Meeting>("/meetings", {
       method: "POST",
+      headers: accessCode ? { "X-Access-Code": accessCode } : undefined,
       body: JSON.stringify({ transcript_text, meeting_id }),
     }),
   reviewItem: (

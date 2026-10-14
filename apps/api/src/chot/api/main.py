@@ -9,7 +9,13 @@ from fastapi.responses import JSONResponse, PlainTextResponse
 from chot import __version__
 from chot.adapters.export import to_csv_tasks, to_json, to_markdown_minutes
 from chot.adapters.parsing.transcript_txt import TranscriptParseError
-from chot.api.deps import RateLimitExceeded, client_ip, get_service
+from chot.api.deps import (
+    AccessDenied,
+    RateLimitExceeded,
+    access_code,
+    client_ip,
+    get_service,
+)
 from chot.api.schemas import CreateMeetingIn, MeetingOut, MeetingSummaryOut, ReviewItemIn
 from chot.config import get_settings
 from chot.domain.enums import Status
@@ -52,12 +58,18 @@ def create_app() -> FastAPI:
         if size > limit:
             msg = f"Transcript dài {size:,} ký tự (tối đa {limit:,}). Hãy cắt bớt rồi thử lại."
             raise HTTPException(413, msg.replace(",", "."))
-        # Endpoint sync: builder chạy cùng thread nên đọc được IP này.
+        # Endpoint sync: builder chạy cùng thread nên đọc được IP và mã này.
         client_ip.set(request.client.host if request.client else "?")
+        access_code.set(request.headers.get("x-access-code", ""))
         try:
             record = svc.process(body.transcript_text, body.meeting_id)
         except TranscriptParseError as e:
             raise HTTPException(422, str(e)) from e
+        except AccessDenied as e:
+            raise HTTPException(
+                401,
+                "Transcript mới cần mã truy cập để phân tích bằng AI. Transcript mẫu không cần mã.",
+            ) from e
         except RateLimitExceeded as e:
             raise HTTPException(
                 429,

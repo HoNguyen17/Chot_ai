@@ -8,6 +8,8 @@ import type { MeetingSummary } from "@/lib/types";
 
 // Transcript mẫu (bản sao data/raw) — API replay output LLM đã lưu, không tốn token.
 const SAMPLES = Array.from({ length: 25 }, (_, i) => `m${String(i + 1).padStart(2, "0")}`);
+// Mã truy cập để gọi LLM — chỉ nhớ trong tab hiện tại.
+const CODE_KEY = "chot-access-code";
 
 export default function UploadPage() {
   const router = useRouter();
@@ -16,10 +18,26 @@ export default function UploadPage() {
   const [error, setError] = useState<string | null>(null);
   const [recent, setRecent] = useState<MeetingSummary[]>([]);
   const [sample, setSample] = useState<{ id: string; text: string; title: string } | null>(null);
+  const [code, setCode] = useState("");
+  const isSample = sample !== null && text === sample.text;
 
   useEffect(() => {
     api.listMeetings().then(setRecent).catch(() => setRecent([]));
+    try {
+      setCode(sessionStorage.getItem(CODE_KEY) ?? "");
+    } catch {
+      /* sessionStorage bị chặn */
+    }
   }, []);
+
+  function changeCode(value: string) {
+    setCode(value);
+    try {
+      sessionStorage.setItem(CODE_KEY, value);
+    } catch {
+      /* sessionStorage bị chặn */
+    }
+  }
 
   async function loadFile(file: File) {
     setText(await file.text());
@@ -42,8 +60,10 @@ export default function UploadPage() {
     setBusy(true);
     setError(null);
     try {
-      // Chỉ gửi meeting_id khi transcript mẫu chưa bị sửa — sửa rồi thì để LLM xử lý.
-      const meeting = await api.createMeeting(text, text === sample?.text ? sample.id : undefined);
+      // Chỉ gửi meeting_id khi transcript mẫu chưa bị sửa — sửa rồi thì để LLM xử lý (cần mã).
+      const meeting = isSample
+        ? await api.createMeeting(text, sample.id)
+        : await api.createMeeting(text, undefined, code.trim());
       router.push(`/meetings/${meeting.id}`);
     } catch (e) {
       setError(e instanceof Error ? e.message : "Không xử lý được transcript.");
@@ -98,7 +118,22 @@ export default function UploadPage() {
             {busy ? "Đang phân tích…" : "Chốt biên bản"}
           </button>
         </div>
-        {sample && text === sample.text && (
+        {!isSample && (
+          <div style={{ marginTop: 12 }}>
+            <label htmlFor="access-code" className="faint">
+              Mã truy cập — transcript mới được phân tích bằng AI nên cần mã; transcript mẫu thì không
+            </label>
+            <input
+              id="access-code"
+              type="password"
+              autoComplete="off"
+              value={code}
+              onChange={(e) => changeCode(e.target.value)}
+              style={{ display: "block", marginTop: 8 }}
+            />
+          </div>
+        )}
+        {isSample && (
           <p className="faint" style={{ marginTop: 12 }}>
             <b>{sample.title}</b> — kết quả mẫu là output đã lưu của LLM (gpt-4.1-mini, ngày
             14/10/2026), không phải đáp án.

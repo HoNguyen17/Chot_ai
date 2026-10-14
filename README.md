@@ -213,7 +213,7 @@ chot/
 - [x] 25 transcript có bẫy + nhãn gold + 13 quy ước gán nhãn
 - [x] Eval so với 2 baseline; 3 vòng tinh chỉnh prompt/luật
 - [x] Màn duyệt khoá xuất bản khi còn mục cần xác nhận; xuất .md / .csv / .json
-- [x] Demo công khai, có giới hạn ký tự và rate limit
+- [x] Demo công khai, có giới hạn ký tự, rate limit và mã truy cập cho transcript mới
 
 **Chưa làm**
 - [ ] Lưu trữ lâu dài (`PostgresRepository` mới là khung, đang lưu trong RAM)

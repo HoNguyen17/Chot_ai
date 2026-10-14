@@ -32,6 +32,9 @@ class Settings:
     llm_global_limit_per_hour: int = field(
         default_factory=lambda: int(_env("LLM_GLOBAL_LIMIT_PER_HOUR", "60"))
     )
+    # Mã truy cập để gọi LLM (header X-Access-Code); transcript mẫu replay không cần.
+    # Không đặt + PUBLIC_DEMO=true → từ chối mọi lượt gọi LLM.
+    llm_access_code: str | None = field(default_factory=lambda: _env("LLM_ACCESS_CODE"))
     # Demo công khai: tắt GET /meetings (lộ cuộc họp của người khác) và /docs.
     public_demo: bool = field(
         default_factory=lambda: (_env("PUBLIC_DEMO", "false") or "").lower() == "true"
