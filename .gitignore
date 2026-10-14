@@ -36,5 +36,8 @@ _archive/
 #docs
 docs/
 
-#scripts 
+#scripts
 scripts/
+
+# Video demo + overlay CapCut (video đã đăng YouTube)
+demo/
