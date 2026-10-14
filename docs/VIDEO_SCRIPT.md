@@ -53,7 +53,7 @@ Chuẩn bị trước: mở sẵn 3 tab: demo, `docs/MISSION2.md` (bảng 3 hệ
 **Màn hình:** mục "4. Hạn chế đã biết" trong `docs/MISSION2.md`, rồi mục "Việc tiếp theo" trong `CLAUDE.md`.
 
 **Lời thoại:**
-> Hạn chế cần nói thẳng. Bộ test mới có 25 cuộc họp, phần lớn là kịch bản tổng hợp, và chỉ một người gán nhãn. Dữ liệu chỉ lưu trong RAM. Chưa có ASR, phải dán transcript. Server và LLM ở nước ngoài, nên với họp thật của doanh nghiệp cần xem lại luật bảo vệ dữ liệu cá nhân trước khi dùng.
+> Hạn chế cần nói thẳng. Bộ test mới có 25 cuộc họp, tất cả đều là kịch bản do mình tự viết hoặc tổng hợp, chưa có cuộc họp thật nào, và chỉ một người gán nhãn. Dữ liệu chỉ lưu trong RAM. Chưa có ASR, phải dán transcript. Server và LLM ở nước ngoài, nên với họp thật của doanh nghiệp cần xem lại luật bảo vệ dữ liệu cá nhân trước khi dùng.
 > Bước tiếp theo: sửa để bắt được vướng mắc và quyết định nằm trong câu giao việc, chạy lại đầu-cuối nhiều lần để đo độ ổn định, thêm Postgres, rồi thử với 3 đến 5 nhóm thật.
 
 ---

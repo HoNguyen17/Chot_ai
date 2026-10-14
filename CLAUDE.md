@@ -53,7 +53,7 @@ make agreement      # nhãn data/gold vs data/answer_key
 
 ## Trạng thái hiện tại (15/10/2026)
 - ✅ Domain, luật, grounding, parser, baseline keyword/summary, LLM extractor, eval CLI, API, màn duyệt, 74 test.
-- ✅ 25 transcript (m01–m25) + gold của Nash + answer_key + oracle events; 13 quy ước gán nhãn trong `docs/LABELING_GUIDE.md`.
+- ✅ 25 transcript kịch bản (m01–m05 Nash tự viết, m06–m25 tổng hợp; chưa có họp thật) + gold của Nash + answer_key + oracle events; 13 quy ước gán nhãn trong `docs/LABELING_GUIDE.md`.
 - ✅ Eval trên gold m01–m25 (gpt-4.1-mini): chốt nhầm 4,8% đầu-cuối (`data/runs/20261014-042208-llm`), 0% khi replay qua luật hiện tại (`20261014-042750-replay`). Keyword 57,6%, tóm tắt 54,3%. Recall mục 51,7%, vướng mắc 7/74.
 - ✅ Demo https://chot.nashng.dev (Vercel) + api.chot.nashng.dev (Railway); m01–m05 replay `apps/api/demo_events/` (= events của `042208-llm`).
 - ✅ Bản nháp nộp Mission 2: `docs/MISSION2.md`, `docs/VIDEO_SCRIPT.md`.
@@ -61,7 +61,7 @@ make agreement      # nhãn data/gold vs data/answer_key
 - ⏳ `PostgresRepository` mới là khung (`adapters/persistence/postgres.py`), đang dùng InMemory.
 
 ## Việc tiếp theo (theo thứ tự)
-1. Nash duyệt các chỗ `[Nash xác nhận]` trong `docs/MISSION2.md`, quay video theo `docs/VIDEO_SCRIPT.md`.
+1. Quay video theo `docs/VIDEO_SCRIPT.md`, nộp Mission 2.
 2. Vướng mắc: luật sinh `blocker` từ `object` có nội dung cụ thể (quy ước 1–2) → `make eval-oracle` + replay.
 3. Prompt: quyết định trong câu giao việc (m03 u016), `commit` cho câu nhận việc ("Ok anh, … em gửi" — m04, m14, m25), không gộp key 2 phương án (m02 D3) → `make eval-llm` vài lần để đo độ ổn định.
 4. `PostgresRepository` (lưu cả `events` để replay, `review_actions` append-only).

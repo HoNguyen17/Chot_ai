@@ -10,7 +10,7 @@ Trên demo, chọn "Dùng transcript mẫu…" (m01–m05): kết quả là sự
 
 ## Kết quả
 
-25 cuộc họp có cài bẫy (m01–m25), nhãn gold của Nash, cùng model gpt-4.1-mini.
+25 cuộc họp có cài bẫy (m01–m25, đều là kịch bản: m01–m05 Nash tự viết, m06–m25 tổng hợp; chưa có họp thật), nhãn gold của Nash, cùng model gpt-4.1-mini.
 
 | Hệ thống | Chốt nhầm ⭐ | Phương án cũ được gắn "bị thay thế" | Precision / Recall mục |
 |---|---|---|---|

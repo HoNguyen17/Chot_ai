@@ -2,8 +2,6 @@
 
 > Demo: **https://chot.nashng.dev** → bấm "Dùng transcript mẫu" (m01–m05 chạy lại sự kiện của một lần gọi LLM thật, không cần key).
 > Số liệu trong file này lấy từ `data/runs/` (không commit vì có thể chứa nội dung họp) và [EVAL_LOG.md](EVAL_LOG.md). Run chính: `20261014-042750-replay` = sự kiện của lần chạy LLM thật `20261014-042208-llm` (gpt-4.1-mini) đi qua bộ luật hiện tại. Sự kiện m01–m05 của run đó được commit ở `apps/api/demo_events/` để ai cũng kiểm lại được.
->
-> Chỗ đánh dấu **[Nash xác nhận]** là chỗ mình chưa chắc, cần Nash sửa trước khi nộp.
 
 ## 1. Đề yêu cầu gì → nằm ở đâu trong sản phẩm
 
@@ -48,16 +46,16 @@ So [PRD §5 "Kế hoạch 3 ngày"](PRD.md) với git log từ `314420f` (codeba
 | Kế hoạch Mission 1 | Thực tế | Điều gì khiến đổi |
 |---|---|---|
 | 3 ngày: dữ liệu → lõi → dùng được | Lõi (domain, luật, parser, baseline, API, màn duyệt) có sẵn trong `314420f`. Phần Mission 2 là dữ liệu, eval, tinh chỉnh, deploy: 17 commit trong khoảng 6 giờ | Hạn nộp ngắn. Ưu tiên có số eval thật hơn thêm tính năng |
-| Bộ test 15–20 transcript | **25**: m01–m05 + m06–m20 sinh từ 15 kịch bản bẫy (`make synth`, `data/synthetic/scenarios.json`) + m21–m25 viết thêm cho bẫy còn thiếu (quyết định ngầm, 2 đồng chủ trì, nhắc quyết định họp trước, giao việc cho người vắng mặt) | Chỉ m01–m05 thì gold có rất ít quyết định "đã chốt", sai một mục là tỷ lệ nhảy 20%. 25 cuộc họp cho 22 quyết định final, đủ để đọc được tỷ lệ. [Nash xác nhận lý do; và m01–m05 là họp thật có consent hay kịch bản tự viết?] |
+| Bộ test 15–20 transcript, gồm 3–5 cuộc họp thật (có consent) + kịch bản đóng vai | **25 kịch bản, chưa có họp thật**: m01–m05 Nash tự viết + m06–m20 sinh từ 15 kịch bản bẫy (`make synth`, `data/synthetic/scenarios.json`) + m21–m25 viết thêm cho bẫy còn thiếu (quyết định ngầm, 2 đồng chủ trì, nhắc quyết định họp trước, giao việc cho người vắng mặt) | Cần nhiều loại tình huống hơn để xem hệ thống xử lý từng loại thế nào (ngành nghề, số người, kiểu đổi ý, đồng chủ trì, người vắng mặt…). Chưa xin được biên bản họp thật có consent trong thời gian này. 25 cuộc họp cũng cho 22 quyết định đã chốt, đủ để tỷ lệ chốt nhầm không nhảy 20% chỉ vì một lỗi |
 | Gán nhãn theo LABELING_GUIDE | Thêm **13 quy ước** (Nash, 14/10) trong lúc gán nhãn | Đo nhãn gold so với đáp án tham khảo: lần đầu lệch 16,7% (m01–m05), có quy ước rồi còn 4,5% (m01–m25). Nhãn chưa thống nhất thì đo LLM cũng vô nghĩa |
-| "Tách chủ đề" là một bước riêng trước khi trích sự kiện | Gộp vào **một lời gọi LLM**: prompt trả cả `threads` lẫn `events`, mỗi phương án có một `key` cố định | Lỗi lớn nhất ở run đầu (`033444-llm`) là LLM đặt key/thread khác nhau cho cùng một phương án → luật ghép sai cặp đề xuất–đồng ý. Sửa trong prompt: chốt nhầm 17,6% → 5,3% (`cef2354`). [Nash xác nhận: có phải ngay từ đầu đã định gộp, hay đổi sau run đầu?] |
+| "Tách chủ đề" là một bước riêng trước khi trích sự kiện | Không có bước riêng: chính lời gọi trích sự kiện trả luôn `threads`. Cách chia chủ đề được sửa lại sau run đầu: chủ đề = câu hỏi cần quyết định, mọi phương án trả lời cùng câu hỏi nằm chung một `thread`, mỗi phương án giữ một `key` cố định | Đổi sau run đầu (`033444-llm`), khi thấy nhãn chủ đề LLM gán chưa hợp lý: cùng một phương án nhưng câu đề xuất và câu đồng ý mang key/thread khác nhau → luật ghép sai cặp đề xuất–đồng ý. Sửa trong prompt: chốt nhầm 17,6% → 5,3% (`cef2354`) |
 | Model: PRD dẫn GPT-5 mini | **gpt-4.1-mini** qua adapter OpenAI-compatible có sẵn | Có cân nhắc Claude Haiku nhưng bỏ: cần viết adapter mới và trả lỗi 400 với `temperature=0`. Đổi model chỉ cần sửa `.env` |
 | Tinh chỉnh sau eval (PRD không nói làm ở prompt hay ở luật) | Cải thiện chủ yếu nhờ **luật** | Prompt: 17,6% → 5,3%. Luật (replay, 0 token): 5,3% → 0%. Chạy lại đầu-cuối thì LLM gán `agree` cho câu "Ừ." dù prompt đã cấm → lên lại 4,8%. Thêm luật chặn (`ccf3042`) → 0%. LLM không ổn định giữa các lần chạy, nên chỗ nào quan trọng phải có luật giữ |
 | Grounding 2 tầng: tầng 1 chặn cứng, tầng 2 người chấm ≥ 95% | Tầng 1 làm đúng như kế hoạch (100% ở mọi run). Tầng 2 **chưa có người chấm**. Thay bằng kiểm tra tự động: người chốt phải là chủ trì, câu chốt mới nhất phải của đúng người đó, không có rào đón, owner phải có trong danh sách | Không có người chấm thứ hai trong thời gian này. Kiểm tra tự động bắt được phần "cấu trúc", chưa bắt được trường hợp trích dẫn đúng câu nhưng sai ý |
 | Màn duyệt, export md/JSON/CSV, eval so 2 baseline | Làm đủ. Baseline keyword ban đầu chỉ đo trên m01–m05, nay đo lại trên gold m01–m25 | Để ba hệ thống so trên cùng một bộ |
 | Không có trong kế hoạch | **Deploy demo công khai** (Vercel + Railway), demo m01–m05 replay sự kiện LLM thật, transcript mới gọi LLM có giới hạn ký tự và rate limit | Mission 2 cần demo chạy được. Replay để không tốn token và để kết quả trên demo truy được về một run thật |
 | PostgresRepository + Supabase | **Chưa làm**, vẫn InMemory | Hết thời gian; không ảnh hưởng tới câu hỏi chính là "chốt có đúng không" |
-| Phỏng vấn 3–5 trưởng nhóm SME, pilot 4 tuần | Chưa làm | Ngoài phạm vi Mission 2. [Nash xác nhận: đã phỏng vấn ai chưa?] |
+| Phỏng vấn 3–5 trưởng nhóm SME, pilot 4 tuần | Chưa làm | Chưa phỏng vấn ai. Sẽ làm khi có cơ hội; các giả định [GĐ] ở PRD §1 vẫn chưa được kiểm chứng |
 
 ### Q3 · Loại thông tin nào dễ sai nhất, và làm sao để không bịa?
 
@@ -189,10 +187,24 @@ Cả 6 lỗi còn lại của run (`ERRORS.md` trong run, không commit) đều 
 
 - **Lưu trong RAM.** Không có DB; tối đa 500 cuộc họp, server restart là mất. `PostgresRepository` mới là khung.
 - **Bộ test nhỏ, một người gán.** 25 cuộc họp, 315 mục, 22 quyết định đã chốt. Một lỗi chốt nhầm = khoảng 5 điểm %. Nhãn do Nash gán, chưa có người thứ hai để đo độ đồng thuận.
-- **Phần lớn là dữ liệu tổng hợp.** m06–m25 là kịch bản tổng hợp, viết với sự hỗ trợ của LLM rồi duyệt tay. Họp thật có nhiều người nói chen, câu cụt, lỗi ASR hơn. [Nash xác nhận nguồn gốc m01–m05.]
+- **Chưa có cuộc họp thật nào.** m01–m05 do Nash tự viết; m06–m25 là kịch bản tổng hợp, viết với sự hỗ trợ của LLM rồi duyệt tay. Họp thật có nhiều người nói chen, câu cụt, lỗi ASR hơn, nên số đo trên đây có thể lạc quan hơn thực tế.
 - **Recall thấp: 51,7%.** Vướng mắc, kiến thức, phản hồi bị bỏ sót nhiều (Q3). Biên bản hiện đáng tin ở quyết định và task, chưa đầy đủ ở phần còn lại.
 - **LLM không ổn định giữa các lần chạy.** Số 0% là replay sự kiện của một lần chạy qua luật mới; lần chạy đầu-cuối gần nhất là 4,8%. Chưa chạy lại đầu-cuối sau khi sửa luật.
 - **Chưa có ASR.** Đầu vào phải là transcript text có tên người nói.
-- **Dữ liệu đi ra nước ngoài.** API chạy trên Railway, LLM là OpenAI, nên transcript rời khỏi Việt Nam. Với dữ liệu họp thật của doanh nghiệp cần xem lại theo Luật Bảo vệ dữ liệu cá nhân (Luật 91/2025/QH15) [Nash xác nhận số hiệu và điều khoản áp dụng]. Bản demo chỉ nên dùng transcript mẫu.
+- **Dữ liệu đi ra nước ngoài.** API chạy trên Railway, LLM là OpenAI, nên transcript rời khỏi Việt Nam. Theo Luật Bảo vệ dữ liệu cá nhân 91/2025/QH15, đó là chuyển dữ liệu ra nước ngoài (xem mục 5). Bản demo chỉ nên dùng transcript mẫu.
 - **Rate limit chỉ đúng với 1 instance.** Bộ đếm (10 lượt/giờ/IP, 60 lượt/giờ toàn hệ thống) nằm trong RAM; scale ra nhiều instance thì mỗi instance đếm riêng.
 - **Kết quả eval không commit.** `data/runs/` bị gitignore; người ngoài chỉ kiểm lại được m01–m05 qua `apps/api/demo_events/`.
+
+## 5. (Tuỳ chọn) Pháp lý: dữ liệu cá nhân
+
+Phần này tóm tắt lại [PRD §4](PRD.md#4-quyết-định--rủi-ro) (R6 và lưu ý pháp lý), áp vào bản hiện tại. *Không phải tư vấn pháp lý.*
+
+- **Khung áp dụng:** Luật Bảo vệ dữ liệu cá nhân 91/2025/QH15 và Nghị định 356/2025, hiệu lực từ 01/01/2026. Transcript họp có tên người và nội dung phát biểu nên là dữ liệu cá nhân.
+- **Chuyển dữ liệu ra nước ngoài:** gửi transcript tới API/LLM đặt server ở nước ngoài bị tính là chuyển dữ liệu ra nước ngoài. Theo PRD: cần consent theo từng mục đích và hồ sơ đánh giá tác động nộp Bộ Công an trong 60 ngày. Đây là thủ tục nộp hồ sơ, không phải xin phép trước.
+- **Không được miễn vì nhỏ:** miễn trừ cho doanh nghiệp nhỏ không áp dụng với bên cung cấp dịch vụ xử lý dữ liệu, nên một SaaS như Chốt vẫn phải tuân thủ.
+- **Đã chuẩn bị gì:**
+  - Bảng `consents` trong `db/migrations/001_init.sql`, tách 3 mục đích: `transcript`, `ai_processing`, `knowledge_base`. Chưa dùng, vì bản hiện tại lưu trong RAM.
+  - `data/runs/` không commit, vì sau này có thể chứa nội dung họp thật.
+  - Đổi LLM sang model tự host chỉ cần sửa `.env` (`LLM_BASE_URL`, xem [ARCHITECTURE](ARCHITECTURE.md)).
+  - Bộ test hiện chỉ có kịch bản tự viết/tổng hợp, chưa đụng tới dữ liệu của ai.
+- **Chưa làm:** màn hình thu consent, thông báo cho người tham gia họp, hồ sơ chuyển dữ liệu, che PII trước khi gửi LLM, host trong Việt Nam. Trước khi chạy pilot với họp thật thì phải có ít nhất consent + hồ sơ, hoặc chuyển sang host trong nước với model tự host.
