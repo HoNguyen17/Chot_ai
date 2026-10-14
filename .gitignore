@@ -32,3 +32,6 @@ claude/
 
 # Bản lưu trữ local (theo quy tắc: không xoá, chuyển vào _archive/)
 _archive/
+
+#docs
+docs/

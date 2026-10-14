@@ -14,7 +14,7 @@ Dán transcript → biết ngay điều gì *thật sự đã chốt*, ai làm g
 ![Next.js](https://img.shields.io/badge/next.js-16-black)
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](LICENSE)
 
-[**Dùng thử demo**](https://chot.nashng.dev) · [Bài nộp Mission 2](docs/MISSION2.md) · [Kịch bản video](docs/VIDEO_SCRIPT.md) · [PRD](docs/PRD.md)
+ [**Dùng thử demo**](https://chot.nashng.dev) 
 
 <img src="assets/demo.gif" alt="Dán transcript m01 → Decision Ledger có bằng chứng" width="800" />
 
@@ -22,16 +22,19 @@ Dán transcript → biết ngay điều gì *thật sự đã chốt*, ai làm g
 
 ## Mục lục
 
-- [Vì sao có Chốt](#vì-sao-có-chốt)
-- [Tính năng](#tính-năng)
-- [Kết quả đo](#kết-quả-đo)
-- [Cách hoạt động](#cách-hoạt-động)
-- [Chạy local](#chạy-local)
-- [Sử dụng](#sử-dụng)
-- [Cấu trúc thư mục](#cấu-trúc-thư-mục)
-- [Tài liệu](#tài-liệu)
+- [Chốt](#chốt)
+  - [Mục lục](#mục-lục)
+  - [Vì sao có Chốt](#vì-sao-có-chốt)
+  - [Tính năng](#tính-năng)
+  - [Kết quả đo](#kết-quả-đo)
+  - [Cách hoạt động](#cách-hoạt-động)
+  - [Chạy local](#chạy-local)
+  - [Sử dụng](#sử-dụng)
+  - [Cấu trúc thư mục](#cấu-trúc-thư-mục)
+  - [Giấy phép](#giấy-phép)
+<!-- - [Tài liệu](#tài-liệu)
 - [Đã làm / Chưa làm](#đã-làm--chưa-làm)
-- [Deploy](#deploy)
+- [Deploy](#deploy) -->
 - [Giấy phép](#giấy-phép)
 
 ## Vì sao có Chốt
@@ -89,7 +92,7 @@ flowchart LR
   UI --> E["Xuất .md / .csv / .json"]
 ```
 
-Một mục chỉ là **Đã chốt** khi: người chủ trì đồng ý, không rào đón ("tạm thời", "nếu mà"), và không có câu nào sau đó lật lại. Chi tiết: [docs/DATA_DESIGN.md](docs/DATA_DESIGN.md), [ADR-0002](docs/adr/0002-llm-labels-code-decides.md), [ADR-0003](docs/adr/0003-precision-over-recall.md).
+Một mục chỉ là **Đã chốt** khi: người chủ trì đồng ý, không rào đón ("tạm thời", "nếu mà"), và không có câu nào sau đó lật lại.
 
 <p align="right"><a href="#chốt">↑ lên đầu</a></p>
 
@@ -188,9 +191,9 @@ chot/
 └── Makefile                  `make help`
 ```
 
-<p align="right"><a href="#chốt">↑ lên đầu</a></p>
+<!-- <p align="right"><a href="#chốt">↑ lên đầu</a></p> -->
 
-## Tài liệu
+<!-- ## Tài liệu
 
 | File | Nội dung |
 |---|---|
@@ -221,9 +224,9 @@ chot/
 - [ ] Thu consent, che PII, tuỳ chọn host trong Việt Nam ([MISSION2 §5](docs/MISSION2.md))
 - [ ] ASR / audio, bot vào họp, tích hợp Jira/Notion, ledger xuyên cuộc họp
 
-<p align="right"><a href="#chốt">↑ lên đầu</a></p>
+<p align="right"><a href="#chốt">↑ lên đầu</a></p> -->
 
-## Deploy
+<!-- ## Deploy
 
 Web: **https://chot.nashng.dev** (Vercel) · API: **https://api.chot.nashng.dev** (Railway, Docker). Không có DB: lưu trong RAM, restart là mất.
 
@@ -232,9 +235,9 @@ bash scripts/deploy_wizard.sh
 ```
 
 Wizard chỉ in hướng dẫn từng bước trên dashboard và kiểm tra bằng curl/nslookup, không tự tạo gì trên dịch vụ nào. Biến môi trường: [docs/ARCHITECTURE.md §6](docs/ARCHITECTURE.md#6-deploy).
-**Chi phí:** Vercel Hobby miễn phí. Railway hết trial thì cần gói Hobby (https://railway.com/pricing). LLM tính theo token, nên đặt budget tháng ở OpenAI project.
+**Chi phí:** Vercel Hobby miễn phí. Railway hết trial thì cần gói Hobby (https://railway.com/pricing). LLM tính theo token, nên đặt budget tháng ở OpenAI project. -->
 
-<p align="right"><a href="#chốt">↑ lên đầu</a></p>
+<!-- <p align="right"><a href="#chốt">↑ lên đầu</a></p> -->
 
 ## Giấy phép
 

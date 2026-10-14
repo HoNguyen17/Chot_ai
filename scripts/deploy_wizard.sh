@@ -210,6 +210,8 @@ retry_until() {
 }
 
 health_ok() { [[ "$(http_code "https://$1/health")" == "200" ]]; }
+# Biến Railway đã vào container? LEDGER_BUILDER=llm → builder "rules-v1|rules-v1".
+llm_mode() { curl -s -m 15 "https://$1/health" | grep -q '"builder":"rules-v1|rules-v1"'; }
 page_ok()   { [[ "$(http_code "https://$1")" =~ ^(200|307|308)$ ]]; }
 cname_ok()  { nslookup "$1" 1.1.1.1 2>/dev/null | grep -qi "${2%.}"; }
 cors_allows() {
@@ -247,17 +249,21 @@ open_url "https://railway.com/new"
 step "New Project → Deploy from GitHub repo → chọn repo Chot_ai."
 step "Mở service vừa tạo → Settings → Source → Root Directory: apps/api (Railway tự dùng Dockerfile)."
 step "Tab Variables → Raw Editor → dán (điền key thật vào LLM_API_KEY):"
+note "Khối dưới KHÔNG thụt đầu dòng — dán nguyên văn; dấu cách đầu dòng sẽ thành tên biến sai."
 cat <<VARS
-      LEDGER_BUILDER=llm
-      REPLAY_EVENTS_DIR=demo_events
-      LLM_API_KEY=<key OpenAI — KHÔNG có khoảng trắng sau dấu =>
-      LLM_MODEL=gpt-4.1-mini
-      MAX_TRANSCRIPT_CHARS=20000
-      LLM_RATE_LIMIT_PER_HOUR=10
-      LLM_GLOBAL_LIMIT_PER_HOUR=60
-      PUBLIC_DEMO=true
-      CORS_ORIGINS=https://$WEB_HOST
+
+LEDGER_BUILDER=llm
+REPLAY_EVENTS_DIR=demo_events
+LLM_API_KEY=<key OpenAI, viết liền sau dấu =>
+LLM_MODEL=gpt-4.1-mini
+MAX_TRANSCRIPT_CHARS=20000
+LLM_RATE_LIMIT_PER_HOUR=10
+LLM_GLOBAL_LIMIT_PER_HOUR=60
+PUBLIC_DEMO=true
+CORS_ORIGINS=https://$WEB_HOST
+
 VARS
+step "Bấm Update Variables, rồi Deploy ở thanh trên cùng (biến chỉ có tác dụng sau khi deploy)."
 note "Không cần đặt PORT — Railway tự cấp, Dockerfile đã đọc \$PORT."
 step "Bấm Deploy, đợi tab Deployments báo thành công (log có 'Uvicorn running on')."
 pause "Deploy xanh thì Enter…"
@@ -268,6 +274,7 @@ step "Settings → Networking → Generate Domain (nếu hỏi Target port: lấ
 ask RAILWAY_DOMAIN "Dán domain Railway vừa tạo (vd. chot-api-production.up.railway.app, không có https://):"
 RAILWAY_DOMAIN="${RAILWAY_DOMAIN#https://}"; RAILWAY_DOMAIN="${RAILWAY_DOMAIN%/}"
 retry_until "https://$RAILWAY_DOMAIN/health trả 200" health_ok "$RAILWAY_DOMAIN"
+retry_until "API chạy chế độ LLM (biến Variables đã có tác dụng)" llm_mode "$RAILWAY_DOMAIN"
 step "Vẫn ở Networking → Custom Domain → nhập: $API_HOST"
 step "Railway hiện bản ghi DNS cần thêm: copy giá trị CNAME (và TXT nếu có)."
 ask RAILWAY_CNAME "Dán giá trị CNAME Railway đưa (vd. xxxx.up.railway.app):"
@@ -315,6 +322,7 @@ retry_until "DNS $WEB_HOST → $VERCEL_CNAME" cname_ok "$WEB_HOST" "$VERCEL_CNAM
 retry_until "DNS $API_HOST → $RAILWAY_CNAME" cname_ok "$API_HOST" "$RAILWAY_CNAME"
 note "Nếu Railway/Vercel còn báo 'Waiting for DNS / Pending', đợi SSL được cấp rồi thử lại."
 retry_until "https://$API_HOST/health trả 200" health_ok "$API_HOST"
+retry_until "API chạy chế độ LLM" llm_mode "$API_HOST"
 retry_until "https://$WEB_HOST mở được" page_ok "$WEB_HOST"
 retry_until "CORS cho phép https://$WEB_HOST" cors_allows "https://$WEB_HOST"
 retry_until "CORS chặn origin lạ (https://evil.example)" cors_blocks "https://evil.example"
