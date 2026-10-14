@@ -14,7 +14,7 @@ Dán transcript → biết ngay điều gì *thật sự đã chốt*, ai làm g
 ![Next.js](https://img.shields.io/badge/next.js-16-black)
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](LICENSE)
 
- [**Dùng thử demo**](https://chot.nashng.dev) 
+ [**Dùng thử demo**](https://chot.nashng.dev) · [**Xem video demo**](https://youtu.be/wdBGOkLPdsg) 
 
 <img src="assets/demo.gif" alt="Dán transcript m01 → Decision Ledger có bằng chứng" width="800" />
 
@@ -24,6 +24,7 @@ Dán transcript → biết ngay điều gì *thật sự đã chốt*, ai làm g
 
 - [Chốt](#chốt)
   - [Mục lục](#mục-lục)
+  - [Video demo (YouTube)](#video-demo-youtube)
   - [Vì sao có Chốt](#vì-sao-có-chốt)
   - [Tính năng](#tính-năng)
   - [Kết quả đo](#kết-quả-đo)
@@ -36,6 +37,14 @@ Dán transcript → biết ngay điều gì *thật sự đã chốt*, ai làm g
 - [Đã làm / Chưa làm](#đã-làm--chưa-làm)
 - [Deploy](#deploy) -->
 - [Giấy phép](#giấy-phép)
+
+## Video demo (YouTube)
+
+[![Video demo Chốt trên YouTube](https://img.youtube.com/vi/wdBGOkLPdsg/hqdefault.jpg)](https://youtu.be/wdBGOkLPdsg)
+
+▶️ https://youtu.be/wdBGOkLPdsg
+
+<p align="right"><a href="#chốt">↑ lên đầu</a></p>
 
 ## Vì sao có Chốt
 
