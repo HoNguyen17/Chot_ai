@@ -12,6 +12,7 @@ Dán transcript → biết ngay điều gì *thật sự đã chốt*, ai làm g
 ![Chốt nhầm](https://img.shields.io/badge/ch%E1%BB%91t%20nh%E1%BA%A7m-0%25%E2%80%934%2C8%25-blue)
 ![Python](https://img.shields.io/badge/python-3.12-3776ab)
 ![Next.js](https://img.shields.io/badge/next.js-16-black)
+[![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](LICENSE)
 
 [**Dùng thử demo**](https://chot.nashng.dev) · [Bài nộp Mission 2](docs/MISSION2.md) · [Kịch bản video](docs/VIDEO_SCRIPT.md) · [PRD](docs/PRD.md)
 
@@ -237,6 +238,6 @@ Wizard chỉ in hướng dẫn từng bước trên dashboard và kiểm tra b�
 
 ## Giấy phép
 
-Chưa chọn giấy phép.
+[MIT](LICENSE).
 
 Làm bởi **Nguyễn Hồ Nguyễn (Nash)**, 10/2026.
