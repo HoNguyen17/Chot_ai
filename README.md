@@ -74,8 +74,6 @@ Người dùng: PM / trưởng nhóm SME chủ trì họp dự án định kỳ.
 
 "Chốt nhầm" = trong các mục hệ thống ghi "Đã chốt", tỷ lệ mục thật ra chưa chốt. Lỗi duy nhất của lần chạy đầu-cuối là LLM coi "Ừ." là đồng ý; luật mới chặn lỗi này, dòng cuối là cùng sự kiện đó chạy lại.
 
-Điểm yếu hiện tại: recall thấp, vướng mắc chỉ bắt được 7/74. Test case (cả case thất bại) ở [docs/MISSION2.md](docs/MISSION2.md); lịch sử từng lần đo ở [docs/EVAL_LOG.md](docs/EVAL_LOG.md).
-
 <p align="right"><a href="#chốt">↑ lên đầu</a></p>
 
 ## Cách hoạt động
