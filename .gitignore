@@ -26,3 +26,6 @@ data/synthetic/drafts/
 #claude
 .claude/
 _claude/
+CLAUDE.md
+CLAUDECODE_prompt.md
+claude/
