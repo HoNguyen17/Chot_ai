@@ -27,6 +27,8 @@ class OpenAICompatibleClient:
         self.model = model
         self.temperature = temperature
         self._client = OpenAI(api_key=api_key or "not-needed", base_url=base_url, timeout=timeout)
+        # cộng dồn để tính chi phí
+        self.usage = dict.fromkeys(("calls", "prompt_tokens", "completion_tokens"), 0)
 
     def complete_json(self, prompt: str, schema: dict[str, Any] | None) -> str:
         if schema is not None:
@@ -42,4 +44,8 @@ class OpenAICompatibleClient:
             response_format=response_format,
             messages=[{"role": "user", "content": prompt}],
         )
+        self.usage["calls"] += 1
+        if resp.usage:  # vài server tự host không trả usage
+            self.usage["prompt_tokens"] += resp.usage.prompt_tokens
+            self.usage["completion_tokens"] += resp.usage.completion_tokens
         return resp.choices[0].message.content or "{}"

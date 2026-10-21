@@ -7,6 +7,9 @@ Ví dụ (chạy từ thư mục gốc repo, sau `make install`):
   # Pipeline chính (LLM + luật). Lưu sự kiện LLM để replay khi chỉ sửa luật.
   python -m chot.eval.run --system llm --gold data/gold --save data/runs
 
+  # Họp dài L1–L4 (không áp MAX_TRANSCRIPT_CHARS của API)
+  python -m chot.eval.run --system llm --transcripts data/long/raw --gold data/long/gold --save data/runs
+
   # Replay sự kiện LLM đã lưu qua luật mới (không tốn token)
   python -m chot.eval.run --system replay --events data/runs/<run>/events --gold data/gold
 
@@ -19,6 +22,7 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import json
+import os
 import sys
 from pathlib import Path
 
@@ -40,11 +44,12 @@ def _load_gold(path: Path) -> GoldMeeting:
     return GoldMeeting.model_validate_json(path.read_text(encoding="utf-8"))
 
 
-def _builder(args: argparse.Namespace) -> LedgerBuilder | None:
+def _builder(args: argparse.Namespace) -> tuple[LedgerBuilder | None, object | None]:
+    """Trả (builder, client LLM nếu có) — client giữ `usage` để tính chi phí."""
     if args.system == "keyword":
         from chot.adapters.baselines import KeywordBaseline
 
-        return KeywordBaseline()
+        return KeywordBaseline(), None
     if args.system in ("llm", "summary"):
         from chot.adapters.llm import LLMEventExtractor, OpenAICompatibleClient
         from chot.config import get_settings
@@ -56,9 +61,17 @@ def _builder(args: argparse.Namespace) -> LedgerBuilder | None:
         if args.system == "summary":
             from chot.adapters.baselines.summary_prompt import SummaryPromptBaseline
 
-            return SummaryPromptBaseline(client)
-        return RulesLedgerBuilder(LLMEventExtractor(client))
-    return None
+            return SummaryPromptBaseline(client), client
+        return RulesLedgerBuilder(LLMEventExtractor(client)), client
+    return None, None
+
+
+def _with_cost(usage: dict) -> dict:
+    """Chi phí USD theo PRICE_IN_PER_M / PRICE_OUT_PER_M (giá mỗi 1M token) trong .env."""
+    price_in = float(os.environ.get("PRICE_IN_PER_M") or 0)
+    price_out = float(os.environ.get("PRICE_OUT_PER_M") or 0)
+    cost = (usage["prompt_tokens"] * price_in + usage["completion_tokens"] * price_out) / 1e6
+    return {**usage, "cost_usd": round(cost, 4)}
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -88,7 +101,7 @@ def main(argv: list[str] | None = None) -> int:
         (run_dir / "ledgers").mkdir(parents=True)
         (run_dir / "events").mkdir()
 
-    builder = _builder(args)
+    builder, client = _builder(args)
     total = Counts()
     per_meeting = {}
     for gpath in gold_files:
@@ -127,7 +140,13 @@ def main(argv: list[str] | None = None) -> int:
         total.add(counts)
 
     summary = summarize(total)
+    usage = _with_cost(client.usage) if client else None
     print(render_table(summary, f"{args.system} — {len(per_meeting)} cuộc họp"))
+    if usage:
+        print(
+            f"\nToken: {usage['prompt_tokens']} vào / {usage['completion_tokens']} ra, "
+            f"{usage['calls']} lần gọi, ~${usage['cost_usd']}"
+        )
     if args.show_errors and total.errors:
         print("\nLỗi chi tiết:")
         for e in total.errors:
@@ -137,6 +156,7 @@ def main(argv: list[str] | None = None) -> int:
             "system": args.system,
             "summary": summary,
             "per_meeting": per_meeting,
+            "usage": usage,
             "errors": total.errors,
         }
         (run_dir / "report.json").write_text(

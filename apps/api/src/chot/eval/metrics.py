@@ -40,6 +40,7 @@ class GoldItem(BaseModel):
     deadline_text: str | None = None
     evidence: list[str] = Field(default_factory=list)
     note: str | None = None
+    scope: str | None = None  # knowledge: "meeting" | "durable" (M3); thiếu = không chấm
 
 
 class GoldMeeting(BaseModel):
@@ -58,6 +59,7 @@ def ledger_as_gold(ledger: Ledger) -> GoldMeeting:
                 type=i.type,
                 status=i.status,
                 content=i.content,
+                thread=i.thread,
                 owner=i.owner,
                 decided_by=i.decided_by,
                 deadline=i.deadline,
@@ -87,6 +89,15 @@ class Counts:
     quotes_total: int = 0
     quotes_valid: int = 0
     hallucinated_people: int = 0
+    pred_task_open: int = 0
+    pred_task_open_wrong: int = 0
+    thread_pairs: int = 0
+    thread_pairs_same: int = 0
+    meetings: int = 0
+    questions: int = 0
+    questions_gold_agree: int = 0
+    scope_total: int = 0
+    scope_correct: int = 0
     by_group: dict[str, list[int]] = field(default_factory=dict)  # group -> [pred, gold, matched]
     errors: list[str] = field(default_factory=list)
 
@@ -109,7 +120,7 @@ def _ratio(a: int, b: int) -> float | None:
 def score_meeting(
     pred: GoldMeeting, gold: GoldMeeting, tr: Transcript | None, pred_ledger: Ledger | None = None
 ) -> Counts:
-    c = Counts(pred_items=len(pred.items), gold_items=len(gold.items))
+    c = Counts(pred_items=len(pred.items), gold_items=len(gold.items), meetings=1)
 
     # 1) Ghép cặp tham lam theo số câu bằng chứng trùng nhau
     pairs: dict[str, str] = {}  # gold_id -> pred_id
@@ -149,6 +160,22 @@ def score_meeting(
                     + (f" — gold: {g.status}" if g else " — gold: không có")
                 )
 
+    # 2b) Việc nhầm (M3): task "Đã nhận" mà gold không coi là việc đã nhận
+    # 2c) Câu hỏi cho người dùng (M2: mục needs_confirmation) và bao nhiêu câu gold cũng cần hỏi
+    for p in pred.items:
+        g = gold_by_pred.get(p.id)
+        if p.status == Status.NEEDS_CONFIRMATION:
+            c.questions += 1
+            c.questions_gold_agree += bool(g and g.status == Status.NEEDS_CONFIRMATION)
+        if p.type == ItemType.TASK and p.status == Status.OPEN:
+            c.pred_task_open += 1
+            if not g or g.status != Status.OPEN:
+                c.pred_task_open_wrong += 1
+                c.errors.append(
+                    f"[{pred.meeting_id}] VIỆC NHẦM {p.id} ({', '.join(p.evidence)}): {p.content[:70]}"
+                    + (f" — gold: {g.status}" if g else " — gold: không có")
+                )
+
     # 3) Trạng thái cuối, supersession, owner, deadline
     for g in gold.items:
         p = pmap.get(pairs.get(g.id, ""))
@@ -164,6 +191,9 @@ def score_meeting(
                 c.gold_superseded_hit += 1
         if p is None:
             continue
+        if g.type == ItemType.KNOWLEDGE and g.scope:
+            c.scope_total += 1
+            c.scope_correct += (p.scope or "meeting") == g.scope  # M2 chưa có Kho → "meeting"
         if p.status == g.status:
             c.status_correct += 1
         if g.type == ItemType.TASK:
@@ -180,6 +210,14 @@ def score_meeting(
                 c.errors.append(
                     f"[{gold.meeting_id}] SAI HẠN {g.id}: dự đoán {p.deadline} / gold {g.deadline}"
                 )
+
+    # 3b) Nhất quán thread (M3): cặp mục gold cùng thread → hệ thống có giữ cùng thread không
+    matched = [(g, pmap[pairs[g.id]]) for g in gold.items if g.id in pairs and g.thread]
+    for i, (g1, p1) in enumerate(matched):
+        for g2, p2 in matched[i + 1 :]:
+            if g1.thread == g2.thread:
+                c.thread_pairs += 1
+                c.thread_pairs_same += bool(p1.thread) and p1.thread == p2.thread
 
     # 4) Grounding tầng 1 + người bịa
     if tr and pred_ledger:
@@ -201,6 +239,11 @@ def summarize(c: Counts) -> dict:
     }
     return {
         "wrong_final_rate": _ratio(c.pred_final_wrong, c.pred_final),
+        "false_action_rate": _ratio(c.pred_task_open_wrong, c.pred_task_open),
+        "thread_consistency": _ratio(c.thread_pairs_same, c.thread_pairs),
+        "questions_per_meeting": _ratio(c.questions, c.meetings),
+        "question_precision": _ratio(c.questions_gold_agree, c.questions),
+        "knowledge_scope_acc": _ratio(c.scope_correct, c.scope_total),
         "final_state_accuracy": _ratio(c.gold_final_hit, c.gold_final),
         "supersession_recall": _ratio(c.gold_superseded_hit, c.gold_superseded),
         "item_precision": _ratio(c.matched, c.pred_items),
@@ -241,6 +284,15 @@ def render_table(summary: dict, title: str) -> str:
     rows.append(
         f"| item_precision / recall | {summary['item_precision']} / {summary['item_recall']} | — | — |"
     )
+    for key in (
+        "false_action_rate",
+        "thread_consistency",
+        "questions_per_meeting",
+        "question_precision",
+        "knowledge_scope_acc",
+    ):  # M3, chưa có mục tiêu
+        v = summary.get(key)
+        rows.append(f"| {key} | {'-' if v is None else v} | — | — |")
     rows.append(
         f"| hallucinated_people | {summary['hallucinated_people']} | 0 | "
         f"{'✅' if summary['hallucinated_people'] == 0 else '❌'} |"
