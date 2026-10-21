@@ -1,6 +1,6 @@
 {
   "meeting_id": "L4",
-  "labeler": "claude",
+  "labeler": "nguyen",
   "items": [
     {
       "id": "K1",
@@ -152,7 +152,7 @@
         "u030",
         "u031"
       ],
-      "note": "'Dạ, em gọi… ngay trong sáng nay' = nhận rõ → open. Hạn = ngày họp 2/11. ⚠ dates.py chưa nhận 'sáng nay' (chỉ có hôm nay/chiều nay/tối nay)."
+      "note": "'Dạ, em gọi… ngay trong sáng nay' = nhận rõ → open. Hạn = ngày họp 2/11. ⚠ dates.py chưa nhận 'sáng nay' (chỉ có hôm nay/chiều nay/tối nay). theo dõi tiếp thời gian coi trong buổi họp có giải quyết luôn chưa"
     },
     {
       "id": "B4",
@@ -203,7 +203,7 @@
         "u036",
         "u043"
       ],
-      "note": "Hạnh (đồng chủ trì) đề xuất 3 lớp (u036), Mi đề xuất thùng 5 lớp (u043), Hạnh đồng ý và chốt rõ (u048–u049). Bách không phản đối. ⚠ CẦN NASH QUYẾT: đọc chặt quy tắc 10 ('người kia chưa đồng ý') thì là needs_confirmation; tôi gán final vì Bách không hề phản đối (khác m23 D1)."
+      "note": "Hạnh (đồng chủ trì) đề xuất 3 lớp (u036), Mi đề xuất thùng 5 lớp (u043), Hạnh đồng ý và chốt rõ (u048–u049). Bách không phản đối."
     },
     {
       "id": "B5",
@@ -951,7 +951,7 @@
         "u182",
         "u179"
       ],
-      "note": "Hạnh (đồng chủ trì) quyết rõ; Bách không phản đối và giao tiếp việc nhắc nợ (u184). ⚠ CẦN NASH QUYẾT như D2 (quy tắc 10 đọc chặt → needs_confirmation)."
+      "note": "Hạnh (đồng chủ trì) quyết rõ; Bách không phản đối và giao tiếp việc nhắc nợ (u184)."
     },
     {
       "id": "T20",
