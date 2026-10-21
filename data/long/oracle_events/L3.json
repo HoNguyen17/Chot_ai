@@ -1,0 +1,1370 @@
+{
+  "threads": [
+    {
+      "id": "venue",
+      "title": "Địa điểm tổ chức gala"
+    },
+    {
+      "id": "entertainment",
+      "title": "Chương trình biểu diễn"
+    },
+    {
+      "id": "led",
+      "title": "Màn LED cho gala"
+    },
+    {
+      "id": "winter-dish",
+      "title": "Món mới mùa đông"
+    },
+    {
+      "id": "lunch-combo",
+      "title": "Giá combo trưa"
+    },
+    {
+      "id": "customer-review",
+      "title": "Review của khách"
+    },
+    {
+      "id": "tiktok-reviewer",
+      "title": "Có chạy TikTok với food reviewer không"
+    },
+    {
+      "id": "thu-duc-shift",
+      "title": "Chi nhánh Thủ Đức có mở thêm ca sáng không"
+    },
+    {
+      "id": "logo",
+      "title": "Chọn phương án logo"
+    },
+    {
+      "id": "slogan",
+      "title": "Slogan chính"
+    },
+    {
+      "id": "menu-board",
+      "title": "Bộ menu board"
+    },
+    {
+      "id": "font-license",
+      "title": "License font chữ"
+    },
+    {
+      "id": "promo-1111",
+      "title": "Chương trình khuyến mãi 11.11"
+    },
+    {
+      "id": "livestream",
+      "title": "Kênh livestream"
+    },
+    {
+      "id": "delivery",
+      "title": "Giao hàng nội thành"
+    },
+    {
+      "id": "branch-location",
+      "title": "Mặt bằng chi nhánh thứ 5"
+    },
+    {
+      "id": "banh-mi",
+      "title": "Có bán thêm bánh mì buổi sáng không"
+    },
+    {
+      "id": "espresso-machine",
+      "title": "Máy pha cà phê chi nhánh Quận 3"
+    },
+    {
+      "id": "salmon-set",
+      "title": "Set menu cá hồi khi giá tăng"
+    },
+    {
+      "id": "order-flow",
+      "title": "Flow order trên tablet"
+    },
+    {
+      "id": "sales-channel",
+      "title": "Kênh bán mới"
+    },
+    {
+      "id": "freeship",
+      "title": "Ngưỡng freeship"
+    },
+    {
+      "id": "warehouse",
+      "title": "Kệ kho"
+    },
+    {
+      "id": "product-review",
+      "title": "Review sữa rửa mặt mới"
+    },
+    {
+      "id": "curriculum",
+      "title": "Có đổi giáo trình lớp Kids không"
+    },
+    {
+      "id": "midterm",
+      "title": "Lịch thi giữa kỳ"
+    },
+    {
+      "id": "weekend-class",
+      "title": "Lớp sáng thứ Bảy cho Starters 3"
+    },
+    {
+      "id": "tet-tour",
+      "title": "Sản phẩm tour chính dịp Tết"
+    },
+    {
+      "id": "private-tour",
+      "title": "Tour riêng cho khách đoàn Hòa An"
+    },
+    {
+      "id": "hotel-deposit",
+      "title": "Đặt cọc khách sạn dịp Tết"
+    }
+  ],
+  "events": [
+    {
+      "utt": "u002",
+      "thread": "venue",
+      "kind": "propose",
+      "speaker": "Hảo",
+      "key": "ks-quan-1",
+      "content": "Khách sạn quận 1, sảnh 400 chỗ, giá thuê 180 triệu",
+      "quote": "khách nghiêng về khách sạn ở quận 1, sảnh 400 chỗ"
+    },
+    {
+      "utt": "u003",
+      "thread": "venue",
+      "kind": "object",
+      "speaker": "Nhung",
+      "key": "ks-quan-1",
+      "content": "Tháng 12 kín lịch cuối tuần, chỉ còn 10/12",
+      "quote": "Sảnh đó tháng 12 kín lịch cuối tuần"
+    },
+    {
+      "utt": "u004",
+      "thread": "entertainment",
+      "kind": "propose",
+      "speaker": "Thoa",
+      "key": "acoustic",
+      "content": "Ban nhạc acoustic 5 người",
+      "quote": "em đề xuất mời ban nhạc acoustic 5 người"
+    },
+    {
+      "utt": "u007",
+      "thread": "winter-dish",
+      "kind": "propose",
+      "speaker": "Phụng",
+      "key": "banh-canh-cua",
+      "content": "Bánh canh cua",
+      "quote": "Món mới em đề xuất bánh canh cua"
+    },
+    {
+      "utt": "u008",
+      "thread": "winter-dish",
+      "kind": "propose",
+      "speaker": "Hảo",
+      "key": "lau-mini",
+      "content": "Lẩu mini một người",
+      "quote": "lẩu mini một người đang trend trên TikTok"
+    },
+    {
+      "utt": "u009",
+      "thread": "winter-dish",
+      "kind": "agree",
+      "speaker": "Vân",
+      "key": "lau-mini",
+      "content": "Chốt lẩu mini",
+      "quote": "Ok chốt lẩu mini"
+    },
+    {
+      "utt": "u010",
+      "thread": "winter-dish",
+      "kind": "object",
+      "speaker": "Nhung",
+      "key": "lau-mini",
+      "content": "Cần bếp từ mỗi bàn, ~40 triệu/chi nhánh",
+      "quote": "lẩu mini cần bếp từ ở mỗi bàn"
+    },
+    {
+      "utt": "u011",
+      "thread": "winter-dish",
+      "kind": "reopen",
+      "speaker": "Vân",
+      "key": "lau-mini",
+      "content": "Huỷ chốt lẩu mini",
+      "quote": "Ờ thôi khoan"
+    },
+    {
+      "utt": "u011",
+      "thread": "winter-dish",
+      "kind": "defer",
+      "speaker": "Vân",
+      "content": "Món mới để tuần sau quyết",
+      "quote": "vậy món mới chưa chốt được"
+    },
+    {
+      "utt": "u011",
+      "thread": "winter-dish",
+      "kind": "assign",
+      "speaker": "Vân",
+      "key": "chi-phi-bep-tu",
+      "owner": "Nhung",
+      "content": "Tính chi phí bếp từ cụ thể",
+      "quote": "Nhung tính chi phí bếp từ cụ thể"
+    },
+    {
+      "utt": "u012",
+      "thread": "winter-dish",
+      "kind": "commit",
+      "speaker": "Nhung",
+      "key": "chi-phi-bep-tu",
+      "owner": "Nhung",
+      "deadline_text": "thứ Tư",
+      "quote": "Ok anh, thứ Tư em gửi bảng chi phí"
+    },
+    {
+      "utt": "u013",
+      "thread": "lunch-combo",
+      "kind": "propose",
+      "speaker": "Hảo",
+      "key": "59k",
+      "content": "Combo trưa 59.000đ",
+      "quote": "Combo trưa em đề xuất 59 nghìn"
+    },
+    {
+      "utt": "u014",
+      "thread": "lunch-combo",
+      "kind": "object",
+      "speaker": "Phụng",
+      "key": "59k",
+      "content": "59 nghìn là lỗ",
+      "quote": "59 nghìn là lỗ"
+    },
+    {
+      "utt": "u014",
+      "thread": "lunch-combo",
+      "kind": "info",
+      "speaker": "Phụng",
+      "content": "Food cost combo trưa 45%, mục tiêu dưới 35%",
+      "quote": "Food cost combo trưa hiện tại 45%, mục tiêu công ty là dưới 35%"
+    },
+    {
+      "utt": "u015",
+      "thread": "lunch-combo",
+      "kind": "agree",
+      "speaker": "Vân",
+      "key": "65k",
+      "content": "Giá combo trưa 65.000đ",
+      "quote": "Vậy giá combo trưa 65 nghìn, chốt"
+    },
+    {
+      "utt": "u017",
+      "thread": "customer-review",
+      "kind": "feedback",
+      "speaker": "Nhung",
+      "content": "Khách phàn nàn chờ món hơn 20 phút giờ trưa",
+      "quote": "nhiều khách phàn nàn giờ trưa chờ món hơn 20 phút"
+    },
+    {
+      "utt": "u018",
+      "thread": "tiktok-reviewer",
+      "kind": "propose",
+      "speaker": "Hảo",
+      "key": "tiktok-reviewer",
+      "content": "Chạy TikTok với food reviewer",
+      "hedged": true,
+      "quote": "Em nghĩ mình nên chạy TikTok với mấy bạn food reviewer"
+    },
+    {
+      "utt": "u019",
+      "thread": "tiktok-reviewer",
+      "kind": "defer",
+      "speaker": "Vân",
+      "content": "Chờ case study trước khi quyết",
+      "quote": "Anh chưa chắc hiệu quả"
+    },
+    {
+      "utt": "u019",
+      "thread": "tiktok-reviewer",
+      "kind": "assign",
+      "speaker": "Vân",
+      "key": "case-study",
+      "owner": "Hảo",
+      "content": "Gửi vài case study TikTok food reviewer",
+      "quote": "Hảo gửi anh vài case study trước đã"
+    },
+    {
+      "utt": "u020",
+      "thread": "tiktok-reviewer",
+      "kind": "commit",
+      "speaker": "Hảo",
+      "key": "case-study",
+      "owner": "Hảo",
+      "deadline_text": "thứ Hai tuần sau",
+      "quote": "Dạ thứ Hai tuần sau em gửi anh"
+    },
+    {
+      "utt": "u021",
+      "thread": "thu-duc-shift",
+      "kind": "propose",
+      "speaker": "Hảo",
+      "key": "ca-sang",
+      "content": "Mở thêm ca sáng ở Thủ Đức",
+      "quote": "Chi nhánh Thủ Đức có nên mở thêm ca sáng không anh"
+    },
+    {
+      "utt": "u022",
+      "thread": "thu-duc-shift",
+      "kind": "object",
+      "speaker": "Nhung",
+      "key": "ca-sang",
+      "content": "Thiếu người",
+      "quote": "Mở ca sáng thì thiếu người"
+    },
+    {
+      "utt": "u025",
+      "thread": "logo",
+      "kind": "request",
+      "speaker": "Hảo",
+      "content": "Khách yêu cầu thêm bản logo dạng chữ đơn giản để in lên ly giấy",
+      "quote": "Họ request thêm một bản logo dạng chữ đơn giản để in lên ly giấy"
+    },
+    {
+      "utt": "u026",
+      "thread": "logo",
+      "kind": "propose",
+      "speaker": "Phụng",
+      "key": "la-tra",
+      "content": "Logo lá trà cách điệu",
+      "quote": "Phương án 1 là lá trà cách điệu"
+    },
+    {
+      "utt": "u026",
+      "thread": "logo",
+      "kind": "propose",
+      "speaker": "Phụng",
+      "key": "chu-viet-tay",
+      "content": "Logo chữ viết tay",
+      "quote": "phương án 2 là chữ viết tay"
+    },
+    {
+      "utt": "u026",
+      "thread": "logo",
+      "kind": "propose",
+      "speaker": "Phụng",
+      "key": "con-dau",
+      "content": "Logo con dấu tròn",
+      "quote": "phương án 3 là con dấu tròn"
+    },
+    {
+      "utt": "u027",
+      "thread": "logo",
+      "kind": "object",
+      "speaker": "Nhung",
+      "key": "chu-viet-tay",
+      "content": "In nhỏ trên ly dễ nhòe nét",
+      "quote": "Phương án 2 in nhỏ trên ly thì nét chữ viết tay dễ bị nhòe"
+    },
+    {
+      "utt": "u028",
+      "thread": "logo",
+      "kind": "agree",
+      "speaker": "Vân",
+      "key": "chu-viet-tay",
+      "content": "Thích phương án 2",
+      "hedged": true,
+      "quote": "Chị vẫn thích phương án 2 hơn"
+    },
+    {
+      "utt": "u030",
+      "thread": "logo",
+      "kind": "assign",
+      "speaker": "Vân",
+      "key": "logo-ly",
+      "owner": "Phụng",
+      "content": "Làm thêm bản logo chữ đơn giản cho ly",
+      "deadline_text": "thứ Sáu này",
+      "quote": "Phụng làm thêm bản logo chữ đơn giản cho ly, thứ Sáu này gửi chị"
+    },
+    {
+      "utt": "u031",
+      "thread": "logo",
+      "kind": "commit",
+      "speaker": "Phụng",
+      "key": "logo-ly",
+      "owner": "Phụng",
+      "deadline_text": "thứ Sáu",
+      "quote": "Dạ ok chị, thứ Sáu em gửi"
+    },
+    {
+      "utt": "u032",
+      "thread": "slogan",
+      "kind": "propose",
+      "speaker": "Nhung",
+      "key": "tra-moc",
+      "content": "Slogan: Trà mộc vị thật",
+      "quote": "Trà mộc vị thật"
+    },
+    {
+      "utt": "u032",
+      "thread": "slogan",
+      "kind": "propose",
+      "speaker": "Nhung",
+      "key": "uong-cham",
+      "content": "Slogan: Uống chậm sống chậm",
+      "quote": "Uống chậm sống chậm"
+    },
+    {
+      "utt": "u033",
+      "thread": "slogan",
+      "kind": "object",
+      "speaker": "Hảo",
+      "key": "uong-cham",
+      "content": "Khách thấy câu này hơi buồn",
+      "quote": "câu Uống chậm sống chậm nghe hơi buồn"
+    },
+    {
+      "utt": "u033",
+      "thread": "slogan",
+      "kind": "feedback",
+      "speaker": "Hảo",
+      "content": "Khách thấy slogan Uống chậm sống chậm hơi buồn, muốn năng động hơn",
+      "quote": "Khách feedback là câu Uống chậm sống chậm nghe hơi buồn, họ muốn năng động hơn"
+    },
+    {
+      "utt": "u034",
+      "thread": "slogan",
+      "kind": "agree",
+      "speaker": "Vân",
+      "key": "tra-moc",
+      "content": "Slogan chính: Trà mộc vị thật",
+      "quote": "Vậy chốt dùng Trà mộc vị thật làm slogan chính nhé"
+    },
+    {
+      "utt": "u036",
+      "thread": "menu-board",
+      "kind": "request",
+      "speaker": "Hảo",
+      "content": "Khách hỏi làm thêm bộ menu board, xong trước khai trương 1/12",
+      "quote": "Bên khách cũng hỏi có làm được bộ menu board luôn không"
+    },
+    {
+      "utt": "u037",
+      "thread": "menu-board",
+      "kind": "info",
+      "speaker": "Vân",
+      "content": "Menu board ngoài scope hợp đồng",
+      "quote": "Menu board thì ngoài scope hợp đồng"
+    },
+    {
+      "utt": "u037",
+      "thread": "menu-board",
+      "kind": "assign",
+      "speaker": "Vân",
+      "key": "bao-gia-menu",
+      "owner": "Hảo",
+      "content": "Báo giá phần menu board cho khách",
+      "quote": "Hảo báo giá phần đó cho khách nha"
+    },
+    {
+      "utt": "u038",
+      "thread": "menu-board",
+      "kind": "commit",
+      "speaker": "Hảo",
+      "key": "bao-gia-menu",
+      "owner": "Hảo",
+      "hedged": true,
+      "quote": "Dạ để em xem lại hợp đồng rồi báo giá"
+    },
+    {
+      "utt": "u039",
+      "thread": "font-license",
+      "kind": "blocker",
+      "speaker": "Phụng",
+      "content": "Font phương án 2 đang dùng bản trial, chưa có license thương mại",
+      "quote": "Font chữ phương án 2 bên mình đang dùng bản trial"
+    },
+    {
+      "utt": "u042",
+      "thread": "promo-1111",
+      "kind": "propose",
+      "speaker": "Hảo",
+      "key": "giam-30",
+      "content": "Giảm giá đồng loạt 30% toàn shop, chạy 3 ngày",
+      "quote": "11.11 em đề xuất giảm giá đồng loạt 30% toàn shop"
+    },
+    {
+      "utt": "u043",
+      "thread": "promo-1111",
+      "kind": "object",
+      "speaker": "Phụng",
+      "key": "giam-30",
+      "content": "Áo khoác bị lỗ",
+      "quote": "Giảm 30% thì mấy mẫu áo khoác lỗ"
+    },
+    {
+      "utt": "u043",
+      "thread": "promo-1111",
+      "kind": "info",
+      "speaker": "Phụng",
+      "content": "Giá vốn áo khoác chiếm ~65% giá bán",
+      "quote": "giá vốn đã chiếm 65% giá bán rồi"
+    },
+    {
+      "utt": "u044",
+      "thread": "promo-1111",
+      "kind": "revise",
+      "speaker": "Hảo",
+      "key": "mua2-tang1",
+      "content": "Mua 2 tặng 1 cho nhóm áo thun, áo khoác giữ giá",
+      "quote": "Vậy làm mua 2 tặng 1 cho nhóm áo thun thôi"
+    },
+    {
+      "utt": "u045",
+      "thread": "promo-1111",
+      "kind": "agree",
+      "speaker": "Vân",
+      "key": "mua2-tang1",
+      "content": "Chốt mua 2 tặng 1 áo thun cho 11.11",
+      "quote": "Ok chốt mua 2 tặng 1 áo thun cho 11.11"
+    },
+    {
+      "utt": "u046",
+      "thread": "promo-1111",
+      "kind": "object",
+      "speaker": "Phụng",
+      "key": "mua2-tang1",
+      "content": "Kho chỉ còn ~300 áo thun, ngày đầu là hết hàng",
+      "quote": "chạy mua 2 tặng 1 thì ngày đầu là hết hàng"
+    },
+    {
+      "utt": "u046",
+      "thread": "promo-1111",
+      "kind": "info",
+      "speaker": "Phụng",
+      "content": "Kho áo thun hiện còn khoảng 300 cái",
+      "quote": "kho áo thun hiện chỉ còn khoảng 300 cái"
+    },
+    {
+      "utt": "u047",
+      "thread": "promo-1111",
+      "kind": "reopen",
+      "speaker": "Vân",
+      "key": "mua2-tang1",
+      "content": "Huỷ chốt mua 2 tặng 1",
+      "quote": "Ờ thôi khoan"
+    },
+    {
+      "utt": "u047",
+      "thread": "promo-1111",
+      "kind": "defer",
+      "speaker": "Vân",
+      "content": "Khuyến mãi 11.11 chưa chốt, đợi số hàng về",
+      "quote": "Vậy khuyến mãi 11.11 chưa chốt được"
+    },
+    {
+      "utt": "u048",
+      "thread": "promo-1111",
+      "kind": "commit",
+      "speaker": "Phụng",
+      "key": "lich-giao-hang",
+      "owner": "Phụng",
+      "content": "Hỏi xưởng lịch giao lô áo thun mới, báo chị Vân",
+      "deadline_text": "thứ Ba tuần sau",
+      "quote": "Em sẽ hỏi xưởng lịch giao lô áo thun mới, thứ Ba tuần sau báo chị"
+    },
+    {
+      "utt": "u049",
+      "thread": "livestream",
+      "kind": "info",
+      "speaker": "Vân",
+      "content": "Doanh thu livestream tuần này giảm 20% so với tuần trước",
+      "quote": "Tuần này doanh thu live giảm 20% so với tuần trước"
+    },
+    {
+      "utt": "u050",
+      "thread": "livestream",
+      "kind": "info",
+      "speaker": "Hảo",
+      "content": "Khung live 8 giờ tối trùng giờ các shop lớn, khách bị chia",
+      "quote": "Khung 8 giờ tối bên mình trùng giờ mấy shop lớn live"
+    },
+    {
+      "utt": "u051",
+      "thread": "livestream",
+      "kind": "commit",
+      "speaker": "Hảo",
+      "key": "doi-gio-live",
+      "owner": "Hảo",
+      "content": "Dời livestream sang 9 giờ tối từ tuần này, theo dõi số liệu",
+      "quote": "Em sẽ dời live sang 9 giờ tối từ tuần này và theo dõi số liệu"
+    },
+    {
+      "utt": "u052",
+      "thread": "delivery",
+      "kind": "feedback",
+      "speaker": "Phụng",
+      "content": "Khách khen đóng gói đẹp hơn nhưng giao nội thành vẫn chậm 3–4 ngày",
+      "quote": "Khách phản hồi đóng gói lần này đẹp hơn, nhưng giao hàng nội thành vẫn chậm 3 đến 4 ngày"
+    },
+    {
+      "utt": "u053",
+      "thread": "delivery",
+      "kind": "assign",
+      "speaker": "Vân",
+      "key": "giao-nhanh",
+      "owner": "Phụng",
+      "content": "Làm việc lại với bên vận chuyển, báo phương án giao nhanh",
+      "deadline_text": "thứ Năm tuần sau",
+      "quote": "Phụng làm việc lại với bên vận chuyển, thứ Năm tuần sau báo chị phương án giao nhanh"
+    },
+    {
+      "utt": "u054",
+      "thread": "delivery",
+      "kind": "commit",
+      "speaker": "Phụng",
+      "key": "giao-nhanh",
+      "owner": "Phụng",
+      "deadline_text": "thứ Năm tuần sau",
+      "quote": "Dạ ok chị, thứ Năm tuần sau em báo"
+    },
+    {
+      "utt": "u057",
+      "thread": "branch-location",
+      "kind": "propose",
+      "speaker": "Hảo",
+      "key": "le-van-sy",
+      "content": "Mặt bằng Lê Văn Sỹ 80 m², 45 triệu/tháng, gần hai trường đại học",
+      "quote": "Mặt bằng đường Lê Văn Sỹ 80 mét vuông, thuê 45 triệu một tháng"
+    },
+    {
+      "utt": "u058",
+      "thread": "branch-location",
+      "kind": "propose",
+      "speaker": "Nhung",
+      "key": "thao-dien",
+      "content": "Mặt bằng Thảo Điền 120 m², 70 triệu/tháng, nhiều khách nước ngoài",
+      "quote": "Mặt bằng ở Thảo Điền 120 mét vuông, 70 triệu"
+    },
+    {
+      "utt": "u059",
+      "thread": "venue",
+      "kind": "propose",
+      "speaker": "Hảo",
+      "key": "hoi-nghi-quan-7",
+      "content": "Trung tâm hội nghị quận 7, sảnh 500 chỗ, 150 triệu, trống 12/12",
+      "quote": "em đề xuất trung tâm hội nghị ở quận 7"
+    },
+    {
+      "utt": "u060",
+      "thread": "venue",
+      "kind": "object",
+      "speaker": "Nhung",
+      "key": "hoi-nghi-quan-7",
+      "content": "Xa khách ở quận 1, phải thuê thêm 6 xe ~15 triệu",
+      "quote": "Quận 7 thì xa khách ở quận 1"
+    },
+    {
+      "utt": "u061",
+      "thread": "entertainment",
+      "kind": "request",
+      "speaker": "Thoa",
+      "content": "Khách hỏi thêm tiết mục ảo thuật cho phần bốc thăm",
+      "quote": "khách có hỏi thêm tiết mục ảo thuật cho phần bốc thăm"
+    },
+    {
+      "utt": "u062",
+      "thread": "venue",
+      "kind": "agree",
+      "speaker": "Vân",
+      "key": "hoi-nghi-quan-7",
+      "content": "Trung tâm hội nghị quận 7, giữ ngày 12/12, thuê thêm xe đưa đón",
+      "quote": "chốt địa điểm trung tâm hội nghị quận 7, giữ đúng ngày 12/12"
+    },
+    {
+      "utt": "u064",
+      "thread": "venue",
+      "kind": "assign",
+      "speaker": "Vân",
+      "key": "dat-coc",
+      "owner": "Nhung",
+      "content": "Đặt cọc trung tâm hội nghị quận 7",
+      "deadline_text": "trước thứ Hai",
+      "quote": "Nhung đặt cọc trung tâm hội nghị trước thứ Hai nhé"
+    },
+    {
+      "utt": "u065",
+      "thread": "venue",
+      "kind": "commit",
+      "speaker": "Nhung",
+      "key": "dat-coc",
+      "owner": "Nhung",
+      "deadline_text": "thứ Hai",
+      "quote": "Ok anh, thứ Hai em đặt cọc"
+    },
+    {
+      "utt": "u066",
+      "thread": "entertainment",
+      "kind": "agree",
+      "speaker": "Vân",
+      "key": "acoustic",
+      "content": "Ban nhạc acoustic, thêm ảo thuật vào phần bốc thăm",
+      "quote": "Phần biểu diễn chốt ban nhạc acoustic"
+    },
+    {
+      "utt": "u067",
+      "thread": "led",
+      "kind": "blocker",
+      "speaker": "Phụng",
+      "content": "Màn LED đang cho thuê sự kiện khác tới 11/12, chưa chắc tháo về kịp",
+      "quote": "Màn LED bên mình đang cho thuê ở sự kiện khác tới ngày 11/12"
+    },
+    {
+      "utt": "u068",
+      "thread": "led",
+      "kind": "assign",
+      "speaker": "Vân",
+      "key": "check-led",
+      "owner": null,
+      "content": "Check lịch tháo dỡ màn LED với đối tác",
+      "quote": "Ai đó check lại lịch tháo dỡ màn LED với bên đối tác giúp anh"
+    },
+    {
+      "utt": "u070",
+      "thread": "entertainment",
+      "kind": "commit",
+      "speaker": "Thoa",
+      "key": "kich-ban",
+      "owner": "Thoa",
+      "content": "Gửi kịch bản chương trình bản nháp cho khách",
+      "deadline_text": "trước 30/10",
+      "quote": "Em sẽ gửi kịch bản chương trình bản nháp cho khách trước 30/10"
+    },
+    {
+      "utt": "u073",
+      "thread": "salmon-set",
+      "kind": "info",
+      "speaker": "Hảo",
+      "content": "Cá hồi tăng giá 25% từ tuần này; food cost set cá hồi lên 48%",
+      "quote": "Supplier cá hồi báo giá tăng 25% từ tuần này"
+    },
+    {
+      "utt": "u074",
+      "thread": "salmon-set",
+      "kind": "propose",
+      "speaker": "Phụng",
+      "key": "tang-gia",
+      "content": "Giữ cá hồi, tăng giá set thêm 40 nghìn",
+      "quote": "Em propose giữ cá hồi, tăng giá set thêm 40 nghìn"
+    },
+    {
+      "utt": "u075",
+      "thread": "salmon-set",
+      "kind": "object",
+      "speaker": "Hảo",
+      "key": "tang-gia",
+      "content": "Food cost vẫn chưa về target 35%",
+      "quote": "Tăng 40 nghìn thì food cost vẫn chưa về target 35%"
+    },
+    {
+      "utt": "u076",
+      "thread": "salmon-set",
+      "kind": "propose",
+      "speaker": "Hảo",
+      "key": "ca-chem",
+      "content": "Thay cá hồi bằng cá chẽm áp chảo",
+      "quote": "Em đề xuất thay cá hồi bằng cá chẽm áp chảo"
+    },
+    {
+      "utt": "u077",
+      "thread": "salmon-set",
+      "kind": "object",
+      "speaker": "Phụng",
+      "key": "ca-chem",
+      "content": "Khách quen order set cá hồi, đổi đột ngột sẽ bị complain",
+      "quote": "đổi đột ngột sẽ có complain"
+    },
+    {
+      "utt": "u078",
+      "thread": "salmon-set",
+      "kind": "agree",
+      "speaker": "Vân",
+      "key": "ca-chem",
+      "content": "Thay cá hồi bằng cá chẽm từ thứ Hai tuần sau; tuần này vẫn bán cá hồi giá cũ",
+      "quote": "chốt thay cá hồi bằng cá chẽm từ thứ Hai tuần sau"
+    },
+    {
+      "utt": "u079",
+      "thread": "salmon-set",
+      "kind": "assign",
+      "speaker": "Vân",
+      "key": "brief-phuc-vu",
+      "owner": "Phụng",
+      "content": "Brief team phục vụ cách giới thiệu món cá chẽm",
+      "deadline_text": "chiều nay",
+      "quote": "Phụng brief cho team phục vụ cách giới thiệu món mới trong chiều nay nhé"
+    },
+    {
+      "utt": "u080",
+      "thread": "salmon-set",
+      "kind": "commit",
+      "speaker": "Phụng",
+      "key": "brief-phuc-vu",
+      "owner": "Phụng",
+      "deadline_text": "chiều nay",
+      "quote": "Ok anh, chiều nay em brief"
+    },
+    {
+      "utt": "u081",
+      "thread": "order-flow",
+      "kind": "blocker",
+      "speaker": "Nhung",
+      "content": "Order bàn VIP trên tablet không in xuống bếp, tối qua sót 2 order",
+      "quote": "order bàn VIP không in xuống bếp"
+    },
+    {
+      "utt": "u082",
+      "thread": "order-flow",
+      "kind": "assign",
+      "speaker": "Vân",
+      "key": "goi-pos",
+      "owner": "Nhung",
+      "content": "Gọi support POS sửa lỗi order bàn VIP",
+      "deadline_text": "trong hôm nay",
+      "quote": "Nhung gọi support bên POS trong hôm nay"
+    },
+    {
+      "utt": "u083",
+      "thread": "order-flow",
+      "kind": "commit",
+      "speaker": "Nhung",
+      "key": "goi-pos",
+      "owner": "Nhung",
+      "quote": "Dạ ok anh, em gọi liền"
+    },
+    {
+      "utt": "u084",
+      "thread": "salmon-set",
+      "kind": "commit",
+      "speaker": "Hảo",
+      "key": "recipe-card",
+      "owner": "Hảo",
+      "content": "Update recipe card món cá chẽm lên group bếp",
+      "deadline_text": "trước thứ Sáu",
+      "quote": "Em sẽ update recipe card món cá chẽm lên group bếp trước thứ Sáu"
+    },
+    {
+      "utt": "u087",
+      "thread": "sales-channel",
+      "kind": "propose",
+      "speaker": "Hảo",
+      "key": "shopee-mall",
+      "content": "Mở Shopee Mall",
+      "quote": "Em đề xuất mở Shopee Mall"
+    },
+    {
+      "utt": "u088",
+      "thread": "sales-channel",
+      "kind": "object",
+      "speaker": "Phụng",
+      "key": "shopee-mall",
+      "content": "Phí tổng ~12% doanh thu",
+      "quote": "phí cố định cộng phí thanh toán tổng khoảng 12% doanh thu"
+    },
+    {
+      "utt": "u088",
+      "thread": "sales-channel",
+      "kind": "info",
+      "speaker": "Phụng",
+      "content": "Phí Shopee Mall (cố định + thanh toán) ~12% doanh thu",
+      "quote": "Shopee Mall phí cố định cộng phí thanh toán tổng khoảng 12% doanh thu"
+    },
+    {
+      "utt": "u089",
+      "thread": "sales-channel",
+      "kind": "propose",
+      "speaker": "Hảo",
+      "key": "tiktok-shop",
+      "content": "Mở TikTok Shop (phí ~8%, có sẵn 3 bạn làm video)",
+      "quote": "TikTok Shop thì phí thấp hơn, khoảng 8%"
+    },
+    {
+      "utt": "u090",
+      "thread": "sales-channel",
+      "kind": "object",
+      "speaker": "Khánh",
+      "key": "tiktok-shop",
+      "content": "TikTok Shop đổi chính sách liên tục",
+      "quote": "TikTok Shop đổi chính sách liên tục"
+    },
+    {
+      "utt": "u091",
+      "thread": "sales-channel",
+      "kind": "agree",
+      "speaker": "Vân",
+      "key": "tiktok-shop",
+      "content": "Đi TikTok Shop trước, mở tháng 12; Shopee Mall để quý sau",
+      "quote": "Chị quyết đi TikTok Shop trước, tháng 12 mở"
+    },
+    {
+      "utt": "u093",
+      "thread": "sales-channel",
+      "kind": "assign",
+      "speaker": "Vân",
+      "key": "ke-hoach-video",
+      "owner": "Hảo",
+      "content": "Lên kế hoạch 30 video cho tháng đầu TikTok Shop",
+      "deadline_text": "thứ Hai tuần sau",
+      "quote": "Hảo lên kế hoạch 30 video cho tháng đầu, thứ Hai tuần sau gửi chị"
+    },
+    {
+      "utt": "u094",
+      "thread": "sales-channel",
+      "kind": "commit",
+      "speaker": "Hảo",
+      "key": "ke-hoach-video",
+      "owner": "Hảo",
+      "deadline_text": "thứ Hai",
+      "quote": "Dạ ok chị, thứ Hai em gửi"
+    },
+    {
+      "utt": "u095",
+      "thread": "freeship",
+      "kind": "propose",
+      "speaker": "Khánh",
+      "key": "299k",
+      "content": "Freeship cho đơn từ 299 nghìn (thay vì 199 nghìn)",
+      "quote": "anh đề xuất freeship cho đơn từ 299 nghìn"
+    },
+    {
+      "utt": "u096",
+      "thread": "freeship",
+      "kind": "info",
+      "speaker": "Phụng",
+      "content": "Đơn trung bình hiện 260 nghìn",
+      "quote": "Đơn trung bình bên mình đang là 260 nghìn"
+    },
+    {
+      "utt": "u097",
+      "thread": "freeship",
+      "kind": "agree",
+      "speaker": "Vân",
+      "key": "299k",
+      "content": "Freeship cho đơn từ 299 nghìn, áp dụng từ 1/11",
+      "quote": "chốt freeship từ 299 nghìn, áp dụng từ 1/11"
+    },
+    {
+      "utt": "u099",
+      "thread": "warehouse",
+      "kind": "blocker",
+      "speaker": "Phụng",
+      "content": "Kho thiếu kệ, 2 pallet hàng mới để dưới sàn",
+      "quote": "Kho hiện thiếu kệ cho hàng mới về"
+    },
+    {
+      "utt": "u100",
+      "thread": "warehouse",
+      "kind": "assign",
+      "speaker": "Khánh",
+      "key": "ke-sat",
+      "owner": "Phụng",
+      "content": "Đặt thêm và lắp 4 kệ sắt cho kho",
+      "deadline_text": "thứ Bảy này",
+      "quote": "Phụng đặt thêm 4 kệ sắt, thứ Bảy này lắp xong nhé"
+    },
+    {
+      "utt": "u101",
+      "thread": "warehouse",
+      "kind": "commit",
+      "speaker": "Phụng",
+      "key": "ke-sat",
+      "owner": "Phụng",
+      "deadline_text": "thứ Bảy",
+      "quote": "Ok anh, thứ Bảy em lắp"
+    },
+    {
+      "utt": "u102",
+      "thread": "product-review",
+      "kind": "feedback",
+      "speaker": "Hảo",
+      "content": "Khách chê sữa rửa mặt mới mùi hơi nồng, 15 đánh giá 3 sao trong tuần",
+      "quote": "Khách review sữa rửa mặt mới nói mùi hơi nồng"
+    },
+    {
+      "utt": "u103",
+      "thread": "product-review",
+      "kind": "assign",
+      "speaker": "Vân",
+      "key": "gom-review",
+      "owner": "Hảo",
+      "content": "Gom các review chê mùi gửi nhà máy",
+      "quote": "Hảo gom lại các review đó gửi bên nhà máy nhé"
+    },
+    {
+      "utt": "u104",
+      "thread": "product-review",
+      "kind": "commit",
+      "speaker": "Hảo",
+      "key": "gom-review",
+      "owner": "Hảo",
+      "quote": "Dạ vâng"
+    },
+    {
+      "utt": "u106",
+      "thread": "branch-location",
+      "kind": "agree",
+      "speaker": "Vân",
+      "key": "le-van-sy",
+      "content": "Chốt Lê Văn Sỹ",
+      "quote": "Ok chốt Lê Văn Sỹ"
+    },
+    {
+      "utt": "u107",
+      "thread": "branch-location",
+      "kind": "object",
+      "speaker": "Phụng",
+      "key": "le-van-sy",
+      "content": "Cọc 6 tháng 270 triệu, dòng tiền quý này không kham nổi",
+      "quote": "dòng tiền quý này không kham nổi"
+    },
+    {
+      "utt": "u107",
+      "thread": "branch-location",
+      "kind": "info",
+      "speaker": "Phụng",
+      "content": "Chủ nhà Lê Văn Sỹ đòi cọc 6 tháng (270 triệu)",
+      "quote": "chủ nhà Lê Văn Sỹ đòi cọc 6 tháng, 270 triệu"
+    },
+    {
+      "utt": "u108",
+      "thread": "branch-location",
+      "kind": "reopen",
+      "speaker": "Vân",
+      "key": "le-van-sy",
+      "content": "Huỷ chốt Lê Văn Sỹ",
+      "quote": "Ờ thôi khoan"
+    },
+    {
+      "utt": "u108",
+      "thread": "branch-location",
+      "kind": "defer",
+      "speaker": "Vân",
+      "content": "Chưa chốt mặt bằng, để nhà đầu tư Diệp quyết",
+      "quote": "Cọc lớn vậy phải để chị Diệp quyết"
+    },
+    {
+      "utt": "u109",
+      "thread": "branch-location",
+      "kind": "assign",
+      "speaker": "Vân",
+      "key": "dong-tien",
+      "owner": "Phụng",
+      "content": "Làm bảng dòng tiền hai phương án mặt bằng gửi chị Diệp",
+      "deadline_text": "trước thứ Sáu",
+      "quote": "Phụng làm bảng dòng tiền hai phương án gửi chị Diệp trước thứ Sáu"
+    },
+    {
+      "utt": "u110",
+      "thread": "branch-location",
+      "kind": "commit",
+      "speaker": "Phụng",
+      "key": "dong-tien",
+      "owner": "Phụng",
+      "deadline_text": "thứ Sáu",
+      "quote": "Ok anh, thứ Sáu em gửi"
+    },
+    {
+      "utt": "u111",
+      "thread": "banh-mi",
+      "kind": "propose",
+      "speaker": "Nhung",
+      "key": "banh-mi-sang",
+      "content": "Bán thêm bánh mì buổi sáng ở chi nhánh mới",
+      "quote": "Chi nhánh mới có nên bán thêm bánh mì buổi sáng không anh"
+    },
+    {
+      "utt": "u111",
+      "thread": "banh-mi",
+      "kind": "info",
+      "speaker": "Nhung",
+      "content": "Khảo sát khách quen: 60% muốn có bánh mì buổi sáng",
+      "quote": "Khảo sát khách quen thì 60% muốn"
+    },
+    {
+      "utt": "u112",
+      "thread": "banh-mi",
+      "kind": "object",
+      "speaker": "Hảo",
+      "key": "banh-mi-sang",
+      "content": "Phải thêm người ca sáng và tủ trưng bày, bếp chật",
+      "quote": "Bán bánh mì thì phải thêm một người ca sáng và tủ trưng bày"
+    },
+    {
+      "utt": "u114",
+      "thread": "espresso-machine",
+      "kind": "blocker",
+      "speaker": "Hảo",
+      "content": "Máy pha cà phê Quận 3 lỗi áp suất, đang dùng máy dự phòng",
+      "quote": "Máy pha cà phê chi nhánh Quận 3 báo lỗi áp suất từ thứ Bảy"
+    },
+    {
+      "utt": "u115",
+      "thread": "espresso-machine",
+      "kind": "assign",
+      "speaker": "Vân",
+      "key": "goi-ky-thuat",
+      "owner": "Hảo",
+      "content": "Gọi kỹ thuật bên hãng qua kiểm tra máy pha cà phê",
+      "deadline_text": "ngày mai",
+      "quote": "Hảo gọi kỹ thuật bên hãng qua kiểm tra ngày mai nhé"
+    },
+    {
+      "utt": "u116",
+      "thread": "espresso-machine",
+      "kind": "commit",
+      "speaker": "Hảo",
+      "key": "goi-ky-thuat",
+      "owner": "Hảo",
+      "deadline_text": "mai",
+      "quote": "Dạ ok anh, mai em gọi"
+    },
+    {
+      "utt": "u119",
+      "thread": "curriculum",
+      "kind": "info",
+      "speaker": "Hảo",
+      "content": "Lớp Kids dùng giáo trình cũ từ 2019, nhiều bài nghe chất lượng kém",
+      "quote": "Lớp Kids hiện dùng giáo trình cũ từ 2019"
+    },
+    {
+      "utt": "u120",
+      "thread": "curriculum",
+      "kind": "propose",
+      "speaker": "Hảo",
+      "key": "gt-2025",
+      "content": "Đổi sang giáo trình mới bản 2025, học viên tự mua sách ~450 nghìn/bộ",
+      "quote": "Em đề xuất đổi sang bộ giáo trình mới bản 2025"
+    },
+    {
+      "utt": "u121",
+      "thread": "curriculum",
+      "kind": "object",
+      "speaker": "Phụng",
+      "key": "gt-2025",
+      "content": "Phụ huynh sẽ hỏi nhiều khi tăng 450 nghìn, sắp tuyển sinh",
+      "quote": "Tăng thêm 450 nghìn thì phụ huynh sẽ hỏi nhiều"
+    },
+    {
+      "utt": "u122",
+      "thread": "curriculum",
+      "kind": "object",
+      "speaker": "Nhung",
+      "key": "gt-2025",
+      "content": "Đổi giữa khóa giáo viên phải soạn lại bài, mất ít nhất 3 tuần",
+      "quote": "Đổi giáo trình giữa khóa thì giáo viên phải soạn lại bài"
+    },
+    {
+      "utt": "u123",
+      "thread": "curriculum",
+      "kind": "defer",
+      "speaker": "Vân",
+      "content": "Họp tháng sau quyết, khi có báo giá chính thức",
+      "quote": "Vụ giáo trình để họp tháng sau quyết"
+    },
+    {
+      "utt": "u124",
+      "thread": "curriculum",
+      "kind": "commit",
+      "speaker": "Hảo",
+      "key": "bao-gia-sach",
+      "owner": "Hảo",
+      "content": "Liên hệ nhà sách xin báo giá giáo trình cho trung tâm",
+      "hedged": true,
+      "quote": "Để em thử liên hệ nhà sách xin báo giá cho trung tâm xem"
+    },
+    {
+      "utt": "u125",
+      "thread": "midterm",
+      "kind": "info",
+      "speaker": "Nhung",
+      "content": "Thi giữa kỳ từ 2/11 đến 6/11; phòng 3 đang sửa, dồn sang phòng 1 và 2",
+      "quote": "thi từ 2/11 đến 6/11, phòng 3 đang sửa nên dồn sang phòng 1 và 2"
+    },
+    {
+      "utt": "u126",
+      "thread": "midterm",
+      "kind": "assign",
+      "speaker": "Vân",
+      "key": "gui-lich-thi",
+      "owner": "Nhung",
+      "content": "Gửi lịch thi giữa kỳ cho giáo viên và phụ huynh",
+      "deadline_text": "trước thứ Tư",
+      "quote": "Nhung gửi lịch thi cho giáo viên và phụ huynh trước thứ Tư nhé"
+    },
+    {
+      "utt": "u127",
+      "thread": "midterm",
+      "kind": "commit",
+      "speaker": "Nhung",
+      "key": "gui-lich-thi",
+      "owner": "Nhung",
+      "deadline_text": "thứ Tư",
+      "quote": "Ok chị, thứ Tư em gửi"
+    },
+    {
+      "utt": "u128",
+      "thread": "weekend-class",
+      "kind": "request",
+      "speaker": "Phụng",
+      "content": "Phụ huynh Starters 3 yêu cầu mở thêm lớp sáng thứ Bảy (9 phụ huynh đã ký tên)",
+      "quote": "Phụ huynh lớp Starters 3 yêu cầu mở thêm lớp sáng thứ Bảy"
+    },
+    {
+      "utt": "u130",
+      "thread": "weekend-class",
+      "kind": "blocker",
+      "speaker": "Vân",
+      "content": "Chưa có giáo viên trống lịch sáng thứ Bảy để mở lớp mới",
+      "quote": "Mở lớp mới phải có giáo viên trống lịch sáng thứ Bảy, giờ chưa có ai"
+    },
+    {
+      "utt": "u133",
+      "thread": "tet-tour",
+      "kind": "info",
+      "speaker": "Hảo",
+      "content": "Tour Đà Lạt 4 ngày năm ngoái bán hết sớm nhất (12 đoàn); xe giường nằm dịp Tết khó thuê",
+      "quote": "Năm ngoái tour Đà Lạt 4 ngày bán hết sớm nhất, 12 đoàn"
+    },
+    {
+      "utt": "u134",
+      "thread": "tet-tour",
+      "kind": "propose",
+      "speaker": "Phụng",
+      "key": "phu-quoc",
+      "content": "Tour Phú Quốc bay thẳng 3 ngày 2 đêm",
+      "quote": "Em đề xuất năm nay đẩy tour Phú Quốc bay thẳng"
+    },
+    {
+      "utt": "u135",
+      "thread": "tet-tour",
+      "kind": "object",
+      "speaker": "Nhung",
+      "key": "phu-quoc",
+      "content": "Vé máy bay Tết ~5 triệu/chiều, giá tour vượt 15 triệu/người",
+      "quote": "giá tour sẽ vượt 15 triệu một người"
+    },
+    {
+      "utt": "u135",
+      "thread": "tet-tour",
+      "kind": "info",
+      "speaker": "Nhung",
+      "content": "Vé máy bay Tết đi Phú Quốc ~5 triệu/chiều",
+      "quote": "Vé máy bay Tết đi Phú Quốc đã lên gần 5 triệu một chiều"
+    },
+    {
+      "utt": "u136",
+      "thread": "tet-tour",
+      "kind": "propose",
+      "speaker": "Hảo",
+      "key": "dalat-limo",
+      "content": "Tour Đà Lạt đi limousine 9 chỗ, đặt trước 20 xe",
+      "quote": "làm tour Đà Lạt nhưng đi bằng xe limousine 9 chỗ"
+    },
+    {
+      "utt": "u138",
+      "thread": "tet-tour",
+      "kind": "agree",
+      "speaker": "Vân",
+      "key": "dalat-limo",
+      "content": "Tour Đà Lạt limousine là sản phẩm chính dịp Tết; Phú Quốc để dành cho mùa hè",
+      "quote": "Vậy làm theo hướng đó đi"
+    },
+    {
+      "utt": "u139",
+      "thread": "tet-tour",
+      "kind": "assign",
+      "speaker": "Vân",
+      "key": "giu-xe",
+      "owner": "Hảo",
+      "content": "Giữ chỗ và đặt cọc 20 xe limousine với nhà xe",
+      "deadline_text": "trong tuần này",
+      "quote": "Hảo giữ chỗ 20 xe limousine với nhà xe, trong tuần này đặt cọc nhé"
+    },
+    {
+      "utt": "u140",
+      "thread": "tet-tour",
+      "kind": "commit",
+      "speaker": "Hảo",
+      "key": "giu-xe",
+      "owner": "Hảo",
+      "deadline_text": "thứ Năm",
+      "quote": "Dạ ok anh, thứ Năm em đặt cọc"
+    },
+    {
+      "utt": "u141",
+      "thread": "tet-tour",
+      "kind": "commit",
+      "speaker": "Phụng",
+      "key": "landing-page",
+      "owner": "Phụng",
+      "content": "Làm bộ ảnh và landing page tour Đà Lạt",
+      "deadline_text": "trước ngày 10/11",
+      "quote": "Em sẽ làm bộ ảnh và landing page tour Đà Lạt, xong trước ngày 10/11"
+    },
+    {
+      "utt": "u142",
+      "thread": "private-tour",
+      "kind": "request",
+      "speaker": "Nhung",
+      "content": "Khách đoàn Hòa An hỏi tour riêng 40 người, đi mùng 2 Tết",
+      "quote": "Khách đoàn công ty Hòa An hỏi có làm tour riêng 40 người"
+    },
+    {
+      "utt": "u143",
+      "thread": "private-tour",
+      "kind": "assign",
+      "speaker": "Vân",
+      "key": "bao-gia-doan",
+      "owner": "Nhung",
+      "content": "Báo giá tour riêng cho khách đoàn Hòa An",
+      "quote": "Nhung báo giá tour riêng cho họ nhé"
+    },
+    {
+      "utt": "u144",
+      "thread": "private-tour",
+      "kind": "commit",
+      "speaker": "Nhung",
+      "key": "bao-gia-doan",
+      "owner": "Nhung",
+      "quote": "Dạ vâng"
+    },
+    {
+      "utt": "u145",
+      "thread": "hotel-deposit",
+      "kind": "info",
+      "speaker": "Hảo",
+      "content": "Từ năm nay khách sạn Đà Lạt bắt buộc cọc 50% cho booking dịp Tết, không hoàn",
+      "quote": "khách sạn ở Đà Lạt bắt buộc cọc 50% cho booking dịp Tết, không hoàn"
+    },
+    {
+      "utt": "u146",
+      "thread": "hotel-deposit",
+      "kind": "assign",
+      "speaker": "Vân",
+      "key": "dong-tien-coc",
+      "owner": "Hảo",
+      "content": "Tính lại dòng tiền đặt cọc cho cả mùa Tết",
+      "quote": "Vậy Hảo tính lại dòng tiền đặt cọc cho cả mùa Tết"
+    },
+    {
+      "utt": "u147",
+      "thread": "hotel-deposit",
+      "kind": "commit",
+      "speaker": "Hảo",
+      "key": "dong-tien-coc",
+      "owner": "Hảo",
+      "deadline_text": "cuối tuần này",
+      "quote": "Ok anh, cuối tuần này em gửi bảng"
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "id": "L1",
+  "title": "Họp tuần liên phòng — khối sản phẩm số (ghép từ 8 cuộc)",
+  "date": "2026-10-05",
+  "participants": [
+    "Hùng (CEO, chủ trì)",
+    "Minh (PM)",
+    "Lan (Tech lead)",
+    "Tú (Designer)",
+    "Hân (Media buyer)",
+    "Phát (Content lead)"
+  ],
+  "absent": [],
+  "roster": {
+    "m01": {
+      "Hùng": "Hùng",
+      "Minh": "Minh",
+      "Lan": "Lan",
+      "Tú": "Tú"
+    },
+    "m02": {
+      "Ngọc": "Hùng",
+      "Phát": "Minh",
+      "Hân": "Lan",
+      "Duy": "Tú"
+    },
+    "m03": {
+      "Quân": "Hùng",
+      "Trang": "Minh",
+      "Bảo": "Lan",
+      "Linh": "Tú"
+    },
+    "m19": {
+      "Huy": "Hùng",
+      "Nhàn": "Minh",
+      "Lâm": "Lan",
+      "Oanh": "Tú"
+    },
+    "m10": {
+      "Nam": "Hùng",
+      "Tuyết": "Minh",
+      "Đức": "Lan",
+      "Hòa": "Tú",
+      "Kim": "Hân"
+    },
+    "m06": {
+      "Vy": "Hùng",
+      "Khang": "Minh",
+      "Thư": "Lan",
+      "Long": "Tú"
+    },
+    "m24": {
+      "Bình": "Hùng",
+      "Giang": "Minh",
+      "Thơ": "Lan",
+      "Nhật": "Tú"
+    },
+    "m15": {
+      "Quang": "Hùng",
+      "Hằng": "Minh",
+      "Định": "Lan",
+      "Thùy": "Tú"
+    }
+  },
+  "blocks": [
+    {
+      "source": "m01",
+      "from": "u001",
+      "to": "u014"
+    },
+    {
+      "source": "m02",
+      "from": "u001",
+      "to": "u023"
+    },
+    {
+      "source": "m03",
+      "from": "u001",
+      "to": "u021"
+    },
+    {
+      "source": "m01",
+      "from": "u015",
+      "to": "u026"
+    },
+    {
+      "source": "m19",
+      "from": "u001",
+      "to": "u008"
+    },
+    {
+      "source": "m10",
+      "from": "u001",
+      "to": "u018"
+    },
+    {
+      "source": "m06",
+      "from": "u001",
+      "to": "u022"
+    },
+    {
+      "source": "m24",
+      "from": "u001",
+      "to": "u017"
+    },
+    {
+      "source": "m19",
+      "from": "u009",
+      "to": "u018"
+    },
+    {
+      "source": "m15",
+      "from": "u001",
+      "to": "u012"
+    }
+  ]
+}

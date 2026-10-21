@@ -1,0 +1,161 @@
+# meeting: L1
+# title: Họp tuần liên phòng — khối sản phẩm số (ghép từ 8 cuộc)
+# date: 2026-10-05
+# participants: Hùng (CEO, chủ trì); Minh (PM); Lan (Tech lead); Tú (Designer); Hân (Media buyer); Phát (Content lead)
+[00:00:10] Hùng: Ok bắt đầu nhé. Hôm nay có ba việc: cổng thanh toán, flow onboarding, và timeline launch tháng 11.
+[00:01:05] Minh: Về thanh toán, em đề xuất mình sử dụng VNPay, vì bên họ hỗ trợ nhiều ngân hàng nhất.
+[00:01:40] Tú: Dạ.
+[00:02:30] Lan: Em thấy VNPay phí giao dịch cao hơn, mà tích hợp theo doc của họ chắc mất tầm ba tuần, không kịp launch.
+[00:03:15] Lan: Em đề xuất MoMo, SDK của MoMo tụi em làm rồi ở dự án cũ, tầm một tuần là xong.
+[00:04:02] Minh: Nhưng tệp khách của mình nhiều người lớn tuổi, họ quen chuyển khoản ngân hàng hơn.
+[00:04:50] Hùng: Ừ, cái đó cũng đúng.
+[00:05:30] Hùng: Thôi tạm thời đi MoMo nhé, để kịp launch đã.
+[00:06:10] Minh: Dạ vâng.
+[00:06:40] Hùng: Rồi, qua phần onboarding. Tú show đi em.
+[00:07:20] Tú: Dạ, flow mới em cắt từ năm bước còn ba bước, bỏ màn hình chọn sở thích, đưa xác thực số điện thoại lên đầu.
+[00:08:45] Minh: Anh thấy bỏ màn sở thích ok, nhưng nút "Tiếp tục" hơi nhỏ, trên máy Android màn hình nhỏ khó bấm.
+[00:09:30] Hùng: Ừ anh cũng thấy vậy. Tú sửa lại cái nút rồi gửi bản mới nhé.
+[00:09:52] Tú: Dạ ok anh, thứ Năm em gửi bản mới.
+[00:10:17] Hùng: Hello cả nhà, tuần này mình chốt mấy cái chính cho campaign Tết của An Phú nha: KOL, budget split, và key visual.
+[00:11:04] Minh: Về KOL, em propose Lily Trần, tệp follower của bạn đúng target mẹ bỉm 25 đến 35.
+[00:11:47] Lan: Booking Lily Trần báo giá 80 triệu một post, trong khi tổng budget KOL mình có 120 triệu thôi chị.
+[00:12:22] Lan: Em đề xuất đi nhóm 5 micro-KOL, mỗi bạn tầm 20 triệu, reach tổng còn cao hơn.
+[00:13:07] Minh: Micro thì engagement tốt nhưng độ nhận diện thấp hơn, khách hàng thích tên tuổi.
+[00:13:42] Hùng: Ừm.
+[00:14:12] Hùng: Tạm thời chị nghiêng về nhóm micro-KOL, nhưng chị phải hỏi lại khách đã nha.
+[00:14:32] Minh: Dạ.
+[00:15:02] Hùng: Rồi, budget split. Chốt: 60% Facebook ads, 40% TikTok.
+[00:15:42] Lan: Chị ơi tháng Chạp CPM TikTok thường tăng mạnh, 40% có khi không đủ reach.
+[00:16:22] Hùng: Chị biết, nhưng vẫn giữ 60-40 nha, sang tháng 1 mình review lại theo số thực tế.
+[00:16:37] Lan: Dạ ok chị.
+[00:17:12] Tú: Key visual em làm hai concept: concept 1 tông vàng truyền thống, concept 2 tông đỏ hiện đại hơn.
+[00:18:02] Hùng: Chị thích concept 2 hơn, nhìn trẻ.
+[00:18:27] Minh: Nếu mà khách duyệt concept 2 thì em viết caption theo hướng trẻ trung luôn.
+[00:19:07] Hùng: Tú làm thêm biến thể vuông 1:1 cho concept 2 để chị gửi khách nha.
+[00:19:17] Tú: Dạ vâng.
+[00:20:02] Minh: À, bên khách có request làm thêm bản tiếng Anh cho landing page, cho nhà phân phối nước ngoài.
+[00:20:42] Hùng: Cái đó tính thêm phí, để chị báo giá lại với khách.
+[00:21:22] Lan: Em sẽ gửi media plan chi tiết cuối tuần này.
+[00:21:52] Minh: Còn vụ dùng nhạc trend TikTok, mình có cần mua bản quyền không? Lần trước bị đánh gậy.
+[00:22:32] Hùng: Cái này chị cũng không rõ, chị sẽ hỏi bên legal rồi báo lại.
+[00:23:02] Hùng: Ok vậy thôi, cảm ơn cả nhà.
+[00:23:27] Hùng: Rồi, sprint planning. Việc lớn nhất là ngày release v2.0.
+[00:24:02] Minh: Khách đang chờ, em muốn release ngày 15/11 như cam kết ban đầu.
+[00:24:47] Lan: Module export PDF còn khá nhiều, em ước tính thêm hai tuần nữa. 15/11 thì không kịp.
+[00:25:32] Lan: Em đề xuất dời qua 22/11.
+[00:26:07] Tú: Nếu chốt 22/11 thì QA mới đủ một tuần regression test.
+[00:26:37] Hùng: Ok, vậy dời release qua 22/11.
+[00:26:52] Minh: Khoan đã anh. 22/11 trùng đợt kiểm kê cuối năm của khách, họ không nhận bản mới tuần đó đâu.
+[00:27:37] Hùng: À cái đó anh không biết. Vậy quyết định sao đây?
+[00:28:17] Minh: Hay mình giữ 15/11 nhưng cắt export PDF ra, đưa qua bản 2.1?
+[00:28:47] Lan: Bỏ export PDF thì 15/11 làm kịp, phần còn lại gần xong rồi.
+[00:29:12] Tú: Em ok, scope nhỏ lại thì test kịp.
+[00:29:37] Hùng: Được. Chốt lại: release v2.0 ngày 15/11, export PDF chuyển sang v2.1. Bỏ phương án 22/11.
+[00:30:17] Hùng: Minh báo lại khách về việc export PDF qua bản 2.1 trong hôm nay nhé.
+[00:30:25] Minh: Ok anh, chiều nay em gọi khách.
+[00:31:07] Lan: Còn một vấn đề, server staging hết dung lượng, deploy bản mới lên không được.
+[00:31:47] Hùng: Lan tạo ticket trên Gia ra, anh duyệt nâng cấp ổ đĩa. Mai làm luôn nhé.
+[00:31:57] Lan: Dạ để em xem lại cấu hình rồi báo anh.
+[00:32:37] Tú: Em note lại: bên khách chỉ test được trên Chrome bản cũ 109 vì máy kho chạy Windows 7.
+[00:33:22] Tú: Em sẽ viết test plan cho regression, thứ Sáu gửi team review.
+[00:34:07] Minh: Còn chuyện có làm dark mode không, mình chưa chốt được, để sprint sau bàn.
+[00:34:37] Hùng: Ok. Hết, cảm ơn mọi người.
+[00:35:02] Lan: Quay lại thanh toán một chút. Hôm qua em thử sandbox MoMo thì đang lỗi, callback trả về sai mã giao dịch.
+[00:35:42] Lan: Với lại sandbox của MoMo chỉ chạy được với tài khoản merchant đã xác minh, nên mình phải làm hồ sơ merchant trước.
+[00:36:32] Minh: Vậy hay là quay lại VNPay cho chắc?
+[00:37:07] Lan: Lỗi callback em nghĩ fix được, em đã mở ticket với MoMo rồi.
+[00:38:22] Hùng: Ok. Vậy chốt nhé: launch tháng 11 dùng MoMo, VNPay để phase 2.
+[00:38:37] Hùng: Lan theo vụ sandbox MoMo, thứ Sáu này báo lại anh là fix được chưa nhé.
+[00:38:50] Lan: Ok anh, thứ Sáu em báo.
+[00:39:12] Hùng: Minh tìm hiểu phí VNPay cho phase 2, gửi anh bảng so sánh tuần sau nhé?
+[00:39:24] Minh: Dạ, để em xem lại ạ.
+[00:40:02] Minh: À còn timeline launch, bên marketing hỏi ngày cụ thể.
+[00:40:32] Hùng: Ngày cụ thể thì để họp tuần sau chốt, khi có kết quả sandbox.
+[00:41:07] Hùng: Ok hết rồi, cảm ơn mọi người.
+[00:41:32] Hùng: Sprint review. Chủ đề chính: demo ra ở đâu, và art của boss cuối.
+[00:42:17] Minh: Demo em đề xuất đăng Steam Next Fest tháng 2, lượng wishlist tăng mạnh nhất.
+[00:43:02] Lan: Next Fest hạn nộp build là 15/12, mà build hiện tại còn crash ở màn 3.
+[00:43:37] Lan: Hay mình đăng itch.io trước cho kịp, không cần chờ duyệt.
+[00:44:07] Hùng: Ok vậy mình đi itch.io trước.
+[00:44:47] Tú: itch.io thì gần như không có traffic, tụi mình mất công làm trang mà không ai chơi.
+[00:45:32] Minh: Hay mình làm bản demo mobile trên TestFlight, gửi thẳng cho cộng đồng Discord 3.000 người?
+[00:46:17] Lan: Port sang mobile mất ít nhất một tháng, input điều khiển phải làm lại.
+[00:46:42] Hùng: Chào chị Minh, hôm nay mình bàn phương án đăng nhập cho app và lịch UAT.
+[00:47:27] Minh: Bên chị muốn đăng nhập bằng OTP qua SMS, người dùng quen rồi.
+[00:48:12] Lan: OTP SMS mỗi tin khoảng 800 đồng, 50 nghìn user một tháng là 40 triệu tiền SMS.
+[00:48:57] Hân: Em đề xuất đăng nhập bằng email kèm mật khẩu, không tốn phí.
+[00:49:37] Hùng: Ok vậy đi email với mật khẩu.
+[00:50:17] Minh: Khoan, khách của chị phần lớn là người bán hàng ở chợ, ít ai dùng email.
+[00:51:02] Lan: Vậy dùng đăng nhập bằng Zalo, gần như ai cũng có, mà miễn phí.
+[00:51:47] Tú: Đăng nhập Zalo cần app được duyệt trên Zalo Developer, lần trước bên em chờ ba tuần.
+[00:52:27] Minh: Ba tuần thì trễ UAT mất. Thôi quay lại OTP SMS, nhưng chỉ gửi OTP khi đăng nhập trên máy mới thôi.
+[00:53:12] Lan: Chỉ gửi khi đổi máy thì số SMS giảm còn khoảng một phần mười, tầm 4 triệu một tháng.
+[00:53:57] Hùng: Được. Chốt đăng nhập OTP SMS, chỉ gửi khi đăng nhập trên thiết bị mới. Email và Zalo bỏ.
+[00:54:37] Minh: Ok em.
+[00:55:17] Hùng: Lan cập nhật lại tài liệu kiến trúc phần đăng nhập, thứ Hai tuần sau gửi chị Minh.
+[00:55:32] Lan: Dạ ok anh, thứ Hai em gửi.
+[00:56:12] Tú: Về UAT, team em chưa có môi trường staging có dữ liệu thật đã ẩn danh, nên chưa test được.
+[00:56:57] Minh: Ngày bắt đầu UAT thì mình chưa chốt được, chị phải hỏi lại sếp bên chị về lịch nghỉ lễ.
+[00:57:37] Hân: Em sẽ cập nhật user story đăng nhập lên Gi ra trong hôm nay để Tú viết test case.
+[00:58:17] Hùng: Ok, cảm ơn chị Minh và mọi người.
+[00:58:42] Hùng: Ok mình bắt đầu. Hôm nay bàn mô hình thu phí cho bản mới, với lịch ra bài học tháng 11.
+[00:59:24] Minh: Về thu phí, em đề xuất bán gói trọn đời 990 nghìn, phụ huynh trả một lần cho dễ quyết.
+[01:00:09] Tú: Dạ.
+[01:00:44] Lan: Gói trọn đời thì doanh thu dồn hết tháng đầu, sau đó mình không có tiền đều để làm content mới.
+[01:01:29] Tú: Với lại cổng thanh toán bên mình hiện chỉ hỗ trợ trả theo tháng, làm gói trọn đời phải tích hợp lại mất hai tuần.
+[01:02:14] Lan: Em đề xuất thuê bao tháng 149 nghìn, có dùng thử 7 ngày.
+[01:02:54] Minh: Nhưng phụ huynh hay ngại đăng ký trả tháng, sợ bị trừ tiền tự động.
+[01:03:19] Hùng: Ừ.
+[01:04:04] Minh: Hay là làm gói 6 tháng 690 nghìn, ở giữa hai cái?
+[01:04:49] Tú: Gói 6 tháng thì cũng phải sửa cổng thanh toán như gói trọn đời.
+[01:05:34] Hùng: Ok vậy chốt: bản mới thu phí theo thuê bao tháng 149 nghìn, có 7 ngày dùng thử. Gói trọn đời và gói 6 tháng bỏ.
+[01:05:54] Lan: Dạ.
+[01:06:19] Hùng: Minh viết lại màn hình paywall theo giá mới, cuối tuần này gửi chị duyệt nhé.
+[01:06:39] Minh: Ok chị, cuối tuần này em gửi.
+[01:07:14] Hùng: Rồi, lịch ra bài học tháng 11. Lan cập nhật đi em.
+[01:07:54] Lan: Tháng 11 mình ra 20 bài chủ đề Giáng sinh. Hiện mới thu âm xong 8 bài, giọng đọc bản xứ bên freelancer đang trễ hẹn.
+[01:08:39] Hùng: Tú hỗ trợ Lan dựng công cụ upload bài học hàng loạt được không?
+[01:08:59] Tú: Dạ.
+[01:09:34] Lan: Em sẽ gửi danh sách 20 bài kèm tiến độ từng bài cho cả team trước thứ Tư.
+[01:10:14] Minh: Chị ơi phụ huynh trong group Zalo phản ánh app hay văng khi mở bài nghe trên máy Android cũ.
+[01:10:49] Tú: Cái đó do thư viện audio cũ. Em sẽ nâng cấp thư viện, thứ Sáu này có bản sửa.
+[01:11:24] Hùng: Ok, hết rồi. Cảm ơn mọi người.
+[01:11:49] Hùng: Họp release tuần. Như tuần trước đã chốt, bản 3.2 release ngày 1/11, còn tính năng báo cáo nâng cao để sang bản 3.3.
+[01:12:34] Lan: Regression bản 3.2 còn 4 bug mức cao, trong đó có bug mất dữ liệu khi đồng bộ offline.
+[01:13:14] Minh: Bug đồng bộ offline em cần thêm 3 ngày mới fix chắc chắn được.
+[01:13:49] Lan: Em đề xuất dời release 3.2 sang thứ Năm 5/11.
+[01:14:29] Tú: Khách Minh Long được hứa bản mới đầu tháng 11, dời sang 5/11 thì em báo lại được.
+[01:15:04] Hùng: Ok, release 3.2 dời sang thứ Năm 5/11.
+[01:15:14] Minh: Dạ.
+[01:15:49] Hùng: Tú báo khách Minh Long lịch mới trong hôm nay nhé.
+[01:15:59] Tú: Ok chị, em gửi email ngay.
+[01:16:39] Tú: Khách Minh Long cũng hỏi có đưa được báo cáo nâng cao vào 3.2 luôn không.
+[01:17:14] Hùng: Không, báo cáo nâng cao vẫn ở bản 3.3 như đã chốt.
+[01:17:54] Tú: Tuần này có 6 khách phàn nàn app chậm khi mở báo cáo tháng.
+[01:18:34] Lan: Em sẽ gửi danh sách 4 bug mức cao kèm trạng thái lên kênh release mỗi sáng cho tới ngày release.
+[01:19:19] Minh: Server staging hết hạn chứng chỉ SSL từ hôm qua, QA không truy cập được bằng HTTPS.
+[01:19:49] Hùng: Minh gia hạn chứng chỉ trong hôm nay nhé.
+[01:19:59] Minh: Ok chị, em làm liền.
+[01:20:34] Hùng: Ok, hết.
+[01:20:59] Minh: Vậy quay lại Steam Next Fest, Lan fix crash màn 3 trước 15/12 được không?
+[01:21:34] Lan: Crash đó em đã tìm ra nguyên nhân rồi, một tuần là fix xong.
+[01:22:09] Hùng: Được. Chốt demo đăng Steam Next Fest tháng 2, bỏ itch.io và mobile.
+[01:22:34] Hùng: Lan fix crash màn 3 trong tuần này, xong báo anh.
+[01:22:44] Lan: Ok anh, em làm luôn.
+[01:23:29] Tú: Về art boss cuối, em làm hai bản: bản tối màu kiểu gothic và bản màu pastel dễ thương.
+[01:24:04] Hùng: Anh thích bản gothic hơn, hợp với tone game.
+[01:24:49] Minh: Playtester tuần rồi nói boss màn 2 quá khó, 70% người chơi bỏ cuộc ở đó.
+[01:25:29] Lan: Máy build của studio hết license Unity Pro từ hôm qua, không export được bản release.
+[01:26:04] Hùng: Ok, hôm nay vậy thôi, cảm ơn mọi người.
+[01:26:29] Hùng: Họp tech tuần. Chủ đề chính là migrate database và bản app tháng 11.
+[01:27:14] Tú: Database Postgres hiện tại là bản 12, đã hết hỗ trợ bảo mật từ tháng 11 năm ngoái.
+[01:27:59] Minh: Em đề xuất migrate lên Postgres 16 bằng logical replication, downtime gần như bằng không.
+[01:28:44] Tú: Logical replication với database 2 TB thì sync lần đầu mất khoảng 3 ngày, phải canh lúc ít giao dịch.
+[01:29:29] Hùng: Tạm thời mình đi logical replication nhé, anh cần xem thêm số liệu tải.
+[01:29:44] Minh: Dạ.
+[01:30:24] Hùng: Theo quy định của ngân hàng đối tác, mọi thay đổi hạ tầng phải báo trước 14 ngày.
+[01:31:04] Hùng: Tú viết runbook migrate rồi gửi anh trước thứ Sáu nhé.
+[01:31:24] Tú: Tuần này em không kịp anh ơi, em đang trực sự cố cho bên payment.
+[01:32:09] Lan: Bản app tháng 11 bên mobile xong 80%, còn màn hình eKYC đang chờ SDK mới của đối tác.
+[01:32:49] Lan: Em sẽ build bản beta cho team QA vào thứ Hai tuần sau.
+[01:33:19] Hùng: Ok, hết. Cảm ơn mọi người.

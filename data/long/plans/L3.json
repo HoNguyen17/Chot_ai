@@ -1,0 +1,131 @@
+{
+  "id": "L3",
+  "title": "Họp tuần — bán lẻ, F&B và sự kiện (ghép từ 9 cuộc)",
+  "date": "2026-10-29",
+  "participants": [
+    "Vân (Co-founder CEO, chủ trì)",
+    "Khánh (Co-founder COO, chủ trì)",
+    "Hảo (Marketing)",
+    "Phụng (Kho vận)",
+    "Nhung (Account)",
+    "Thoa (Creative)",
+    "Vũ (Logistics)"
+  ],
+  "absent": [
+    "Diệp (Nhà đầu tư)"
+  ],
+  "roster": {
+    "m17": {
+      "Thắng": "Vân",
+      "Nhung": "Hảo",
+      "Hậu": "Phụng",
+      "Vũ": "Nhung",
+      "Thoa": "Thoa"
+    },
+    "m05": {
+      "Kiên": "Vân",
+      "Uyên": "Hảo",
+      "Đạt": "Phụng",
+      "Nhi": "Nhung"
+    },
+    "m08": {
+      "Duyên": "Vân",
+      "Toàn": "Hảo",
+      "Mai": "Phụng",
+      "Kha": "Nhung"
+    },
+    "m11": {
+      "Linh": "Vân",
+      "Trúc": "Hảo",
+      "Khôi": "Phụng"
+    },
+    "m20": {
+      "Nhân": "Vân",
+      "Ánh": "Hảo",
+      "Quốc": "Phụng",
+      "My": "Nhung",
+      "Diệp": "Diệp"
+    },
+    "m14": {
+      "Hiếu": "Vân",
+      "Ngân": "Hảo",
+      "Tùng": "Phụng",
+      "Ly": "Nhung"
+    },
+    "m23": {
+      "Vân": "Vân",
+      "Khánh": "Khánh",
+      "Hảo": "Hảo",
+      "Phụng": "Phụng"
+    },
+    "m16": {
+      "Hà": "Vân",
+      "Trâm": "Hảo",
+      "Đông": "Phụng",
+      "Kiều": "Nhung"
+    },
+    "m21": {
+      "Hoàng": "Vân",
+      "Thanh": "Hảo",
+      "Trinh": "Phụng",
+      "Đăng": "Nhung"
+    }
+  },
+  "blocks": [
+    {
+      "source": "m17",
+      "from": "u001",
+      "to": "u005"
+    },
+    {
+      "source": "m05",
+      "from": "u001",
+      "to": "u018"
+    },
+    {
+      "source": "m08",
+      "from": "u001",
+      "to": "u017"
+    },
+    {
+      "source": "m11",
+      "from": "u001",
+      "to": "u015"
+    },
+    {
+      "source": "m20",
+      "from": "u001",
+      "to": "u003"
+    },
+    {
+      "source": "m17",
+      "from": "u006",
+      "to": "u018"
+    },
+    {
+      "source": "m14",
+      "from": "u001",
+      "to": "u014"
+    },
+    {
+      "source": "m23",
+      "from": "u001",
+      "to": "u020"
+    },
+    {
+      "source": "m20",
+      "from": "u004",
+      "to": "u015"
+    },
+    {
+      "source": "m16",
+      "from": "u001",
+      "to": "u014"
+    },
+    {
+      "source": "m21",
+      "from": "u001",
+      "to": "u017"
+    }
+  ]
+}

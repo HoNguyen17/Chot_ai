@@ -1,0 +1,1282 @@
+{
+  "threads": [
+    {
+      "id": "slab-pour",
+      "title": "Lịch đổ bê tông sàn tầng 5"
+    },
+    {
+      "id": "steel",
+      "title": "Thép phi 16 giao trễ"
+    },
+    {
+      "id": "safety",
+      "title": "Xử lý vi phạm an toàn lao động"
+    },
+    {
+      "id": "salary-advance",
+      "title": "Ứng lương tháng 11 cho công nhân"
+    },
+    {
+      "id": "hoist",
+      "title": "Máy vận thăng"
+    },
+    {
+      "id": "stair-drawing",
+      "title": "Bản vẽ cầu thang tầng 6"
+    },
+    {
+      "id": "wood-supplier",
+      "title": "Có đổi nhà cung cấp gỗ sang Đắk Nông Xanh không"
+    },
+    {
+      "id": "qc",
+      "title": "Chất lượng gỗ nhập"
+    },
+    {
+      "id": "overtime",
+      "title": "Tăng ca cho đơn hàng Nhật"
+    },
+    {
+      "id": "inventory",
+      "title": "Phiếu xuất kho"
+    },
+    {
+      "id": "picking-layout",
+      "title": "Layout khu picking mùa peak"
+    },
+    {
+      "id": "shift-plan",
+      "title": "Lịch ca mùa peak: 3 ca hay tăng ca"
+    },
+    {
+      "id": "scanner",
+      "title": "Máy quét barcode dock 2"
+    },
+    {
+      "id": "wms-update",
+      "title": "Bản update WMS"
+    },
+    {
+      "id": "client-report",
+      "title": "Report tồn kho cho khách Minh Khoa"
+    },
+    {
+      "id": "wait-time",
+      "title": "Có chuyển sang đặt lịch hẹn qua Zalo không"
+    },
+    {
+      "id": "record-storage",
+      "title": "Lưu hồ sơ bệnh án điện tử 10 năm"
+    },
+    {
+      "id": "printer",
+      "title": "Máy in hóa đơn quầy lễ tân"
+    },
+    {
+      "id": "intake-process",
+      "title": "Quy trình tiếp nhận"
+    },
+    {
+      "id": "fabric-supplier",
+      "title": "Nhà cung cấp vải cho đơn áo khoác"
+    },
+    {
+      "id": "cost-compare",
+      "title": "Bảng so sánh chi phí nhà cung cấp"
+    },
+    {
+      "id": "qc-machine",
+      "title": "Máy kiểm tra độ bền màu"
+    },
+    {
+      "id": "shirt-quality",
+      "title": "Chất lượng lô áo sơ mi"
+    },
+    {
+      "id": "labels",
+      "title": "Nhãn mác đơn áo khoác"
+    },
+    {
+      "id": "machine-2",
+      "title": "Máy in offset số 2 hỏng"
+    },
+    {
+      "id": "tet-order",
+      "title": "Đơn hộp quà Tết chạy máy nào"
+    },
+    {
+      "id": "maintenance",
+      "title": "Bảo trì máy cắt bế"
+    },
+    {
+      "id": "riverside-feedback",
+      "title": "Phản hồi khách xem dự án Riverside"
+    },
+    {
+      "id": "ads-young",
+      "title": "Có chạy quảng cáo Facebook nhắm khách trẻ không"
+    },
+    {
+      "id": "legal",
+      "title": "Pháp lý dự án Riverside"
+    },
+    {
+      "id": "follow-up",
+      "title": "Gọi lại khách đã xem nhà mẫu"
+    },
+    {
+      "id": "export-volume",
+      "title": "Nhận bao nhiêu tấn cho đơn xuất khẩu"
+    },
+    {
+      "id": "inspection",
+      "title": "Kiểm định dư lượng thuốc"
+    },
+    {
+      "id": "harvest",
+      "title": "Lịch thu hoạch"
+    }
+  ],
+  "events": [
+    {
+      "utt": "u003",
+      "thread": "slab-pour",
+      "kind": "propose",
+      "speaker": "Sinh",
+      "key": "thu-bay",
+      "content": "Đổ bê tông sàn tầng 5 sáng thứ Bảy 31/10",
+      "quote": "Em đề xuất đổ bê tông sàn tầng 5 sáng thứ Bảy 31/10"
+    },
+    {
+      "utt": "u004",
+      "thread": "slab-pour",
+      "kind": "object",
+      "speaker": "Toản",
+      "key": "thu-bay",
+      "content": "Thứ Bảy dự báo mưa lớn từ trưa",
+      "quote": "Thứ Bảy dự báo có mưa lớn từ trưa"
+    },
+    {
+      "utt": "u006",
+      "thread": "steel",
+      "kind": "blocker",
+      "speaker": "Lam",
+      "content": "Thép phi 16 giao trễ 5 ngày, nhà cung cấp hẹn thứ Hai",
+      "quote": "lô thép phi 16 đợt này giao trễ 5 ngày rồi"
+    },
+    {
+      "utt": "u009",
+      "thread": "safety",
+      "kind": "blocker",
+      "speaker": "Toản",
+      "content": "3 công nhân làm trên giàn giáo tầng 4 không đeo dây an toàn",
+      "quote": "em bắt được 3 công nhân làm trên giàn giáo tầng 4 không đeo dây an toàn"
+    },
+    {
+      "utt": "u010",
+      "thread": "safety",
+      "kind": "info",
+      "speaker": "Toản",
+      "content": "Quy định công ty: vi phạm an toàn lần đầu phạt 500 nghìn, lần hai cho nghỉ việc",
+      "quote": "vi phạm lần đầu phạt 500 nghìn, lần hai cho nghỉ việc"
+    },
+    {
+      "utt": "u011",
+      "thread": "safety",
+      "kind": "object",
+      "speaker": "Quý",
+      "key": "phat",
+      "content": "Công nhân mới chưa được training kỹ",
+      "quote": "phạt luôn thì tội"
+    },
+    {
+      "utt": "u013",
+      "thread": "wood-supplier",
+      "kind": "propose",
+      "speaker": "Sinh",
+      "key": "dak-nong-xanh",
+      "content": "Đổi sang Lâm sản Đắk Nông Xanh (rẻ hơn ~8%)",
+      "quote": "Em đề xuất đổi qua Lâm sản Đắk Nông Xanh"
+    },
+    {
+      "utt": "u014",
+      "thread": "wood-supplier",
+      "kind": "object",
+      "speaker": "Toản",
+      "key": "dak-nong-xanh",
+      "content": "Chưa có chứng nhận FSC",
+      "quote": "Bên Đắk Nông Xanh chưa có chứng nhận FSC"
+    },
+    {
+      "utt": "u014",
+      "thread": "wood-supplier",
+      "kind": "info",
+      "speaker": "Toản",
+      "content": "Đơn hàng đi Nhật bắt buộc chứng nhận FSC",
+      "quote": "đơn hàng đi Nhật bắt buộc phải có"
+    },
+    {
+      "utt": "u017",
+      "thread": "wood-supplier",
+      "kind": "propose",
+      "speaker": "Sinh",
+      "key": "dak-nong-xanh",
+      "content": "Thúc giục chốt đổi sang Đắk Nông Xanh",
+      "quote": "mình chốt đổi qua Đắk Nông Xanh luôn đi anh"
+    },
+    {
+      "utt": "u018",
+      "thread": "wood-supplier",
+      "kind": "defer",
+      "speaker": "Đạo",
+      "content": "Hợp đồng lớn, để giám đốc Phong quyết",
+      "quote": "phải để anh Phong quyết"
+    },
+    {
+      "utt": "u018",
+      "thread": "wood-supplier",
+      "kind": "assign",
+      "speaker": "Đạo",
+      "key": "bang-so-sanh",
+      "owner": "Sinh",
+      "deadline_text": "sáng thứ Hai",
+      "content": "Làm bảng so sánh hai nhà cung cấp gửi anh Phong",
+      "quote": "Sinh làm bảng so sánh hai bên gửi anh Phong, sáng thứ Hai nhé"
+    },
+    {
+      "utt": "u019",
+      "thread": "wood-supplier",
+      "kind": "commit",
+      "speaker": "Sinh",
+      "key": "bang-so-sanh",
+      "owner": "Sinh",
+      "quote": "Ok anh, sáng thứ Hai em gửi"
+    },
+    {
+      "utt": "u020",
+      "thread": "wood-supplier",
+      "kind": "assign",
+      "speaker": "Đạo",
+      "key": "check-hop-dong",
+      "owner": null,
+      "content": "Kiểm tra điều khoản phạt khi đổi nhà cung cấp trong hợp đồng cũ",
+      "quote": "ai đó check giúp hợp đồng cũ với Tân Phát"
+    },
+    {
+      "utt": "u022",
+      "thread": "qc",
+      "kind": "blocker",
+      "speaker": "Toản",
+      "content": "Lô gỗ tuần trước độ ẩm 16% (chuẩn 12%), chưa đưa vào sản xuất",
+      "quote": "lô gỗ nhập tuần trước đo độ ẩm 16%, vượt chuẩn 12%"
+    },
+    {
+      "utt": "u023",
+      "thread": "overtime",
+      "kind": "agree",
+      "speaker": "Đạo",
+      "key": "ca-toi-thu-bay",
+      "content": "Từ tuần sau làm thêm ca tối thứ Bảy đến khi xong đơn Nhật",
+      "quote": "Từ tuần sau xưởng làm thêm ca tối thứ Bảy cho tới khi xong đơn Nhật"
+    },
+    {
+      "utt": "u025",
+      "thread": "inventory",
+      "kind": "request",
+      "speaker": "Lam",
+      "content": "Chuyển phiếu xuất kho viết tay sang file Excel",
+      "quote": "mình chuyển qua file Excel cho dễ đối chiếu"
+    },
+    {
+      "utt": "u029",
+      "thread": "picking-layout",
+      "kind": "info",
+      "speaker": "Sinh",
+      "content": "Volume tháng 11 dự báo tăng 40%, khu picking sẽ nghẽn ở dock 2",
+      "quote": "Volume dự báo tháng 11 tăng 40%"
+    },
+    {
+      "utt": "u030",
+      "thread": "picking-layout",
+      "kind": "propose",
+      "speaker": "Toản",
+      "key": "fast-dock1",
+      "content": "Dời khu hàng fast-moving lên sát dock 1",
+      "quote": "Em propose dời khu hàng fast-moving lên sát dock 1"
+    },
+    {
+      "utt": "u031",
+      "thread": "picking-layout",
+      "kind": "object",
+      "speaker": "Lam",
+      "key": "fast-dock1",
+      "content": "Phải mapping lại ~1.200 SKU trên WMS, mất 3 ngày",
+      "quote": "phải update lại location trên WMS"
+    },
+    {
+      "utt": "u032",
+      "thread": "picking-layout",
+      "kind": "info",
+      "speaker": "Quý",
+      "content": "Lối thoát hiểm cạnh dock 1 phải trống tối thiểu 1,2 m (quy định PCCC)",
+      "quote": "Lối thoát hiểm cạnh dock 1 phải giữ trống tối thiểu 1,2 mét"
+    },
+    {
+      "utt": "u033",
+      "thread": "picking-layout",
+      "kind": "agree",
+      "speaker": "Đạo",
+      "key": "fast-dock1",
+      "content": "Tạm đi phương án dời fast-moving lên dock 1",
+      "hedged": true,
+      "quote": "Tạm thời mình đi phương án dời fast-moving lên dock 1 nha"
+    },
+    {
+      "utt": "u036",
+      "thread": "shift-plan",
+      "kind": "propose",
+      "speaker": "Toản",
+      "key": "ca-dem",
+      "content": "Thêm ca đêm, tuyển ~15 thời vụ",
+      "quote": "Em nghĩ thêm ca đêm, tuyển thời vụ khoảng 15 người"
+    },
+    {
+      "utt": "u037",
+      "thread": "shift-plan",
+      "kind": "object",
+      "speaker": "Sinh",
+      "key": "ca-dem",
+      "content": "Thời vụ training mất cả tuần, KPI picking accuracy tụt",
+      "quote": "Thời vụ thì training mất cả tuần"
+    },
+    {
+      "utt": "u038",
+      "thread": "shift-plan",
+      "kind": "defer",
+      "speaker": "Đạo",
+      "content": "Tính với HR, tuần sau quyết",
+      "quote": "để anh tính với HR rồi tuần sau quyết"
+    },
+    {
+      "utt": "u039",
+      "thread": "scanner",
+      "kind": "blocker",
+      "speaker": "Lam",
+      "content": "Máy quét barcode dock 2 lỗi kết nối Wi-Fi, picker phải nhập tay",
+      "quote": "máy quét barcode ở dock 2 bị lỗi kết nối Wi-Fi từ hôm qua"
+    },
+    {
+      "utt": "u040",
+      "thread": "scanner",
+      "kind": "assign",
+      "speaker": "Đạo",
+      "key": "vendor-check",
+      "owner": null,
+      "content": "Gọi vendor check máy quét barcode",
+      "quote": "Ai đó gọi bên vendor check giúp cái máy quét nhé"
+    },
+    {
+      "utt": "u042",
+      "thread": "wms-update",
+      "kind": "commit",
+      "speaker": "Lam",
+      "key": "wms-deploy",
+      "owner": "Lam",
+      "content": "Deploy bản update WMS lên môi trường test",
+      "deadline_text": "trong hôm nay",
+      "quote": "Em sẽ deploy bản update WMS lên môi trường test trong hôm nay"
+    },
+    {
+      "utt": "u043",
+      "thread": "client-report",
+      "kind": "request",
+      "speaker": "Sinh",
+      "content": "Khách Minh Khoa yêu cầu report tồn kho hàng ngày, gửi trước 9 giờ sáng",
+      "quote": "Bên khách Minh Khoa request report tồn kho hàng ngày thay vì hàng tuần"
+    },
+    {
+      "utt": "u044",
+      "thread": "client-report",
+      "kind": "assign",
+      "speaker": "Đạo",
+      "key": "daily-report",
+      "owner": "Sinh",
+      "content": "Làm template report tồn kho daily",
+      "deadline_text": "trước thứ Năm",
+      "quote": "Sinh làm template report daily rồi gửi anh xem trước thứ Năm nha"
+    },
+    {
+      "utt": "u045",
+      "thread": "client-report",
+      "kind": "commit",
+      "speaker": "Sinh",
+      "key": "daily-report",
+      "owner": "Sinh",
+      "deadline_text": "thứ Năm",
+      "quote": "Ok anh, thứ Năm em gửi"
+    },
+    {
+      "utt": "u048",
+      "thread": "wait-time",
+      "kind": "feedback",
+      "speaker": "Toản",
+      "content": "Bệnh nhân phàn nàn chờ lâu buổi sáng, có người chờ hơn một tiếng",
+      "quote": "Bệnh nhân phàn nàn nhiều về thời gian chờ buổi sáng"
+    },
+    {
+      "utt": "u049",
+      "thread": "wait-time",
+      "kind": "propose",
+      "speaker": "Sinh",
+      "key": "zalo-booking",
+      "content": "Đặt lịch hẹn qua Zalo, khung 15 phút tối đa 4 bệnh nhân",
+      "quote": "Em đề xuất chuyển sang đặt lịch hẹn qua Zalo"
+    },
+    {
+      "utt": "u050",
+      "thread": "wait-time",
+      "kind": "object",
+      "speaker": "Lam",
+      "key": "zalo-booking",
+      "content": "Phần mềm ~3 triệu/tháng, chưa có ngân sách",
+      "quote": "chưa có trong ngân sách năm nay"
+    },
+    {
+      "utt": "u050",
+      "thread": "wait-time",
+      "kind": "info",
+      "speaker": "Lam",
+      "content": "Phần mềm đặt lịch ~3 triệu/tháng, chưa có trong ngân sách năm nay",
+      "quote": "Phần mềm đặt lịch tốn khoảng 3 triệu một tháng"
+    },
+    {
+      "utt": "u051",
+      "thread": "wait-time",
+      "kind": "defer",
+      "speaker": "Đạo",
+      "content": "Khoản chi mới phải để giám đốc Phong duyệt",
+      "quote": "Khoản chi mới này phải để anh Phong duyệt"
+    },
+    {
+      "utt": "u051",
+      "thread": "wait-time",
+      "kind": "assign",
+      "speaker": "Đạo",
+      "key": "de-xuat",
+      "owner": "Sinh",
+      "content": "Làm đề xuất chi tiết đặt lịch qua Zalo gửi anh Phong",
+      "quote": "Sinh làm đề xuất chi tiết gửi anh Phong nhé"
+    },
+    {
+      "utt": "u052",
+      "thread": "wait-time",
+      "kind": "commit",
+      "speaker": "Sinh",
+      "key": "de-xuat",
+      "owner": "Sinh",
+      "hedged": true,
+      "quote": "Dạ để em xem lại số liệu rồi làm"
+    },
+    {
+      "utt": "u053",
+      "thread": "record-storage",
+      "kind": "info",
+      "speaker": "Sinh",
+      "content": "Từ tháng 11 Sở Y tế yêu cầu lưu hồ sơ bệnh án điện tử tối thiểu 10 năm",
+      "quote": "từ tháng 11 Sở Y tế yêu cầu lưu hồ sơ bệnh án điện tử tối thiểu 10 năm"
+    },
+    {
+      "utt": "u054",
+      "thread": "record-storage",
+      "kind": "blocker",
+      "speaker": "Lam",
+      "content": "Server chỉ còn trống ~20%, không đủ lưu 10 năm",
+      "quote": "Server hiện tại chỉ còn trống khoảng 20%"
+    },
+    {
+      "utt": "u055",
+      "thread": "record-storage",
+      "kind": "assign",
+      "speaker": "Đạo",
+      "key": "cloud-quote",
+      "owner": "Lam",
+      "content": "Hỏi báo giá lưu trữ cloud ba bên",
+      "deadline_text": "thứ Ba tuần sau",
+      "quote": "Lam hỏi báo giá lưu trữ cloud ba bên, trước thứ Ba tuần sau gửi anh"
+    },
+    {
+      "utt": "u056",
+      "thread": "record-storage",
+      "kind": "commit",
+      "speaker": "Lam",
+      "key": "cloud-quote",
+      "owner": "Lam",
+      "deadline_text": "thứ Ba",
+      "quote": "Ok anh, thứ Ba em gửi"
+    },
+    {
+      "utt": "u057",
+      "thread": "printer",
+      "kind": "blocker",
+      "speaker": "Toản",
+      "content": "Máy in hóa đơn quầy lễ tân kẹt giấy liên tục, phải viết tay",
+      "quote": "Máy in hóa đơn ở quầy lễ tân kẹt giấy liên tục"
+    },
+    {
+      "utt": "u058",
+      "thread": "printer",
+      "kind": "assign",
+      "speaker": "Đạo",
+      "key": "sua-may-in",
+      "owner": "Toản",
+      "content": "Liên hệ bảo hành sửa máy in hóa đơn",
+      "deadline_text": "trong tuần này",
+      "quote": "Toản liên hệ bên bảo hành sửa máy in trong tuần này nhé"
+    },
+    {
+      "utt": "u059",
+      "thread": "printer",
+      "kind": "commit",
+      "speaker": "Toản",
+      "key": "sua-may-in",
+      "owner": "Toản",
+      "quote": "Dạ vâng"
+    },
+    {
+      "utt": "u060",
+      "thread": "intake-process",
+      "kind": "commit",
+      "speaker": "Sinh",
+      "key": "quy-trinh",
+      "owner": "Sinh",
+      "content": "Cập nhật quy trình tiếp nhận mới cho điều dưỡng",
+      "deadline_text": "thứ Hai tuần sau",
+      "quote": "Em sẽ cập nhật quy trình tiếp nhận mới cho điều dưỡng, thứ Hai tuần sau phổ biến"
+    },
+    {
+      "utt": "u063",
+      "thread": "slab-pour",
+      "kind": "info",
+      "speaker": "Sinh",
+      "content": "Mưa khi bê tông chưa ninh kết làm bề mặt rỗ, phải mài lại thêm ~2 ngày",
+      "quote": "Mưa lúc bê tông chưa ninh kết thì bề mặt bị rỗ"
+    },
+    {
+      "utt": "u064",
+      "thread": "slab-pour",
+      "kind": "propose",
+      "speaker": "Toản",
+      "key": "thu-ba",
+      "content": "Dời đổ sàn sang sáng thứ Ba 3/11",
+      "quote": "Em đề xuất dời qua sáng thứ Ba 3/11"
+    },
+    {
+      "utt": "u065",
+      "thread": "slab-pour",
+      "kind": "object",
+      "speaker": "Quý",
+      "key": "thu-ba",
+      "content": "Tổ đổ bê tông phải chờ, mất hai ngày công ~12 triệu",
+      "quote": "Dời qua thứ Ba thì tổ đổ bê tông bên em phải chờ"
+    },
+    {
+      "utt": "u066",
+      "thread": "slab-pour",
+      "kind": "agree",
+      "speaker": "Đạo",
+      "key": "thu-bay",
+      "content": "Đổ thứ Bảy",
+      "quote": "Ok vậy đổ thứ Bảy"
+    },
+    {
+      "utt": "u068",
+      "thread": "salary-advance",
+      "kind": "request",
+      "speaker": "Lam",
+      "content": "Công nhân xin ứng trước một nửa lương tháng 11 để về quê",
+      "quote": "công nhân hỏi ứng trước một nửa lương tháng 11"
+    },
+    {
+      "utt": "u069",
+      "thread": "salary-advance",
+      "kind": "info",
+      "speaker": "Lam",
+      "content": "Quỹ công trình còn ~300 triệu; ứng cho 40 người hết ~200 triệu",
+      "quote": "Quỹ công trình hiện còn khoảng 300 triệu"
+    },
+    {
+      "utt": "u070",
+      "thread": "salary-advance",
+      "kind": "defer",
+      "speaker": "Đạo",
+      "content": "Hỏi giám đốc dự án rồi trả lời sau",
+      "quote": "để anh hỏi giám đốc dự án rồi trả lời sau"
+    },
+    {
+      "utt": "u071",
+      "thread": "slab-pour",
+      "kind": "object",
+      "speaker": "Sinh",
+      "key": "thu-bay",
+      "content": "Dự báo mới: mưa từ 10 giờ sáng thứ Bảy",
+      "quote": "thứ Bảy mưa từ 10 giờ sáng chứ không phải trưa"
+    },
+    {
+      "utt": "u072",
+      "thread": "slab-pour",
+      "kind": "object",
+      "speaker": "Sinh",
+      "key": "thu-bay",
+      "content": "Đổ 6–10 giờ không kịp xong sàn",
+      "quote": "đổ từ 6 giờ tới 10 giờ không kịp xong"
+    },
+    {
+      "utt": "u073",
+      "thread": "slab-pour",
+      "kind": "reopen",
+      "speaker": "Đạo",
+      "key": "thu-bay",
+      "content": "Huỷ đổ thứ Bảy",
+      "quote": "không đổ thứ Bảy nữa"
+    },
+    {
+      "utt": "u074",
+      "thread": "slab-pour",
+      "kind": "propose",
+      "speaker": "Toản",
+      "key": "thu-ba",
+      "content": "Thúc giục chốt thứ Ba 3/11",
+      "quote": "Vậy chốt thứ Ba 3/11 luôn đi anh"
+    },
+    {
+      "utt": "u075",
+      "thread": "slab-pour",
+      "kind": "object",
+      "speaker": "Quý",
+      "key": "thu-ba",
+      "content": "Mất tiền chờ của tổ đổ",
+      "quote": "nhưng mất tiền chờ của tổ đổ"
+    },
+    {
+      "utt": "u076",
+      "thread": "slab-pour",
+      "kind": "agree",
+      "speaker": "Đạo",
+      "key": "thu-ba",
+      "content": "Đổ sàn tầng 5 sáng thứ Ba 3/11; công trình chịu tiền chờ của tổ đổ",
+      "quote": "Đổ sàn tầng 5 sáng thứ Ba 3/11"
+    },
+    {
+      "utt": "u078",
+      "thread": "slab-pour",
+      "kind": "assign",
+      "speaker": "Đạo",
+      "key": "phieu-be-tong",
+      "owner": "Sinh",
+      "content": "Gửi lại phiếu yêu cầu bê tông cho trạm trộn, đổi ngày giao sang thứ Ba",
+      "deadline_text": "trong hôm nay",
+      "quote": "Sinh gửi lại phiếu yêu cầu bê tông cho trạm trộn"
+    },
+    {
+      "utt": "u079",
+      "thread": "slab-pour",
+      "kind": "commit",
+      "speaker": "Sinh",
+      "key": "phieu-be-tong",
+      "owner": "Sinh",
+      "deadline_text": "chiều nay",
+      "quote": "Ok anh, chiều nay em gửi"
+    },
+    {
+      "utt": "u080",
+      "thread": "safety",
+      "kind": "propose",
+      "speaker": "Đạo",
+      "key": "phat",
+      "content": "Phạt đúng quy định",
+      "quote": "Anh nghĩ phạt thì vẫn phạt"
+    },
+    {
+      "utt": "u081",
+      "thread": "safety",
+      "kind": "revise",
+      "speaker": "Quý",
+      "key": "nhac-nho",
+      "content": "Lần này chỉ nhắc nhở, training lại cả tổ",
+      "quote": "Anh cho em xin lần này nhắc nhở thôi"
+    },
+    {
+      "utt": "u082",
+      "thread": "safety",
+      "kind": "object",
+      "speaker": "Toản",
+      "key": "nhac-nho",
+      "content": "Bỏ qua thì các tổ khác làm theo, khó quản lý",
+      "quote": "Bỏ qua lần này thì mấy tổ khác cũng làm theo"
+    },
+    {
+      "utt": "u083",
+      "thread": "safety",
+      "kind": "agree",
+      "speaker": "Đạo",
+      "key": "phat",
+      "content": "Phạt đúng quy định 500 nghìn/người; công nhân mới phải học an toàn trước khi lên giàn giáo",
+      "quote": "Phạt đúng quy định 500 nghìn mỗi người"
+    },
+    {
+      "utt": "u084",
+      "thread": "safety",
+      "kind": "assign",
+      "speaker": "Đạo",
+      "key": "training",
+      "owner": "Toản",
+      "content": "Tổ chức buổi training an toàn cho công nhân mới",
+      "deadline_text": "sáng thứ Năm này",
+      "quote": "Toản tổ chức buổi training an toàn cho công nhân mới, sáng thứ Năm này"
+    },
+    {
+      "utt": "u085",
+      "thread": "safety",
+      "kind": "commit",
+      "speaker": "Toản",
+      "key": "training",
+      "owner": "Toản",
+      "deadline_text": "thứ Năm",
+      "quote": "Ok anh, sáng thứ Năm em tổ chức"
+    },
+    {
+      "utt": "u086",
+      "thread": "safety",
+      "kind": "commit",
+      "speaker": "Quý",
+      "key": "kiem-tra-day",
+      "owner": "Quý",
+      "content": "Cho tổ trưởng kiểm tra dây an toàn đầu mỗi ca",
+      "deadline_text": "mai",
+      "quote": "Em sẽ cho tổ trưởng kiểm tra dây an toàn đầu mỗi ca, bắt đầu từ mai"
+    },
+    {
+      "utt": "u088",
+      "thread": "fabric-supplier",
+      "kind": "propose",
+      "speaker": "Sinh",
+      "key": "thanh-cong",
+      "content": "Giữ nhà cung cấp cũ Thành Công (68 nghìn/m, giao 10 ngày)",
+      "quote": "Phong án một là giữ nhà cung cấp cũ Thành Công"
+    },
+    {
+      "utt": "u089",
+      "thread": "fabric-supplier",
+      "kind": "propose",
+      "speaker": "Sinh",
+      "key": "phu-thinh",
+      "content": "Chuyển sang Phú Thịnh (61 nghìn/m, giao 7 ngày)",
+      "quote": "Em đề xuất Phú Thịnh"
+    },
+    {
+      "utt": "u090",
+      "thread": "fabric-supplier",
+      "kind": "object",
+      "speaker": "Toản",
+      "key": "phu-thinh",
+      "content": "Chưa từng làm, chưa có kết quả test co rút",
+      "quote": "chưa có kết quả test độ co rút vải"
+    },
+    {
+      "utt": "u091",
+      "thread": "fabric-supplier",
+      "kind": "info",
+      "speaker": "Sinh",
+      "content": "Phú Thịnh làm mẫu test trong 2 ngày, miễn phí",
+      "quote": "Phú Thịnh nhận làm mẫu test trong 2 ngày, không tính phí"
+    },
+    {
+      "utt": "u092",
+      "thread": "fabric-supplier",
+      "kind": "info",
+      "speaker": "Lam",
+      "content": "Đơn áo khoác giao khách ngày 5/12",
+      "quote": "Đơn này giao khách ngày 5/12"
+    },
+    {
+      "utt": "u093",
+      "thread": "fabric-supplier",
+      "kind": "agree",
+      "speaker": "Đạo",
+      "key": "phu-thinh",
+      "content": "Dùng vải Phú Thịnh cho đơn áo khoác",
+      "quote": "Chốt dùng vải Phú Thịnh cho đơn này"
+    },
+    {
+      "utt": "u094",
+      "thread": "fabric-supplier",
+      "kind": "commit",
+      "speaker": "Sinh",
+      "key": "bao-gui-mau",
+      "owner": "Sinh",
+      "content": "Báo Phú Thịnh gửi mẫu vải test",
+      "quote": "em báo Phú Thịnh gửi mẫu ngay"
+    },
+    {
+      "utt": "u095",
+      "thread": "fabric-supplier",
+      "kind": "assign",
+      "speaker": "Đạo",
+      "key": "test-co-rut",
+      "owner": "Toản",
+      "content": "Test độ co rút mẫu vải Phú Thịnh",
+      "deadline_text": "trước thứ Ba",
+      "quote": "Toản test độ co rút mẫu vải ngay khi về, có kết quả trước thứ Ba"
+    },
+    {
+      "utt": "u096",
+      "thread": "fabric-supplier",
+      "kind": "commit",
+      "speaker": "Toản",
+      "key": "test-co-rut",
+      "owner": "Toản",
+      "deadline_text": "thứ Ba",
+      "quote": "Dạ ok chị, thứ Ba có kết quả"
+    },
+    {
+      "utt": "u097",
+      "thread": "cost-compare",
+      "kind": "assign",
+      "speaker": "Đạo",
+      "key": "bang-so-sanh",
+      "owner": "Phong",
+      "content": "Làm bảng so sánh chi phí hai nhà cung cấp vải",
+      "deadline_text": "thứ Sáu",
+      "quote": "Phong làm bảng so sánh chi phí hai nhà cung cấp, thứ Sáu nộp chị"
+    },
+    {
+      "utt": "u098",
+      "thread": "cost-compare",
+      "kind": "commit",
+      "speaker": "Lam",
+      "key": "nhan-phuong",
+      "owner": "Lam",
+      "content": "Nhắn chị Phong (đang nghỉ phép) về việc làm bảng so sánh",
+      "quote": "em sẽ nhắn chị ấy"
+    },
+    {
+      "utt": "u099",
+      "thread": "qc-machine",
+      "kind": "blocker",
+      "speaker": "Toản",
+      "content": "Máy kiểm tra độ bền màu hỏng, gửi mẫu ra ngoài test mất 3 ngày",
+      "quote": "Máy kiểm tra độ bền màu của phòng QC hỏng từ tuần trước"
+    },
+    {
+      "utt": "u100",
+      "thread": "qc-machine",
+      "kind": "assign",
+      "speaker": "Đạo",
+      "key": "gia-sua-may",
+      "owner": "Sinh",
+      "content": "Hỏi giá sửa máy kiểm tra độ bền màu",
+      "quote": "Sinh hỏi giá sửa máy kiểm tra độ bền màu nha"
+    },
+    {
+      "utt": "u101",
+      "thread": "qc-machine",
+      "kind": "commit",
+      "speaker": "Sinh",
+      "key": "gia-sua-may",
+      "owner": "Sinh",
+      "quote": "Dạ"
+    },
+    {
+      "utt": "u102",
+      "thread": "shirt-quality",
+      "kind": "feedback",
+      "speaker": "Toản",
+      "content": "Khách phản hồi lô áo sơ mi tuần trước lệch đường may cổ áo ở ~3% sản phẩm",
+      "quote": "khách phản hồi đường may cổ áo bị lệch ở khoảng 3% sản phẩm"
+    },
+    {
+      "utt": "u103",
+      "thread": "labels",
+      "kind": "request",
+      "speaker": "Lam",
+      "content": "Khách Nhật yêu cầu thêm nhãn mác song ngữ Nhật–Việt cho đơn áo khoác",
+      "quote": "Khách Nhật vừa yêu cầu thêm nhãn mác song ngữ Nhật–Việt cho đơn áo khoác"
+    },
+    {
+      "utt": "u106",
+      "thread": "machine-2",
+      "kind": "blocker",
+      "speaker": "Toản",
+      "content": "Máy in offset số 2 hỏng trục lô, chờ linh kiện ít nhất 5 ngày",
+      "quote": "Máy in offset số 2 hỏng trục lô từ chiều thứ Sáu"
+    },
+    {
+      "utt": "u107",
+      "thread": "tet-order",
+      "kind": "info",
+      "speaker": "Sinh",
+      "content": "Đơn hộp quà Tết khách Tân Mỹ giao ngày 30/10",
+      "quote": "Đơn hộp quà Tết của khách Tân Mỹ giao ngày 30/10"
+    },
+    {
+      "utt": "u108",
+      "thread": "tet-order",
+      "kind": "propose",
+      "speaker": "Sinh",
+      "key": "may-1",
+      "content": "Chuyển đơn hộp quà Tết sang máy 1, đẩy đơn túi giấy xuống tuần sau",
+      "quote": "Em đề xuất chuyển đơn đó sang máy số 1"
+    },
+    {
+      "utt": "u109",
+      "thread": "tet-order",
+      "kind": "propose",
+      "speaker": "Toản",
+      "key": "may-1",
+      "content": "Thúc giục chốt chuyển sang máy 1",
+      "quote": "Mình chốt chuyển sang máy 1 luôn đi anh"
+    },
+    {
+      "utt": "u110",
+      "thread": "tet-order",
+      "kind": "agree",
+      "speaker": "Đạo",
+      "key": "may-1",
+      "content": "Chuyển đơn hộp quà Tết sang máy 1, đơn túi giấy dời qua tuần sau",
+      "quote": "Chuyển đơn hộp quà Tết sang máy 1, đơn túi giấy dời qua tuần sau"
+    },
+    {
+      "utt": "u111",
+      "thread": "tet-order",
+      "kind": "object",
+      "speaker": "Lam",
+      "key": "may-1",
+      "content": "Máy 1 in màu pha đỏ hay lệch, lô trước bị trả 2.000 hộp",
+      "quote": "máy 1 in màu pha đỏ hay lệch"
+    },
+    {
+      "utt": "u112",
+      "thread": "tet-order",
+      "kind": "agree",
+      "speaker": "Đạo",
+      "key": "may-1",
+      "content": "Giữ quyết định chuyển đơn hộp quà Tết sang máy 1, đơn túi giấy dời tuần sau",
+      "quote": "Vẫn chạy máy 1"
+    },
+    {
+      "utt": "u112",
+      "thread": "tet-order",
+      "kind": "assign",
+      "speaker": "Đạo",
+      "key": "do-mau",
+      "owner": "Lam",
+      "content": "Đo màu từng lô 500 hộp, lệch thì dừng máy",
+      "quote": "Lam đo màu từng lô 500 hộp"
+    },
+    {
+      "utt": "u113",
+      "thread": "tet-order",
+      "kind": "commit",
+      "speaker": "Lam",
+      "key": "do-mau",
+      "owner": "Lam",
+      "quote": "Dạ ok anh, em đo từng lô"
+    },
+    {
+      "utt": "u114",
+      "thread": "tet-order",
+      "kind": "commit",
+      "speaker": "Sinh",
+      "key": "bao-khach",
+      "owner": "Sinh",
+      "content": "Gọi báo khách Phúc Lộc việc dời đơn túi giấy",
+      "deadline_text": "chiều nay",
+      "quote": "Em sẽ gọi khách chiều nay"
+    },
+    {
+      "utt": "u115",
+      "thread": "maintenance",
+      "kind": "blocker",
+      "speaker": "Toản",
+      "content": "Bảo trì định kỳ máy cắt bế đã quá hạn hai tuần",
+      "quote": "Lịch bảo trì định kỳ máy cắt bế tháng này mình chưa làm"
+    },
+    {
+      "utt": "u116",
+      "thread": "maintenance",
+      "kind": "assign",
+      "speaker": "Đạo",
+      "key": "bao-tri",
+      "owner": "Toản",
+      "content": "Lên lịch bảo trì máy cắt bế",
+      "deadline_text": "thứ Bảy này",
+      "quote": "Toản lên lịch bảo trì máy cắt bế, làm vào thứ Bảy này"
+    },
+    {
+      "utt": "u117",
+      "thread": "maintenance",
+      "kind": "decline",
+      "speaker": "Toản",
+      "key": "bao-tri",
+      "owner": "Toản",
+      "quote": "Thứ Bảy này em kẹt đám cưới em gái rồi anh, khó làm được"
+    },
+    {
+      "utt": "u120",
+      "thread": "riverside-feedback",
+      "kind": "feedback",
+      "speaker": "Sinh",
+      "content": "Khách khen nhà mẫu Riverside đẹp nhưng chê bãi giữ xe chật, ô tô ra vào khó",
+      "quote": "Khách xem dự án Riverside phản hồi nhà mẫu đẹp, nhưng chê bãi giữ xe chật"
+    },
+    {
+      "utt": "u121",
+      "thread": "ads-young",
+      "kind": "propose",
+      "speaker": "Lam",
+      "key": "fb-khach-tre",
+      "content": "Chạy quảng cáo Facebook nhắm khách trẻ mua căn đầu, ngân sách 30 triệu",
+      "quote": "Em đề xuất chạy thêm quảng cáo Facebook nhắm khách trẻ mua căn đầu tiên"
+    },
+    {
+      "utt": "u122",
+      "thread": "ads-young",
+      "kind": "object",
+      "speaker": "Toản",
+      "key": "fb-khach-tre",
+      "content": "Tháng 8 đã chạy, tỉ lệ ra cọc dưới 1%",
+      "quote": "tỉ lệ ra cọc chưa tới 1%, tốn tiền"
+    },
+    {
+      "utt": "u122",
+      "thread": "ads-young",
+      "kind": "info",
+      "speaker": "Toản",
+      "content": "Quảng cáo nhắm khách trẻ tháng 8: tỉ lệ ra cọc dưới 1%",
+      "quote": "Tệp khách trẻ mình chạy hồi tháng 8 rồi, tỉ lệ ra cọc chưa tới 1%"
+    },
+    {
+      "utt": "u125",
+      "thread": "legal",
+      "kind": "info",
+      "speaker": "Quý",
+      "content": "Riverside dự kiến tháng 12 mới có sổ hồng từng căn, phải nói rõ với khách",
+      "quote": "Dự án Riverside dự kiến tháng 12 mới có sổ hồng từng căn"
+    },
+    {
+      "utt": "u126",
+      "thread": "legal",
+      "kind": "assign",
+      "speaker": "Đạo",
+      "key": "faq-phap-ly",
+      "owner": "Toản",
+      "content": "Soạn lại bộ câu hỏi thường gặp về pháp lý cho cả team",
+      "quote": "Toản soạn lại bộ câu hỏi thường gặp về pháp lý cho cả team nhé"
+    },
+    {
+      "utt": "u127",
+      "thread": "legal",
+      "kind": "commit",
+      "speaker": "Toản",
+      "key": "faq-phap-ly",
+      "owner": "Toản",
+      "quote": "Dạ vâng"
+    },
+    {
+      "utt": "u128",
+      "thread": "follow-up",
+      "kind": "commit",
+      "speaker": "Sinh",
+      "key": "goi-lai-khach",
+      "owner": "Sinh",
+      "content": "Gọi lại 12 khách đã xem nhà mẫu tuần trước",
+      "deadline_text": "trong hôm nay",
+      "quote": "Em sẽ gọi lại 12 khách đã xem nhà mẫu tuần trước trong hôm nay"
+    },
+    {
+      "utt": "u131",
+      "thread": "export-volume",
+      "kind": "info",
+      "speaker": "Lam",
+      "content": "Đối tác đặt 20 tấn, giao trước 15/11, giá 95 nghìn/kg",
+      "quote": "Đối tác bên kia đặt 20 tấn, giao trước ngày 15/11, giá 95 nghìn một ký"
+    },
+    {
+      "utt": "u134",
+      "thread": "export-volume",
+      "kind": "info",
+      "speaker": "Toản",
+      "content": "Vườn xã viên đợt này gom được ~14 tấn đạt chuẩn",
+      "quote": "Vườn của xã viên đợt này chỉ gom được khoảng 14 tấn đạt chuẩn"
+    },
+    {
+      "utt": "u135",
+      "thread": "export-volume",
+      "kind": "object",
+      "speaker": "Sinh",
+      "key": "mua-vuon-ngoai",
+      "content": "Khó kiểm soát dư lượng thuốc, lô bị trả là mất cả đơn",
+      "quote": "Mua vườn ngoài thì khó kiểm soát dư lượng thuốc"
+    },
+    {
+      "utt": "u136",
+      "thread": "export-volume",
+      "kind": "propose",
+      "speaker": "Lam",
+      "key": "nhan-14-tan",
+      "content": "Nhận 14 tấn, phần còn lại giao đợt sau",
+      "quote": "Em đề xuất nhận 14 tấn thôi"
+    },
+    {
+      "utt": "u137",
+      "thread": "export-volume",
+      "kind": "agree",
+      "speaker": "Đạo",
+      "key": "nhan-14-tan",
+      "content": "Nhận 14 tấn, phần còn lại thương lượng giao đợt tháng 12",
+      "quote": "nhận 14 tấn, phần còn lại thương lượng giao đợt tháng 12. Chốt vậy"
+    },
+    {
+      "utt": "u138",
+      "thread": "export-volume",
+      "kind": "assign",
+      "speaker": "Đạo",
+      "key": "hop-dong",
+      "owner": "Lam",
+      "content": "Báo lại đối tác và gửi hợp đồng sửa đổi",
+      "deadline_text": "trước ngày 30/10",
+      "quote": "Lam báo lại đối tác và gửi hợp đồng sửa đổi trước ngày 30/10"
+    },
+    {
+      "utt": "u139",
+      "thread": "export-volume",
+      "kind": "commit",
+      "speaker": "Lam",
+      "key": "hop-dong",
+      "owner": "Lam",
+      "quote": "Dạ"
+    },
+    {
+      "utt": "u140",
+      "thread": "inspection",
+      "kind": "info",
+      "speaker": "Sinh",
+      "content": "Phí kiểm định dư lượng thuốc 4 triệu/lô; 14 tấn chia 2 lô là 8 triệu",
+      "quote": "Phí kiểm định dư lượng thuốc mỗi lô 4 triệu"
+    },
+    {
+      "utt": "u141",
+      "thread": "harvest",
+      "kind": "commit",
+      "speaker": "Toản",
+      "key": "lich-thu-hoach",
+      "owner": "Toản",
+      "content": "Lên lịch thu hoạch từng vườn, gửi nhóm Zalo",
+      "deadline_text": "cuối tuần này",
+      "quote": "Em sẽ lên lịch thu hoạch cho từng vườn, gửi nhóm Zalo cuối tuần này"
+    },
+    {
+      "utt": "u144",
+      "thread": "steel",
+      "kind": "propose",
+      "speaker": "Sinh",
+      "key": "dong-a",
+      "content": "Mua lô thép phi 16 của Đông Á, giá cao hơn 3%, giao trong 2 ngày",
+      "quote": "Em đề xuất mua lô phi 16 của nhà cung cấp Đông Á"
+    },
+    {
+      "utt": "u145",
+      "thread": "steel",
+      "kind": "object",
+      "speaker": "Lam",
+      "key": "dong-a",
+      "content": "Lô 25 tấn đội thêm ~15 triệu",
+      "quote": "lô 25 tấn đội thêm khoảng 15 triệu"
+    },
+    {
+      "utt": "u147",
+      "thread": "steel",
+      "kind": "agree",
+      "speaker": "Đạo",
+      "key": "dong-a",
+      "content": "Mua lô thép phi 16 này của Đông Á",
+      "quote": "Mua của Đông Á lô này"
+    },
+    {
+      "utt": "u148",
+      "thread": "steel",
+      "kind": "info",
+      "speaker": "Lam",
+      "content": "Hợp đồng mua thép trên 10 triệu phải có chữ ký giám đốc dự án",
+      "quote": "Hợp đồng mua thép trên 10 triệu phải có chữ ký giám đốc dự án"
+    },
+    {
+      "utt": "u149",
+      "thread": "steel",
+      "kind": "assign",
+      "speaker": "Đạo",
+      "key": "hop-dong-thep",
+      "owner": "Lam",
+      "content": "Soạn hợp đồng Đông Á, gửi giám đốc dự án Khải ký online",
+      "deadline_text": "trong hôm nay",
+      "quote": "Lam soạn hợp đồng Đông Á rồi gửi anh Khải ký online trong hôm nay"
+    },
+    {
+      "utt": "u150",
+      "thread": "steel",
+      "kind": "commit",
+      "speaker": "Lam",
+      "key": "hop-dong-thep",
+      "owner": "Lam",
+      "quote": "Dạ, em gửi liền"
+    },
+    {
+      "utt": "u151",
+      "thread": "hoist",
+      "kind": "blocker",
+      "speaker": "Toản",
+      "content": "Máy vận thăng chở người kêu lạ, đã dừng chạy",
+      "quote": "máy vận thăng chở người kêu lạ từ hôm qua"
+    },
+    {
+      "utt": "u152",
+      "thread": "hoist",
+      "kind": "assign",
+      "speaker": "Đạo",
+      "key": "kiem-tra-van-thang",
+      "owner": null,
+      "content": "Gọi bên cho thuê vận thăng xuống kiểm tra",
+      "quote": "Ai đó gọi bên cho thuê vận thăng xuống kiểm tra giúp anh"
+    },
+    {
+      "utt": "u154",
+      "thread": "stair-drawing",
+      "kind": "blocker",
+      "speaker": "Sinh",
+      "content": "Bản vẽ điều chỉnh cầu thang tầng 6 gửi tư vấn thiết kế từ tuần trước, chưa ai phản hồi",
+      "quote": "chưa ai phản hồi"
+    },
+    {
+      "utt": "u155",
+      "thread": "stair-drawing",
+      "kind": "assign",
+      "speaker": "Đạo",
+      "key": "hoi-thiet-ke",
+      "owner": "Sinh",
+      "content": "Gọi chủ trì thiết kế hối bản vẽ cầu thang tầng 6",
+      "deadline_text": "thứ Sáu này",
+      "quote": "Sinh gọi thẳng chủ trì thiết kế hối, thứ Sáu này phải có bản vẽ"
+    },
+    {
+      "utt": "u156",
+      "thread": "stair-drawing",
+      "kind": "commit",
+      "speaker": "Sinh",
+      "key": "hoi-thiet-ke",
+      "owner": "Sinh",
+      "hedged": true,
+      "deadline_text": "thứ Sáu",
+      "quote": "họ hẹn thứ Sáu, nhưng em chưa chắc"
+    }
+  ]
+}

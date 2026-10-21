@@ -1,0 +1,1297 @@
+{
+  "threads": [
+    {
+      "id": "payment-gateway",
+      "title": "Cổng thanh toán khi launch"
+    },
+    {
+      "id": "onboarding",
+      "title": "Flow onboarding"
+    },
+    {
+      "id": "launch-date",
+      "title": "Ngày launch cụ thể"
+    },
+    {
+      "id": "kol",
+      "title": "Chọn KOL cho campaign Tết"
+    },
+    {
+      "id": "budget-split",
+      "title": "Chia budget quảng cáo"
+    },
+    {
+      "id": "key-visual",
+      "title": "Key visual"
+    },
+    {
+      "id": "landing-page",
+      "title": "Landing page tiếng Anh"
+    },
+    {
+      "id": "media-plan",
+      "title": "Media plan"
+    },
+    {
+      "id": "music-license",
+      "title": "Bản quyền nhạc TikTok"
+    },
+    {
+      "id": "release-date",
+      "title": "Ngày release v2.0"
+    },
+    {
+      "id": "staging",
+      "title": "Server staging"
+    },
+    {
+      "id": "client-env",
+      "title": "Môi trường của khách"
+    },
+    {
+      "id": "qa",
+      "title": "Kế hoạch QA"
+    },
+    {
+      "id": "dark-mode",
+      "title": "Có làm dark mode không"
+    },
+    {
+      "id": "demo-platform",
+      "title": "Demo ra ở nền tảng nào"
+    },
+    {
+      "id": "boss-art",
+      "title": "Art boss cuối"
+    },
+    {
+      "id": "playtest",
+      "title": "Phản hồi playtest"
+    },
+    {
+      "id": "build-machine",
+      "title": "Máy build"
+    },
+    {
+      "id": "login",
+      "title": "Phương án đăng nhập app"
+    },
+    {
+      "id": "uat",
+      "title": "Lịch và môi trường UAT"
+    },
+    {
+      "id": "pricing",
+      "title": "Mô hình thu phí bản mới"
+    },
+    {
+      "id": "lesson-plan",
+      "title": "Lịch ra bài học tháng 11"
+    },
+    {
+      "id": "app-crash",
+      "title": "App văng trên Android cũ"
+    },
+    {
+      "id": "release-32",
+      "title": "Ngày release bản 3.2"
+    },
+    {
+      "id": "advanced-report",
+      "title": "Báo cáo nâng cao ở bản nào"
+    },
+    {
+      "id": "performance",
+      "title": "Hiệu năng báo cáo tháng"
+    },
+    {
+      "id": "staging-ssl",
+      "title": "Chứng chỉ SSL staging"
+    },
+    {
+      "id": "db-migration",
+      "title": "Phương án migrate database"
+    },
+    {
+      "id": "app-release",
+      "title": "Bản app tháng 11"
+    }
+  ],
+  "events": [
+    {
+      "utt": "u002",
+      "thread": "payment-gateway",
+      "kind": "propose",
+      "speaker": "Minh",
+      "key": "VNPay",
+      "content": "Dùng VNPay khi launch",
+      "quote": "em đề xuất mình sử dụng VNPay"
+    },
+    {
+      "utt": "u004",
+      "thread": "payment-gateway",
+      "kind": "object",
+      "speaker": "Lan",
+      "key": "VNPay",
+      "content": "VNPay phí cao, tích hợp 3 tuần",
+      "quote": "VNPay phí giao dịch cao hơn"
+    },
+    {
+      "utt": "u005",
+      "thread": "payment-gateway",
+      "kind": "propose",
+      "speaker": "Lan",
+      "key": "MoMo",
+      "content": "Dùng MoMo khi launch",
+      "quote": "Em đề xuất MoMo"
+    },
+    {
+      "utt": "u006",
+      "thread": "payment-gateway",
+      "kind": "object",
+      "speaker": "Minh",
+      "key": "MoMo",
+      "content": "Khách lớn tuổi quen chuyển khoản",
+      "quote": "họ quen chuyển khoản ngân hàng hơn"
+    },
+    {
+      "utt": "u008",
+      "thread": "payment-gateway",
+      "kind": "agree",
+      "speaker": "Hùng",
+      "key": "MoMo",
+      "content": "Tạm thời đi MoMo",
+      "hedged": true,
+      "quote": "tạm thời đi MoMo nhé"
+    },
+    {
+      "utt": "u011",
+      "thread": "onboarding",
+      "kind": "propose",
+      "speaker": "Tú",
+      "key": "flow-3-buoc",
+      "content": "Flow onboarding mới 3 bước, bỏ màn chọn sở thích, xác thực SĐT lên đầu",
+      "quote": "flow mới em cắt từ năm bước còn ba bước"
+    },
+    {
+      "utt": "u012",
+      "thread": "onboarding",
+      "kind": "agree",
+      "speaker": "Minh",
+      "key": "flow-3-buoc",
+      "content": "Đồng ý bỏ màn sở thích",
+      "quote": "bỏ màn sở thích ok"
+    },
+    {
+      "utt": "u012",
+      "thread": "onboarding",
+      "kind": "feedback",
+      "speaker": "Minh",
+      "content": "Nút 'Tiếp tục' quá nhỏ trên Android màn hình nhỏ",
+      "quote": "nút \"Tiếp tục\" hơi nhỏ"
+    },
+    {
+      "utt": "u013",
+      "thread": "onboarding",
+      "kind": "assign",
+      "speaker": "Hùng",
+      "key": "sua-nut",
+      "owner": "Tú",
+      "content": "Sửa nút 'Tiếp tục' và gửi bản onboarding mới",
+      "quote": "Tú sửa lại cái nút rồi gửi bản mới nhé"
+    },
+    {
+      "utt": "u014",
+      "thread": "onboarding",
+      "kind": "commit",
+      "speaker": "Tú",
+      "key": "sua-nut",
+      "owner": "Tú",
+      "deadline_text": "thứ Năm",
+      "quote": "thứ Năm em gửi bản mới"
+    },
+    {
+      "utt": "u016",
+      "thread": "kol",
+      "kind": "propose",
+      "speaker": "Minh",
+      "key": "lily-tran",
+      "content": "Book KOL Lily Trần",
+      "quote": "em propose Lily Trần"
+    },
+    {
+      "utt": "u017",
+      "thread": "kol",
+      "kind": "object",
+      "speaker": "Lan",
+      "key": "lily-tran",
+      "content": "Giá 80 triệu/post, vượt budget",
+      "quote": "báo giá 80 triệu một post"
+    },
+    {
+      "utt": "u018",
+      "thread": "kol",
+      "kind": "propose",
+      "speaker": "Lan",
+      "key": "micro-kol",
+      "content": "Đi nhóm 5 micro-KOL (~20 triệu/bạn)",
+      "quote": "Em đề xuất đi nhóm 5 micro-KOL"
+    },
+    {
+      "utt": "u019",
+      "thread": "kol",
+      "kind": "object",
+      "speaker": "Minh",
+      "key": "micro-kol",
+      "content": "Micro-KOL độ nhận diện thấp",
+      "quote": "độ nhận diện thấp hơn"
+    },
+    {
+      "utt": "u021",
+      "thread": "kol",
+      "kind": "agree",
+      "speaker": "Hùng",
+      "key": "micro-kol",
+      "content": "Nghiêng về nhóm micro-KOL, chờ hỏi lại khách",
+      "hedged": true,
+      "quote": "Tạm thời chị nghiêng về nhóm micro-KOL"
+    },
+    {
+      "utt": "u023",
+      "thread": "budget-split",
+      "kind": "agree",
+      "speaker": "Hùng",
+      "key": "60-40",
+      "content": "Budget 60% Facebook ads / 40% TikTok",
+      "quote": "Chốt: 60% Facebook ads, 40% TikTok"
+    },
+    {
+      "utt": "u024",
+      "thread": "budget-split",
+      "kind": "object",
+      "speaker": "Lan",
+      "key": "60-40",
+      "content": "CPM TikTok tháng Chạp tăng, 40% có thể không đủ",
+      "quote": "40% có khi không đủ reach"
+    },
+    {
+      "utt": "u025",
+      "thread": "budget-split",
+      "kind": "agree",
+      "speaker": "Hùng",
+      "key": "60-40",
+      "content": "Giữ 60-40, review lại tháng 1",
+      "quote": "vẫn giữ 60-40 nha"
+    },
+    {
+      "utt": "u027",
+      "thread": "key-visual",
+      "kind": "propose",
+      "speaker": "Tú",
+      "key": "concept-1",
+      "content": "Concept 1 tông vàng truyền thống",
+      "quote": "concept 1 tông vàng truyền thống"
+    },
+    {
+      "utt": "u027",
+      "thread": "key-visual",
+      "kind": "propose",
+      "speaker": "Tú",
+      "key": "concept-2",
+      "content": "Concept 2 tông đỏ hiện đại",
+      "quote": "concept 2 tông đỏ hiện đại hơn"
+    },
+    {
+      "utt": "u028",
+      "thread": "key-visual",
+      "kind": "agree",
+      "speaker": "Hùng",
+      "key": "concept-2",
+      "content": "Chọn concept 2",
+      "hedged": true,
+      "quote": "Chị thích concept 2 hơn"
+    },
+    {
+      "utt": "u030",
+      "thread": "key-visual",
+      "kind": "assign",
+      "speaker": "Hùng",
+      "key": "bien-the-1x1",
+      "owner": "Tú",
+      "content": "Làm biến thể vuông 1:1 cho concept 2",
+      "quote": "Tú làm thêm biến thể vuông 1:1 cho concept 2"
+    },
+    {
+      "utt": "u032",
+      "thread": "landing-page",
+      "kind": "request",
+      "speaker": "Minh",
+      "content": "Khách yêu cầu thêm bản tiếng Anh cho landing page",
+      "quote": "bên khách có request làm thêm bản tiếng Anh cho landing page"
+    },
+    {
+      "utt": "u033",
+      "thread": "landing-page",
+      "kind": "assign",
+      "speaker": "Hùng",
+      "key": "bao-gia",
+      "owner": "Hùng",
+      "content": "Báo giá lại với khách phần landing page tiếng Anh",
+      "quote": "để chị báo giá lại với khách"
+    },
+    {
+      "utt": "u034",
+      "thread": "media-plan",
+      "kind": "assign",
+      "speaker": "Lan",
+      "key": "media-plan",
+      "owner": "Lan",
+      "deadline_text": "cuối tuần này",
+      "content": "Gửi media plan chi tiết",
+      "quote": "Em sẽ gửi media plan chi tiết cuối tuần này"
+    },
+    {
+      "utt": "u035",
+      "thread": "music-license",
+      "kind": "question",
+      "speaker": "Minh",
+      "content": "Có cần mua bản quyền nhạc trend TikTok không?",
+      "quote": "mình có cần mua bản quyền không"
+    },
+    {
+      "utt": "u036",
+      "thread": "music-license",
+      "kind": "assign",
+      "speaker": "Hùng",
+      "key": "hoi-legal",
+      "owner": "Hùng",
+      "content": "Hỏi legal về bản quyền nhạc rồi báo lại",
+      "quote": "chị sẽ hỏi bên legal rồi báo lại"
+    },
+    {
+      "utt": "u039",
+      "thread": "release-date",
+      "kind": "propose",
+      "speaker": "Minh",
+      "key": "15-11-full",
+      "content": "Release 15/11 đầy đủ scope",
+      "quote": "em muốn release ngày 15/11"
+    },
+    {
+      "utt": "u040",
+      "thread": "release-date",
+      "kind": "object",
+      "speaker": "Lan",
+      "key": "15-11-full",
+      "content": "Export PDF chưa xong, 15/11 không kịp",
+      "quote": "15/11 thì không kịp"
+    },
+    {
+      "utt": "u041",
+      "thread": "release-date",
+      "kind": "propose",
+      "speaker": "Lan",
+      "key": "22-11",
+      "content": "Dời release sang 22/11",
+      "quote": "Em đề xuất dời qua 22/11"
+    },
+    {
+      "utt": "u043",
+      "thread": "release-date",
+      "kind": "agree",
+      "speaker": "Hùng",
+      "key": "22-11",
+      "content": "Dời release sang 22/11",
+      "quote": "vậy dời release qua 22/11"
+    },
+    {
+      "utt": "u044",
+      "thread": "release-date",
+      "kind": "object",
+      "speaker": "Minh",
+      "key": "22-11",
+      "content": "22/11 trùng đợt kiểm kê của khách",
+      "quote": "22/11 trùng đợt kiểm kê cuối năm của khách"
+    },
+    {
+      "utt": "u046",
+      "thread": "release-date",
+      "kind": "revise",
+      "speaker": "Minh",
+      "key": "15-11-cut",
+      "content": "Giữ 15/11, cắt export PDF sang v2.1",
+      "hedged": true,
+      "quote": "Hay mình giữ 15/11 nhưng cắt export PDF ra"
+    },
+    {
+      "utt": "u047",
+      "thread": "release-date",
+      "kind": "agree",
+      "speaker": "Lan",
+      "key": "15-11-cut",
+      "content": "Bỏ export PDF thì kịp 15/11",
+      "quote": "Bỏ export PDF thì 15/11 làm kịp"
+    },
+    {
+      "utt": "u048",
+      "thread": "release-date",
+      "kind": "agree",
+      "speaker": "Tú",
+      "key": "15-11-cut",
+      "content": "QA test kịp nếu scope nhỏ",
+      "quote": "Em ok, scope nhỏ lại thì test kịp"
+    },
+    {
+      "utt": "u049",
+      "thread": "release-date",
+      "kind": "agree",
+      "speaker": "Hùng",
+      "key": "15-11-cut",
+      "content": "Release v2.0 ngày 15/11; export PDF chuyển sang v2.1",
+      "quote": "Chốt lại: release v2.0 ngày 15/11, export PDF chuyển sang v2.1"
+    },
+    {
+      "utt": "u050",
+      "thread": "release-date",
+      "kind": "assign",
+      "speaker": "Hùng",
+      "key": "bao-khach",
+      "owner": "Minh",
+      "deadline_text": "trong hôm nay",
+      "content": "Báo khách export PDF chuyển sang bản 2.1",
+      "quote": "Minh báo lại khách về việc export PDF qua bản 2.1 trong hôm nay nhé"
+    },
+    {
+      "utt": "u051",
+      "thread": "release-date",
+      "kind": "commit",
+      "speaker": "Minh",
+      "key": "bao-khach",
+      "owner": "Minh",
+      "deadline_text": "chiều nay",
+      "quote": "Ok anh, chiều nay em gọi khách"
+    },
+    {
+      "utt": "u052",
+      "thread": "staging",
+      "kind": "blocker",
+      "speaker": "Lan",
+      "content": "Server staging hết dung lượng, không deploy được",
+      "quote": "server staging hết dung lượng"
+    },
+    {
+      "utt": "u053",
+      "thread": "staging",
+      "kind": "assign",
+      "speaker": "Hùng",
+      "key": "ticket-o-dia",
+      "owner": "Lan",
+      "deadline_text": "Mai",
+      "content": "Tạo ticket trên Jira nâng cấp ổ đĩa staging",
+      "quote": "Lan tạo ticket trên Gia ra"
+    },
+    {
+      "utt": "u054",
+      "thread": "staging",
+      "kind": "decline",
+      "speaker": "Lan",
+      "key": "ticket-o-dia",
+      "owner": "Lan",
+      "hedged": true,
+      "quote": "Dạ để em xem lại cấu hình rồi báo anh"
+    },
+    {
+      "utt": "u055",
+      "thread": "client-env",
+      "kind": "info",
+      "speaker": "Tú",
+      "content": "Khách chỉ test được trên Chrome 109 (máy kho Windows 7)",
+      "quote": "bên khách chỉ test được trên Chrome bản cũ 109"
+    },
+    {
+      "utt": "u056",
+      "thread": "qa",
+      "kind": "assign",
+      "speaker": "Tú",
+      "key": "test-plan",
+      "owner": "Tú",
+      "deadline_text": "thứ Sáu",
+      "content": "Viết test plan regression, gửi team review",
+      "quote": "Em sẽ viết test plan cho regression, thứ Sáu gửi team review"
+    },
+    {
+      "utt": "u057",
+      "thread": "dark-mode",
+      "kind": "defer",
+      "speaker": "Minh",
+      "content": "Dark mode để sprint sau bàn",
+      "quote": "mình chưa chốt được, để sprint sau bàn"
+    },
+    {
+      "utt": "u059",
+      "thread": "payment-gateway",
+      "kind": "blocker",
+      "speaker": "Lan",
+      "content": "Sandbox MoMo lỗi: callback trả về sai mã giao dịch",
+      "quote": "callback trả về sai mã giao dịch"
+    },
+    {
+      "utt": "u060",
+      "thread": "payment-gateway",
+      "kind": "info",
+      "speaker": "Lan",
+      "content": "Sandbox MoMo chỉ chạy với merchant đã xác minh → cần hồ sơ merchant trước",
+      "quote": "sandbox của MoMo chỉ chạy được với tài khoản merchant đã xác minh"
+    },
+    {
+      "utt": "u061",
+      "thread": "payment-gateway",
+      "kind": "revise",
+      "speaker": "Minh",
+      "key": "VNPay",
+      "content": "Quay lại VNPay",
+      "hedged": true,
+      "quote": "hay là quay lại VNPay cho chắc"
+    },
+    {
+      "utt": "u063",
+      "thread": "payment-gateway",
+      "kind": "agree",
+      "speaker": "Hùng",
+      "key": "MoMo",
+      "content": "Launch tháng 11 dùng MoMo; VNPay để phase 2",
+      "quote": "Vậy chốt nhé: launch tháng 11 dùng MoMo, VNPay để phase 2"
+    },
+    {
+      "utt": "u064",
+      "thread": "payment-gateway",
+      "kind": "assign",
+      "speaker": "Hùng",
+      "key": "sandbox-momo",
+      "owner": "Lan",
+      "deadline_text": "thứ Sáu này",
+      "content": "Theo dõi lỗi sandbox MoMo, báo lại đã fix chưa",
+      "quote": "Lan theo vụ sandbox MoMo, thứ Sáu này báo lại anh"
+    },
+    {
+      "utt": "u065",
+      "thread": "payment-gateway",
+      "kind": "commit",
+      "speaker": "Lan",
+      "key": "sandbox-momo",
+      "owner": "Lan",
+      "quote": "Ok anh, thứ Sáu em báo"
+    },
+    {
+      "utt": "u066",
+      "thread": "payment-gateway",
+      "kind": "assign",
+      "speaker": "Hùng",
+      "key": "phi-vnpay",
+      "owner": "Minh",
+      "deadline_text": "tuần sau",
+      "content": "Tìm hiểu phí VNPay cho phase 2, gửi bảng so sánh",
+      "quote": "Minh tìm hiểu phí VNPay cho phase 2, gửi anh bảng so sánh tuần sau nhé"
+    },
+    {
+      "utt": "u067",
+      "thread": "payment-gateway",
+      "kind": "decline",
+      "speaker": "Minh",
+      "key": "phi-vnpay",
+      "owner": "Minh",
+      "hedged": true,
+      "quote": "để em xem lại ạ"
+    },
+    {
+      "utt": "u068",
+      "thread": "launch-date",
+      "kind": "question",
+      "speaker": "Minh",
+      "content": "Marketing hỏi ngày launch cụ thể",
+      "quote": "bên marketing hỏi ngày cụ thể"
+    },
+    {
+      "utt": "u069",
+      "thread": "launch-date",
+      "kind": "defer",
+      "speaker": "Hùng",
+      "content": "Để họp tuần sau chốt ngày launch",
+      "quote": "để họp tuần sau chốt"
+    },
+    {
+      "utt": "u072",
+      "thread": "demo-platform",
+      "kind": "propose",
+      "speaker": "Minh",
+      "key": "next-fest",
+      "content": "Đăng demo ở Steam Next Fest tháng 2",
+      "quote": "Demo em đề xuất đăng Steam Next Fest tháng 2"
+    },
+    {
+      "utt": "u073",
+      "thread": "demo-platform",
+      "kind": "object",
+      "speaker": "Lan",
+      "key": "next-fest",
+      "content": "Build còn crash ở màn 3",
+      "quote": "build hiện tại còn crash ở màn 3"
+    },
+    {
+      "utt": "u073",
+      "thread": "demo-platform",
+      "kind": "info",
+      "speaker": "Lan",
+      "content": "Hạn nộp build Steam Next Fest là 15/12",
+      "quote": "Next Fest hạn nộp build là 15/12"
+    },
+    {
+      "utt": "u074",
+      "thread": "demo-platform",
+      "kind": "revise",
+      "speaker": "Lan",
+      "key": "itch-io",
+      "content": "Đăng demo trên itch.io trước",
+      "hedged": true,
+      "quote": "Hay mình đăng itch.io trước cho kịp"
+    },
+    {
+      "utt": "u075",
+      "thread": "demo-platform",
+      "kind": "agree",
+      "speaker": "Hùng",
+      "key": "itch-io",
+      "content": "Đi itch.io trước",
+      "quote": "Ok vậy mình đi itch.io trước"
+    },
+    {
+      "utt": "u076",
+      "thread": "demo-platform",
+      "kind": "object",
+      "speaker": "Tú",
+      "key": "itch-io",
+      "content": "itch.io gần như không có traffic",
+      "quote": "itch.io thì gần như không có traffic"
+    },
+    {
+      "utt": "u077",
+      "thread": "demo-platform",
+      "kind": "revise",
+      "speaker": "Minh",
+      "key": "mobile",
+      "content": "Demo mobile trên TestFlight gửi cộng đồng Discord",
+      "hedged": true,
+      "quote": "Hay mình làm bản demo mobile trên TestFlight"
+    },
+    {
+      "utt": "u078",
+      "thread": "demo-platform",
+      "kind": "object",
+      "speaker": "Lan",
+      "key": "mobile",
+      "content": "Port mobile mất ít nhất một tháng",
+      "quote": "Port sang mobile mất ít nhất một tháng"
+    },
+    {
+      "utt": "u080",
+      "thread": "login",
+      "kind": "propose",
+      "speaker": "Minh",
+      "key": "otp-sms",
+      "content": "Đăng nhập bằng OTP SMS mọi lần",
+      "quote": "Bên chị muốn đăng nhập bằng OTP qua SMS"
+    },
+    {
+      "utt": "u081",
+      "thread": "login",
+      "kind": "object",
+      "speaker": "Lan",
+      "key": "otp-sms",
+      "content": "Tốn ~40 triệu/tháng tiền SMS",
+      "quote": "OTP SMS mỗi tin khoảng 800 đồng"
+    },
+    {
+      "utt": "u081",
+      "thread": "login",
+      "kind": "info",
+      "speaker": "Lan",
+      "content": "OTP SMS ~800 đồng/tin; 50 nghìn user/tháng ≈ 40 triệu",
+      "quote": "50 nghìn user một tháng là 40 triệu tiền SMS"
+    },
+    {
+      "utt": "u082",
+      "thread": "login",
+      "kind": "propose",
+      "speaker": "Hân",
+      "key": "email",
+      "content": "Đăng nhập bằng email kèm mật khẩu",
+      "quote": "Em đề xuất đăng nhập bằng email kèm mật khẩu"
+    },
+    {
+      "utt": "u083",
+      "thread": "login",
+      "kind": "agree",
+      "speaker": "Hùng",
+      "key": "email",
+      "content": "Đi email với mật khẩu",
+      "quote": "Ok vậy đi email với mật khẩu"
+    },
+    {
+      "utt": "u084",
+      "thread": "login",
+      "kind": "object",
+      "speaker": "Minh",
+      "key": "email",
+      "content": "Khách phần lớn là người bán hàng ở chợ, ít dùng email",
+      "quote": "khách của chị phần lớn là người bán hàng ở chợ, ít ai dùng email"
+    },
+    {
+      "utt": "u085",
+      "thread": "login",
+      "kind": "propose",
+      "speaker": "Lan",
+      "key": "zalo",
+      "content": "Đăng nhập bằng Zalo",
+      "quote": "Vậy dùng đăng nhập bằng Zalo"
+    },
+    {
+      "utt": "u086",
+      "thread": "login",
+      "kind": "object",
+      "speaker": "Tú",
+      "key": "zalo",
+      "content": "Phải chờ duyệt Zalo Developer ~3 tuần",
+      "quote": "Đăng nhập Zalo cần app được duyệt trên Zalo Developer"
+    },
+    {
+      "utt": "u086",
+      "thread": "login",
+      "kind": "info",
+      "speaker": "Tú",
+      "content": "Đăng nhập Zalo cần duyệt trên Zalo Developer, lần trước chờ 3 tuần",
+      "quote": "lần trước bên em chờ ba tuần"
+    },
+    {
+      "utt": "u087",
+      "thread": "login",
+      "kind": "revise",
+      "speaker": "Minh",
+      "key": "otp-sms-thiet-bi-moi",
+      "content": "OTP SMS, chỉ gửi khi đăng nhập trên máy mới",
+      "quote": "Thôi quay lại OTP SMS, nhưng chỉ gửi OTP khi đăng nhập trên máy mới thôi"
+    },
+    {
+      "utt": "u089",
+      "thread": "login",
+      "kind": "agree",
+      "speaker": "Hùng",
+      "key": "otp-sms-thiet-bi-moi",
+      "content": "Đăng nhập OTP SMS, chỉ gửi khi đăng nhập trên thiết bị mới; bỏ email và Zalo",
+      "quote": "Chốt đăng nhập OTP SMS, chỉ gửi khi đăng nhập trên thiết bị mới"
+    },
+    {
+      "utt": "u091",
+      "thread": "login",
+      "kind": "assign",
+      "speaker": "Hùng",
+      "key": "arch-doc",
+      "owner": "Lan",
+      "content": "Cập nhật tài liệu kiến trúc phần đăng nhập, gửi chị Minh",
+      "deadline_text": "thứ Hai tuần sau",
+      "quote": "Lan cập nhật lại tài liệu kiến trúc phần đăng nhập, thứ Hai tuần sau gửi chị Minh"
+    },
+    {
+      "utt": "u092",
+      "thread": "login",
+      "kind": "commit",
+      "speaker": "Lan",
+      "key": "arch-doc",
+      "owner": "Lan",
+      "deadline_text": "thứ Hai",
+      "quote": "Dạ ok anh, thứ Hai em gửi"
+    },
+    {
+      "utt": "u093",
+      "thread": "uat",
+      "kind": "blocker",
+      "speaker": "Tú",
+      "content": "Chưa có môi trường staging có dữ liệu thật đã ẩn danh để UAT",
+      "quote": "team em chưa có môi trường staging có dữ liệu thật đã ẩn danh"
+    },
+    {
+      "utt": "u094",
+      "thread": "uat",
+      "kind": "defer",
+      "speaker": "Minh",
+      "content": "Ngày bắt đầu UAT chưa chốt, chờ lịch nghỉ lễ phía khách",
+      "quote": "Ngày bắt đầu UAT thì mình chưa chốt được"
+    },
+    {
+      "utt": "u095",
+      "thread": "uat",
+      "kind": "commit",
+      "speaker": "Hân",
+      "key": "user-story",
+      "owner": "Hân",
+      "content": "Cập nhật user story đăng nhập lên Jira",
+      "deadline_text": "trong hôm nay",
+      "quote": "Em sẽ cập nhật user story đăng nhập lên Gi ra trong hôm nay"
+    },
+    {
+      "utt": "u098",
+      "thread": "pricing",
+      "kind": "propose",
+      "speaker": "Minh",
+      "key": "tron-doi",
+      "content": "Gói trọn đời 990 nghìn",
+      "quote": "em đề xuất bán gói trọn đời 990 nghìn"
+    },
+    {
+      "utt": "u100",
+      "thread": "pricing",
+      "kind": "object",
+      "speaker": "Lan",
+      "key": "tron-doi",
+      "content": "Doanh thu dồn hết tháng đầu",
+      "quote": "Gói trọn đời thì doanh thu dồn hết tháng đầu"
+    },
+    {
+      "utt": "u101",
+      "thread": "pricing",
+      "kind": "object",
+      "speaker": "Tú",
+      "key": "tron-doi",
+      "content": "Phải tích hợp lại cổng thanh toán, mất hai tuần",
+      "quote": "làm gói trọn đời phải tích hợp lại mất hai tuần"
+    },
+    {
+      "utt": "u101",
+      "thread": "pricing",
+      "kind": "info",
+      "speaker": "Tú",
+      "content": "Cổng thanh toán hiện chỉ hỗ trợ trả theo tháng",
+      "quote": "cổng thanh toán bên mình hiện chỉ hỗ trợ trả theo tháng"
+    },
+    {
+      "utt": "u102",
+      "thread": "pricing",
+      "kind": "propose",
+      "speaker": "Lan",
+      "key": "thue-bao-thang",
+      "content": "Thuê bao tháng 149 nghìn, dùng thử 7 ngày",
+      "quote": "Em đề xuất thuê bao tháng 149 nghìn, có dùng thử 7 ngày"
+    },
+    {
+      "utt": "u103",
+      "thread": "pricing",
+      "kind": "object",
+      "speaker": "Minh",
+      "key": "thue-bao-thang",
+      "content": "Phụ huynh ngại trả tháng vì sợ bị trừ tiền tự động",
+      "quote": "phụ huynh hay ngại đăng ký trả tháng"
+    },
+    {
+      "utt": "u105",
+      "thread": "pricing",
+      "kind": "revise",
+      "speaker": "Minh",
+      "key": "goi-6-thang",
+      "content": "Gói 6 tháng 690 nghìn",
+      "hedged": true,
+      "quote": "Hay là làm gói 6 tháng 690 nghìn"
+    },
+    {
+      "utt": "u106",
+      "thread": "pricing",
+      "kind": "object",
+      "speaker": "Tú",
+      "key": "goi-6-thang",
+      "content": "Cũng phải sửa cổng thanh toán",
+      "quote": "Gói 6 tháng thì cũng phải sửa cổng thanh toán"
+    },
+    {
+      "utt": "u107",
+      "thread": "pricing",
+      "kind": "agree",
+      "speaker": "Hùng",
+      "key": "thue-bao-thang",
+      "content": "Thu phí thuê bao tháng 149 nghìn, 7 ngày dùng thử; bỏ gói trọn đời và gói 6 tháng",
+      "quote": "chốt: bản mới thu phí theo thuê bao tháng 149 nghìn"
+    },
+    {
+      "utt": "u109",
+      "thread": "pricing",
+      "kind": "assign",
+      "speaker": "Hùng",
+      "key": "paywall",
+      "owner": "Minh",
+      "content": "Viết lại màn hình paywall theo giá mới",
+      "deadline_text": "cuối tuần này",
+      "quote": "Minh viết lại màn hình paywall theo giá mới, cuối tuần này gửi chị duyệt nhé"
+    },
+    {
+      "utt": "u110",
+      "thread": "pricing",
+      "kind": "commit",
+      "speaker": "Minh",
+      "key": "paywall",
+      "owner": "Minh",
+      "deadline_text": "cuối tuần này",
+      "quote": "Ok chị, cuối tuần này em gửi"
+    },
+    {
+      "utt": "u112",
+      "thread": "lesson-plan",
+      "kind": "blocker",
+      "speaker": "Lan",
+      "content": "Freelancer thu âm giọng bản xứ trễ hẹn, mới xong 8/20 bài",
+      "quote": "giọng đọc bản xứ bên freelancer đang trễ hẹn"
+    },
+    {
+      "utt": "u113",
+      "thread": "lesson-plan",
+      "kind": "assign",
+      "speaker": "Hùng",
+      "key": "upload-tool",
+      "owner": "Tú",
+      "content": "Dựng công cụ upload bài học hàng loạt",
+      "quote": "Tú hỗ trợ Lan dựng công cụ upload bài học hàng loạt"
+    },
+    {
+      "utt": "u114",
+      "thread": "lesson-plan",
+      "kind": "commit",
+      "speaker": "Tú",
+      "key": "upload-tool",
+      "owner": "Tú",
+      "quote": "Dạ"
+    },
+    {
+      "utt": "u115",
+      "thread": "lesson-plan",
+      "kind": "commit",
+      "speaker": "Lan",
+      "key": "lesson-list",
+      "owner": "Lan",
+      "content": "Gửi danh sách 20 bài kèm tiến độ cho cả team",
+      "deadline_text": "trước thứ Tư",
+      "quote": "Em sẽ gửi danh sách 20 bài kèm tiến độ từng bài cho cả team trước thứ Tư"
+    },
+    {
+      "utt": "u116",
+      "thread": "app-crash",
+      "kind": "feedback",
+      "speaker": "Minh",
+      "content": "Phụ huynh phản ánh app hay văng khi mở bài nghe trên Android cũ",
+      "quote": "phụ huynh trong group Zalo phản ánh app hay văng khi mở bài nghe trên máy Android cũ"
+    },
+    {
+      "utt": "u117",
+      "thread": "app-crash",
+      "kind": "commit",
+      "speaker": "Tú",
+      "key": "fix-audio",
+      "owner": "Tú",
+      "content": "Nâng cấp thư viện audio để sửa lỗi văng app",
+      "deadline_text": "thứ Sáu này",
+      "quote": "Em sẽ nâng cấp thư viện, thứ Sáu này có bản sửa"
+    },
+    {
+      "utt": "u119",
+      "thread": "release-32",
+      "kind": "info",
+      "speaker": "Hùng",
+      "content": "Họp tuần trước đã chốt: bản 3.2 release ngày 1/11",
+      "quote": "bản 3.2 release ngày 1/11"
+    },
+    {
+      "utt": "u119",
+      "thread": "advanced-report",
+      "kind": "info",
+      "speaker": "Hùng",
+      "content": "Họp tuần trước đã chốt: báo cáo nâng cao để sang bản 3.3",
+      "quote": "tính năng báo cáo nâng cao để sang bản 3.3"
+    },
+    {
+      "utt": "u120",
+      "thread": "release-32",
+      "kind": "blocker",
+      "speaker": "Lan",
+      "content": "Regression 3.2 còn 4 bug mức cao, có bug mất dữ liệu khi đồng bộ offline",
+      "quote": "Regression bản 3.2 còn 4 bug mức cao"
+    },
+    {
+      "utt": "u122",
+      "thread": "release-32",
+      "kind": "propose",
+      "speaker": "Lan",
+      "key": "5-11",
+      "content": "Dời release 3.2 sang thứ Năm 5/11",
+      "quote": "Em đề xuất dời release 3.2 sang thứ Năm 5/11"
+    },
+    {
+      "utt": "u123",
+      "thread": "release-32",
+      "kind": "info",
+      "speaker": "Tú",
+      "content": "Khách Minh Long đã được hứa bản mới đầu tháng 11",
+      "quote": "Khách Minh Long được hứa bản mới đầu tháng 11"
+    },
+    {
+      "utt": "u124",
+      "thread": "release-32",
+      "kind": "agree",
+      "speaker": "Hùng",
+      "key": "5-11",
+      "content": "Release 3.2 dời sang thứ Năm 5/11",
+      "quote": "release 3.2 dời sang thứ Năm 5/11"
+    },
+    {
+      "utt": "u126",
+      "thread": "release-32",
+      "kind": "assign",
+      "speaker": "Hùng",
+      "key": "bao-khach",
+      "owner": "Tú",
+      "content": "Báo khách Minh Long lịch release mới",
+      "deadline_text": "trong hôm nay",
+      "quote": "Tú báo khách Minh Long lịch mới trong hôm nay nhé"
+    },
+    {
+      "utt": "u127",
+      "thread": "release-32",
+      "kind": "commit",
+      "speaker": "Tú",
+      "key": "bao-khach",
+      "owner": "Tú",
+      "quote": "Ok chị, em gửi email ngay"
+    },
+    {
+      "utt": "u128",
+      "thread": "advanced-report",
+      "kind": "request",
+      "speaker": "Tú",
+      "content": "Khách Minh Long hỏi đưa báo cáo nâng cao vào bản 3.2",
+      "quote": "Khách Minh Long cũng hỏi có đưa được báo cáo nâng cao vào 3.2 luôn không"
+    },
+    {
+      "utt": "u129",
+      "thread": "advanced-report",
+      "kind": "agree",
+      "speaker": "Hùng",
+      "key": "bao-cao-3-3",
+      "content": "Báo cáo nâng cao vẫn ở bản 3.3",
+      "quote": "báo cáo nâng cao vẫn ở bản 3.3"
+    },
+    {
+      "utt": "u130",
+      "thread": "performance",
+      "kind": "feedback",
+      "speaker": "Tú",
+      "content": "6 khách phàn nàn app chậm khi mở báo cáo tháng",
+      "quote": "Tuần này có 6 khách phàn nàn app chậm khi mở báo cáo tháng"
+    },
+    {
+      "utt": "u131",
+      "thread": "release-32",
+      "kind": "commit",
+      "speaker": "Lan",
+      "key": "bao-cao-bug",
+      "owner": "Lan",
+      "content": "Gửi danh sách 4 bug mức cao kèm trạng thái lên kênh release mỗi sáng tới ngày release",
+      "quote": "Em sẽ gửi danh sách 4 bug mức cao kèm trạng thái lên kênh release mỗi sáng"
+    },
+    {
+      "utt": "u132",
+      "thread": "staging-ssl",
+      "kind": "blocker",
+      "speaker": "Minh",
+      "content": "Chứng chỉ SSL staging hết hạn, QA không truy cập được HTTPS",
+      "quote": "Server staging hết hạn chứng chỉ SSL từ hôm qua"
+    },
+    {
+      "utt": "u133",
+      "thread": "staging-ssl",
+      "kind": "assign",
+      "speaker": "Hùng",
+      "key": "gia-han-ssl",
+      "owner": "Minh",
+      "content": "Gia hạn chứng chỉ SSL staging",
+      "deadline_text": "trong hôm nay",
+      "quote": "Minh gia hạn chứng chỉ trong hôm nay nhé"
+    },
+    {
+      "utt": "u134",
+      "thread": "staging-ssl",
+      "kind": "commit",
+      "speaker": "Minh",
+      "key": "gia-han-ssl",
+      "owner": "Minh",
+      "quote": "Ok chị, em làm liền"
+    },
+    {
+      "utt": "u136",
+      "thread": "demo-platform",
+      "kind": "revise",
+      "speaker": "Minh",
+      "key": "next-fest",
+      "content": "Quay lại Steam Next Fest",
+      "quote": "Vậy quay lại Steam Next Fest"
+    },
+    {
+      "utt": "u138",
+      "thread": "demo-platform",
+      "kind": "agree",
+      "speaker": "Hùng",
+      "key": "next-fest",
+      "content": "Demo đăng Steam Next Fest tháng 2; bỏ itch.io và mobile",
+      "quote": "Chốt demo đăng Steam Next Fest tháng 2"
+    },
+    {
+      "utt": "u139",
+      "thread": "demo-platform",
+      "kind": "assign",
+      "speaker": "Hùng",
+      "key": "fix-crash",
+      "owner": "Lan",
+      "content": "Fix crash màn 3",
+      "deadline_text": "trong tuần này",
+      "quote": "Lan fix crash màn 3 trong tuần này"
+    },
+    {
+      "utt": "u140",
+      "thread": "demo-platform",
+      "kind": "commit",
+      "speaker": "Lan",
+      "key": "fix-crash",
+      "owner": "Lan",
+      "quote": "Ok anh, em làm luôn"
+    },
+    {
+      "utt": "u141",
+      "thread": "boss-art",
+      "kind": "propose",
+      "speaker": "Tú",
+      "key": "gothic",
+      "content": "Art boss tối màu kiểu gothic",
+      "quote": "bản tối màu kiểu gothic"
+    },
+    {
+      "utt": "u141",
+      "thread": "boss-art",
+      "kind": "propose",
+      "speaker": "Tú",
+      "key": "pastel",
+      "content": "Art boss màu pastel dễ thương",
+      "quote": "bản màu pastel dễ thương"
+    },
+    {
+      "utt": "u142",
+      "thread": "boss-art",
+      "kind": "agree",
+      "speaker": "Hùng",
+      "key": "gothic",
+      "content": "Thích bản gothic",
+      "hedged": true,
+      "quote": "Anh thích bản gothic hơn"
+    },
+    {
+      "utt": "u143",
+      "thread": "playtest",
+      "kind": "feedback",
+      "speaker": "Minh",
+      "content": "Playtester: boss màn 2 quá khó, 70% người chơi bỏ cuộc",
+      "quote": "Playtester tuần rồi nói boss màn 2 quá khó"
+    },
+    {
+      "utt": "u144",
+      "thread": "build-machine",
+      "kind": "blocker",
+      "speaker": "Lan",
+      "content": "Máy build hết license Unity Pro, không export được bản release",
+      "quote": "Máy build của studio hết license Unity Pro từ hôm qua"
+    },
+    {
+      "utt": "u147",
+      "thread": "db-migration",
+      "kind": "info",
+      "speaker": "Tú",
+      "content": "Postgres 12 đang dùng đã hết hỗ trợ bảo mật",
+      "quote": "Database Postgres hiện tại là bản 12, đã hết hỗ trợ bảo mật"
+    },
+    {
+      "utt": "u148",
+      "thread": "db-migration",
+      "kind": "propose",
+      "speaker": "Minh",
+      "key": "logical-replication",
+      "content": "Migrate lên Postgres 16 bằng logical replication",
+      "quote": "Em đề xuất migrate lên Postgres 16 bằng logical replication"
+    },
+    {
+      "utt": "u149",
+      "thread": "db-migration",
+      "kind": "info",
+      "speaker": "Tú",
+      "content": "Database 2 TB: sync lần đầu bằng logical replication mất ~3 ngày, phải canh lúc ít giao dịch",
+      "quote": "Logical replication với database 2 TB thì sync lần đầu mất khoảng 3 ngày"
+    },
+    {
+      "utt": "u150",
+      "thread": "db-migration",
+      "kind": "agree",
+      "speaker": "Hùng",
+      "key": "logical-replication",
+      "content": "Tạm đi logical replication",
+      "hedged": true,
+      "quote": "Tạm thời mình đi logical replication nhé"
+    },
+    {
+      "utt": "u152",
+      "thread": "db-migration",
+      "kind": "info",
+      "speaker": "Hùng",
+      "content": "Ngân hàng đối tác yêu cầu báo trước 14 ngày mọi thay đổi hạ tầng",
+      "quote": "mọi thay đổi hạ tầng phải báo trước 14 ngày"
+    },
+    {
+      "utt": "u153",
+      "thread": "db-migration",
+      "kind": "assign",
+      "speaker": "Hùng",
+      "key": "runbook",
+      "owner": "Tú",
+      "content": "Viết runbook migrate database",
+      "deadline_text": "trước thứ Sáu",
+      "quote": "Tú viết runbook migrate rồi gửi anh trước thứ Sáu nhé"
+    },
+    {
+      "utt": "u154",
+      "thread": "db-migration",
+      "kind": "decline",
+      "speaker": "Tú",
+      "key": "runbook",
+      "owner": "Tú",
+      "quote": "Tuần này em không kịp anh ơi"
+    },
+    {
+      "utt": "u155",
+      "thread": "app-release",
+      "kind": "blocker",
+      "speaker": "Lan",
+      "content": "Màn hình eKYC chờ SDK mới của đối tác, app tháng 11 mới xong 80%",
+      "quote": "còn màn hình eKYC đang chờ SDK mới của đối tác"
+    },
+    {
+      "utt": "u156",
+      "thread": "app-release",
+      "kind": "commit",
+      "speaker": "Lan",
+      "key": "beta-qa",
+      "owner": "Lan",
+      "content": "Build bản beta cho team QA",
+      "deadline_text": "thứ Hai tuần sau",
+      "quote": "Em sẽ build bản beta cho team QA vào thứ Hai tuần sau"
+    }
+  ]
+}

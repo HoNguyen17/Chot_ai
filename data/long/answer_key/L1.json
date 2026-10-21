@@ -1,0 +1,934 @@
+{
+  "meeting_id": "L1",
+  "labeler": "answer-key",
+  "items": [
+    {
+      "id": "m01.O1",
+      "type": "option",
+      "thread": "payment-gateway",
+      "content": "Dùng VNPay khi launch",
+      "status": "superseded",
+      "evidence": [
+        "u002",
+        "u061"
+      ]
+    },
+    {
+      "id": "m01.D1",
+      "type": "decision",
+      "thread": "payment-gateway",
+      "content": "Launch tháng 11 dùng MoMo; VNPay để phase 2",
+      "status": "final",
+      "decided_by": "Hùng",
+      "evidence": [
+        "u063",
+        "u005"
+      ],
+      "note": "u008 'tạm thời đi MoMo' chỉ là tạm chốt; u017 lật lại; u019 mới là chốt cuối."
+    },
+    {
+      "id": "m01.D2",
+      "type": "decision",
+      "thread": "onboarding",
+      "content": "Flow onboarding mới 3 bước (bỏ màn chọn sở thích, xác thực SĐT lên đầu)",
+      "status": "needs_confirmation",
+      "decided_by": "Minh",
+      "evidence": [
+        "u011",
+        "u012",
+        "u013"
+      ],
+      "note": "Minh (không phải chủ trì) đồng ý; CEO chỉ nhận xét về nút → cần xác nhận."
+    },
+    {
+      "id": "m01.F1",
+      "type": "feedback",
+      "thread": "onboarding",
+      "content": "Nút 'Tiếp tục' quá nhỏ, khó bấm trên Android màn hình nhỏ",
+      "status": "open",
+      "evidence": [
+        "u012"
+      ]
+    },
+    {
+      "id": "m01.T1",
+      "type": "task",
+      "thread": "onboarding",
+      "content": "Sửa nút 'Tiếp tục' và gửi bản onboarding mới",
+      "status": "open",
+      "owner": "Tú",
+      "deadline": "2026-10-08",
+      "deadline_text": "thứ năm",
+      "evidence": [
+        "u013",
+        "u014"
+      ],
+      "needs_review": true
+    },
+    {
+      "id": "m02.O1",
+      "type": "option",
+      "thread": "kol",
+      "content": "Book KOL Lily Trần (80 triệu/post)",
+      "status": "open",
+      "evidence": [
+        "u016"
+      ],
+      "note": "Chưa có quyết định cuối nên phương án này vẫn còn mở, chưa bị thay thế."
+    },
+    {
+      "id": "m02.D1",
+      "type": "decision",
+      "thread": "kol",
+      "content": "Đi nhóm 5 micro-KOL (~20 triệu/bạn) thay vì 1 KOL lớn",
+      "status": "needs_confirmation",
+      "decided_by": "Hùng",
+      "evidence": [
+        "u021",
+        "u018"
+      ],
+      "note": "'Tạm thời chị nghiêng về… phải hỏi lại khách' = tạm chốt, hết họp không xác nhận lại."
+    },
+    {
+      "id": "m02.D2",
+      "type": "decision",
+      "thread": "budget-split",
+      "content": "Budget split 60% Facebook ads / 40% TikTok; review lại tháng 1 theo số thực tế",
+      "status": "final",
+      "decided_by": "Hùng",
+      "evidence": [
+        "u025",
+        "u023"
+      ],
+      "note": "Bị phản biện ở u010 nhưng chủ trì giữ nguyên ở u011 → vẫn final."
+    },
+    {
+      "id": "m02.D3",
+      "type": "decision",
+      "thread": "key-visual",
+      "content": "Chọn key visual concept 2 (tông đỏ hiện đại)",
+      "status": "needs_confirmation",
+      "decided_by": "Hùng",
+      "evidence": [
+        "u028",
+        "u027"
+      ],
+      "note": "'Chị thích… hơn' là sở thích, chưa phải chốt; còn chờ khách duyệt."
+    },
+    {
+      "id": "m02.O2",
+      "type": "option",
+      "thread": "key-visual",
+      "content": "Key visual concept 1 (tông vàng truyền thống)",
+      "status": "open",
+      "evidence": [
+        "u027"
+      ]
+    },
+    {
+      "id": "m02.T1",
+      "type": "task",
+      "thread": "key-visual",
+      "content": "Làm thêm biến thể vuông 1:1 cho concept 2 để gửi khách",
+      "status": "needs_confirmation",
+      "owner": "Tú",
+      "deadline": null,
+      "deadline_text": null,
+      "evidence": [
+        "u030",
+        "u031"
+      ],
+      "note": "'Dạ vâng' trơn không tính là nhận việc."
+    },
+    {
+      "id": "m02.R1",
+      "type": "request",
+      "thread": "landing-page",
+      "content": "Khách yêu cầu thêm bản tiếng Anh cho landing page (cho nhà phân phối nước ngoài)",
+      "status": "open",
+      "evidence": [
+        "u032"
+      ]
+    },
+    {
+      "id": "m02.T2",
+      "type": "task",
+      "thread": "landing-page",
+      "content": "Báo giá lại với khách phần landing page tiếng Anh",
+      "status": "open",
+      "owner": "Hùng",
+      "deadline": null,
+      "deadline_text": null,
+      "evidence": [
+        "u033"
+      ],
+      "note": "'Để chị báo giá lại' = hành động cụ thể, tự nhận → open (khác 'để em xem lại')."
+    },
+    {
+      "id": "m02.T3",
+      "type": "task",
+      "thread": "media-plan",
+      "content": "Gửi media plan chi tiết",
+      "status": "open",
+      "owner": "Lan",
+      "deadline": "2026-10-11",
+      "deadline_text": "cuối tuần này",
+      "evidence": [
+        "u034"
+      ],
+      "needs_review": true
+    },
+    {
+      "id": "m02.Q1",
+      "type": "open_question",
+      "thread": "music-license",
+      "content": "Có cần mua bản quyền nhạc trend khi chạy TikTok không?",
+      "status": "open",
+      "evidence": [
+        "u035"
+      ]
+    },
+    {
+      "id": "m02.T4",
+      "type": "task",
+      "thread": "music-license",
+      "content": "Hỏi bên legal về bản quyền nhạc TikTok rồi báo lại",
+      "status": "open",
+      "owner": "Hùng",
+      "deadline": null,
+      "deadline_text": null,
+      "evidence": [
+        "u036"
+      ]
+    },
+    {
+      "id": "m03.O2",
+      "type": "option",
+      "thread": "release-date",
+      "content": "Release 15/11 với đầy đủ scope (gồm export PDF)",
+      "status": "superseded",
+      "evidence": [
+        "u039"
+      ]
+    },
+    {
+      "id": "m03.O1",
+      "type": "option",
+      "thread": "release-date",
+      "content": "Dời release v2.0 sang 22/11",
+      "status": "superseded",
+      "evidence": [
+        "u041",
+        "u043"
+      ],
+      "note": "Bẫy: chủ trì đã nói 'Ok, vậy dời' ở u006 nhưng bị lật ngay sau đó."
+    },
+    {
+      "id": "m03.D1",
+      "type": "decision",
+      "thread": "release-date",
+      "content": "Release v2.0 ngày 15/11; export PDF chuyển sang v2.1",
+      "status": "final",
+      "decided_by": "Hùng",
+      "evidence": [
+        "u049",
+        "u046"
+      ],
+      "note": "Đổi 2 lần: 15/11 → 22/11 (u006, đã đồng ý) → bị lật ở u007 → 15/11 cắt scope (u012)."
+    },
+    {
+      "id": "m03.T1",
+      "type": "task",
+      "thread": "release-date",
+      "content": "Báo khách việc export PDF chuyển sang bản 2.1",
+      "status": "open",
+      "owner": "Minh",
+      "deadline": "2026-10-05",
+      "deadline_text": "trong hôm nay",
+      "evidence": [
+        "u050",
+        "u051"
+      ],
+      "needs_review": true
+    },
+    {
+      "id": "m03.B1",
+      "type": "blocker",
+      "thread": "staging",
+      "content": "Server staging hết dung lượng, không deploy được bản mới",
+      "status": "open",
+      "evidence": [
+        "u052"
+      ]
+    },
+    {
+      "id": "m03.T2",
+      "type": "task",
+      "thread": "staging",
+      "content": "Tạo ticket trên Jira để nâng cấp ổ đĩa staging",
+      "status": "needs_confirmation",
+      "owner": "Lan",
+      "deadline": "2026-10-06",
+      "deadline_text": "mai",
+      "evidence": [
+        "u053",
+        "u054"
+      ],
+      "note": "'Gia ra' là lỗi ASR của 'Jira'. 'Dạ để em xem lại cấu hình' = chưa nhận việc.",
+      "needs_review": true
+    },
+    {
+      "id": "m03.K1",
+      "type": "knowledge",
+      "thread": "client-env",
+      "content": "Khách chỉ test được trên Chrome 109 vì máy kho chạy Windows 7",
+      "status": "open",
+      "evidence": [
+        "u055"
+      ]
+    },
+    {
+      "id": "m03.T3",
+      "type": "task",
+      "thread": "qa",
+      "content": "Viết test plan regression, gửi team review",
+      "status": "open",
+      "owner": "Tú",
+      "deadline": "2026-10-09",
+      "deadline_text": "thứ sáu",
+      "evidence": [
+        "u056"
+      ],
+      "needs_review": true
+    },
+    {
+      "id": "m03.D2",
+      "type": "decision",
+      "thread": "dark-mode",
+      "content": "Có làm dark mode không — để sprint sau bàn",
+      "status": "deferred",
+      "evidence": [
+        "u057"
+      ],
+      "note": "Bẫy keyword: câu có chữ 'chốt' nhưng là 'chưa chốt được'."
+    },
+    {
+      "id": "m01.B1",
+      "type": "blocker",
+      "thread": "payment-gateway",
+      "content": "Sandbox MoMo lỗi: callback trả về sai mã giao dịch",
+      "status": "open",
+      "evidence": [
+        "u059"
+      ]
+    },
+    {
+      "id": "m01.K1",
+      "type": "knowledge",
+      "thread": "payment-gateway",
+      "content": "Sandbox MoMo chỉ chạy với tài khoản merchant đã xác minh → phải làm hồ sơ merchant trước",
+      "status": "open",
+      "evidence": [
+        "u060"
+      ]
+    },
+    {
+      "id": "m01.T2",
+      "type": "task",
+      "thread": "payment-gateway",
+      "content": "Theo dõi lỗi sandbox MoMo, báo lại đã fix được chưa",
+      "status": "open",
+      "owner": "Lan",
+      "deadline": "2026-10-09",
+      "deadline_text": "thứ sáu này",
+      "evidence": [
+        "u064",
+        "u065"
+      ],
+      "needs_review": true
+    },
+    {
+      "id": "m01.T3",
+      "type": "task",
+      "thread": "payment-gateway",
+      "content": "Tìm hiểu phí VNPay cho phase 2, gửi bảng so sánh",
+      "status": "needs_confirmation",
+      "owner": "Minh",
+      "deadline": null,
+      "deadline_text": "tuần sau",
+      "evidence": [
+        "u066",
+        "u067"
+      ],
+      "note": "'Dạ, để em xem lại ạ' = trì hoãn lịch sự, chưa phải nhận việc."
+    },
+    {
+      "id": "m01.D3",
+      "type": "decision",
+      "thread": "launch-date",
+      "content": "Ngày launch cụ thể — để họp tuần sau chốt khi có kết quả sandbox",
+      "status": "deferred",
+      "evidence": [
+        "u068",
+        "u069"
+      ]
+    },
+    {
+      "id": "m19.D1",
+      "type": "decision",
+      "thread": "demo-platform",
+      "content": "Demo đăng Steam Next Fest tháng 2; bỏ itch.io và mobile",
+      "status": "final",
+      "decided_by": "Hùng",
+      "evidence": [
+        "u138",
+        "u072"
+      ],
+      "note": "Bẫy đổi ý 3 lần: Next Fest → itch.io (chủ trì đã 'Ok' ở u005) → bị lật u006 → mobile → quay lại Next Fest → chốt u011."
+    },
+    {
+      "id": "m19.K1",
+      "type": "knowledge",
+      "thread": "demo-platform",
+      "content": "Hạn nộp build Steam Next Fest là 15/12",
+      "status": "open",
+      "evidence": [
+        "u073"
+      ]
+    },
+    {
+      "id": "m19.O1",
+      "type": "option",
+      "thread": "demo-platform",
+      "content": "Đăng demo trên itch.io trước",
+      "status": "superseded",
+      "evidence": [
+        "u074"
+      ]
+    },
+    {
+      "id": "m19.O2",
+      "type": "option",
+      "thread": "demo-platform",
+      "content": "Demo mobile trên TestFlight gửi cộng đồng Discord",
+      "status": "superseded",
+      "evidence": [
+        "u077"
+      ]
+    },
+    {
+      "id": "m10.O1",
+      "type": "option",
+      "thread": "login",
+      "content": "Đăng nhập bằng OTP SMS mọi lần",
+      "status": "superseded",
+      "evidence": [
+        "u080"
+      ]
+    },
+    {
+      "id": "m10.K1",
+      "type": "knowledge",
+      "thread": "login",
+      "content": "OTP SMS ~800 đồng/tin; 50 nghìn user/tháng ≈ 40 triệu",
+      "status": "open",
+      "evidence": [
+        "u081"
+      ]
+    },
+    {
+      "id": "m10.O2",
+      "type": "option",
+      "thread": "login",
+      "content": "Đăng nhập bằng email kèm mật khẩu",
+      "status": "superseded",
+      "evidence": [
+        "u082"
+      ]
+    },
+    {
+      "id": "m10.O3",
+      "type": "option",
+      "thread": "login",
+      "content": "Đăng nhập bằng Zalo",
+      "status": "superseded",
+      "evidence": [
+        "u085"
+      ]
+    },
+    {
+      "id": "m10.K2",
+      "type": "knowledge",
+      "thread": "login",
+      "content": "Đăng nhập Zalo cần duyệt trên Zalo Developer, lần trước chờ 3 tuần",
+      "status": "open",
+      "evidence": [
+        "u086"
+      ]
+    },
+    {
+      "id": "m10.D1",
+      "type": "decision",
+      "thread": "login",
+      "content": "Đăng nhập OTP SMS, chỉ gửi khi đăng nhập trên thiết bị mới; bỏ email và Zalo",
+      "status": "final",
+      "decided_by": "Hùng",
+      "evidence": [
+        "u089",
+        "u087"
+      ],
+      "note": "Bẫy đổi ý 3 lần: SMS → email (chủ trì đã 'ok' ở u005) → bị lật u006 → Zalo → quay lại SMS biến thể → chốt u011."
+    },
+    {
+      "id": "m10.T1",
+      "type": "task",
+      "thread": "login",
+      "content": "Cập nhật tài liệu kiến trúc phần đăng nhập, gửi chị Minh",
+      "status": "open",
+      "owner": "Lan",
+      "deadline": "2026-10-12",
+      "deadline_text": "thứ Hai",
+      "evidence": [
+        "u091",
+        "u092"
+      ],
+      "needs_review": true
+    },
+    {
+      "id": "m10.B1",
+      "type": "blocker",
+      "thread": "uat",
+      "content": "Chưa có môi trường staging có dữ liệu thật đã ẩn danh để UAT",
+      "status": "open",
+      "evidence": [
+        "u093"
+      ]
+    },
+    {
+      "id": "m10.D2",
+      "type": "decision",
+      "thread": "uat",
+      "content": "Ngày bắt đầu UAT — chưa chốt, chờ lịch nghỉ lễ phía khách",
+      "status": "deferred",
+      "evidence": [
+        "u094"
+      ],
+      "note": "Bẫy keyword 'chưa chốt được'."
+    },
+    {
+      "id": "m10.T2",
+      "type": "task",
+      "thread": "uat",
+      "content": "Cập nhật user story đăng nhập lên Jira",
+      "status": "open",
+      "owner": "Hân",
+      "deadline": "2026-10-05",
+      "deadline_text": "trong hôm nay",
+      "evidence": [
+        "u095"
+      ],
+      "note": "Bẫy ASR: 'Gi ra' = Jira.",
+      "needs_review": true
+    },
+    {
+      "id": "m06.O1",
+      "type": "option",
+      "thread": "pricing",
+      "content": "Gói trọn đời 990 nghìn",
+      "status": "superseded",
+      "evidence": [
+        "u098"
+      ]
+    },
+    {
+      "id": "m06.K1",
+      "type": "knowledge",
+      "thread": "pricing",
+      "content": "Cổng thanh toán hiện chỉ hỗ trợ trả theo tháng",
+      "status": "open",
+      "evidence": [
+        "u101"
+      ]
+    },
+    {
+      "id": "m06.D1",
+      "type": "decision",
+      "thread": "pricing",
+      "content": "Thu phí thuê bao tháng 149 nghìn, 7 ngày dùng thử; bỏ gói trọn đời và gói 6 tháng",
+      "status": "final",
+      "decided_by": "Hùng",
+      "evidence": [
+        "u107",
+        "u102"
+      ],
+      "note": "Bẫy A→B: trọn đời (u002) và gói 6 tháng (u009) bị loại; chủ trì chốt rõ ở u011. 'Ừ.' (u008) chỉ là đang nghe."
+    },
+    {
+      "id": "m06.O2",
+      "type": "option",
+      "thread": "pricing",
+      "content": "Gói 6 tháng 690 nghìn",
+      "status": "superseded",
+      "evidence": [
+        "u105"
+      ]
+    },
+    {
+      "id": "m06.T1",
+      "type": "task",
+      "thread": "pricing",
+      "content": "Viết lại màn hình paywall theo giá mới, gửi chị Hùng duyệt",
+      "status": "open",
+      "owner": "Minh",
+      "deadline": "2026-10-11",
+      "deadline_text": "cuối tuần này",
+      "evidence": [
+        "u109",
+        "u110"
+      ],
+      "note": "Cuối tuần này = Chủ nhật tuần họp (họp thứ Hai 12/10).",
+      "needs_review": true
+    },
+    {
+      "id": "m06.B1",
+      "type": "blocker",
+      "thread": "lesson-plan",
+      "content": "Freelancer thu âm giọng bản xứ trễ hẹn, mới xong 8/20 bài",
+      "status": "open",
+      "evidence": [
+        "u112"
+      ]
+    },
+    {
+      "id": "m06.T2",
+      "type": "task",
+      "thread": "lesson-plan",
+      "content": "Dựng công cụ upload bài học hàng loạt",
+      "status": "needs_confirmation",
+      "owner": "Tú",
+      "deadline": null,
+      "deadline_text": null,
+      "evidence": [
+        "u113",
+        "u114"
+      ],
+      "note": "Chỉ đáp 'Dạ.' → chưa nhận việc."
+    },
+    {
+      "id": "m06.T3",
+      "type": "task",
+      "thread": "lesson-plan",
+      "content": "Gửi danh sách 20 bài kèm tiến độ cho cả team",
+      "status": "open",
+      "owner": "Lan",
+      "deadline": "2026-10-07",
+      "deadline_text": "trước thứ Tư",
+      "evidence": [
+        "u115"
+      ],
+      "needs_review": true
+    },
+    {
+      "id": "m06.F1",
+      "type": "feedback",
+      "thread": "app-crash",
+      "content": "Phụ huynh phản ánh app hay văng khi mở bài nghe trên Android cũ",
+      "status": "open",
+      "evidence": [
+        "u116"
+      ]
+    },
+    {
+      "id": "m06.T4",
+      "type": "task",
+      "thread": "app-crash",
+      "content": "Nâng cấp thư viện audio để sửa lỗi văng app",
+      "status": "open",
+      "owner": "Tú",
+      "deadline": "2026-10-09",
+      "deadline_text": "thứ Sáu này",
+      "evidence": [
+        "u117"
+      ],
+      "needs_review": true
+    },
+    {
+      "id": "m24.K1",
+      "type": "knowledge",
+      "thread": "release-32",
+      "content": "Họp tuần trước đã chốt: bản 3.2 release ngày 1/11",
+      "status": "open",
+      "evidence": [
+        "u119"
+      ]
+    },
+    {
+      "id": "m24.K2",
+      "type": "knowledge",
+      "thread": "advanced-report",
+      "content": "Họp tuần trước đã chốt: báo cáo nâng cao để sang bản 3.3",
+      "status": "open",
+      "evidence": [
+        "u119"
+      ]
+    },
+    {
+      "id": "m24.B1",
+      "type": "blocker",
+      "thread": "release-32",
+      "content": "Regression 3.2 còn 4 bug mức cao, có bug mất dữ liệu khi đồng bộ offline",
+      "status": "open",
+      "evidence": [
+        "u120"
+      ]
+    },
+    {
+      "id": "m24.D1",
+      "type": "decision",
+      "thread": "release-32",
+      "content": "Release 3.2 dời sang thứ Năm 5/11",
+      "status": "final",
+      "decided_by": "Hùng",
+      "evidence": [
+        "u124",
+        "u122"
+      ]
+    },
+    {
+      "id": "m24.K3",
+      "type": "knowledge",
+      "thread": "release-32",
+      "content": "Khách Minh Long đã được hứa bản mới đầu tháng 11",
+      "status": "open",
+      "evidence": [
+        "u123"
+      ]
+    },
+    {
+      "id": "m24.T1",
+      "type": "task",
+      "thread": "release-32",
+      "content": "Báo khách Minh Long lịch release mới",
+      "status": "open",
+      "owner": "Tú",
+      "deadline": "2026-10-05",
+      "deadline_text": "trong hôm nay",
+      "evidence": [
+        "u126",
+        "u127"
+      ],
+      "needs_review": true
+    },
+    {
+      "id": "m24.R1",
+      "type": "request",
+      "thread": "advanced-report",
+      "content": "Khách Minh Long hỏi đưa báo cáo nâng cao vào bản 3.2",
+      "status": "open",
+      "evidence": [
+        "u128"
+      ]
+    },
+    {
+      "id": "m24.D2",
+      "type": "decision",
+      "thread": "advanced-report",
+      "content": "Báo cáo nâng cao vẫn ở bản 3.3",
+      "status": "final",
+      "decided_by": "Hùng",
+      "evidence": [
+        "u129"
+      ],
+      "note": "Quy ước cũ: chủ trì trả lời dứt khoát, không rào đón → ghi thành quyết định."
+    },
+    {
+      "id": "m24.F1",
+      "type": "feedback",
+      "thread": "performance",
+      "content": "6 khách phàn nàn app chậm khi mở báo cáo tháng",
+      "status": "open",
+      "evidence": [
+        "u130"
+      ]
+    },
+    {
+      "id": "m24.T2",
+      "type": "task",
+      "thread": "release-32",
+      "content": "Gửi danh sách 4 bug mức cao kèm trạng thái lên kênh release mỗi sáng tới ngày release",
+      "status": "open",
+      "owner": "Lan",
+      "deadline": null,
+      "deadline_text": null,
+      "evidence": [
+        "u131"
+      ]
+    },
+    {
+      "id": "m24.B2",
+      "type": "blocker",
+      "thread": "staging-ssl",
+      "content": "Chứng chỉ SSL staging hết hạn, QA không truy cập được HTTPS",
+      "status": "open",
+      "evidence": [
+        "u132"
+      ]
+    },
+    {
+      "id": "m24.T3",
+      "type": "task",
+      "thread": "staging-ssl",
+      "content": "Gia hạn chứng chỉ SSL staging",
+      "status": "open",
+      "owner": "Minh",
+      "deadline": "2026-10-05",
+      "deadline_text": "trong hôm nay",
+      "evidence": [
+        "u133",
+        "u134"
+      ],
+      "needs_review": true
+    },
+    {
+      "id": "m19.T1",
+      "type": "task",
+      "thread": "demo-platform",
+      "content": "Fix crash màn 3",
+      "status": "open",
+      "owner": "Lan",
+      "deadline": null,
+      "deadline_text": "trong tuần này",
+      "evidence": [
+        "u139",
+        "u140"
+      ],
+      "note": "'trong tuần này' không có ngày cụ thể."
+    },
+    {
+      "id": "m19.D2",
+      "type": "decision",
+      "thread": "boss-art",
+      "content": "Art boss tối màu kiểu gothic",
+      "status": "needs_confirmation",
+      "decided_by": "Hùng",
+      "evidence": [
+        "u142",
+        "u141"
+      ],
+      "note": "Bẫy 'thích' ≠ chốt."
+    },
+    {
+      "id": "m19.O3",
+      "type": "option",
+      "thread": "boss-art",
+      "content": "Art boss màu pastel dễ thương",
+      "status": "open",
+      "evidence": [
+        "u141"
+      ]
+    },
+    {
+      "id": "m19.F1",
+      "type": "feedback",
+      "thread": "playtest",
+      "content": "Playtester: boss màn 2 quá khó, 70% người chơi bỏ cuộc",
+      "status": "open",
+      "evidence": [
+        "u143"
+      ]
+    },
+    {
+      "id": "m19.B1",
+      "type": "blocker",
+      "thread": "build-machine",
+      "content": "Máy build hết license Unity Pro, không export được bản release",
+      "status": "open",
+      "evidence": [
+        "u144"
+      ]
+    },
+    {
+      "id": "m15.K1",
+      "type": "knowledge",
+      "thread": "db-migration",
+      "content": "Postgres 12 đang dùng đã hết hỗ trợ bảo mật",
+      "status": "open",
+      "evidence": [
+        "u147"
+      ]
+    },
+    {
+      "id": "m15.D1",
+      "type": "decision",
+      "thread": "db-migration",
+      "content": "Migrate lên Postgres 16 bằng logical replication",
+      "status": "needs_confirmation",
+      "decided_by": "Hùng",
+      "evidence": [
+        "u150",
+        "u148"
+      ],
+      "note": "Bẫy 'tạm thời…, anh cần xem thêm' rồi hết họp không nhắc lại → cần xác nhận."
+    },
+    {
+      "id": "m15.K2",
+      "type": "knowledge",
+      "thread": "db-migration",
+      "content": "Database 2 TB: sync lần đầu bằng logical replication mất ~3 ngày, phải canh lúc ít giao dịch",
+      "status": "open",
+      "evidence": [
+        "u149"
+      ]
+    },
+    {
+      "id": "m15.K3",
+      "type": "knowledge",
+      "thread": "db-migration",
+      "content": "Ngân hàng đối tác yêu cầu báo trước 14 ngày mọi thay đổi hạ tầng",
+      "status": "open",
+      "evidence": [
+        "u152"
+      ]
+    },
+    {
+      "id": "m15.T1",
+      "type": "task",
+      "thread": "db-migration",
+      "content": "Viết runbook migrate database",
+      "status": "needs_confirmation",
+      "owner": "Tú",
+      "deadline": "2026-10-09",
+      "deadline_text": "trước thứ Sáu",
+      "evidence": [
+        "u153",
+        "u154"
+      ],
+      "note": "Từ chối khéo ('tuần này em không kịp') → cần giao lại.",
+      "needs_review": true
+    },
+    {
+      "id": "m15.B1",
+      "type": "blocker",
+      "thread": "app-release",
+      "content": "Màn hình eKYC chờ SDK mới của đối tác, app tháng 11 mới xong 80%",
+      "status": "open",
+      "evidence": [
+        "u155"
+      ]
+    },
+    {
+      "id": "m15.T2",
+      "type": "task",
+      "thread": "app-release",
+      "content": "Build bản beta cho team QA",
+      "status": "open",
+      "owner": "Lan",
+      "deadline": "2026-10-12",
+      "deadline_text": "thứ Hai tuần sau",
+      "evidence": [
+        "u156"
+      ],
+      "needs_review": true
+    }
+  ]
+}

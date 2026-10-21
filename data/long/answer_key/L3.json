@@ -1,0 +1,942 @@
+{
+  "meeting_id": "L3",
+  "labeler": "answer-key",
+  "items": [
+    {
+      "id": "m17.O1",
+      "type": "option",
+      "thread": "venue",
+      "content": "Khách sạn quận 1, sảnh 400 chỗ, giá thuê 180 triệu",
+      "status": "superseded",
+      "evidence": [
+        "u002"
+      ]
+    },
+    {
+      "id": "m17.D2",
+      "type": "decision",
+      "thread": "entertainment",
+      "content": "Ban nhạc acoustic, thêm ảo thuật vào phần bốc thăm",
+      "status": "final",
+      "decided_by": "Vân",
+      "evidence": [
+        "u066",
+        "u004"
+      ]
+    },
+    {
+      "id": "m05.D1",
+      "type": "decision",
+      "thread": "winter-dish",
+      "content": "Món mới mùa đông (lẩu mini 1 người hay bánh canh cua) — tuần sau quyết sau khi có chi phí bếp từ",
+      "status": "deferred",
+      "evidence": [
+        "u011",
+        "u009"
+      ],
+      "note": "Bẫy: 'Ok chốt lẩu mini' (u004) bị chính chủ trì lật lại ở u006 ('thôi khoan… chưa chốt được')."
+    },
+    {
+      "id": "m05.T1",
+      "type": "task",
+      "thread": "winter-dish",
+      "content": "Tính chi phí bếp từ cụ thể cho 3 chi nhánh, gửi bảng chi phí",
+      "status": "open",
+      "owner": "Nhung",
+      "deadline": "2026-11-04",
+      "deadline_text": "thứ tư",
+      "evidence": [
+        "u011",
+        "u012"
+      ],
+      "needs_review": true
+    },
+    {
+      "id": "m05.O1",
+      "type": "option",
+      "thread": "lunch-combo",
+      "content": "Combo trưa 59.000đ",
+      "status": "superseded",
+      "evidence": [
+        "u013"
+      ]
+    },
+    {
+      "id": "m05.K1",
+      "type": "knowledge",
+      "thread": "lunch-combo",
+      "content": "Food cost combo trưa hiện 45%, mục tiêu công ty dưới 35%",
+      "status": "open",
+      "evidence": [
+        "u014"
+      ]
+    },
+    {
+      "id": "m05.D2",
+      "type": "decision",
+      "thread": "lunch-combo",
+      "content": "Giá combo trưa 65.000đ",
+      "status": "final",
+      "decided_by": "Vân",
+      "evidence": [
+        "u015"
+      ]
+    },
+    {
+      "id": "m05.F1",
+      "type": "feedback",
+      "thread": "customer-review",
+      "content": "Khách phàn nàn giờ trưa chờ món hơn 20 phút",
+      "status": "open",
+      "evidence": [
+        "u017"
+      ]
+    },
+    {
+      "id": "m05.D3",
+      "type": "decision",
+      "thread": "tiktok-reviewer",
+      "content": "Có chạy TikTok với food reviewer không — chờ case study",
+      "status": "deferred",
+      "evidence": [
+        "u019",
+        "u018"
+      ]
+    },
+    {
+      "id": "m05.T2",
+      "type": "task",
+      "thread": "tiktok-reviewer",
+      "content": "Gửi vài case study chạy TikTok với food reviewer",
+      "status": "open",
+      "owner": "Hảo",
+      "deadline": "2026-11-02",
+      "deadline_text": "thứ hai tuần sau",
+      "evidence": [
+        "u019",
+        "u020"
+      ],
+      "needs_review": true
+    },
+    {
+      "id": "m05.Q1",
+      "type": "open_question",
+      "thread": "thu-duc-shift",
+      "content": "Chi nhánh Thủ Đức có mở thêm ca sáng không?",
+      "status": "open",
+      "evidence": [
+        "u021",
+        "u022"
+      ],
+      "note": "Có ý kiến trái chiều, chủ trì không kết luận ('Ừm… hết giờ')."
+    },
+    {
+      "id": "m08.R1",
+      "type": "request",
+      "thread": "logo",
+      "content": "Khách yêu cầu thêm bản logo dạng chữ đơn giản để in lên ly giấy",
+      "status": "open",
+      "evidence": [
+        "u025"
+      ]
+    },
+    {
+      "id": "m08.D1",
+      "type": "decision",
+      "thread": "logo",
+      "content": "Logo chữ viết tay (phương án 2)",
+      "status": "needs_confirmation",
+      "decided_by": "Vân",
+      "evidence": [
+        "u028",
+        "u026"
+      ],
+      "note": "Bẫy 'thích' ≠ chốt. u006 'Nếu mà khách chọn…' là câu điều kiện, không gán."
+    },
+    {
+      "id": "m08.O1",
+      "type": "option",
+      "thread": "logo",
+      "content": "Logo lá trà cách điệu (phương án 1)",
+      "status": "open",
+      "evidence": [
+        "u026"
+      ]
+    },
+    {
+      "id": "m08.O2",
+      "type": "option",
+      "thread": "logo",
+      "content": "Logo con dấu tròn (phương án 3)",
+      "status": "open",
+      "evidence": [
+        "u026"
+      ]
+    },
+    {
+      "id": "m08.T1",
+      "type": "task",
+      "thread": "logo",
+      "content": "Làm thêm bản logo chữ đơn giản cho ly",
+      "status": "open",
+      "owner": "Phụng",
+      "deadline": "2026-10-30",
+      "deadline_text": "thứ Sáu",
+      "evidence": [
+        "u030",
+        "u031"
+      ],
+      "needs_review": true
+    },
+    {
+      "id": "m08.D2",
+      "type": "decision",
+      "thread": "slogan",
+      "content": "Slogan chính: Trà mộc vị thật",
+      "status": "final",
+      "decided_by": "Vân",
+      "evidence": [
+        "u034",
+        "u032"
+      ]
+    },
+    {
+      "id": "m08.O3",
+      "type": "option",
+      "thread": "slogan",
+      "content": "Slogan: Uống chậm sống chậm",
+      "status": "superseded",
+      "evidence": [
+        "u032"
+      ]
+    },
+    {
+      "id": "m08.F1",
+      "type": "feedback",
+      "thread": "slogan",
+      "content": "Khách thấy slogan Uống chậm sống chậm hơi buồn, muốn năng động hơn",
+      "status": "open",
+      "evidence": [
+        "u033"
+      ]
+    },
+    {
+      "id": "m08.R2",
+      "type": "request",
+      "thread": "menu-board",
+      "content": "Khách hỏi làm thêm bộ menu board, xong trước khai trương 1/12",
+      "status": "open",
+      "evidence": [
+        "u036"
+      ]
+    },
+    {
+      "id": "m08.K1",
+      "type": "knowledge",
+      "thread": "menu-board",
+      "content": "Menu board ngoài scope hợp đồng",
+      "status": "open",
+      "evidence": [
+        "u037"
+      ]
+    },
+    {
+      "id": "m08.T2",
+      "type": "task",
+      "thread": "menu-board",
+      "content": "Báo giá phần menu board cho khách",
+      "status": "needs_confirmation",
+      "owner": "Hảo",
+      "deadline": null,
+      "deadline_text": null,
+      "evidence": [
+        "u037",
+        "u038"
+      ],
+      "note": "'Dạ để em xem lại hợp đồng' → chưa cam kết."
+    },
+    {
+      "id": "m08.B1",
+      "type": "blocker",
+      "thread": "font-license",
+      "content": "Font phương án 2 đang dùng bản trial, chưa có license thương mại",
+      "status": "open",
+      "evidence": [
+        "u039"
+      ]
+    },
+    {
+      "id": "m11.K1",
+      "type": "knowledge",
+      "thread": "promo-1111",
+      "content": "Giá vốn áo khoác chiếm ~65% giá bán",
+      "status": "open",
+      "evidence": [
+        "u043"
+      ]
+    },
+    {
+      "id": "m11.K2",
+      "type": "knowledge",
+      "thread": "promo-1111",
+      "content": "Kho áo thun hiện còn khoảng 300 cái",
+      "status": "open",
+      "evidence": [
+        "u046"
+      ]
+    },
+    {
+      "id": "m11.D1",
+      "type": "decision",
+      "thread": "promo-1111",
+      "content": "Khuyến mãi 11.11 — chưa chốt, đợi số hàng áo thun về",
+      "status": "deferred",
+      "evidence": [
+        "u047"
+      ],
+      "note": "Bẫy 'Ok chốt' (u005) rồi 'thôi khoan' (u007) → hoãn."
+    },
+    {
+      "id": "m11.T1",
+      "type": "task",
+      "thread": "promo-1111",
+      "content": "Hỏi xưởng lịch giao lô áo thun mới, báo chị Vân",
+      "status": "open",
+      "owner": "Phụng",
+      "deadline": "2026-11-03",
+      "deadline_text": "thứ Ba tuần sau",
+      "evidence": [
+        "u048"
+      ],
+      "note": "Tự nhận. Họp thứ Bảy 17/10 → thứ Ba tuần sau = 20/10.",
+      "needs_review": true
+    },
+    {
+      "id": "m11.K3",
+      "type": "knowledge",
+      "thread": "livestream",
+      "content": "Doanh thu livestream tuần này giảm 20% so với tuần trước",
+      "status": "open",
+      "evidence": [
+        "u049"
+      ]
+    },
+    {
+      "id": "m11.K4",
+      "type": "knowledge",
+      "thread": "livestream",
+      "content": "Khung live 8 giờ tối trùng giờ các shop lớn, khách bị chia",
+      "status": "open",
+      "evidence": [
+        "u050"
+      ]
+    },
+    {
+      "id": "m11.T2",
+      "type": "task",
+      "thread": "livestream",
+      "content": "Dời livestream sang 9 giờ tối từ tuần này, theo dõi số liệu",
+      "status": "open",
+      "owner": "Hảo",
+      "deadline": null,
+      "deadline_text": null,
+      "evidence": [
+        "u051"
+      ]
+    },
+    {
+      "id": "m11.F1",
+      "type": "feedback",
+      "thread": "delivery",
+      "content": "Khách khen đóng gói đẹp hơn nhưng giao nội thành vẫn chậm 3–4 ngày",
+      "status": "open",
+      "evidence": [
+        "u052"
+      ]
+    },
+    {
+      "id": "m11.T3",
+      "type": "task",
+      "thread": "delivery",
+      "content": "Làm việc lại với bên vận chuyển, báo phương án giao nhanh",
+      "status": "open",
+      "owner": "Phụng",
+      "deadline": "2026-11-05",
+      "deadline_text": "thứ Năm tuần sau",
+      "evidence": [
+        "u053",
+        "u054"
+      ],
+      "needs_review": true
+    },
+    {
+      "id": "m17.D1",
+      "type": "decision",
+      "thread": "venue",
+      "content": "Trung tâm hội nghị quận 7, giữ ngày 12/12, thuê thêm xe đưa đón",
+      "status": "final",
+      "decided_by": "Vân",
+      "evidence": [
+        "u062",
+        "u059"
+      ],
+      "note": "Bẫy 2 chủ đề xen kẽ: địa điểm quay lại ở u006 sau phần biểu diễn. A (khách sạn quận 1) → B (quận 7)."
+    },
+    {
+      "id": "m17.R1",
+      "type": "request",
+      "thread": "entertainment",
+      "content": "Khách hỏi thêm tiết mục ảo thuật cho phần bốc thăm",
+      "status": "open",
+      "evidence": [
+        "u061"
+      ]
+    },
+    {
+      "id": "m17.T1",
+      "type": "task",
+      "thread": "venue",
+      "content": "Đặt cọc trung tâm hội nghị quận 7",
+      "status": "open",
+      "owner": "Nhung",
+      "deadline": "2026-11-02",
+      "deadline_text": "thứ Hai",
+      "evidence": [
+        "u064",
+        "u065"
+      ],
+      "needs_review": true
+    },
+    {
+      "id": "m17.B1",
+      "type": "blocker",
+      "thread": "led",
+      "content": "Màn LED đang cho thuê sự kiện khác tới 11/12, chưa chắc tháo về kịp",
+      "status": "open",
+      "evidence": [
+        "u067"
+      ]
+    },
+    {
+      "id": "m17.T2",
+      "type": "task",
+      "thread": "led",
+      "content": "Check lịch tháo dỡ màn LED với đối tác",
+      "status": "needs_confirmation",
+      "owner": null,
+      "deadline": null,
+      "deadline_text": null,
+      "evidence": [
+        "u068"
+      ],
+      "note": "Bẫy 'ai đó…': 'Dạ.' của Thoa chỉ là đang nghe."
+    },
+    {
+      "id": "m17.T3",
+      "type": "task",
+      "thread": "entertainment",
+      "content": "Gửi kịch bản chương trình bản nháp cho khách",
+      "status": "open",
+      "owner": "Thoa",
+      "deadline": "2026-10-30",
+      "deadline_text": "trước 30/10",
+      "evidence": [
+        "u070"
+      ]
+    },
+    {
+      "id": "m14.K1",
+      "type": "knowledge",
+      "thread": "salmon-set",
+      "content": "Cá hồi tăng giá 25% từ tuần này; food cost set cá hồi lên 48%",
+      "status": "open",
+      "evidence": [
+        "u073"
+      ]
+    },
+    {
+      "id": "m14.O1",
+      "type": "option",
+      "thread": "salmon-set",
+      "content": "Giữ cá hồi, tăng giá set thêm 40 nghìn",
+      "status": "superseded",
+      "evidence": [
+        "u074"
+      ]
+    },
+    {
+      "id": "m14.D1",
+      "type": "decision",
+      "thread": "salmon-set",
+      "content": "Thay cá hồi bằng cá chẽm từ thứ Hai tuần sau; tuần này vẫn bán cá hồi giá cũ",
+      "status": "final",
+      "decided_by": "Vân",
+      "evidence": [
+        "u078",
+        "u076"
+      ],
+      "note": "Bẫy A→B: tăng giá set (A) bị loại, chốt cá chẽm (B)."
+    },
+    {
+      "id": "m14.T1",
+      "type": "task",
+      "thread": "salmon-set",
+      "content": "Brief team phục vụ cách giới thiệu món cá chẽm",
+      "status": "open",
+      "owner": "Phụng",
+      "deadline": "2026-10-29",
+      "deadline_text": "chiều nay",
+      "evidence": [
+        "u079",
+        "u080"
+      ],
+      "needs_review": true
+    },
+    {
+      "id": "m14.B1",
+      "type": "blocker",
+      "thread": "order-flow",
+      "content": "Order bàn VIP trên tablet không in xuống bếp, tối qua sót 2 order",
+      "status": "open",
+      "evidence": [
+        "u081"
+      ]
+    },
+    {
+      "id": "m14.T2",
+      "type": "task",
+      "thread": "order-flow",
+      "content": "Gọi support POS sửa lỗi order bàn VIP",
+      "status": "open",
+      "owner": "Nhung",
+      "deadline": "2026-10-29",
+      "deadline_text": "trong hôm nay",
+      "evidence": [
+        "u082",
+        "u083"
+      ],
+      "note": "'chưa fix thì quay lại ghi order giấy' là câu điều kiện dự phòng, không thành quyết định.",
+      "needs_review": true
+    },
+    {
+      "id": "m14.T3",
+      "type": "task",
+      "thread": "salmon-set",
+      "content": "Update recipe card món cá chẽm lên group bếp",
+      "status": "open",
+      "owner": "Hảo",
+      "deadline": "2026-10-30",
+      "deadline_text": "trước thứ Sáu",
+      "evidence": [
+        "u084"
+      ],
+      "needs_review": true
+    },
+    {
+      "id": "m23.O1",
+      "type": "option",
+      "thread": "sales-channel",
+      "content": "Mở Shopee Mall",
+      "status": "open",
+      "evidence": [
+        "u087"
+      ],
+      "note": "Quy ước mới (P3): D1 chưa chốt → phương án khác còn mở."
+    },
+    {
+      "id": "m23.K1",
+      "type": "knowledge",
+      "thread": "sales-channel",
+      "content": "Phí Shopee Mall (cố định + thanh toán) ~12% doanh thu",
+      "status": "open",
+      "evidence": [
+        "u088"
+      ]
+    },
+    {
+      "id": "m23.D1",
+      "type": "decision",
+      "thread": "sales-channel",
+      "content": "Đi TikTok Shop trước, mở tháng 12; Shopee Mall để quý sau",
+      "status": "needs_confirmation",
+      "decided_by": "Vân",
+      "evidence": [
+        "u091",
+        "u089"
+      ],
+      "note": "Quy ước mới (P3, quy tắc 10): đồng chủ trì Khánh đã phản đối TikTok (u005) và chỉ đáp 'Ờ.' → chưa đồng ý lại → needs_confirmation."
+    },
+    {
+      "id": "m23.T1",
+      "type": "task",
+      "thread": "sales-channel",
+      "content": "Lên kế hoạch 30 video cho tháng đầu TikTok Shop",
+      "status": "open",
+      "owner": "Hảo",
+      "deadline": "2026-11-02",
+      "deadline_text": "thứ Hai",
+      "evidence": [
+        "u093",
+        "u094"
+      ],
+      "needs_review": true
+    },
+    {
+      "id": "m23.D2",
+      "type": "decision",
+      "thread": "freeship",
+      "content": "Freeship cho đơn từ 299 nghìn, áp dụng từ 1/11",
+      "status": "final",
+      "decided_by": "Vân",
+      "evidence": [
+        "u097",
+        "u095"
+      ]
+    },
+    {
+      "id": "m23.K2",
+      "type": "knowledge",
+      "thread": "freeship",
+      "content": "Đơn trung bình hiện 260 nghìn",
+      "status": "open",
+      "evidence": [
+        "u096"
+      ]
+    },
+    {
+      "id": "m23.B1",
+      "type": "blocker",
+      "thread": "warehouse",
+      "content": "Kho thiếu kệ, 2 pallet hàng mới để dưới sàn",
+      "status": "open",
+      "evidence": [
+        "u099"
+      ]
+    },
+    {
+      "id": "m23.T2",
+      "type": "task",
+      "thread": "warehouse",
+      "content": "Đặt thêm và lắp 4 kệ sắt cho kho",
+      "status": "open",
+      "owner": "Phụng",
+      "deadline": "2026-10-31",
+      "deadline_text": "thứ Bảy",
+      "evidence": [
+        "u100",
+        "u101"
+      ],
+      "needs_review": true
+    },
+    {
+      "id": "m23.F1",
+      "type": "feedback",
+      "thread": "product-review",
+      "content": "Khách chê sữa rửa mặt mới mùi hơi nồng, 15 đánh giá 3 sao trong tuần",
+      "status": "open",
+      "evidence": [
+        "u102"
+      ]
+    },
+    {
+      "id": "m23.T3",
+      "type": "task",
+      "thread": "product-review",
+      "content": "Gom các review chê mùi gửi nhà máy",
+      "status": "needs_confirmation",
+      "owner": "Hảo",
+      "deadline": null,
+      "deadline_text": null,
+      "evidence": [
+        "u103",
+        "u104"
+      ],
+      "note": "Chỉ đáp 'Dạ vâng.' → chưa nhận việc."
+    },
+    {
+      "id": "m20.K1",
+      "type": "knowledge",
+      "thread": "branch-location",
+      "content": "Chủ nhà Lê Văn Sỹ đòi cọc 6 tháng (270 triệu)",
+      "status": "open",
+      "evidence": [
+        "u107"
+      ]
+    },
+    {
+      "id": "m20.D1",
+      "type": "decision",
+      "thread": "branch-location",
+      "content": "Mặt bằng chi nhánh thứ 5 — chưa chốt, để nhà đầu tư Diệp quyết",
+      "status": "deferred",
+      "evidence": [
+        "u108"
+      ],
+      "note": "Bẫy 'Ok chốt Lê Văn Sỹ' (u004) rồi 'thôi khoan' (u006), đẩy cho người vắng mặt."
+    },
+    {
+      "id": "m20.T1",
+      "type": "task",
+      "thread": "branch-location",
+      "content": "Làm bảng dòng tiền hai phương án mặt bằng gửi chị Diệp",
+      "status": "open",
+      "owner": "Phụng",
+      "deadline": "2026-10-30",
+      "deadline_text": "thứ Sáu",
+      "evidence": [
+        "u109",
+        "u110"
+      ],
+      "needs_review": true
+    },
+    {
+      "id": "m20.Q1",
+      "type": "open_question",
+      "thread": "banh-mi",
+      "content": "Có bán thêm bánh mì buổi sáng không?",
+      "status": "open",
+      "evidence": [
+        "u111",
+        "u112"
+      ],
+      "note": "Ý kiến trái chiều, chủ trì chỉ 'Ừm...' → không kết luận."
+    },
+    {
+      "id": "m20.K2",
+      "type": "knowledge",
+      "thread": "banh-mi",
+      "content": "Khảo sát khách quen: 60% muốn có bánh mì buổi sáng",
+      "status": "open",
+      "evidence": [
+        "u111"
+      ]
+    },
+    {
+      "id": "m20.B1",
+      "type": "blocker",
+      "thread": "espresso-machine",
+      "content": "Máy pha cà phê Quận 3 lỗi áp suất, đang dùng máy dự phòng",
+      "status": "open",
+      "evidence": [
+        "u114"
+      ]
+    },
+    {
+      "id": "m20.T2",
+      "type": "task",
+      "thread": "espresso-machine",
+      "content": "Gọi kỹ thuật bên hãng qua kiểm tra máy pha cà phê",
+      "status": "open",
+      "owner": "Hảo",
+      "deadline": "2026-10-30",
+      "deadline_text": "mai",
+      "evidence": [
+        "u115",
+        "u116"
+      ],
+      "needs_review": true
+    },
+    {
+      "id": "m16.K1",
+      "type": "knowledge",
+      "thread": "curriculum",
+      "content": "Lớp Kids dùng giáo trình cũ từ 2019, nhiều bài nghe chất lượng kém",
+      "status": "open",
+      "evidence": [
+        "u119"
+      ]
+    },
+    {
+      "id": "m16.D1",
+      "type": "decision",
+      "thread": "curriculum",
+      "content": "Có đổi giáo trình lớp Kids không — họp tháng sau quyết khi có báo giá",
+      "status": "deferred",
+      "evidence": [
+        "u123"
+      ],
+      "note": "Bẫy defer_next_meeting."
+    },
+    {
+      "id": "m16.T1",
+      "type": "task",
+      "thread": "curriculum",
+      "content": "Liên hệ nhà sách xin báo giá giáo trình cho trung tâm",
+      "status": "needs_confirmation",
+      "owner": "Hảo",
+      "deadline": null,
+      "deadline_text": null,
+      "evidence": [
+        "u124"
+      ],
+      "note": "Bẫy 'Để em thử… xem' → tự nhận nhưng có rào đón."
+    },
+    {
+      "id": "m16.K2",
+      "type": "knowledge",
+      "thread": "midterm",
+      "content": "Thi giữa kỳ từ 2/11 đến 6/11; phòng 3 đang sửa, dồn sang phòng 1 và 2",
+      "status": "open",
+      "evidence": [
+        "u125"
+      ]
+    },
+    {
+      "id": "m16.T2",
+      "type": "task",
+      "thread": "midterm",
+      "content": "Gửi lịch thi giữa kỳ cho giáo viên và phụ huynh",
+      "status": "open",
+      "owner": "Nhung",
+      "deadline": "2026-11-04",
+      "deadline_text": "thứ Tư",
+      "evidence": [
+        "u126",
+        "u127"
+      ],
+      "note": "Họp thứ Năm 22/10 → thứ Tư 28/10.",
+      "needs_review": true
+    },
+    {
+      "id": "m16.R1",
+      "type": "request",
+      "thread": "weekend-class",
+      "content": "Phụ huynh Starters 3 yêu cầu mở thêm lớp sáng thứ Bảy (9 phụ huynh đã ký tên)",
+      "status": "open",
+      "evidence": [
+        "u128"
+      ]
+    },
+    {
+      "id": "m16.B1",
+      "type": "blocker",
+      "thread": "weekend-class",
+      "content": "Chưa có giáo viên trống lịch sáng thứ Bảy để mở lớp mới",
+      "status": "open",
+      "evidence": [
+        "u130"
+      ]
+    },
+    {
+      "id": "m21.K1",
+      "type": "knowledge",
+      "thread": "tet-tour",
+      "content": "Tour Đà Lạt 4 ngày năm ngoái bán hết sớm nhất (12 đoàn); xe giường nằm dịp Tết khó thuê",
+      "status": "open",
+      "evidence": [
+        "u133"
+      ]
+    },
+    {
+      "id": "m21.O1",
+      "type": "option",
+      "thread": "tet-tour",
+      "content": "Tour Phú Quốc bay thẳng 3 ngày 2 đêm",
+      "status": "superseded",
+      "evidence": [
+        "u134"
+      ]
+    },
+    {
+      "id": "m21.K2",
+      "type": "knowledge",
+      "thread": "tet-tour",
+      "content": "Vé máy bay Tết đi Phú Quốc ~5 triệu/chiều",
+      "status": "open",
+      "evidence": [
+        "u135"
+      ]
+    },
+    {
+      "id": "m21.D1",
+      "type": "decision",
+      "thread": "tet-tour",
+      "content": "Tour Đà Lạt limousine là sản phẩm chính dịp Tết; Phú Quốc để dành cho mùa hè",
+      "status": "final",
+      "decided_by": "Vân",
+      "evidence": [
+        "u138",
+        "u136"
+      ],
+      "note": "Bẫy quyết định ngầm: 'Vậy làm theo hướng đó đi' không có chữ chốt/thống nhất nhưng là cam kết rõ của chủ trì."
+    },
+    {
+      "id": "m21.T1",
+      "type": "task",
+      "thread": "tet-tour",
+      "content": "Giữ chỗ và đặt cọc 20 xe limousine với nhà xe",
+      "status": "open",
+      "owner": "Hảo",
+      "deadline": "2026-11-05",
+      "deadline_text": "thứ Năm",
+      "evidence": [
+        "u139",
+        "u140"
+      ],
+      "needs_review": true
+    },
+    {
+      "id": "m21.T2",
+      "type": "task",
+      "thread": "tet-tour",
+      "content": "Làm bộ ảnh và landing page tour Đà Lạt",
+      "status": "open",
+      "owner": "Phụng",
+      "deadline": "2026-11-10",
+      "deadline_text": "trước ngày 10/11",
+      "evidence": [
+        "u141"
+      ]
+    },
+    {
+      "id": "m21.R1",
+      "type": "request",
+      "thread": "private-tour",
+      "content": "Khách đoàn Hòa An hỏi tour riêng 40 người, đi mùng 2 Tết",
+      "status": "open",
+      "evidence": [
+        "u142"
+      ]
+    },
+    {
+      "id": "m21.T3",
+      "type": "task",
+      "thread": "private-tour",
+      "content": "Báo giá tour riêng cho khách đoàn Hòa An",
+      "status": "needs_confirmation",
+      "owner": "Nhung",
+      "deadline": null,
+      "deadline_text": null,
+      "evidence": [
+        "u143",
+        "u144"
+      ],
+      "note": "Chỉ đáp 'Dạ vâng.' → chưa nhận việc."
+    },
+    {
+      "id": "m21.K3",
+      "type": "knowledge",
+      "thread": "hotel-deposit",
+      "content": "Từ năm nay khách sạn Đà Lạt bắt buộc cọc 50% cho booking dịp Tết, không hoàn",
+      "status": "open",
+      "evidence": [
+        "u145"
+      ]
+    },
+    {
+      "id": "m21.T4",
+      "type": "task",
+      "thread": "hotel-deposit",
+      "content": "Tính lại dòng tiền đặt cọc cho cả mùa Tết",
+      "status": "open",
+      "owner": "Hảo",
+      "deadline": "2026-11-01",
+      "deadline_text": "cuối tuần này",
+      "evidence": [
+        "u146",
+        "u147"
+      ],
+      "needs_review": true
+    }
+  ]
+}

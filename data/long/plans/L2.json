@@ -1,0 +1,124 @@
+{
+  "id": "L2",
+  "title": "Giao ban tuần — xưởng, kho và công trình (ghép từ 8 cuộc)",
+  "date": "2026-10-26",
+  "participants": [
+    "Đạo (Chỉ huy trưởng, chủ trì)",
+    "Sinh (Kỹ sư)",
+    "Toản (Giám sát an toàn)",
+    "Lam (Kế toán)",
+    "Quý (Đội trưởng)",
+    "Hiền (Thu mua)"
+  ],
+  "absent": [
+    "Phong (Giám đốc)"
+  ],
+  "roster": {
+    "m22": {
+      "Đạo": "Đạo",
+      "Sinh": "Sinh",
+      "Toản": "Toản",
+      "Lam": "Lam",
+      "Quý": "Quý"
+    },
+    "m04": {
+      "Sơn": "Đạo",
+      "Hiền": "Sinh",
+      "Tài": "Toản",
+      "Mỹ": "Lam",
+      "Phong": "Phong"
+    },
+    "m07": {
+      "Tâm": "Đạo",
+      "Quyên": "Sinh",
+      "Hải": "Toản",
+      "Nga": "Lam",
+      "Phúc": "Quý"
+    },
+    "m09": {
+      "Hưng": "Đạo",
+      "Loan": "Sinh",
+      "Bích": "Toản",
+      "Sang": "Lam",
+      "Thịnh": "Phong"
+    },
+    "m25": {
+      "Liên": "Đạo",
+      "Tuấn": "Sinh",
+      "Hồng": "Toản",
+      "Vĩnh": "Lam",
+      "Phương": "Phong"
+    },
+    "m12": {
+      "Lực": "Đạo",
+      "Hạnh": "Sinh",
+      "Tín": "Toản",
+      "Diễm": "Lam"
+    },
+    "m13": {
+      "Cường": "Đạo",
+      "Yến": "Sinh",
+      "Lộc": "Toản",
+      "Như": "Lam",
+      "Vinh": "Quý"
+    },
+    "m18": {
+      "Bảy": "Đạo",
+      "Hương": "Sinh",
+      "Sáu": "Toản",
+      "Tiến": "Lam"
+    }
+  },
+  "blocks": [
+    {
+      "source": "m22",
+      "from": "u001",
+      "to": "u011"
+    },
+    {
+      "source": "m04",
+      "from": "u001",
+      "to": "u016"
+    },
+    {
+      "source": "m07",
+      "from": "u001",
+      "to": "u019"
+    },
+    {
+      "source": "m09",
+      "from": "u001",
+      "to": "u015"
+    },
+    {
+      "source": "m22",
+      "from": "u012",
+      "to": "u036"
+    },
+    {
+      "source": "m25",
+      "from": "u001",
+      "to": "u018"
+    },
+    {
+      "source": "m12",
+      "from": "u001",
+      "to": "u014"
+    },
+    {
+      "source": "m13",
+      "from": "u001",
+      "to": "u011"
+    },
+    {
+      "source": "m18",
+      "from": "u001",
+      "to": "u013"
+    },
+    {
+      "source": "m22",
+      "from": "u037",
+      "to": "u051"
+    }
+  ]
+}
