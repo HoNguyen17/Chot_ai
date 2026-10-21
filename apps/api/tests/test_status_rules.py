@@ -247,3 +247,192 @@ def test_agree_label_on_bare_backchannel_is_only_indirect():
     (d,) = decisions(led)
     assert d.status == Status.NEEDS_CONFIRMATION
     assert any("gián tiếp" in f for f in d.flags)
+
+
+# ---- M3: mã lý do, timeline, tri thức (kết luận trạng thái không đổi so với M2) ----------------
+from pathlib import Path  # noqa: E402
+
+from chot.adapters.parsing import parse_transcript_file  # noqa: E402
+from chot.domain.reasons import ReasonCode as C  # noqa: E402
+from chot.domain.text import is_durable, is_hearsay  # noqa: E402
+
+_ROOT = Path(__file__).resolve().parents[3]
+
+
+def codes(item):
+    return [r.code for r in item.reasons]
+
+
+def test_co_chair_objection_gives_reason_with_names():
+    tr = _tr(
+        "[00:10] Bình: Em đề xuất B.",
+        "[00:20] Hai: Anh thấy B rủi ro.",
+        "[00:30] Sếp: Chị quyết đi B.",
+        participants="Sếp (chủ trì); Hai (chủ trì); Bình",
+    )
+    (d,) = decisions(
+        ledger_for(
+            tr,
+            [
+                ev("u001", K.PROPOSE, "Bình", "B"),
+                ev("u002", K.OBJECT, "Hai", "B", quote="B rủi ro"),
+                ev("u003", K.AGREE, "Sếp", "B", quote="Chị quyết đi B"),
+            ],
+        )
+    )
+    (r,) = d.reasons
+    assert r.code == C.CO_CHAIR_OBJECTION
+    assert r.params == {"chair": "Sếp", "co_chair": "Hai", "key": "B"}
+
+
+def test_m23_oracle_tiktok_decision_flags_co_chair_objection():
+    tr = parse_transcript_file(_ROOT / "data" / "raw" / "m23.txt")
+    extraction = ExtractionResult.model_validate_json(
+        (Path(__file__).parent / "fixtures" / "oracle_events" / "m23.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    tiktok = next(
+        d for d in decisions(build_ledger(tr, extraction)) if "u006" in [e.utt for e in d.evidence]
+    )
+    assert tiktok.status == Status.NEEDS_CONFIRMATION and C.CO_CHAIR_OBJECTION in codes(tiktok)
+
+
+def test_fallback_is_info_not_question():
+    tr = _tr(
+        "[00:10] An: Em đề xuất A.", "[00:20] Sếp: Chốt dùng B. Nếu thứ Năm B trễ thì quay lại A."
+    )
+    (d,) = decisions(
+        ledger_for(
+            tr,
+            [
+                ev("u001", K.PROPOSE, "An", "A"),
+                ev(
+                    "u002",
+                    K.AGREE,
+                    "Sếp",
+                    "B",
+                    quote="Chốt dùng B. Nếu thứ Năm B trễ thì quay lại A",
+                ),
+            ],
+        )
+    )
+    assert d.status == Status.FINAL and codes(d) == [C.FALLBACK_KEPT]
+    assert not any(r.asking for r in d.reasons)
+    assert d.flags == [
+        "có điều kiện quay lại phương án cũ — phương án cũ vẫn mở"
+    ]  # export cũ giữ chữ
+
+
+def test_hedged_and_nod_reasons_carry_question_params(mini):
+    led = ledger_for(
+        mini,
+        [
+            ev("u002", K.PROPOSE, "Bình", "B"),
+            ev("u003", K.AGREE, "Sếp", "B", quote="Tạm thời đi B nhé"),
+        ],
+    )
+    (r,) = decisions(led)[0].reasons
+    assert r.code == C.HEDGED and r.params == {
+        "speaker": "Sếp",
+        "quote": "Tạm thời đi B nhé",
+        "key": "B",
+    }
+
+
+def test_task_reasons_owner_absent_and_vague_deadline():
+    tr = _tr("[00:10] Sếp: Chi làm báo cáo, tuần sau nộp.", absent="Chi (Kế toán)")
+    led = ledger_for(
+        tr,
+        [
+            ev(
+                "u001",
+                K.ASSIGN,
+                "Sếp",
+                "bao-cao",
+                owner="Chi",
+                content="Làm báo cáo",
+                quote="Chi làm báo cáo, tuần sau nộp",
+            )
+        ],
+    )
+    (t,) = [i for i in led.items if i.type == ItemType.TASK]
+    assert codes(t) == [C.OWNER_ABSENT, C.DEADLINE_VAGUE]
+    assert t.reasons[0].params == {"owner": "Chi", "content": "Làm báo cáo"}
+    assert t.reasons[1].params == {"deadline_text": "tuần sau"}
+
+
+def test_decision_timeline_lists_thread_events_in_order(mini):
+    led = ledger_for(
+        mini,
+        [
+            ev("u002", K.PROPOSE, "Bình", "B", quote="đề xuất B"),
+            ev("u001", K.PROPOSE, "An", "A", quote="đề xuất A"),
+            ev("u005", K.AGREE, "Sếp", "B", quote="Chốt dùng B"),
+        ],
+    )
+    (d,) = decisions(led)
+    assert [(t.utt, t.kind, t.key) for t in d.timeline] == [
+        ("u001", K.PROPOSE, "A"),
+        ("u002", K.PROPOSE, "B"),
+        ("u005", K.AGREE, "B"),
+    ]
+    assert d.timeline[0].speaker == "An" and d.timeline[2].quote == "Chốt dùng B"
+    (opt,) = [i for i in led.items if i.type == ItemType.OPTION]
+    assert opt.timeline == d.timeline
+
+
+def _knowledge(quote, **kw):
+    tr = _tr(f"[00:10] Sếp: {quote}")
+    led = ledger_for(tr, [ev("u001", K.INFO, "Sếp", content=quote, quote=quote, **kw)])
+    (k,) = led.items
+    return k
+
+
+def test_knowledge_is_noted_with_meeting_scope_by_default():
+    k = _knowledge("Đơn Tết năm nay khoảng 120 pallet.")
+    assert k.type == ItemType.KNOWLEDGE and k.status == Status.NOTED
+    assert k.scope == "meeting" and k.reasons == []
+
+
+def test_durable_knowledge_always_asks():
+    k = _knowledge("Từ nay mọi lô hàng xuất kho phải có mã PO của khách.")
+    assert k.scope == "durable" and codes(k) == [C.DURABLE_KNOWLEDGE]
+    assert k.reasons[0].params["hearsay"] is False
+
+
+def test_hearsay_knowledge_is_durable_but_warned():
+    k = _knowledge("Nghe nói khách bên Đà Nẵng chỉ nhận hàng đường bộ.")
+    assert k.scope == "durable" and k.reasons[0].params["hearsay"] is True
+
+
+def test_llm_durable_hint_marks_durable():
+    assert _knowledge("Kho Bình Dương đóng cửa Chủ nhật.", durable_hint=True).scope == "durable"
+
+
+def test_feedback_is_noted():
+    tr = _tr("[00:10] An: Khách khen mẫu mới.")
+    (f,) = ledger_for(
+        tr, [ev("u001", K.FEEDBACK, "An", content="Khách khen", quote="Khách khen mẫu mới")]
+    ).items
+    assert f.status == Status.NOTED
+
+
+def test_durable_and_hearsay_signals():
+    assert is_durable("Từ giờ hoá đơn bắt buộc có mã PO")
+    assert is_durable("Quy định công ty: vi phạm lần đầu phạt 500 nghìn")
+    assert is_durable("Khách bên đó chỉ dùng MoMo")
+    assert not is_durable("Ok anh, em gửi luôn")
+    assert not is_durable("Đơn Tết năm nay 120 pallet")
+    assert is_hearsay("Nghe nói khách chỉ dùng MoMo") and is_hearsay("Hình như kho đóng Chủ nhật")
+    assert not is_hearsay("Khách chỉ dùng MoMo")
+
+
+def test_every_needs_confirmation_item_asks_on_oracle_set():
+    fix = Path(__file__).parent / "fixtures" / "oracle_events"
+    for p in sorted(fix.glob("m*.json")):
+        tr = parse_transcript_file(_ROOT / "data" / "raw" / f"{p.stem}.txt")
+        led = build_ledger(tr, ExtractionResult.model_validate_json(p.read_text(encoding="utf-8")))
+        for i in led.items:
+            if i.status == Status.NEEDS_CONFIRMATION:
+                assert any(r.asking for r in i.reasons), (p.stem, i.id, i.flags)

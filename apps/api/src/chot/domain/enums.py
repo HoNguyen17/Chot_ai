@@ -23,6 +23,23 @@ class Status(StrEnum):
     REJECTED = "rejected"  # Bị bác (chỉ người duyệt gán thủ công ở v1)
     DEFERRED = "deferred"  # Hoãn sang lần sau / chờ người khác quyết
     OPEN = "open"  # Đang mở: task đã nhận, blocker, câu hỏi, phương án còn treo
+    NOTED = "noted"  # Ghi nhận: tri thức, phản hồi (M3)
+
+
+class ReviewState(StrEnum):
+    """Trạng thái duyệt của một mục (M3) — tách khỏi Status: duyệt không tự đổi kết luận."""
+
+    AUTO_ACCEPTED = "auto_accepted"  # không có mã lý do hỏi → không cần người trả lời
+    PENDING = "pending"  # đang chờ người duyệt trả lời
+    CONFIRMED = "confirmed"
+    REJECTED = "rejected"
+    DEFERRED = "deferred"  # để họp sau → "Việc treo"
+
+
+class ReviewAction(StrEnum):
+    CONFIRM = "confirm"
+    REJECT = "reject"
+    DEFER = "defer"
 
 
 class EventKind(StrEnum):

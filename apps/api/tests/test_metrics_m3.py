@@ -125,3 +125,17 @@ def test_knowledge_scope_only_counts_gold_items_with_scope():
 def test_knowledge_scope_is_none_when_gold_has_no_scope():
     gold = _m({"id": "K1", "type": "knowledge", "status": "open", "evidence": ["u1"]})
     assert _score(gold, gold)["knowledge_scope_acc"] is None
+
+
+def test_legacy_open_gold_equals_noted_for_knowledge_and_feedback():
+    gold = _m(
+        {"id": "K1", "type": "knowledge", "status": "open", "evidence": ["u1"]},
+        {"id": "F1", "type": "feedback", "status": "open", "evidence": ["u2"]},
+        {"id": "B1", "type": "blocker", "status": "open", "evidence": ["u3"]},
+    )
+    pred = _m(
+        {"id": "K1", "type": "knowledge", "status": "noted", "evidence": ["u1"]},
+        {"id": "F1", "type": "feedback", "status": "noted", "evidence": ["u2"]},
+        {"id": "B1", "type": "blocker", "status": "open", "evidence": ["u3"]},
+    )
+    assert _score(pred, gold)["status_accuracy_matched"] == 1.0

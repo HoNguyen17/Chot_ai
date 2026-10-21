@@ -10,7 +10,7 @@ from __future__ import annotations
 import datetime as dt
 from dataclasses import dataclass, field
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, model_validator
 
 from chot.domain.enums import ItemType, Status
 from chot.domain.grounding import quote_in_utterance
@@ -41,6 +41,13 @@ class GoldItem(BaseModel):
     evidence: list[str] = Field(default_factory=list)
     note: str | None = None
     scope: str | None = None  # knowledge: "meeting" | "durable" (M3); thiếu = không chấm
+
+    @model_validator(mode="after")
+    def _legacy_noted(self) -> GoldItem:
+        """Gold M2 ghi tri thức / phản hồi là `open`; M3 gọi là `noted` — cùng nghĩa."""
+        if self.type in (ItemType.KNOWLEDGE, ItemType.FEEDBACK) and self.status == Status.OPEN:
+            self.status = Status.NOTED
+        return self
 
 
 class GoldMeeting(BaseModel):

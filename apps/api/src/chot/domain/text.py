@@ -60,6 +60,22 @@ def has_fallback(text: str) -> bool:
     return bool(_FALLBACK_RE.search(normalize(text)))
 
 
+# Tri thức dùng lâu dài (SPEC M3 §4.3). Không dùng "luôn" trơn: "em gửi luôn" ≠ quy định.
+_DURABLE_RE = re.compile(
+    r"\btừ (nay|giờ|bây giờ)\b|quy định|bắt buộc|luôn luôn|lúc nào cũng|\bkhách\b.*\bchỉ\b"
+)
+# Tin nghe lại: KHÔNG gộp vào is_hedged() để kết luận quyết định M2 không đổi.
+_HEARSAY_RE = re.compile(r"nghe nói|nghe đâu|chắc là|hình như")
+
+
+def is_durable(text: str) -> bool:
+    return bool(_DURABLE_RE.search(normalize(text)))
+
+
+def is_hearsay(text: str) -> bool:
+    return bool(_HEARSAY_RE.search(normalize(text)))
+
+
 def is_hedged(text: str) -> bool:
     return bool(_HEDGE_RE.search(_without_fallback(text)))
 

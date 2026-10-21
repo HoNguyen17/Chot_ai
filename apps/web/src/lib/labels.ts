@@ -7,6 +7,7 @@ export const STATUS_LABEL: Record<Status, string> = {
   rejected: "Bị bác",
   deferred: "Hoãn",
   open: "Đang mở",
+  noted: "Ghi nhận",
 };
 
 export const TYPE_LABEL: Record<ItemType, string> = {
@@ -50,7 +51,7 @@ export const SECTIONS: { key: string; title: string; hint: string; match: (t: It
     key: "notes",
     title: "Ghi nhận khác",
     hint: "Tri thức, yêu cầu, phản hồi.",
-    match: (t, s) => (t === "knowledge" || t === "request" || t === "feedback") && s === "open",
+    match: (t, s) => (t === "knowledge" || t === "request" || t === "feedback") && (s === "open" || s === "noted"),
   },
   {
     key: "history",

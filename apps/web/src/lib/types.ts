@@ -16,7 +16,43 @@ export type Status =
   | "superseded"
   | "rejected"
   | "deferred"
-  | "open";
+  | "open"
+  | "noted"; // M3: tri thức, phản hồi
+
+// M3 — trạng thái duyệt, tách khỏi Status
+export type ReviewState = "auto_accepted" | "pending" | "confirmed" | "rejected" | "deferred";
+
+// M3 — mã lý do (apps/api/src/chot/domain/reasons.py); câu hỏi sinh từ code + params
+export type ReasonCode =
+  | "NOT_CHAIR"
+  | "HEDGED"
+  | "NOD_ONLY"
+  | "CO_CHAIR_OBJECTION"
+  | "OWNER_MISSING"
+  | "OWNER_UNCONFIRMED"
+  | "OWNER_DECLINED"
+  | "OWNER_ABSENT"
+  | "DEADLINE_VAGUE"
+  | "DURABLE_KNOWLEDGE"
+  | "THREAD_UNMAPPED"
+  | "FALLBACK_KEPT"
+  | "CHANGED_MIND"
+  | "NO_AGREEMENT"
+  | "AGREEMENT_REVERSED";
+
+export interface Reason {
+  code: ReasonCode;
+  params: Record<string, string | boolean | null>;
+}
+
+export interface TimelineEntry {
+  utt: string;
+  ts: string | null;
+  speaker: string;
+  kind: string;
+  key: string | null;
+  quote: string;
+}
 
 export interface Participant {
   name: string;
@@ -33,10 +69,14 @@ export interface Utterance {
 }
 
 export interface Evidence {
-  utt: string;
+  utt: string | null; // null khi kind = "reviewer"
   quote: string;
   ts: string | null;
   speaker: string | null;
+  kind: "transcript" | "reviewer";
+  by: string | null;
+  at: string | null;
+  note: string | null;
 }
 
 export interface Item {
@@ -53,6 +93,10 @@ export interface Item {
   evidence: Evidence[];
   confidence: number | null;
   flags: string[];
+  reasons: Reason[];
+  review_state: ReviewState | null;
+  scope: "meeting" | "durable" | null;
+  timeline: TimelineEntry[];
 }
 
 export interface Ledger {

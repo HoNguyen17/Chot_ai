@@ -15,11 +15,13 @@ STATUS_VI = {
     Status.REJECTED: "Bị bác",
     Status.DEFERRED: "Hoãn",
     Status.OPEN: "Đang mở",
+    Status.NOTED: "Ghi nhận",
 }
 
 
 def _cite(item: Item) -> str:
-    return ", ".join(f"[{e.ts or e.utt}]" for e in item.evidence)
+    # Chỉ trích câu transcript; câu trả lời của người duyệt không có mốc giờ / utt
+    return ", ".join(f"[{e.ts or e.utt}]" for e in item.evidence if e.kind == "transcript")
 
 
 def _line(item: Item) -> str:
@@ -34,7 +36,11 @@ def _line(item: Item) -> str:
         verb = "chốt bởi" if item.status == Status.FINAL else "đồng ý bởi"
         extra.append(f"{verb}: {item.decided_by}")
     meta = f" — {'; '.join(extra)}" if extra else ""
-    tag = "" if item.status in (Status.FINAL, Status.OPEN) else f"**[{STATUS_VI[item.status]}]** "
+    tag = (
+        ""
+        if item.status in (Status.FINAL, Status.OPEN, Status.NOTED)
+        else f"**[{STATUS_VI[item.status]}]** "
+    )
     return f"- {tag}{item.content}{meta} {_cite(item)}"
 
 

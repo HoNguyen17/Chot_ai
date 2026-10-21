@@ -1,10 +1,12 @@
 from __future__ import annotations
 
 import datetime as dt
+from typing import Literal
 
 from pydantic import BaseModel, Field
 
-from chot.domain.enums import EventKind, ItemType, Status
+from chot.domain.enums import EventKind, ItemType, ReviewState, Status
+from chot.domain.reasons import Reason
 
 
 def format_ts(seconds: int) -> str:
@@ -78,13 +80,32 @@ class Event(BaseModel):
     owner: str | None = None
     deadline_text: str | None = None
     quote: str = ""
+    durable_hint: bool = False  # info: LLM gợi ý tri thức dùng lâu dài (code quyết scope)
+    new_key: bool = False  # phương án mới chưa có trong bản đồ chủ đề (M3 lượt 2)
 
 
 class Evidence(BaseModel):
-    utt: str
-    quote: str
+    """Bằng chứng: câu trong transcript, hoặc câu trả lời của người duyệt (không có utt)."""
+
+    utt: str | None = None
+    quote: str = ""
     ts: str | None = None
     speaker: str | None = None
+    kind: Literal["transcript", "reviewer"] = "transcript"
+    by: str | None = None
+    at: dt.datetime | None = None
+    note: str | None = None
+
+
+class TimelineEntry(BaseModel):
+    """Một bước trong diễn biến của chủ đề — dòng "Vì sao" trên UI."""
+
+    utt: str
+    ts: str | None = None
+    speaker: str
+    kind: EventKind
+    key: str | None = None
+    quote: str = ""
 
 
 class Item(BaseModel):
@@ -100,7 +121,11 @@ class Item(BaseModel):
     supersedes: list[str] = Field(default_factory=list)
     evidence: list[Evidence] = Field(default_factory=list)
     confidence: float | None = None
-    flags: list[str] = Field(default_factory=list)  # lý do hạ trạng thái, cảnh báo cho người duyệt
+    flags: list[str] = Field(default_factory=list)  # chữ M2 sinh từ reasons (export cũ)
+    reasons: list[Reason] = Field(default_factory=list)  # mã lý do (M3) — nguồn của câu hỏi
+    review_state: ReviewState | None = None  # đặt khi cuộc họp vào duyệt (MeetingService)
+    scope: Literal["meeting", "durable"] | None = None  # chỉ knowledge
+    timeline: list[TimelineEntry] = Field(default_factory=list)  # decision / option
 
 
 class Ledger(BaseModel):

@@ -30,10 +30,14 @@ from chot.domain.models import (
     ExtractionResult,
     Item,
     Ledger,
+    TimelineEntry,
     Transcript,
     Utterance,
 )
-from chot.domain.text import has_fallback, is_backchannel, is_hedged
+from chot.domain.reasons import Reason, flag
+from chot.domain.reasons import ReasonCode as C
+from chot.domain.status_table import check_status
+from chot.domain.text import has_fallback, is_backchannel, is_durable, is_hearsay, is_hedged
 
 _CONTRADICTING = {EventKind.PROPOSE, EventKind.REVISE, EventKind.REOPEN, EventKind.DEFER}
 
@@ -56,6 +60,29 @@ def _evidence(e: Event, tr: Transcript) -> Evidence:
         ts=u.ts_label if u else None,
         speaker=u.speaker if u else e.speaker,
     )
+
+
+def _timeline(evs: list[Event], tr: Transcript) -> list[TimelineEntry]:
+    """Diễn biến của chủ đề theo thứ tự câu — dòng "Vì sao" (SPEC M3 §4.5)."""
+    out = []
+    for e in evs:
+        u = tr.utt(e.utt)
+        out.append(
+            TimelineEntry(
+                utt=e.utt,
+                ts=u.ts_label if u else None,
+                speaker=e.speaker,
+                kind=e.kind,
+                key=e.key,
+                quote=e.quote or (u.text if u else ""),
+            )
+        )
+    return out
+
+
+def _with_reasons(reasons: list[Reason]) -> dict:
+    """Mã lý do + chữ M2 sinh từ mã (export cũ không đổi)."""
+    return {"reasons": reasons, "flags": [flag(r) for r in reasons]}
 
 
 def _hedged(e: Event) -> bool:
@@ -104,7 +131,12 @@ def _indirect_agree(evs: list[Event], tr: Transcript) -> tuple[Event, Utterance]
 
 
 def _options(
-    evs: list[Event], chosen_key: str | None, status: Status, tr: Transcript, ids: _Ids
+    evs: list[Event],
+    chosen_key: str | None,
+    status: Status,
+    tr: Transcript,
+    ids: _Ids,
+    timeline: list[TimelineEntry],
 ) -> list[Item]:
     """Mỗi phương án khác phương án được chọn → một mục option (giữ làm lịch sử)."""
     items: list[Item] = []
@@ -124,6 +156,7 @@ def _options(
                         for x in evs
                         if x.key == e.key and x.kind in (EventKind.PROPOSE, EventKind.REVISE)
                     ],
+                    timeline=timeline,
                 )
             )
     return items
@@ -154,6 +187,7 @@ def resolve_thread(events: list[Event], tr: Transcript, thread_title: str, ids: 
         )
 
     thread_id = evs[0].thread if evs else None
+    timeline = _timeline(evs, tr)
 
     # Trường hợp 1: có đồng thuận cuối cùng, không bị lật → FINAL hoặc NEEDS_CONFIRMATION
     if last_agree and not contradicted:
@@ -169,25 +203,29 @@ def resolve_thread(events: list[Event], tr: Transcript, thread_title: str, ids: 
             if authority and not hedged and not co_chair and not nod_only
             else Status.NEEDS_CONFIRMATION
         )
-        flags = []
+        chosen_key = last_agree.key
+        chair = ", ".join(sorted(tr.chairs)) or "Chủ trì"
+        reasons: list[Reason] = []
         if not authority:
-            flags.append("người đồng ý không phải người chủ trì")
+            reasons.append(Reason(code=C.NOT_CHAIR, params={"chair": chair, "key": chosen_key}))
         if hedged:
-            flags.append("đồng thuận có rào đón")
+            params = {"speaker": last_agree.speaker, "quote": last_agree.quote, "key": chosen_key}
+            reasons.append(Reason(code=C.HEDGED, params=params))
         if nod_only:
-            flags.append("chủ trì chỉ đáp 'Ừ.' — đồng ý gián tiếp, cần xác nhận")
+            params = {"chair": last_agree.speaker, "key": chosen_key}
+            reasons.append(Reason(code=C.NOD_ONLY, params=params))
         if co_chair:
-            flags.append(f"đồng chủ trì {co_chair} đã phản đối, chưa đồng ý lại")
+            params = {"chair": last_agree.speaker, "co_chair": co_chair, "key": chosen_key}
+            reasons.append(Reason(code=C.CO_CHAIR_OBJECTION, params=params))
         if fallback:
-            flags.append("có điều kiện quay lại phương án cũ — phương án cũ vẫn mở")
+            reasons.append(Reason(code=C.FALLBACK_KEPT))
         # Có điều kiện quay lại → phương án cũ chưa bị loại hẳn (quy ước Nash 11)
         replaces = status == Status.FINAL and not fallback
         if status == Status.FINAL and len(agrees) > 1:
-            flags.append("đã đổi ý trong cuộc họp — xem timeline")
+            reasons.append(Reason(code=C.CHANGED_MIND))
 
-        chosen_key = last_agree.key
         option_items = _options(
-            evs, chosen_key, Status.SUPERSEDED if replaces else Status.OPEN, tr, ids
+            evs, chosen_key, Status.SUPERSEDED if replaces else Status.OPEN, tr, ids, timeline
         )
         chosen_proposals = [
             x
@@ -207,7 +245,8 @@ def resolve_thread(events: list[Event], tr: Transcript, thread_title: str, ids: 
             supersedes=[o.id for o in option_items] if replaces else [],
             # Bằng chứng: câu AGREE sau cùng đứng đầu, sau đó là câu đề xuất gốc.
             evidence=[_evidence(last_agree, tr)] + [_evidence(x, tr) for x in chosen_proposals[:1]],
-            flags=flags,
+            timeline=timeline,
+            **_with_reasons(reasons),
         )
         return [decision, *option_items]
 
@@ -222,7 +261,8 @@ def resolve_thread(events: list[Event], tr: Transcript, thread_title: str, ids: 
                 content=thread_title,
                 status=Status.DEFERRED,
                 evidence=[_evidence(e, tr) for e in defers],
-                flags=["đã có đồng thuận nhưng bị lật lại"] if last_agree else [],
+                timeline=timeline,
+                **_with_reasons([Reason(code=C.AGREEMENT_REVERSED)] if last_agree else []),
             )
         ]
 
@@ -230,7 +270,7 @@ def resolve_thread(events: list[Event], tr: Transcript, thread_title: str, ids: 
     indirect = _indirect_agree(evs, tr)
     if indirect:
         proposal, nod = indirect
-        others = _options(evs, proposal.key, Status.OPEN, tr, ids)
+        others = _options(evs, proposal.key, Status.OPEN, tr, ids, timeline)
         decision = Item(
             id=ids.next(ItemType.DECISION),
             type=ItemType.DECISION,
@@ -242,7 +282,10 @@ def resolve_thread(events: list[Event], tr: Transcript, thread_title: str, ids: 
                 Evidence(utt=nod.id, quote=nod.text, ts=nod.ts_label, speaker=nod.speaker),
                 _evidence(proposal, tr),
             ],
-            flags=["chủ trì chỉ đáp 'Ừ.' — đồng ý gián tiếp, cần xác nhận"],
+            timeline=timeline,
+            **_with_reasons(
+                [Reason(code=C.NOD_ONLY, params={"chair": nod.speaker, "key": proposal.key})]
+            ),
         )
         return [decision, *others]
 
@@ -256,7 +299,7 @@ def resolve_thread(events: list[Event], tr: Transcript, thread_title: str, ids: 
             content=thread_title,
             status=Status.OPEN,
             evidence=[_evidence(e, tr) for e in (firsts or evs)[:2]],
-            flags=["chưa có đồng thuận"],
+            **_with_reasons([Reason(code=C.NO_AGREEMENT)]),
         )
     ]
 
@@ -266,14 +309,15 @@ def resolve_task(events: list[Event], tr: Transcript, ids: _Ids) -> Item:
     evs = sorted(events, key=lambda e: tr.order(e.utt))
     assign = next((e for e in evs if e.kind == EventKind.ASSIGN), evs[0])
     owner = assign.owner or (assign.speaker if assign.kind == EventKind.COMMIT else None)
-    flags: list[str] = []
+    content = assign.content or assign.quote
+    reasons: list[Reason] = []
 
     absent_owner = bool(owner) and owner not in tr.names and owner in tr.known_names
     if absent_owner:
         # Quy ước Nash 12: giữ tên người vắng mặt, nhưng họ chưa thể nhận việc trong họp
-        flags.append(f"owner '{owner}' vắng mặt — cần xác nhận lại với người đó")
+        reasons.append(Reason(code=C.OWNER_ABSENT, params={"owner": owner, "content": content}))
     elif owner and owner not in tr.names:
-        flags.append(f"owner '{owner}' không có trong danh sách người tham gia")
+        reasons.append(Reason(code=C.OWNER_MISSING, params={"name": owner, "content": content}))
         owner = None
 
     self_assigned = owner is not None and assign.speaker == owner
@@ -290,37 +334,62 @@ def resolve_task(events: list[Event], tr: Transcript, ids: _Ids) -> Item:
     )
     declined = any(e.kind == EventKind.DECLINE for e in replies)
 
+    who = {"owner": owner, "content": content}
     if owner is None or absent_owner:
         status = Status.NEEDS_CONFIRMATION
         if owner is None:
-            flags.append("chưa rõ ai nhận việc")
+            reasons.append(Reason(code=C.OWNER_MISSING, params={"content": content}))
     elif declined:
         status = Status.NEEDS_CONFIRMATION
-        flags.append("owner từ chối hoặc trì hoãn")
+        reasons.append(Reason(code=C.OWNER_DECLINED, params=who))
     elif (self_assigned and not _hedged(assign)) or committed:
         status = Status.OPEN
     else:
         status = Status.NEEDS_CONFIRMATION
-        flags.append("owner chưa xác nhận nhận việc")
+        reasons.append(Reason(code=C.OWNER_UNCONFIRMED, params=who))
 
     deadline_text = next((e.deadline_text for e in reversed(evs) if e.deadline_text), None) or next(
         (p for e in reversed(evs) if (p := extract_deadline_phrase(e.quote))), None
     )
     deadline = resolve_deadline(deadline_text, tr.date)
     if deadline_text and not deadline:
-        flags.append("hạn chót chưa cụ thể")
+        reasons.append(Reason(code=C.DEADLINE_VAGUE, params={"deadline_text": deadline_text}))
 
     return Item(
         id=ids.next(ItemType.TASK),
         type=ItemType.TASK,
         thread=assign.thread,
-        content=assign.content or assign.quote,
+        content=content,
         status=status,
         owner=owner,
         deadline=deadline,
         deadline_text=deadline_text,
         evidence=[_evidence(e, tr) for e in evs],
-        flags=flags,
+        **_with_reasons(reasons),
+    )
+
+
+def _standalone(e: Event, tr: Transcript, ids: _Ids) -> Item:
+    """Vướng mắc / câu hỏi / yêu cầu: Đang mở. Tri thức / phản hồi: Ghi nhận (+ phạm vi)."""
+    item_type = STANDALONE_EVENTS[e.kind]
+    content = e.content or e.quote
+    status = Status.NOTED if item_type in (ItemType.KNOWLEDGE, ItemType.FEEDBACK) else Status.OPEN
+    extra: dict = {}
+    if item_type == ItemType.KNOWLEDGE:
+        text = e.quote or content
+        durable = e.durable_hint or is_durable(text)
+        extra["scope"] = "durable" if durable else "meeting"
+        if durable:  # tri thức lâu dài luôn hỏi 1 lần trước khi vào Kho (SPEC M3 §4.3)
+            params = {"content": content, "hearsay": is_hearsay(text)}
+            extra |= _with_reasons([Reason(code=C.DURABLE_KNOWLEDGE, params=params)])
+    return Item(
+        id=ids.next(item_type),
+        type=item_type,
+        thread=e.thread,
+        content=content,
+        status=status,
+        evidence=[_evidence(e, tr)],
+        **extra,
     )
 
 
@@ -352,18 +421,11 @@ def build_ledger(
         # Câu hỏi nằm trong một chủ đề quyết định đã được xử lý ở resolve_thread.
         if e.kind == EventKind.QUESTION and e.thread in decision_threads:
             continue
-        items.append(
-            Item(
-                id=ids.next(STANDALONE_EVENTS[e.kind]),
-                type=STANDALONE_EVENTS[e.kind],
-                thread=e.thread,
-                content=e.content or e.quote,
-                status=Status.OPEN,
-                evidence=[_evidence(e, tr)],
-            )
-        )
+        items.append(_standalone(e, tr, ids))
 
     items.sort(key=lambda i: min((tr.order(ev.utt) for ev in i.evidence), default=10**9))
+    for i in items:
+        check_status(i.type, i.status)
     return Ledger(
         meeting_id=tr.meeting_id,
         generated_by=generated_by,
