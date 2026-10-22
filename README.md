@@ -66,7 +66,7 @@ Người dùng: PM / trưởng nhóm SME chủ trì họp dự án định kỳ.
 - **Người chủ trì duyệt trước khi gửi.** Nút xuất bản bị khoá khi còn mục cần xác nhận. Xuất biên bản `.md`, task `.csv`, ledger `.json`.
 - **Hiểu tiếng Việt trộn tiếng Anh** ("em propose…", "budget split", "request của khách").
 
-**Mới ở Mission 3** ([docs/MISSION3.md](docs/MISSION3.md)):
+**Mới**:
 - **Họp dài 150–300 câu.** Lượt 1 dựng bản đồ chủ đề, lượt 2 gán sự kiện theo đoạn 100 câu chạy song song. Chủ đề bị cắt rồi quay lại vẫn chung một mạch.
 - **Chỉ hỏi chỗ vướng.** Màn duyệt có hàng đợi "Cần bạn trả lời": câu hỏi sinh từ mã lý do, trả lời bằng Xác nhận / Bác bỏ / để họp sau. Mục chắc chắn tự chấp nhận, mở ra có "Vì sao". Transcript nằm bên cạnh.
 - **Nhóm họp bằng link bí mật.** Buổi họp · Kho tri thức (chỉ tri thức lâu dài đã xác nhận) · Việc treo. Xem thử [nhóm mẫu m01–m05](https://chot.nashng.dev/s/mau-chot-m01-m05).
