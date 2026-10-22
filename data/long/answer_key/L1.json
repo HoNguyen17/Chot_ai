@@ -730,18 +730,6 @@
       ]
     },
     {
-      "id": "m24.D2",
-      "type": "decision",
-      "thread": "advanced-report",
-      "content": "Báo cáo nâng cao vẫn ở bản 3.3",
-      "status": "final",
-      "decided_by": "Hùng",
-      "evidence": [
-        "u129"
-      ],
-      "note": "Quy ước cũ: chủ trì trả lời dứt khoát, không rào đón → ghi thành quyết định."
-    },
-    {
       "id": "m24.F1",
       "type": "feedback",
       "thread": "performance",

@@ -436,3 +436,86 @@ def test_every_needs_confirmation_item_asks_on_oracle_set():
         for i in led.items:
             if i.status == Status.NEEDS_CONFIRMATION:
                 assert any(r.asking for r in i.reasons), (p.stem, i.id, i.flags)
+
+
+# --- P4: luật chặn chốt nhầm còn lại trên họp dài (Nash duyệt 22/10/2026) ---
+
+
+def test_chair_ok_on_a_task_is_not_a_decision():
+    """LLM gán `agree` cho câu chủ trì gật đầu một việc vừa nhận (cùng key với assign)."""
+    tr = _tr(
+        "[00:10] An: Dạ, vậy em soạn tin nhắn giải thích gửi đại lý.",
+        "[00:20] Sếp: Ừ, gửi trước khi áp dụng.",
+    )
+    led = ledger_for(
+        tr,
+        [
+            ev("u001", K.ASSIGN, "An", "tin-nhan", owner="An", quote="em soạn tin nhắn"),
+            ev("u002", K.AGREE, "Sếp", "tin-nhan", quote="Ừ, gửi trước khi áp dụng"),
+        ],
+    )
+    assert decisions(led) == []
+    assert [i.type for i in led.items] == [ItemType.TASK]
+
+
+def test_agree_on_a_key_that_is_also_an_option_stays_a_decision():
+    tr = _tr("[00:10] An: Em đề xuất A, em làm luôn.", "[00:20] Sếp: Chốt A.")
+    led = ledger_for(
+        tr,
+        [
+            ev("u001", K.PROPOSE, "An", "A"),
+            ev("u001", K.ASSIGN, "An", "A", owner="An"),
+            ev("u002", K.AGREE, "Sếp", "A", quote="Chốt A"),
+        ],
+    )
+    assert [d.status for d in decisions(led)] == [Status.FINAL]
+
+
+def test_fallback_kept_when_co_chair_agrees_after_conditional_decision():
+    tr = _tr(
+        "[00:10] An: Em đề xuất đi đường bộ.",
+        "[00:20] Bình: Em đề xuất đường biển.",
+        "[00:30] Sếp: Vậy chốt nhé: đi đường biển. Nếu tới 15/11 chưa có chỗ thì quay về đường bộ.",
+        "[00:40] Hạnh: Ok, chị đồng ý.",
+        participants="Sếp (chủ trì); Hạnh (đồng chủ trì); An; Bình",
+    )
+    led = ledger_for(
+        tr,
+        [
+            ev("u001", K.PROPOSE, "An", "bộ"),
+            ev("u002", K.PROPOSE, "Bình", "biển"),
+            # LLM chỉ chép đoạn ngắn nhất — mệnh đề "Nếu…" nằm ngoài quote
+            ev("u003", K.AGREE, "Sếp", "biển", quote="Vậy chốt nhé: đi đường biển"),
+            ev("u004", K.AGREE, "Hạnh", "biển", quote="Ok, chị đồng ý"),
+        ],
+    )
+    (d,) = decisions(led)
+    assert d.status == Status.FINAL and C.FALLBACK_KEPT in codes(d)
+    (opt,) = [i for i in led.items if i.type == ItemType.OPTION]
+    assert opt.status == Status.OPEN and d.supersedes == []
+
+
+def test_chair_decision_followed_by_commit_stays_a_decision():
+    """m04: chủ trì quyết trước, người làm nhận sau (cùng key) → vẫn là quyết định."""
+    tr = _tr(
+        "[00:10] Sếp: Từ tuần sau xưởng làm thêm ca tối thứ Bảy.",
+        "[00:20] An: Dạ, em sắp xếp người.",
+    )
+    led = ledger_for(
+        tr,
+        [
+            ev("u001", K.AGREE, "Sếp", "ca-toi", quote="Từ tuần sau xưởng làm thêm ca tối thứ Bảy"),
+            ev("u002", K.COMMIT, "An", "ca-toi", owner="An", quote="em sắp xếp người"),
+        ],
+    )
+    assert [d.status for d in decisions(led)] == [Status.FINAL]
+
+
+def test_restating_a_previous_meeting_decision_is_not_a_new_decision():
+    """m24 (gold Nash): "vẫn ở bản 3.3 như đã chốt" nhắc lại quyết định họp trước, không phải mới."""
+    tr = _tr(
+        "[00:10] An: Khách hỏi đưa báo cáo vào bản 3.2 luôn được không.",
+        "[00:20] Sếp: Không, báo cáo vẫn ở bản 3.3 như đã chốt.",
+    )
+    led = ledger_for(tr, [ev("u002", K.AGREE, "Sếp", "bao-cao-3.3", quote="vẫn ở bản 3.3")])
+    assert decisions(led) == []

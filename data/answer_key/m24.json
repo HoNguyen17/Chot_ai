@@ -9,7 +9,6 @@
     {"id": "K3", "type": "knowledge", "thread": "release-32", "content": "Khách Minh Long đã được hứa bản mới đầu tháng 11", "status": "open", "evidence": ["u005"]},
     {"id": "T1", "type": "task", "thread": "release-32", "content": "Báo khách Minh Long lịch release mới", "status": "open", "owner": "Nhật", "deadline": "2026-10-30", "deadline_text": "trong hôm nay", "evidence": ["u008", "u009"]},
     {"id": "R1", "type": "request", "thread": "advanced-report", "content": "Khách Minh Long hỏi đưa báo cáo nâng cao vào bản 3.2", "status": "open", "evidence": ["u010"]},
-    {"id": "D2", "type": "decision", "thread": "advanced-report", "content": "Báo cáo nâng cao vẫn ở bản 3.3", "status": "final", "decided_by": "Bình", "evidence": ["u011"], "note": "Quy ước cũ: chủ trì trả lời dứt khoát, không rào đón → ghi thành quyết định."},
     {"id": "F1", "type": "feedback", "thread": "performance", "content": "6 khách phàn nàn app chậm khi mở báo cáo tháng", "status": "open", "evidence": ["u012"]},
     {"id": "T2", "type": "task", "thread": "release-32", "content": "Gửi danh sách 4 bug mức cao kèm trạng thái lên kênh release mỗi sáng tới ngày release", "status": "open", "owner": "Thơ", "deadline": null, "deadline_text": null, "evidence": ["u013"]},
     {"id": "B2", "type": "blocker", "thread": "staging-ssl", "content": "Chứng chỉ SSL staging hết hạn, QA không truy cập được HTTPS", "status": "open", "evidence": ["u014"]},

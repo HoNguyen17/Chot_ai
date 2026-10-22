@@ -139,3 +139,14 @@ def test_legacy_open_gold_equals_noted_for_knowledge_and_feedback():
         {"id": "B1", "type": "blocker", "status": "open", "evidence": ["u3"]},
     )
     assert _score(pred, gold)["status_accuracy_matched"] == 1.0
+
+
+def test_tie_in_overlap_prefers_same_type():
+    """m22: LLM tách key đề xuất / câu chốt → option và decision cùng trùng 1 câu với gold D1.
+    Hoà điểm phải ghép decision với decision, không thì quyết định đúng bị đếm là chốt nhầm."""
+    pred = _m(
+        {"id": "O1", "type": "option", "status": "superseded", "evidence": ["u014"]},
+        {"id": "D1", "type": "decision", "status": "final", "evidence": ["u026", "u024"]},
+    )
+    gold = _m({"id": "D1", "type": "decision", "status": "final", "evidence": ["u026", "u014"]})
+    assert _score(pred, gold)["wrong_final_rate"] == 0.0

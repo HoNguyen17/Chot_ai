@@ -82,3 +82,13 @@ def test_fallback_clause_is_not_hedge():
     assert has_fallback(text)
     assert not has_fallback("Nếu mà sếp duyệt thì làm B")
     assert is_hedged("Nếu mà sếp duyệt thì làm B")
+
+
+def test_restated_previous_decision():
+    # m24 (gold Nash): nhắc lại quyết định đã có ≠ quyết định mới
+    from chot.domain.text import is_restated
+
+    assert is_restated("Không, báo cáo nâng cao vẫn ở bản 3.3 như đã chốt.")
+    assert is_restated("Làm như đã thống nhất tuần trước.")
+    assert not is_restated("Vậy chốt nhé: launch tháng 11 dùng MoMo.")
+    assert not is_restated("Như đã bàn, mình chốt B.")

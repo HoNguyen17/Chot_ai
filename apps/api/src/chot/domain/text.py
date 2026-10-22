@@ -60,6 +60,14 @@ def has_fallback(text: str) -> bool:
     return bool(_FALLBACK_RE.search(normalize(text)))
 
 
+# Nhắc lại quyết định đã có ("vẫn ở 3.3 như đã chốt") — không phải quyết định mới (gold m24).
+_RESTATED_RE = re.compile(r"\bnhư (đã|đã từng) (chốt|thống nhất|quyết)\b")
+
+
+def is_restated(text: str) -> bool:
+    return bool(_RESTATED_RE.search(normalize(text)))
+
+
 # Tri thức dùng lâu dài (SPEC M3 §4.3). Không dùng "luôn" trơn: "em gửi luôn" ≠ quy định.
 _DURABLE_RE = re.compile(
     r"\btừ (nay|giờ|bây giờ)\b|quy định|bắt buộc|luôn luôn|lúc nào cũng|\bkhách\b.*\bchỉ\b"

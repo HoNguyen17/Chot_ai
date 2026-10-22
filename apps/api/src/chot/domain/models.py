@@ -65,6 +65,9 @@ class Transcript(BaseModel):
 class Thread(BaseModel):
     id: str  # slug, vd "payment-gateway"
     title: str
+    keys: list[str] = Field(default_factory=list)  # M3 lượt 1: phương án + việc của chủ đề
+    utt_ids: list[str] = Field(default_factory=list)  # M3 lượt 1: các câu thuộc chủ đề
+    mapped: bool = True  # False = lượt 2 dùng thread không có trong bản đồ → THREAD_UNMAPPED
 
 
 class Event(BaseModel):

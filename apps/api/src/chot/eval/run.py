@@ -51,7 +51,8 @@ def _builder(args: argparse.Namespace) -> tuple[LedgerBuilder | None, object | N
 
         return KeywordBaseline(), None
     if args.system in ("llm", "summary"):
-        from chot.adapters.llm import LLMEventExtractor, OpenAICompatibleClient
+        from chot.adapters.llm import OpenAICompatibleClient
+        from chot.api.deps import make_extractor
         from chot.config import get_settings
 
         s = get_settings()
@@ -62,7 +63,9 @@ def _builder(args: argparse.Namespace) -> tuple[LedgerBuilder | None, object | N
             from chot.adapters.baselines.summary_prompt import SummaryPromptBaseline
 
             return SummaryPromptBaseline(client), client
-        return RulesLedgerBuilder(LLMEventExtractor(client)), client
+        # cùng composition với API: họp > CHUNK_SIZE câu → hai lượt (đổi qua biến env)
+        print(f"CHUNK_SIZE={s.chunk_size}, CHUNK_CONTEXT={s.chunk_context}")
+        return RulesLedgerBuilder(make_extractor(s, client)), client
     return None, None
 
 
@@ -104,6 +107,7 @@ def main(argv: list[str] | None = None) -> int:
     builder, client = _builder(args)
     total = Counts()
     per_meeting = {}
+    usage_by_meeting: dict[str, dict] = {}
     for gpath in gold_files:
         gold = _load_gold(gpath)
         tpath = args.transcripts / f"{gold.meeting_id}.txt"
@@ -125,8 +129,13 @@ def main(argv: list[str] | None = None) -> int:
                     (args.events / f"{gold.meeting_id}.json").read_text(encoding="utf-8")
                 )
                 builder = RulesLedgerBuilder(StaticExtractor(extraction))
+            before = dict(client.usage) if client else None
             ledger: Ledger = builder.build(tr)
             counts = score_meeting(ledger_as_gold(ledger), gold, tr, ledger)
+            if client:
+                usage_by_meeting[gold.meeting_id] = {
+                    k: client.usage[k] - before[k] for k in client.usage
+                }
             if run_dir:
                 (run_dir / "ledgers" / f"{gold.meeting_id}.json").write_text(
                     ledger.model_dump_json(indent=2), encoding="utf-8"
@@ -157,6 +166,7 @@ def main(argv: list[str] | None = None) -> int:
             "summary": summary,
             "per_meeting": per_meeting,
             "usage": usage,
+            "usage_by_meeting": usage_by_meeting,
             "errors": total.errors,
         }
         (run_dir / "report.json").write_text(

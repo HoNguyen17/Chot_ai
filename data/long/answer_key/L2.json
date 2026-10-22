@@ -478,10 +478,11 @@
       "type": "option",
       "thread": "fabric-supplier",
       "content": "Giữ nhà cung cấp cũ Thành Công (68 nghìn/m, giao 10 ngày)",
-      "status": "superseded",
+      "status": "open",
       "evidence": [
         "u088"
-      ]
+      ],
+      "note": "Quy ước mới (P4, quy tắc 11): 'Chốt B, nếu … thì quay về A' → A chưa bị loại hẳn → open."
     },
     {
       "id": "m25.D1",
@@ -494,7 +495,7 @@
         "u093",
         "u089"
       ],
-      "note": "Quy ước cũ: câu 'Nếu thứ Ba… thì quay về Thành Công' là điều kiện, không gán sự kiện → B final, A superseded."
+      "note": "Quy tắc 11: 'Nếu thứ Ba… thì quay về Thành Công' → B final, A option open."
     },
     {
       "id": "m25.K1",

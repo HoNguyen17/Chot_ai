@@ -129,17 +129,17 @@ def score_meeting(
 ) -> Counts:
     c = Counts(pred_items=len(pred.items), gold_items=len(gold.items), meetings=1)
 
-    # 1) Ghép cặp tham lam theo số câu bằng chứng trùng nhau
+    # 1) Ghép cặp tham lam theo số câu bằng chứng trùng nhau; hoà → ưu tiên cùng type
     pairs: dict[str, str] = {}  # gold_id -> pred_id
     used: set[str] = set()
     for g in gold.items:
-        best, best_overlap = None, 0
+        best, best_score = None, (0, False)
         for p in pred.items:
             if p.id in used or GROUP[p.type] != GROUP[g.type]:
                 continue
-            overlap = len(set(p.evidence) & set(g.evidence))
-            if overlap > best_overlap:
-                best, best_overlap = p, overlap
+            score = (len(set(p.evidence) & set(g.evidence)), p.type == g.type)
+            if score[0] and score > best_score:
+                best, best_score = p, score
         if best:
             pairs[g.id] = best.id
             used.add(best.id)

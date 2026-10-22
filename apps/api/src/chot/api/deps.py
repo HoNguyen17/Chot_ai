@@ -11,12 +11,21 @@ from functools import lru_cache
 from pathlib import Path
 
 from chot.adapters.baselines import KeywordBaseline
-from chot.adapters.llm import LLMClient, LLMEventExtractor, OpenAICompatibleClient
+from chot.adapters.llm import (
+    LLMClient,
+    LLMEventExtractor,
+    LLMTopicMapper,
+    OpenAICompatibleClient,
+)
 from chot.adapters.parsing import parse_transcript
 from chot.adapters.persistence import InMemoryRepository
 from chot.config import Settings, get_settings
 from chot.domain.models import Ledger, Transcript
-from chot.usecases.build_ledger import DirectoryReplayExtractor, RulesLedgerBuilder
+from chot.usecases.build_ledger import (
+    DirectoryReplayExtractor,
+    RulesLedgerBuilder,
+    TwoPassExtractor,
+)
 from chot.usecases.meetings import MeetingService
 from chot.usecases.ports import LedgerBuilder
 
@@ -118,6 +127,16 @@ class LimitedBuilder:
         return self.builder.build(tr)
 
 
+def make_extractor(settings: Settings, client: LLMClient) -> TwoPassExtractor:
+    return TwoPassExtractor(
+        LLMTopicMapper(client),
+        LLMEventExtractor(client),
+        size=settings.chunk_size,
+        context=settings.chunk_context,
+        max_concurrency=settings.llm_max_concurrency,
+    )
+
+
 def make_builder(settings: Settings, client: LLMClient | None = None) -> LedgerBuilder:
     if settings.ledger_builder == "llm":
         client = client or OpenAICompatibleClient(
@@ -125,7 +144,7 @@ def make_builder(settings: Settings, client: LLMClient | None = None) -> LedgerB
         )
         limiter = RateLimiter(settings.llm_rate_limit_per_hour, settings.llm_global_limit_per_hour)
         llm = LimitedBuilder(
-            RulesLedgerBuilder(LLMEventExtractor(client)),
+            RulesLedgerBuilder(make_extractor(settings, client)),
             limiter,
             code=settings.llm_access_code,
             required=settings.public_demo,

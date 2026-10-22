@@ -37,7 +37,14 @@ from chot.domain.models import (
 from chot.domain.reasons import Reason, flag
 from chot.domain.reasons import ReasonCode as C
 from chot.domain.status_table import check_status
-from chot.domain.text import has_fallback, is_backchannel, is_durable, is_hearsay, is_hedged
+from chot.domain.text import (
+    has_fallback,
+    is_backchannel,
+    is_durable,
+    is_hearsay,
+    is_hedged,
+    is_restated,
+)
 
 _CONTRADICTING = {EventKind.PROPOSE, EventKind.REVISE, EventKind.REOPEN, EventKind.DEFER}
 
@@ -83,6 +90,43 @@ def _timeline(evs: list[Event], tr: Transcript) -> list[TimelineEntry]:
 def _with_reasons(reasons: list[Reason]) -> dict:
     """Mã lý do + chữ M2 sinh từ mã (export cũ không đổi)."""
     return {"reasons": reasons, "flags": [flag(r) for r in reasons]}
+
+
+def _text(e: Event, tr: Transcript) -> str:
+    u = tr.utt(e.utt)
+    return u.text if u else e.quote
+
+
+def _decision_events(events: list[Event], tr: Transcript) -> list[Event]:
+    """Bỏ các `agree` mà luật không coi là quyết định (LLM hay gán nhầm, prompt không chặn
+    được — P4 vòng 1–2):
+    - chủ trì gật đầu một VIỆC đã được giao / tự nhận ở câu TRƯỚC (cùng thread + key, key không
+      phải phương án). Quyết trước rồi mới có người nhận (m04) vẫn là quyết định;
+    - câu nhắc lại quyết định đã có ("như đã chốt")."""
+    task_at: dict[tuple[str, str], int] = {}
+    for e in events:
+        if e.kind in TASK_EVENTS and e.key:
+            k = (e.thread, e.key)
+            task_at[k] = min(task_at.get(k, 10**9), tr.order(e.utt))
+    options = {
+        (e.thread, e.key)
+        for e in events
+        if e.kind in (EventKind.PROPOSE, EventKind.REVISE, EventKind.OBJECT)
+    }
+    return [
+        e
+        for e in events
+        if not (
+            e.kind == EventKind.AGREE
+            and (
+                (
+                    (e.thread, e.key) not in options
+                    and task_at.get((e.thread, e.key), 10**9) < tr.order(e.utt)
+                )
+                or is_restated(_text(e, tr))  # nhắc lại quyết định họp trước (gold m24)
+            )
+        )
+    ]
 
 
 def _hedged(e: Event) -> bool:
@@ -195,9 +239,10 @@ def resolve_thread(events: list[Event], tr: Transcript, thread_title: str, ids: 
         hedged = _hedged(last_agree)
         co_chair = _unresolved_co_chair(evs, last_agree, tr) if authority else None
         # Câu "đồng ý" chỉ là "Ừ."/"Dạ." → đồng ý gián tiếp, không bao giờ FINAL (quy ước Nash 5)
-        u = tr.utt(last_agree.utt)
-        nod_only = is_backchannel(u.text if u else last_agree.quote)
-        fallback = has_fallback(last_agree.quote)
+        nod_only = is_backchannel(_text(last_agree, tr))
+        # Điều kiện quay lại có thể nằm ở câu chốt của chủ trì, trước câu "Ok" của đồng chủ trì;
+        # đọc cả câu gốc vì LLM chỉ chép đoạn quote ngắn nhất.
+        fallback = any(has_fallback(_text(a, tr)) for a in agrees if a.key == last_agree.key)
         status = (
             Status.FINAL
             if authority and not hedged and not co_chair and not nod_only
@@ -399,6 +444,7 @@ def build_ledger(
     ids = _Ids()
     titles = {t.id: t.title for t in extraction.threads}
     events = [e for e in extraction.events if tr.utt(e.utt) is not None]
+    events = _decision_events(events, tr)
 
     by_thread: dict[str, list[Event]] = defaultdict(list)
     tasks: dict[tuple[str, str], list[Event]] = defaultdict(list)

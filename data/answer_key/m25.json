@@ -2,8 +2,8 @@
   "meeting_id": "m25",
   "labeler": "answer-key",
   "items": [
-    {"id": "D1", "type": "decision", "thread": "fabric-supplier", "content": "Dùng vải Phú Thịnh cho đơn áo khoác", "status": "final", "decided_by": "Liên", "evidence": ["u007", "u003"], "note": "Quy ước cũ: câu 'Nếu thứ Ba… thì quay về Thành Công' là điều kiện, không gán sự kiện → B final, A superseded."},
-    {"id": "O1", "type": "option", "thread": "fabric-supplier", "content": "Giữ nhà cung cấp cũ Thành Công (68 nghìn/m, giao 10 ngày)", "status": "superseded", "evidence": ["u002"]},
+    {"id": "D1", "type": "decision", "thread": "fabric-supplier", "content": "Dùng vải Phú Thịnh cho đơn áo khoác", "status": "final", "decided_by": "Liên", "evidence": ["u007", "u003"], "note": "Quy tắc 11: 'Nếu thứ Ba… thì quay về Thành Công' → B final, A option open."},
+    {"id": "O1", "type": "option", "thread": "fabric-supplier", "content": "Giữ nhà cung cấp cũ Thành Công (68 nghìn/m, giao 10 ngày)", "status": "open", "evidence": ["u002"], "note": "Quy ước mới (P4, quy tắc 11): 'Chốt B, nếu … thì quay về A' → A chưa bị loại hẳn → open."},
     {"id": "K1", "type": "knowledge", "thread": "fabric-supplier", "content": "Phú Thịnh làm mẫu test trong 2 ngày, miễn phí", "status": "open", "evidence": ["u005"]},
     {"id": "K2", "type": "knowledge", "thread": "fabric-supplier", "content": "Đơn áo khoác giao khách ngày 5/12", "status": "open", "evidence": ["u006"]},
     {"id": "T1", "type": "task", "thread": "fabric-supplier", "content": "Báo Phú Thịnh gửi mẫu vải test", "status": "open", "owner": "Tuấn", "deadline": null, "deadline_text": null, "evidence": ["u008"]},

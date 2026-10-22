@@ -26,6 +26,10 @@ class Settings:
     max_transcript_chars: int = field(
         default_factory=lambda: int(_env("MAX_TRANSCRIPT_CHARS", "20000"))
     )
+    # M3: họp dài > CHUNK_SIZE câu → bản đồ chủ đề + gán nhãn theo đoạn (song song)
+    chunk_size: int = field(default_factory=lambda: int(_env("CHUNK_SIZE", "100")))
+    chunk_context: int = field(default_factory=lambda: int(_env("CHUNK_CONTEXT", "10")))
+    llm_max_concurrency: int = field(default_factory=lambda: int(_env("LLM_MAX_CONCURRENCY", "4")))
     llm_rate_limit_per_hour: int = field(
         default_factory=lambda: int(_env("LLM_RATE_LIMIT_PER_HOUR", "10"))
     )
