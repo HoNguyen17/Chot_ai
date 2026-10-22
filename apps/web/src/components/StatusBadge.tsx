@@ -1,7 +1,6 @@
-import { STATUS_LABEL } from "@/lib/labels";
-import type { Status } from "@/lib/types";
+import type { Item } from "@/lib/types";
 
-/** Trạng thái luôn có CHỮ, không chỉ dựa vào màu (accessibility). */
-export function StatusBadge({ status }: { status: Status }) {
-  return <span className={`badge badge-${status}`}>{STATUS_LABEL[status]}</span>;
+/** Trạng thái luôn có CHỮ, không chỉ dựa vào màu (accessibility). Chữ theo type, lấy từ API. */
+export function StatusBadge({ item }: { item: Pick<Item, "status" | "status_label"> }) {
+  return <span className={`badge badge-${item.status}`}>{item.status_label}</span>;
 }

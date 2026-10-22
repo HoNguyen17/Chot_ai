@@ -3,10 +3,11 @@ from __future__ import annotations
 import datetime as dt
 from typing import Literal
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, computed_field
 
 from chot.domain.enums import EventKind, ItemType, ReviewState, Status
 from chot.domain.reasons import Reason
+from chot.domain.status_table import LABEL
 
 
 def format_ts(seconds: int) -> str:
@@ -129,6 +130,12 @@ class Item(BaseModel):
     review_state: ReviewState | None = None  # đặt khi cuộc họp vào duyệt (MeetingService)
     scope: Literal["meeting", "durable"] | None = None  # chỉ knowledge
     timeline: list[TimelineEntry] = Field(default_factory=list)  # decision / option
+
+    @computed_field
+    @property
+    def status_label(self) -> str:
+        """Nhãn UI theo type (bảng status_table) — web chỉ đọc, không chép bảng."""
+        return LABEL[self.type].get(self.status, self.status.value)
 
 
 class Ledger(BaseModel):

@@ -85,6 +85,7 @@ export interface Item {
   thread: string | null;
   content: string;
   status: Status;
+  status_label: string; // nhãn theo type, từ bảng của API (status_table.py)
   owner: string | null;
   decided_by: string | null;
   deadline: string | null;
@@ -116,6 +117,38 @@ export interface Meeting {
   ledger: Ledger;
   approved: string[];
   published: boolean;
+  series_id: string | null;
+  questions: Question[];
+}
+
+// M3 — một thẻ "Cần bạn trả lời"; codes[k] ↔ texts[k]
+export interface Question {
+  item_id: string;
+  type: ItemType;
+  codes: ReasonCode[];
+  texts: string[];
+}
+
+export type ReviewAction = "confirm" | "reject" | "defer";
+
+export interface KnowledgeEntry {
+  series_id: string;
+  meeting_id: string;
+  item_id: string;
+  content: string;
+  evidence: Evidence[];
+  confirmed_by: string | null;
+  confirmed_at: string | null;
+}
+
+export interface Series {
+  id: string;
+  name: string;
+  read_only: boolean;
+  created_at: string;
+  meetings: MeetingSummary[];
+  knowledge: KnowledgeEntry[];
+  pending: { meeting_id: string; item: Item }[]; // "Việc treo"
 }
 
 export interface MeetingSummary {

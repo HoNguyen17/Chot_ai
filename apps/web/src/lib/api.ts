@@ -1,4 +1,4 @@
-import type { Meeting, MeetingSummary, Status } from "./types";
+import type { Meeting, MeetingSummary, ReviewAction, Series, Status } from "./types";
 
 export const API_URL = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000";
 
@@ -30,12 +30,21 @@ async function request<T>(path: string, init?: RequestInit): Promise<T> {
 export const api = {
   listMeetings: () => request<MeetingSummary[]>("/meetings"),
   getMeeting: (id: string) => request<Meeting>(`/meetings/${id}`),
-  createMeeting: (transcript_text: string, meeting_id?: string, accessCode?: string) =>
-    request<Meeting>("/meetings", {
+  /** seriesId có → buổi họp thuộc nhóm (link bí mật); không có → đường M2. */
+  createMeeting: (transcript_text: string, meeting_id?: string, accessCode?: string, seriesId?: string) =>
+    request<Meeting>(seriesId ? `/series/${seriesId}/meetings` : "/meetings", {
       method: "POST",
       headers: accessCode ? { "X-Access-Code": accessCode } : undefined,
       body: JSON.stringify({ transcript_text, meeting_id }),
     }),
+  answer: (
+    id: string,
+    itemId: string,
+    body: { action: ReviewAction; owner?: string; deadline?: string; thread?: string },
+  ) =>
+    request<Meeting>(`/meetings/${id}/items/${itemId}/answer`, { method: "POST", body: JSON.stringify(body) }),
+  createSeries: (name: string) => request<Series>("/series", { method: "POST", body: JSON.stringify({ name }) }),
+  getSeries: (id: string) => request<Series>(`/series/${id}`),
   reviewItem: (
     id: string,
     itemId: string,

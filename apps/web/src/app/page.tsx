@@ -10,6 +10,7 @@ import type { MeetingSummary } from "@/lib/types";
 const SAMPLES = Array.from({ length: 25 }, (_, i) => `m${String(i + 1).padStart(2, "0")}`);
 // Mã truy cập để gọi LLM — chỉ nhớ trong tab hiện tại.
 const CODE_KEY = "chot-access-code";
+const SAMPLE_SERIES = "mau-chot-m01-m05";
 
 export default function UploadPage() {
   const router = useRouter();
@@ -19,9 +20,13 @@ export default function UploadPage() {
   const [recent, setRecent] = useState<MeetingSummary[]>([]);
   const [sample, setSample] = useState<{ id: string; text: string; title: string } | null>(null);
   const [code, setCode] = useState("");
+  const [seriesId, setSeriesId] = useState<string | undefined>();
+  const [seriesName, setSeriesName] = useState("");
   const isSample = sample !== null && text === sample.text;
 
   useEffect(() => {
+    // "+ Buổi họp mới" từ trang nhóm → /?series=<id>
+    setSeriesId(new URLSearchParams(window.location.search).get("series") ?? undefined);
     api.listMeetings().then(setRecent).catch(() => setRecent([]));
     try {
       setCode(sessionStorage.getItem(CODE_KEY) ?? "");
@@ -62,17 +67,34 @@ export default function UploadPage() {
     try {
       // Chỉ gửi meeting_id khi transcript mẫu chưa bị sửa — sửa rồi thì để LLM xử lý (cần mã).
       const meeting = isSample
-        ? await api.createMeeting(text, sample.id)
-        : await api.createMeeting(text, undefined, code.trim());
-      router.push(`/meetings/${meeting.id}`);
+        ? await api.createMeeting(text, sample.id, undefined, seriesId)
+        : await api.createMeeting(text, undefined, code.trim(), seriesId);
+      router.push(`/m/${meeting.id}`);
     } catch (e) {
       setError(e instanceof Error ? e.message : "Không xử lý được transcript.");
       setBusy(false);
     }
   }
 
+  async function createSeries() {
+    setBusy(true);
+    setError(null);
+    try {
+      const series = await api.createSeries(seriesName.trim());
+      router.push(`/s/${series.id}`);
+    } catch (e) {
+      setError(e instanceof Error ? e.message : "Không tạo được nhóm họp.");
+      setBusy(false);
+    }
+  }
+
   return (
     <>
+      {seriesId && (
+        <p className="faint">
+          Thêm buổi họp vào <Link href={`/s/${seriesId}`}>nhóm họp</Link>
+        </p>
+      )}
       <h1>Họp xong rồi. Giờ chốt lại.</h1>
       <p className="muted">
         Dán transcript cuộc họp. Chốt tìm ra điều gì <b>thật sự đã chốt</b>, ai làm gì, hạn nào và
@@ -149,13 +171,45 @@ export default function UploadPage() {
         )}
       </div>
 
+      {!seriesId && (
+        <section className="section" aria-labelledby="h-series">
+          <div className="section-head">
+            <h2 id="h-series">Họp định kỳ?</h2>
+          </div>
+          <form
+            className="card row"
+            onSubmit={(e) => {
+              e.preventDefault();
+              if (seriesName.trim()) createSeries();
+            }}
+          >
+            <input
+              type="text"
+              aria-label="Tên nhóm họp"
+              placeholder="Tên nhóm họp, vd. Weekly sync App Giao Nhanh"
+              maxLength={200}
+              value={seriesName}
+              onChange={(e) => setSeriesName(e.target.value)}
+              style={{ flex: "1 1 240px", width: "auto" }}
+            />
+            <button className="btn" disabled={busy || !seriesName.trim()}>
+              Tạo nhóm họp
+            </button>
+          </form>
+          <p className="faint" style={{ marginTop: 8 }}>
+            Nhóm gom các buổi họp, Kho tri thức và việc treo vào một link bí mật. Xem thử{" "}
+            <Link href={`/s/${SAMPLE_SERIES}`}>nhóm mẫu m01–m05</Link>.
+          </p>
+        </section>
+      )}
+
       {recent.length > 0 && (
         <section className="section">
           <div className="section-head">
             <h2>Cuộc họp gần đây</h2>
           </div>
           {recent.map((m) => (
-            <Link key={m.id} href={`/meetings/${m.id}`} className="card row" style={{ display: "flex", justifyContent: "space-between", textDecoration: "none" }}>
+            <Link key={m.id} href={`/m/${m.id}`} className="card row" style={{ display: "flex", justifyContent: "space-between", textDecoration: "none" }}>
               <span>
                 <b>{m.title ?? m.id}</b> <span className="faint">{m.date}</span>
               </span>

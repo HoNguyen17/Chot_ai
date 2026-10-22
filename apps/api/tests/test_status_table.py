@@ -37,3 +37,13 @@ def test_status_outside_table_is_rejected():
     with pytest.raises(ValueError, match="không hợp lệ"):
         check_status(T.KNOWLEDGE, S.FINAL)
     check_status(T.DECISION, S.FINAL)  # hợp lệ → không lỗi
+
+
+def test_item_carries_ui_label_for_api():
+    from chot.domain.models import Item
+
+    task = Item(id="T1", type=T.TASK, content="x", status=S.OPEN)
+    note = Item(id="K1", type=T.KNOWLEDGE, content="x", status=S.NOTED)
+    assert task.model_dump()["status_label"] == "Đã nhận"
+    assert note.model_dump()["status_label"] == "Ghi nhận"
+    assert Item(**task.model_dump()) == task  # đọc lại (Postgres / JSON) không vỡ

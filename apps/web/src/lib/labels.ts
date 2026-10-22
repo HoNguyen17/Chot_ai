@@ -1,15 +1,5 @@
 import type { ItemType, Status } from "./types";
 
-export const STATUS_LABEL: Record<Status, string> = {
-  final: "Đã chốt",
-  needs_confirmation: "Cần xác nhận",
-  superseded: "Bị thay thế",
-  rejected: "Bị bác",
-  deferred: "Hoãn",
-  open: "Đang mở",
-  noted: "Ghi nhận",
-};
-
 export const TYPE_LABEL: Record<ItemType, string> = {
   decision: "Quyết định",
   option: "Phương án",
@@ -21,42 +11,29 @@ export const TYPE_LABEL: Record<ItemType, string> = {
   feedback: "Phản hồi",
 };
 
-/** Thứ tự các nhóm trên màn hình duyệt: việc cần người xử lý đứng đầu. */
-export const SECTIONS: { key: string; title: string; hint: string; match: (t: ItemType, s: Status) => boolean }[] = [
-  {
-    key: "confirm",
-    title: "Cần bạn xác nhận",
-    hint: "AI không đủ bằng chứng để tự chốt. Duyệt từng mục trước khi xuất bản.",
-    match: (_t, s) => s === "needs_confirmation",
-  },
-  {
-    key: "decisions",
-    title: "Đã chốt",
-    hint: "Cam kết rõ của người chủ trì, không bị lật lại sau đó.",
-    match: (t, s) => t === "decision" && s === "final",
-  },
-  {
-    key: "tasks",
-    title: "Công việc đã nhận",
-    hint: "Có người nhận rõ ràng.",
-    match: (t, s) => t === "task" && s === "open",
-  },
-  {
-    key: "pending",
-    title: "Hoãn & còn bỏ ngỏ",
-    hint: "Sẽ được đưa vào buổi họp sau.",
-    match: (t, s) => s === "deferred" || ((t === "open_question" || t === "blocker" || t === "option") && s === "open"),
-  },
-  {
-    key: "notes",
-    title: "Ghi nhận khác",
-    hint: "Tri thức, yêu cầu, phản hồi.",
-    match: (t, s) => (t === "knowledge" || t === "request" || t === "feedback") && (s === "open" || s === "noted"),
-  },
-  {
-    key: "history",
-    title: "Lịch sử: phương án bị thay thế",
-    hint: "Giữ lại để biết cuộc họp đã đi đường vòng thế nào.",
-    match: (_t, s) => s === "superseded" || s === "rejected",
-  },
+/** Nhóm "Kết quả — tự chấp nhận" (thứ tự hiển thị). Nhãn trạng thái thì lấy item.status_label từ API. */
+export const RESULT_GROUPS: { key: string; title: string; types: ItemType[] }[] = [
+  { key: "decision", title: "Quyết định", types: ["decision"] },
+  { key: "task", title: "Công việc", types: ["task"] },
+  { key: "blocker", title: "Vướng mắc", types: ["blocker"] },
+  { key: "open_question", title: "Câu hỏi mở", types: ["open_question"] },
+  { key: "knowledge", title: "Tri thức", types: ["knowledge"] },
+  { key: "other", title: "Yêu cầu & phản hồi", types: ["request", "feedback"] },
+  { key: "history", title: "Lịch sử phương án", types: ["option"] },
 ];
+
+/** Mục bị thay thế / bị bác dồn về "Lịch sử" dù thuộc type nào. */
+export function groupKey(type: ItemType, status: Status): string {
+  if (status === "superseded" || status === "rejected") return "history";
+  return RESULT_GROUPS.find((g) => g.types.includes(type))?.key ?? "other";
+}
+
+/** Động từ cho từng bước "Vì sao" (timeline sự kiện quyết định). */
+export const EVENT_VERB: Record<string, string> = {
+  propose: "đề xuất",
+  revise: "đổi đề xuất",
+  object: "phản đối",
+  agree: "đồng ý",
+  defer: "hoãn",
+  reopen: "lật lại",
+};
