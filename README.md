@@ -8,7 +8,7 @@
 Dán transcript → biết ngay điều gì *thật sự đã chốt*, ai làm gì, hạn nào, điều gì còn treo. Mỗi dòng trỏ về đúng câu nói gốc.
 
 [![Demo](https://img.shields.io/badge/demo-chot.nashng.dev-0a7d5a)](https://chot.nashng.dev)
-![Tests](https://img.shields.io/badge/tests-74%20passed-brightgreen)
+![Tests](https://img.shields.io/badge/tests-265%20passed-brightgreen)
 ![Chốt nhầm](https://img.shields.io/badge/ch%E1%BB%91t%20nh%E1%BA%A7m-0%25%E2%80%934%2C8%25-blue)
 ![Python](https://img.shields.io/badge/python-3.12-3776ab)
 ![Next.js](https://img.shields.io/badge/next.js-16-black)
@@ -66,6 +66,12 @@ Người dùng: PM / trưởng nhóm SME chủ trì họp dự án định kỳ.
 - **Người chủ trì duyệt trước khi gửi.** Nút xuất bản bị khoá khi còn mục cần xác nhận. Xuất biên bản `.md`, task `.csv`, ledger `.json`.
 - **Hiểu tiếng Việt trộn tiếng Anh** ("em propose…", "budget split", "request của khách").
 
+**Mới ở Mission 3** ([docs/MISSION3.md](docs/MISSION3.md)):
+- **Họp dài 150–300 câu.** Lượt 1 dựng bản đồ chủ đề, lượt 2 gán sự kiện theo đoạn 100 câu chạy song song. Chủ đề bị cắt rồi quay lại vẫn chung một mạch.
+- **Chỉ hỏi chỗ vướng.** Màn duyệt có hàng đợi "Cần bạn trả lời": câu hỏi sinh từ mã lý do, trả lời bằng Xác nhận / Bác bỏ / để họp sau. Mục chắc chắn tự chấp nhận, mở ra có "Vì sao". Transcript nằm bên cạnh.
+- **Nhóm họp bằng link bí mật.** Buổi họp · Kho tri thức (chỉ tri thức lâu dài đã xác nhận) · Việc treo. Xem thử [nhóm mẫu m01–m05](https://chot.nashng.dev/s/mau-chot-m01-m05).
+- **Lưu bền trên Postgres.** Lưu cả sự kiện LLM để chạy lại khi sửa luật. Nhật ký duyệt chỉ thêm, không sửa / xoá được.
+
 <img src="assets/review-screen.png" alt="Màn duyệt: Đã chốt, Cần bạn xác nhận, Lịch sử phương án bị thay thế" width="800" />
 
 <p align="right"><a href="#chốt">↑ lên đầu</a></p>
@@ -82,6 +88,15 @@ Người dùng: PM / trưởng nhóm SME chủ trì họp dự án định kỳ.
 | Chốt, cùng sự kiện qua luật hiện tại (replay) | **0% (0/20)** | 78,9% | 73,8% / 51,7% |
 
 "Chốt nhầm" = trong các mục hệ thống ghi "Đã chốt", tỷ lệ mục thật ra chưa chốt. Lỗi duy nhất của lần chạy đầu-cuối là LLM coi "Ừ." là đồng ý; luật mới chặn lỗi này, dòng cuối là cùng sự kiện đó chạy lại.
+
+**Họp dài (Mission 3).** 4 cuộc họp 148–200 câu (L1–L4), chủ đề bị cắt rồi quay lại. Chấm bằng luật và metrics hiện tại:
+
+| | Chốt nhầm ⭐ | Nhất quán chủ đề | Việc nhầm | Phương án cũ "bị thay thế" | Chi phí / buổi |
+|---|---|---|---|---|---|
+| M2: một lần gọi | 13% (3/23) | 94,3% | 5,7% | 52,4% | $0,019 |
+| M3: hai lượt | **4,8% (1/21)** | **100%** | **3,3%** | 38,1% | $0,029 |
+
+Run: `20261022-135052-replay-p8-m2-long`, `20261022-135053-replay-p8-m3-long`. Chi phí lấy từ `20261021-143047-llm-m2-long` và `20261021-153854-llm-m3-long-c100-r2`. Với luật cũ, M2 chốt nhầm 25%. Trên m01–m25, M3 vẫn 0% như M2. M3 kém hơn ở "bị thay thế"; chi tiết và giới hạn ở [MISSION3](docs/MISSION3.md).
 
 <p align="right"><a href="#chốt">↑ lên đầu</a></p>
 
@@ -223,19 +238,20 @@ chot/
 - [x] Eval so với 2 baseline; 3 vòng tinh chỉnh prompt/luật
 - [x] Màn duyệt khoá xuất bản khi còn mục cần xác nhận; xuất .md / .csv / .json
 - [x] Demo công khai, có giới hạn ký tự, rate limit và mã truy cập cho transcript mới
+- [x] M3: họp dài hai lượt, mã lý do + hàng đợi câu hỏi, nhóm họp, Kho tri thức, Postgres
 
 **Chưa làm**
-- [ ] Lưu trữ lâu dài (`PostgresRepository` mới là khung, đang lưu trong RAM)
+- [ ] Change Request M3 (T3); "Hoàn tác" chưa khôi phục trạng thái cũ
 - [ ] Bắt vướng mắc và quyết định nằm trong câu giao việc
 - [ ] Thử với cuộc họp thật; người gán nhãn thứ hai; người chấm grounding tầng 2
 - [ ] Thu consent, che PII, tuỳ chọn host trong Việt Nam ([MISSION2 §5](docs/MISSION2.md))
-- [ ] ASR / audio, bot vào họp, tích hợp Jira/Notion, ledger xuyên cuộc họp
+- [ ] ASR / audio, bot vào họp, đăng nhập + dashboard nhiều nhóm, tích hợp Jira/Notion, ledger xuyên cuộc họp
 
 <p align="right"><a href="#chốt">↑ lên đầu</a></p> -->
 
 <!-- ## Deploy
 
-Web: **https://chot.nashng.dev** (Vercel) · API: **https://api.chot.nashng.dev** (Railway, Docker). Không có DB: lưu trong RAM, restart là mất.
+Web: **https://chot.nashng.dev** (Vercel) · API: **https://api.chot.nashng.dev** (Railway, Docker) + Postgres (Supabase, `db/migrations/001` → `002`).
 
 ```bash
 bash scripts/deploy_wizard.sh

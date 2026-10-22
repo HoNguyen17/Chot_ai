@@ -33,8 +33,9 @@ claude/
 # Bản lưu trữ local (theo quy tắc: không xoá, chuyển vào _archive/)
 _archive/
 
-#docs
-docs/
+#docs (trừ bài nộp M3)
+docs/*
+!docs/MISSION3.md
 
 #scripts
 scripts/
