@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import hmac
+import logging
 import threading
 import time
 from collections import deque
@@ -18,7 +19,7 @@ from chot.adapters.llm import (
     OpenAICompatibleClient,
 )
 from chot.adapters.parsing import parse_transcript
-from chot.adapters.persistence import InMemoryRepository
+from chot.adapters.persistence import InMemoryRepository, PostgresRepository
 from chot.config import Settings, get_settings
 from chot.domain.models import Ledger, Transcript
 from chot.usecases.build_ledger import (
@@ -26,8 +27,10 @@ from chot.usecases.build_ledger import (
     RulesLedgerBuilder,
     TwoPassExtractor,
 )
-from chot.usecases.meetings import MeetingService
+from chot.usecases.meetings import MeetingRepository, MeetingService, Series
 from chot.usecases.ports import LedgerBuilder
+
+log = logging.getLogger(__name__)
 
 
 class FallbackBuilder:
@@ -157,9 +160,36 @@ def make_builder(settings: Settings, client: LLMClient | None = None) -> LedgerB
     return KeywordBaseline()
 
 
+def make_repo(settings: Settings) -> MeetingRepository:
+    """Có DATABASE_URL → Postgres (Supabase), không có → RAM. Không in DSN ra log."""
+    if settings.database_url:
+        return PostgresRepository(settings.database_url)
+    return InMemoryRepository()
+
+
+# Nhóm họp mẫu: chỉ xem, id công khai (không cần bí mật vì không sửa được).
+SAMPLE_SERIES_ID = "mau-chot-m01-m05"
+SAMPLE_MEETINGS = ("m01", "m02", "m03", "m04", "m05")
+
+
+def seed_sample_series(svc: MeetingService, events_dir: str) -> None:
+    """Nạp m01–m05 bằng replay sự kiện đã lưu — không bao giờ gọi LLM."""
+    paths = [Path(events_dir) / f"{m}.txt" for m in SAMPLE_MEETINGS]
+    if missing := [p.name for p in paths if not p.exists()]:
+        log.warning("Không nạp nhóm họp mẫu: thiếu %s trong REPLAY_EVENTS_DIR", missing)
+        return
+    svc.seed_series(
+        Series(id=SAMPLE_SERIES_ID, name="Nhóm họp mẫu (m01–m05)", read_only=True),
+        [p.read_text(encoding="utf-8") for p in paths],
+        RulesLedgerBuilder(DirectoryReplayExtractor(events_dir)),
+    )
+
+
 @lru_cache
 def get_service() -> MeetingService:
     settings = get_settings()
-    return MeetingService(
-        repo=InMemoryRepository(), builder=make_builder(settings), parser=parse_transcript
+    svc = MeetingService(
+        repo=make_repo(settings), builder=make_builder(settings), parser=parse_transcript
     )
+    seed_sample_series(svc, settings.replay_events_dir)
+    return svc

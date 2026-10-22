@@ -9,6 +9,12 @@ DATA = ROOT / "data"
 FIXTURES = Path(__file__).parent / "fixtures"
 
 
+@pytest.fixture(autouse=True)
+def _no_real_database(monkeypatch):
+    """Test không bao giờ ghi vào DB thật, kể cả khi shell đã nạp .env."""
+    monkeypatch.delenv("DATABASE_URL", raising=False)
+
+
 @pytest.fixture
 def data_dir() -> Path:
     return DATA

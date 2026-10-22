@@ -41,3 +41,5 @@ scripts/
 
 # Video demo + overlay CapCut (video đã đăng YouTube)
 demo/
+# Case sửa sai từ review_actions (có thể chứa nội dung họp thật)
+data/corrections/

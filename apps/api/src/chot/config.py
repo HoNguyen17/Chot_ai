@@ -36,6 +36,10 @@ class Settings:
     llm_global_limit_per_hour: int = field(
         default_factory=lambda: int(_env("LLM_GLOBAL_LIMIT_PER_HOUR", "60"))
     )
+    # Tạo nhóm họp (POST /series) ghi DB, không cần mã → giới hạn theo IP
+    series_rate_limit_per_hour: int = field(
+        default_factory=lambda: int(_env("SERIES_RATE_LIMIT_PER_HOUR", "20"))
+    )
     # Mã truy cập để gọi LLM (header X-Access-Code); transcript mẫu replay không cần.
     # Không đặt + PUBLIC_DEMO=true → từ chối mọi lượt gọi LLM.
     llm_access_code: str | None = field(default_factory=lambda: _env("LLM_ACCESS_CODE"))

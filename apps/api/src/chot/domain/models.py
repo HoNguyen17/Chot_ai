@@ -136,6 +136,8 @@ class Ledger(BaseModel):
     generated_by: str = "rules-v1"
     threads: list[Thread] = Field(default_factory=list)
     items: list[Item] = Field(default_factory=list)
+    # Sự kiện LLM đã dùng để dựng ledger — lưu để replay khi sửa luật; không trả qua API.
+    events: list[Event] = Field(default_factory=list, exclude=True)
 
     def by_status(self, status: Status) -> list[Item]:
         return [i for i in self.items if i.status == status]

@@ -35,7 +35,9 @@ class RulesLedgerBuilder:
         # thread lượt 2 tự đặt, không có trong bản đồ → hỏi người duyệt, không âm thầm bỏ
         unmapped = {t.id for t in extraction.threads if not t.mapped}
         items = [_unmapped(i) if i.thread in unmapped else i for i in ledger.items]
-        ledger, report = apply_grounding(ledger.model_copy(update={"items": items}), tr)
+        ledger, report = apply_grounding(
+            ledger.model_copy(update={"items": items, "events": extraction.events}), tr
+        )
         self.last_extraction, self.last_report = extraction, report
         return ledger
 
