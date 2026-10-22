@@ -1,0 +1,162 @@
+# meeting: L2
+# title: Giao ban tuần — xưởng, kho và công trình (ghép từ 8 cuộc)
+# date: 2026-10-26
+# participants: Đạo (Chỉ huy trưởng, chủ trì); Sinh (Kỹ sư); Toản (Giám sát an toàn); Lam (Kế toán); Quý (Đội trưởng); Hiền (Thu mua)
+# absent: Phong (Giám đốc)
+[00:00:10] Đạo: Họp giao ban tuần. Hôm nay nhiều việc: lịch đổ sàn tầng 5, thép, an toàn, và tiền lương công nhân.
+[00:00:45] Quý: Cốp pha sàn tầng 5 bên em lắp xong 90%, thứ Sáu là xong hết.
+[00:01:20] Sinh: Em đề xuất đổ bê tông sàn tầng 5 sáng thứ Bảy 31/10, đúng tiến độ.
+[00:01:55] Toản: Thứ Bảy dự báo có mưa lớn từ trưa, đổ dở dang là phải xử lý mạch ngừng.
+[00:02:30] Quý: Mưa thì em che bạt được, tụi em làm nhiều rồi.
+[00:03:10] Lam: Anh ơi về thép, lô thép phi 16 đợt này giao trễ 5 ngày rồi, nhà cung cấp hẹn tới thứ Hai.
+[00:03:45] Sinh: Thép phi 16 là cho cột tầng 6, chưa cần gấp, nhưng trễ nữa thì vướng.
+[00:04:00] Đạo: Ừ.
+[00:04:40] Toản: Về an toàn, hôm thứ Hai em bắt được 3 công nhân làm trên giàn giáo tầng 4 không đeo dây an toàn.
+[00:05:15] Toản: Theo quy định công ty, vi phạm lần đầu phạt 500 nghìn, lần hai cho nghỉ việc.
+[00:05:50] Quý: Mấy anh em đó mới vô, chưa được training kỹ, phạt luôn thì tội.
+[00:06:15] Đạo: Hôm nay anh Phong đi công tác, anh chủ trì. Việc đầu tiên là nhà cung cấp gỗ.
+[00:06:55] Sinh: Gỗ Tân Phát báo tăng giá 12% từ tháng 11. Em đề xuất đổi qua Lâm sản Đắk Nông Xanh, giá thấp hơn Tân Phát tầm 8%.
+[00:07:45] Toản: Bên Đắk Nông Xanh chưa có chứng nhận FSC, đơn hàng đi Nhật bắt buộc phải có.
+[00:08:30] Sinh: Họ nói đang làm hồ sơ FSC, tháng 12 có.
+[00:09:05] Lam: Dạ vâng.
+[00:09:35] Sinh: Vậy mình chốt đổi qua Đắk Nông Xanh luôn đi anh, chứ để lâu Tân Phát áp giá mới.
+[00:10:15] Đạo: Cái này hợp đồng giá trị lớn, phải để anh Phong quyết. Sinh làm bảng so sánh hai bên gửi anh Phong, sáng thứ Hai nhé.
+[00:10:30] Sinh: Ok anh, sáng thứ Hai em gửi.
+[00:11:05] Đạo: Mà ai đó check giúp hợp đồng cũ với Tân Phát có điều khoản phạt nếu mình đổi nhà cung cấp không.
+[00:11:15] Lam: Dạ vâng.
+[00:11:55] Toản: Báo cáo QC: lô gỗ nhập tuần trước đo độ ẩm 16%, vượt chuẩn 12%, em chưa cho đưa vào sản xuất.
+[00:12:45] Đạo: Đơn hàng Nhật đang trễ. Từ tuần sau xưởng làm thêm ca tối thứ Bảy cho tới khi xong đơn Nhật. Anh quyết vậy.
+[00:13:10] Toản: Dạ ok anh.
+[00:13:55] Lam: Em có ý này, phiếu xuất kho viết tay hay sai số, mình chuyển qua file Excel cho dễ đối chiếu.
+[00:14:15] Đạo: Ừ.
+[00:14:45] Đạo: Ok vậy thôi, giải tán.
+[00:15:10] Đạo: Họp nhanh nha. Peak season sắp tới, mình cần bàn layout khu picking với lịch ca.
+[00:15:53] Sinh: Volume dự báo tháng 11 tăng 40%, khu picking hiện tại sẽ nghẽn ở dock số 2.
+[00:16:38] Toản: Em propose dời khu hàng fast-moving lên sát dock 1, giảm quãng đường picker đi.
+[00:17:23] Lam: Dời thì phải update lại location trên WMS, mapping lại khoảng 1.200 SKU, tầm ba ngày.
+[00:18:03] Quý: Lối thoát hiểm cạnh dock 1 phải giữ trống tối thiểu 1,2 mét, đó là quy định PCCC.
+[00:18:48] Đạo: Tạm thời mình đi phương án dời fast-moving lên dock 1 nha, để anh xem lại mặt bằng đã.
+[00:19:08] Toản: Dạ.
+[00:19:48] Đạo: Còn lịch ca. Peak thì mình chạy 3 ca hay tăng ca 2 ca hiện tại?
+[00:20:28] Toản: Em nghĩ thêm ca đêm, tuyển thời vụ khoảng 15 người.
+[00:21:13] Sinh: Thời vụ thì training mất cả tuần, KPI picking accuracy sẽ tụt.
+[00:21:48] Đạo: Ừm, cái này để anh tính với HR rồi tuần sau quyết.
+[00:22:28] Lam: À máy quét barcode ở dock 2 bị lỗi kết nối Wi-Fi từ hôm qua, picker phải nhập tay.
+[00:23:03] Đạo: Ai đó gọi bên vendor check giúp cái máy quét nhé.
+[00:23:18] Toản: Dạ vâng.
+[00:23:58] Lam: Em sẽ deploy bản update WMS lên môi trường test trong hôm nay, mai mọi người test flow nhập kho.
+[00:24:43] Sinh: Bên khách Minh Khoa request report tồn kho hàng ngày thay vì hàng tuần, gửi trước 9 giờ sáng.
+[00:25:18] Đạo: Sinh làm template report daily rồi gửi anh xem trước thứ Năm nha.
+[00:25:33] Sinh: Ok anh, thứ Năm em gửi.
+[00:26:08] Đạo: Ok vậy thôi, giải tán.
+[00:26:33] Đạo: Mình họp vận hành tuần. Anh Phong đi hội thảo nên anh chủ trì.
+[00:27:13] Toản: Bệnh nhân phàn nàn nhiều về thời gian chờ buổi sáng, có người chờ hơn một tiếng.
+[00:27:58] Sinh: Em đề xuất chuyển sang đặt lịch hẹn qua Zalo, mỗi khung 15 phút tối đa 4 bệnh nhân.
+[00:28:43] Lam: Phần mềm đặt lịch tốn khoảng 3 triệu một tháng, chưa có trong ngân sách năm nay.
+[00:29:23] Đạo: Khoản chi mới này phải để anh Phong duyệt. Sinh làm đề xuất chi tiết gửi anh Phong nhé.
+[00:29:43] Sinh: Dạ để em xem lại số liệu rồi làm.
+[00:30:28] Sinh: Thêm một việc: từ tháng 11 Sở Y tế yêu cầu lưu hồ sơ bệnh án điện tử tối thiểu 10 năm.
+[00:31:13] Lam: Server hiện tại chỉ còn trống khoảng 20%, không đủ cho 10 năm.
+[00:31:53] Đạo: Lam hỏi báo giá lưu trữ cloud ba bên, trước thứ Ba tuần sau gửi anh.
+[00:32:13] Lam: Ok anh, thứ Ba em gửi.
+[00:32:53] Toản: Máy in hóa đơn ở quầy lễ tân kẹt giấy liên tục, nhiều hôm phải viết tay.
+[00:33:33] Đạo: Toản liên hệ bên bảo hành sửa máy in trong tuần này nhé.
+[00:33:48] Toản: Dạ vâng.
+[00:34:28] Sinh: Em sẽ cập nhật quy trình tiếp nhận mới cho điều dưỡng, thứ Hai tuần sau phổ biến.
+[00:35:03] Đạo: Ok, hết rồi. Cảm ơn mọi người.
+[00:35:28] Đạo: Quay lại vụ đổ sàn. Mưa thật thì chất lượng bê tông bề mặt có bị ảnh hưởng không?
+[00:36:08] Sinh: Mưa lúc bê tông chưa ninh kết thì bề mặt bị rỗ, phải mài lại, tốn thêm khoảng hai ngày.
+[00:36:48] Toản: Em đề xuất dời qua sáng thứ Ba 3/11, dự báo mấy ngày đó nắng.
+[00:37:28] Quý: Dời qua thứ Ba thì tổ đổ bê tông bên em phải chờ, mất hai ngày công khoảng 12 triệu.
+[00:38:03] Đạo: Ok vậy đổ thứ Bảy.
+[00:38:13] Quý: Dạ.
+[00:38:53] Lam: Về lương, công nhân hỏi ứng trước một nửa lương tháng 11 để về quê đám giỗ.
+[00:39:33] Lam: Quỹ công trình hiện còn khoảng 300 triệu, ứng cho 40 người thì hết khoảng 200 triệu.
+[00:40:08] Đạo: Cái đó để anh hỏi giám đốc dự án rồi trả lời sau.
+[00:40:48] Sinh: Anh Đạo, em xem dự báo mới cập nhật lúc 9 giờ, thứ Bảy mưa từ 10 giờ sáng chứ không phải trưa.
+[00:41:23] Sinh: Sàn tầng 5 diện tích lớn, đổ từ 6 giờ tới 10 giờ không kịp xong.
+[00:41:58] Đạo: Vậy thôi, không đổ thứ Bảy nữa.
+[00:42:18] Toản: Vậy chốt thứ Ba 3/11 luôn đi anh.
+[00:42:53] Quý: Thứ Ba thì em lo được, nhưng mất tiền chờ của tổ đổ.
+[00:43:33] Đạo: Đổ sàn tầng 5 sáng thứ Ba 3/11. Tiền chờ của tổ đổ công trình chịu. Làm vậy.
+[00:43:48] Lam: Dạ, em ghi chi phí phát sinh 12 triệu.
+[00:44:28] Đạo: Sinh gửi lại phiếu yêu cầu bê tông cho trạm trộn, đổi ngày giao sang thứ Ba, trong hôm nay nhé.
+[00:44:43] Sinh: Ok anh, chiều nay em gửi.
+[00:45:28] Đạo: Rồi, vụ an toàn. Anh nghĩ phạt thì vẫn phạt, quy định là quy định.
+[00:46:08] Quý: Anh cho em xin lần này nhắc nhở thôi, em cam kết training lại cả tổ.
+[00:46:48] Toản: Bỏ qua lần này thì mấy tổ khác cũng làm theo, khó quản lý.
+[00:47:28] Đạo: Phạt đúng quy định 500 nghìn mỗi người. Thêm nữa, toàn bộ công nhân mới phải học an toàn trước khi lên giàn giáo.
+[00:47:58] Đạo: Toản tổ chức buổi training an toàn cho công nhân mới, sáng thứ Năm này.
+[00:48:13] Toản: Ok anh, sáng thứ Năm em tổ chức.
+[00:48:53] Quý: Em sẽ cho tổ trưởng kiểm tra dây an toàn đầu mỗi ca, bắt đầu từ mai.
+[00:49:18] Đạo: Họp chọn nhà cung cấp vải cho đơn áo khoác 5.000 cái của khách Nhật.
+[00:49:58] Sinh: Phong án một là giữ nhà cung cấp cũ Thành Công, 68 nghìn một mét, giao trong 10 ngày.
+[00:50:43] Sinh: Phong án hai là chuyển sang Phú Thịnh, 61 nghìn một mét, rẻ hơn 10%, giao trong 7 ngày. Em đề xuất Phú Thịnh.
+[00:51:23] Toản: Phú Thịnh mình chưa làm bao giờ, chưa có kết quả test độ co rút vải.
+[00:51:58] Sinh: Phú Thịnh nhận làm mẫu test trong 2 ngày, không tính phí.
+[00:52:38] Lam: Đơn này giao khách ngày 5/12, vải về trễ là cả chuyền đứng.
+[00:53:23] Đạo: Chốt dùng vải Phú Thịnh cho đơn này. Nếu thứ Ba Phú Thịnh không gửi được mẫu test đạt thì quay về Thành Công.
+[00:53:38] Sinh: Ok chị, em báo Phú Thịnh gửi mẫu ngay.
+[00:54:13] Đạo: Toản test độ co rút mẫu vải ngay khi về, có kết quả trước thứ Ba.
+[00:54:28] Toản: Dạ ok chị, thứ Ba có kết quả.
+[00:55:08] Đạo: Phong làm bảng so sánh chi phí hai nhà cung cấp, thứ Sáu nộp chị.
+[00:55:33] Lam: Chị Phong nghỉ phép tới thứ Năm, em sẽ nhắn chị ấy.
+[00:56:18] Toản: Máy kiểm tra độ bền màu của phòng QC hỏng từ tuần trước, đang gửi mẫu ra ngoài test, mất 3 ngày.
+[00:56:53] Đạo: Sinh hỏi giá sửa máy kiểm tra độ bền màu nha.
+[00:57:03] Sinh: Dạ.
+[00:57:48] Toản: Lô áo sơ mi giao tuần trước khách phản hồi đường may cổ áo bị lệch ở khoảng 3% sản phẩm.
+[00:58:28] Lam: Khách Nhật vừa yêu cầu thêm nhãn mác song ngữ Nhật–Việt cho đơn áo khoác.
+[00:59:03] Đạo: Ok, hết.
+[00:59:28] Đạo: Họp sản xuất nhanh. Có ba việc: máy in số 2, đơn hộp quà Tết, và lịch bảo trì.
+[01:00:08] Toản: Máy in offset số 2 hỏng trục lô từ chiều thứ Sáu, đang chờ linh kiện từ Đài Loan, ít nhất 5 ngày.
+[01:00:58] Sinh: Đơn hộp quà Tết của khách Tân Mỹ giao ngày 30/10, máy 2 nằm 5 ngày là trễ.
+[01:01:38] Sinh: Em đề xuất chuyển đơn đó sang máy số 1, đẩy đơn túi giấy xuống tuần sau.
+[01:02:13] Toản: Mình chốt chuyển sang máy 1 luôn đi anh, em sắp xếp được.
+[01:02:48] Đạo: Chuyển đơn hộp quà Tết sang máy 1, đơn túi giấy dời qua tuần sau. Anh quyết vậy.
+[01:03:28] Lam: Anh ơi máy 1 in màu pha đỏ hay lệch, lô trước bị khách trả 2.000 hộp.
+[01:04:08] Đạo: Anh biết. Vẫn chạy máy 1, Lam đo màu từng lô 500 hộp, lệch là dừng máy.
+[01:04:28] Lam: Dạ ok anh, em đo từng lô.
+[01:05:08] Sinh: Đơn túi giấy dời thì em phải báo khách Phúc Lộc. Em sẽ gọi khách chiều nay.
+[01:05:53] Toản: Lịch bảo trì định kỳ máy cắt bế tháng này mình chưa làm, đã quá hạn hai tuần.
+[01:06:28] Đạo: Toản lên lịch bảo trì máy cắt bế, làm vào thứ Bảy này.
+[01:06:48] Toản: Thứ Bảy này em kẹt đám cưới em gái rồi anh, khó làm được.
+[01:07:23] Đạo: Ok vậy thôi.
+[01:07:48] Đạo: Họp sales tuần. Tuần rồi phòng mình chốt được 3 căn, còn thiếu 5 căn so với chỉ tiêu tháng.
+[01:08:33] Sinh: Khách xem dự án Riverside phản hồi nhà mẫu đẹp, nhưng chê bãi giữ xe chật, ô tô ra vào khó.
+[01:09:18] Lam: Em đề xuất chạy thêm quảng cáo Facebook nhắm khách trẻ mua căn đầu tiên, ngân sách 30 triệu.
+[01:10:03] Toản: Tệp khách trẻ mình chạy hồi tháng 8 rồi, tỉ lệ ra cọc chưa tới 1%, tốn tiền.
+[01:10:43] Lam: Nhưng lần đó mình chưa có gói hỗ trợ lãi suất, giờ có rồi thì khác.
+[01:11:18] Đạo: Ừm, cái này mỗi người một ý.
+[01:11:58] Quý: Dự án Riverside dự kiến tháng 12 mới có sổ hồng từng căn, khách hỏi thì phải nói rõ.
+[01:12:38] Đạo: Toản soạn lại bộ câu hỏi thường gặp về pháp lý cho cả team nhé.
+[01:12:53] Toản: Dạ vâng.
+[01:13:33] Sinh: Em sẽ gọi lại 12 khách đã xem nhà mẫu tuần trước trong hôm nay.
+[01:14:18] Đạo: Ok, hết giờ rồi, tuần sau họp tiếp.
+[01:14:43] Đạo: Bữa nay bàn đơn xuất khẩu sầu riêng đông lạnh đi Trung Quốc.
+[01:15:23] Lam: Đối tác bên kia đặt 20 tấn, giao trước ngày 15/11, giá 95 nghìn một ký.
+[01:15:53] Toản: Dạ.
+[01:16:33] Toản: Nếu chốt 20 tấn thì phải mua thêm sầu riêng của vườn ngoài HTX.
+[01:17:13] Toản: Vườn của xã viên đợt này chỉ gom được khoảng 14 tấn đạt chuẩn.
+[01:17:58] Sinh: Mua vườn ngoài thì khó kiểm soát dư lượng thuốc, lô bị trả về là mất cả đơn.
+[01:18:43] Lam: Em đề xuất nhận 14 tấn thôi, báo đối tác phần còn lại giao đợt sau.
+[01:19:23] Đạo: Ừ, nhận 14 tấn, phần còn lại thương lượng giao đợt tháng 12. Chốt vậy.
+[01:20:03] Đạo: Lam báo lại đối tác và gửi hợp đồng sửa đổi trước ngày 30/10.
+[01:20:13] Lam: Dạ.
+[01:20:53] Sinh: Phí kiểm định dư lượng thuốc mỗi lô 4 triệu, đơn 14 tấn chia 2 lô là 8 triệu.
+[01:21:33] Toản: Em sẽ lên lịch thu hoạch cho từng vườn, gửi nhóm Zalo cuối tuần này.
+[01:22:08] Đạo: Ok vậy nghen, giải tán.
+[01:22:33] Lam: Quay lại thép, nhà cung cấp Hòa Bình vừa nhắn là thứ Hai cũng chưa chắc có, nhà máy đang bảo trì.
+[01:23:13] Sinh: Em đề xuất mua lô phi 16 của nhà cung cấp Đông Á, giá cao hơn 3%, giao được trong 2 ngày.
+[01:23:53] Lam: Cao hơn 3% thì lô 25 tấn đội thêm khoảng 15 triệu.
+[01:24:28] Quý: Nhưng trễ thép thì cột tầng 6 đứng, cả đội nằm chờ còn tốn hơn.
+[01:25:03] Đạo: Mua của Đông Á lô này. Hòa Bình giao lô sau thì tính tiếp.
+[01:25:43] Lam: Hợp đồng mua thép trên 10 triệu phải có chữ ký giám đốc dự án, anh Khải đang ở công trường Bình Dương.
+[01:26:18] Đạo: Lam soạn hợp đồng Đông Á rồi gửi anh Khải ký online trong hôm nay.
+[01:26:28] Lam: Dạ, em gửi liền.
+[01:27:13] Toản: Thêm một việc, máy vận thăng chở người kêu lạ từ hôm qua, em đã cho dừng chạy.
+[01:27:48] Đạo: Ai đó gọi bên cho thuê vận thăng xuống kiểm tra giúp anh.
+[01:27:58] Quý: Dạ.
+[01:28:38] Sinh: Bản vẽ điều chỉnh cầu thang bộ tầng 6 em gửi tư vấn thiết kế từ tuần trước, chưa ai phản hồi.
+[01:29:13] Đạo: Sinh gọi thẳng chủ trì thiết kế hối, thứ Sáu này phải có bản vẽ.
+[01:29:33] Sinh: Em gọi rồi anh, họ hẹn thứ Sáu, nhưng em chưa chắc.
+[01:30:08] Đạo: Ok, hôm nay vậy thôi. Cảm ơn anh em.

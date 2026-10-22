@@ -75,7 +75,7 @@ export function ItemCard({
             <p className="faint">Vì sao</p>
             <ol>
               {item.timeline.map((t) => (
-                <li key={t.utt + t.kind}>
+                <li key={`${t.utt}-${t.kind}-${t.key}`}>
                   <button type="button" className="quote" onClick={() => onQuote(t.utt)}>
                     <span className="mono faint">{t.ts ?? t.utt}</span>
                     <span>

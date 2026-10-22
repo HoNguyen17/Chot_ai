@@ -1,0 +1,205 @@
+# meeting: L4
+# title: Họp điều hành tuần — Gốm Việt Hưng: vận chuyển lô hàng Tết
+# date: 2026-11-02
+# participants: Bách (Giám đốc, chủ trì); Hạnh (Giám đốc vận hành, chủ trì); Thành (Sales); Mi (Logistics); Tâm (Kế toán); Quân (Chăm sóc khách hàng)
+# absent: Phúc (Giám đốc tài chính)
+[00:00:10] Bách: Ok mình bắt đầu nhé. Hôm nay ba việc chính: vận chuyển lô hàng Tết đi miền Nam, đóng gói pallet, và phụ phí giao hàng.
+[00:00:29] Hạnh: Trước khi vào, chị cập nhật nhanh: đơn Tết năm nay đã chốt với đại lý khoảng 120 pallet.
+[00:00:44] Thành: Dạ, trong đó Sài Gòn khoảng 70 pallet, Đà Nẵng 30, Cần Thơ 20.
+[00:00:53] Bách: Năm ngoái mình có bao nhiêu?
+[00:01:07] Thành: Năm ngoái chỉ khoảng 80 pallet anh, năm nay tăng gần 50%.
+[00:01:22] Tâm: Công nợ đại lý Cần Thơ vẫn còn 180 triệu chưa thu từ đợt trước.
+[00:01:32] Bách: Cái đó để cuối buổi nói nhé Tâm.
+[00:01:37] Tâm: Dạ.
+[00:01:56] Quân: Đại lý Sài Gòn hỏi ngày giao chậm nhất là bao giờ, họ cần hàng trước 20/12 để bày bán.
+[00:02:08] Bách: Rồi, vậy vào vụ vận chuyển luôn. Mi nói đi em.
+[00:02:26] Mi: Dạ, em đề xuất đi đường biển, từ Hải Phòng vào Cát Lái, giá rẻ nhất trong ba đường.
+[00:02:37] Mi: Tàu chạy khoảng 12 ngày tính cả bốc xếp.
+[00:02:51] Thành: Mười hai ngày thì sát quá, lỡ tàu trễ là không kịp 20/12.
+[00:03:07] Thành: Em đề xuất đi đường bộ, xe container chạy khoảng 4 ngày là tới Sài Gòn.
+[00:03:25] Mi: Đường bộ đắt hơn đường biển khoảng 30%, với lại gốm đi xe đường dài hay vỡ hơn.
+[00:03:44] Hạnh: Còn một cách nữa là đi hàng không cho mấy pallet gấp, nhưng chi phí chắc gấp năm lần.
+[00:03:58] Tâm: Hàng không thì tiền cước ăn hết lời của lô đó luôn chị.
+[00:04:10] Hạnh: Ừ, chị chỉ nêu ra để mình có đủ phương án.
+[00:04:24] Quân: Khách Đà Nẵng năm ngoái phàn nàn hàng tới bị mẻ khá nhiều.
+[00:04:39] Mi: Năm ngoái mình đi đường bộ đó anh, xe dằn suốt tuyến miền Trung.
+[00:04:57] Thành: Đó là do năm ngoái đóng thùng carton đơn, năm nay đóng pallet có khung gỗ rồi.
+[00:05:09] Bách: Đường biển thì mình cần đặt chỗ trước bao lâu?
+[00:05:23] Mi: Dịp Tết hãng tàu nhận booking trước khoảng hai tuần anh.
+[00:05:30] Bách: Còn đường bộ?
+[00:05:46] Mi: Đường bộ gọi trước ba bốn ngày là có xe, nhưng giá Tết lên từng tuần.
+[00:06:00] Hạnh: Chị lo nhất là tàu trễ, năm nào gần Tết cảng cũng kẹt.
+[00:06:12] Thành: Vậy nên em vẫn nghiêng về đường bộ cho chắc.
+[00:06:29] Tâm: Em cần con số cụ thể mới so được, giờ nói phần trăm thì khó tính dòng tiền.
+[00:06:42] Mi: Em chưa có báo giá chính thức, mới hỏi miệng thôi.
+[00:07:00] Bách: Vậy Mi lấy báo giá chính thức cả ba đường, lát nữa hoặc họp sau mình bàn tiếp.
+[00:07:13] Mi: Dạ, em gọi hãng tàu với nhà xe ngay trong sáng nay.
+[00:07:23] Bách: Rồi, qua đóng gói. Hạnh nói đi.
+[00:07:42] Hạnh: Tuần rồi kho báo vỡ 14 bộ ấm chén ở lô đi Hà Nội, đều nằm ở lớp dưới cùng của pallet.
+[00:07:55] Mi: Do mình chồng bốn lớp thùng, lớp dưới chịu không nổi.
+[00:08:09] Quân: Khách đó đòi đổi hàng mới, em đã hứa gửi bù trong tuần.
+[00:08:24] Hạnh: Chị nghĩ mình giảm xuống ba lớp, thêm tấm lót xốp giữa các lớp.
+[00:08:40] Tâm: Ba lớp thì số pallet tăng khoảng một phần tư, tiền cước tăng theo.
+[00:08:52] Thành: Nói chuyện vận chuyển, em nhớ ra một chuyện.
+[00:08:58] Bách: Ừ, nói đi.
+[00:09:19] Thành: Nghe nói khách bên Đà Nẵng chỉ nhận hàng đường bộ, vì kho của họ không có chỗ nhận container từ cảng.
+[00:09:28] Mi: Cái này em chưa nghe bao giờ.
+[00:09:40] Hạnh: Quay lại đóng gói nhé, chuyện đó tính sau.
+[00:09:59] Mi: Em đề xuất đổi sang thùng carton năm lớp cho bộ ấm chén, món to vẫn dùng thùng ba lớp.
+[00:10:09] Thành: Thùng năm lớp đắt hơn bao nhiêu em?
+[00:10:22] Mi: Khoảng 3 nghìn một thùng, cả lô Tết tầm 9 triệu.
+[00:10:34] Tâm: Chín triệu thì vẫn rẻ hơn tiền gửi bù hàng vỡ.
+[00:10:48] Quân: Đợt rồi gửi bù với phí ship đã hơn 6 triệu cho một khách.
+[00:10:56] Hạnh: Ok, chị thấy đáng làm.
+[00:11:10] Hạnh: Từ lô Tết mình chồng ba lớp, bộ ấm chén dùng thùng năm lớp.
+[00:11:19] Mi: Dạ, em báo kho làm theo.
+[00:11:30] Bách: Còn pallet gỗ, mình đang thuê hay mua?
+[00:11:45] Mi: Đang mua pallet gỗ cũ, 120 nghìn một cái, đi một chiều là mất.
+[00:12:00] Hạnh: Có bên cho thuê pallet nhựa, giao xong họ thu hồi ở Sài Gòn.
+[00:12:20] Mi: Pallet nhựa thì đi đường biển được, nhưng đường bộ thì nhà xe hay không chịu thu hồi giúp.
+[00:12:37] Bách: Cái này phụ thuộc vụ chọn đường vận chuyển, để chốt đường xong rồi tính.
+[00:12:42] Hạnh: Ừ.
+[00:12:59] Quân: Anh chị ơi, em nói chuyện tem nhãn được không, khách phàn nàn nhiều lắm.
+[00:13:05] Bách: Nói đi em.
+[00:13:26] Quân: Tem dán trên thùng hiện tại gặp ẩm là bong, đợt mưa vừa rồi kho Bình Dương có cả chục thùng mất tem.
+[00:13:44] Mi: Mất tem thì bên nhận không biết thùng nào của đại lý nào, phải mở ra kiểm lại.
+[00:13:57] Tâm: Tem đó mình in ở xưởng Minh Phát, giá rẻ nhất khu.
+[00:14:10] Thành: Rẻ nhưng giấy mỏng, keo kém, em thấy nhiều lần rồi.
+[00:14:23] Hạnh: Có cách nào dán thêm băng keo trong đè lên tem không?
+[00:14:38] Mi: Làm tay thì được nhưng 120 pallet thì mất cả ngày công của kho.
+[00:14:51] Quân: Lô Tết mà mất tem thì giao nhầm là mệt lắm anh chị.
+[00:15:06] Thành: Em có hỏi thử xưởng in Hoàng Gia, họ có loại tem decal chống ẩm.
+[00:15:14] Tâm: Giá bên đó sao em?
+[00:15:28] Thành: Cao hơn Minh Phát khoảng 8%, nhưng họ giao trong 3 ngày.
+[00:15:43] Hạnh: Tám phần trăm thì một năm thêm khoảng 5 triệu tiền tem thôi.
+[00:15:59] Thành: Vậy em đề xuất từ lô Tết mình chuyển hẳn sang in tem ở xưởng Hoàng Gia.
+[00:16:05] Bách: Ok vậy đi.
+[00:16:14] Thành: Dạ, chiều nay em đặt mẫu.
+[00:16:26] Bách: Rồi, chuyện phụ phí giao hàng. Tâm nói đi.
+[00:16:41] Tâm: Từ tháng 11 nhà xe báo tăng phụ phí xăng dầu thêm 5% trên cước.
+[00:16:59] Tâm: Mình đang cộng phụ phí vào báo giá cho khách nhưng ghi chung một dòng "phí khác".
+[00:17:16] Quân: Khách hỏi nhiều về dòng "phí khác" đó, có đại lý nghĩ mình thu thêm vô lý.
+[00:17:30] Thành: Bên sales cũng bị hỏi, em giải thích mỗi lần một kiểu.
+[00:17:44] Hạnh: Vậy tách riêng ra, ghi rõ "phụ phí xăng dầu" và phần trăm.
+[00:17:58] Tâm: Tách ra thì em phải sửa mẫu báo giá trên phần mềm kế toán.
+[00:18:05] Bách: Sửa có lâu không?
+[00:18:14] Tâm: Khoảng một buổi chiều anh.
+[00:18:32] Bách: Ok, tách riêng dòng phụ phí xăng dầu trên báo giá, Tâm sửa mẫu trong tuần này nhé.
+[00:18:42] Tâm: Dạ ok anh, thứ Năm em sửa xong.
+[00:18:53] Quân: Còn khách đã nhận báo giá cũ thì sao anh?
+[00:19:08] Hạnh: Báo giá cũ vẫn giữ, chỉ áp dụng mẫu mới cho báo giá từ tuần sau.
+[00:19:22] Quân: Dạ, vậy em soạn một tin nhắn giải thích gửi các đại lý lớn.
+[00:19:31] Bách: Ừ, gửi trước khi áp dụng.
+[00:19:47] Thành: Em góp ý là tin nhắn nên có ví dụ cụ thể một đơn, khách dễ hiểu hơn.
+[00:19:55] Quân: Dạ, em thêm ví dụ.
+[00:20:05] Tâm: Em gửi Quân số liệu để làm ví dụ.
+[00:20:23] Hạnh: Một việc nữa ở kho Bình Dương: mái khu B dột, mưa tuần rồi ướt mấy chục thùng.
+[00:20:33] Mi: Khu B đang để hàng Tết đó chị.
+[00:20:41] Bách: Sửa mất bao nhiêu?
+[00:20:52] Hạnh: Thợ báo khoảng 25 triệu, làm hai ngày.
+[00:21:06] Tâm: Khoản này chưa có trong ngân sách quý, phải xin anh Phúc.
+[00:21:16] Bách: Cứ sửa trước, anh nói với Phúc sau.
+[00:21:33] Hạnh: Mi chuyển hàng khu B sang khu C trước, rồi gọi thợ vào làm ngay thứ Tư nhé.
+[00:21:43] Mi: Dạ ok chị, thứ Tư em cho thợ vào.
+[00:21:52] Thành: Khu C có đủ chỗ không chị?
+[00:22:07] Bách: Chắc đủ, Mi xếp sau. Giờ mình nghỉ 10 phút rồi họp tiếp nhé.
+[00:37:30] Hạnh: Rồi, quay lại vụ vận chuyển lô Tết, hãng tàu sắp đóng booking rồi.
+[00:37:49] Mi: Em vừa có báo giá chính thức. Đường biển trọn gói 120 pallet khoảng 96 triệu, 12 ngày.
+[00:38:00] Mi: Đường bộ khoảng 128 triệu, 4 đến 5 ngày.
+[00:38:14] Mi: Hàng không em chỉ hỏi cho 10 pallet gấp, đã gần 60 triệu.
+[00:38:25] Tâm: Đường biển rẻ hơn đường bộ hơn 30 triệu.
+[00:38:39] Thành: Nhưng chuyện Đà Nẵng chỉ nhận đường bộ thì sao anh chị?
+[00:38:57] Mi: Em hỏi rồi, kho Đà Nẵng nhận được container nếu báo trước, không phải chỉ đường bộ.
+[00:39:05] Thành: À vậy là em nghe nhầm.
+[00:39:19] Hạnh: Chị vẫn lo tàu trễ, Tết năm ngoái có chuyến trễ cả tuần.
+[00:39:33] Mi: Hãng này cam kết lịch, trễ quá 7 ngày họ giảm 10% cước.
+[00:39:49] Thành: Giảm cước thì cũng không bù được nếu đại lý không có hàng bán Tết.
+[00:40:08] Quân: Mình hứa với đại lý giao trước 20/12, đi tàu ngày 25/11 thì còn dư khoảng mười ngày.
+[00:40:19] Hạnh: Mười ngày dư thì chị chấp nhận được.
+[00:40:42] Bách: Vậy chốt nhé: lô Tết đi đường biển. Nếu tới 15/11 hãng tàu chưa xác nhận chỗ thì quay về phương án đường bộ.
+[00:40:49] Hạnh: Ok, chị đồng ý.
+[00:40:58] Bách: Hàng không thì bỏ, đắt quá.
+[00:41:10] Mi: Dạ, chiều nay em đặt booking với hãng tàu.
+[00:41:15] Bách: Ok.
+[00:41:33] Mi: À còn bản vẽ sắp xếp pallet, forwarder cần bản cập nhật theo kiểu chồng ba lớp mới.
+[00:41:43] Hạnh: Bản cũ là chồng bốn lớp đúng không?
+[00:42:00] Mi: Dạ, phải gửi lại bản mới trước thứ Sáu, không thì họ tính sai số container.
+[00:42:10] Thành: Bản vẽ đó ai làm lần trước vậy?
+[00:42:24] Mi: Lần trước là bạn thực tập bên em làm, bạn ấy nghỉ rồi.
+[00:42:39] Bách: Ai đó gửi lại bản vẽ pallet cho forwarder trước thứ Sáu nhé.
+[00:42:49] Tâm: Bên kế toán thì không rành vẽ.
+[00:42:58] Quân: Em cũng không có file gốc.
+[00:43:09] Hạnh: File gốc chắc nằm trong drive của kho.
+[00:43:20] Mi: Drive đó em không có quyền truy cập.
+[00:43:30] Bách: Thôi để đó, giờ còn mấy việc nữa.
+[00:43:35] Thành: Dạ.
+[00:43:49] Bách: Chuyện chứng từ xuất kho. Quân kể lại vụ tuần trước đi.
+[00:44:06] Quân: Dạ, tuần rồi kho xuất nhầm 6 thùng của đại lý Biên Hòa sang đại lý Thủ Đức.
+[00:44:21] Quân: Hai đại lý đặt cùng mẫu, phiếu xuất ghi tay nên kho nhìn nhầm.
+[00:44:36] Mi: Kho xuất theo tin nhắn Zalo của sales, không có số đơn đi kèm.
+[00:44:49] Thành: Tại khách gấp quá, em nhắn trước cho kho xuất kịp.
+[00:45:05] Tâm: Bên em đối soát cuối tháng cũng không khớp được hoá đơn với phiếu xuất.
+[00:45:20] Hạnh: Mấy khách lớn đều có mã PO rồi, chỉ là mình không bắt buộc ghi.
+[00:45:32] Quân: Đại lý nhỏ thì nhiều bên không quen gửi PO.
+[00:45:44] Thành: Bắt buộc PO thì em sợ mất mấy đơn nhỏ gấp.
+[00:46:04] Bách: Không, từ nay mọi lô hàng xuất kho phải có mã PO của khách, không có PO thì kho không xuất.
+[00:46:15] Mi: Dạ, vậy em in mã PO lên phiếu xuất luôn.
+[00:46:27] Tâm: Bên em sẽ ghi mã PO lên hoá đơn để đối soát.
+[00:46:40] Quân: Còn đại lý nhỏ không có hệ thống PO thì sao anh?
+[00:46:55] Hạnh: Thì sales tạo giúp một mã theo mẫu, gửi khách xác nhận qua Zalo.
+[00:47:07] Thành: Dạ, em làm mẫu mã PO cho sales dùng chung.
+[00:47:15] Bách: Ừ, làm cho đơn giản.
+[00:47:27] Quân: Em sẽ báo cho các đại lý quy định mới này.
+[00:47:38] Tâm: Anh ơi áp dụng từ ngày nào để em báo kho?
+[00:47:47] Bách: Áp dụng từ thứ Hai tuần sau.
+[00:47:52] Tâm: Dạ.
+[00:48:06] Bách: Chuyện cuối là chính sách miễn phí vận chuyển cho đại lý.
+[00:48:25] Bách: Anh đề xuất miễn phí vận chuyển cho mọi đơn từ 3 triệu, đối thủ đang làm từ 5 triệu.
+[00:48:38] Thành: Em ủng hộ, đại lý nhỏ rất hay hỏi chuyện phí ship.
+[00:48:57] Hạnh: Chị không đồng ý. Đơn 3 triệu biên lợi nhuận chỉ khoảng 18%, phí ship đã ăn mất 10%.
+[00:49:12] Tâm: Em tính sơ thì đơn dưới 5 triệu miễn ship là gần như hoà vốn.
+[00:49:27] Thành: Nhưng đơn nhỏ thì đại lý đặt đều hơn, mình bù bằng số lượng.
+[00:49:40] Hạnh: Số lượng tăng mà mỗi đơn lỗ thì càng bán càng lỗ em.
+[00:49:54] Quân: Khách cũng phàn nàn phí ship mình cao hơn mặt bằng chung.
+[00:50:08] Bách: Anh nghĩ phải có cái gì đó để giữ đại lý nhỏ qua mùa Tết.
+[00:50:22] Hạnh: Vậy thì miễn từ 5 triệu như đối thủ, chị chấp nhận được.
+[00:50:36] Thành: Năm triệu thì không khác gì đối thủ, không hút được ai.
+[00:50:52] Mi: Tuyến Cần Thơ phí ship cao nhất, nếu miễn thì nên trừ tuyến đó ra.
+[00:51:00] Bách: Tuyến xa thì tính sau.
+[00:51:13] Tâm: Em cần chốt sớm để cập nhật bảng giá trước 15/11.
+[00:51:29] Bách: Thôi chốt miễn phí vận chuyển cho đơn từ 3 triệu, áp dụng từ 15/11.
+[00:51:37] Thành: Dạ, em báo đội sales.
+[00:51:49] Quân: Em cập nhật lên fanpage và nhóm Zalo đại lý.
+[00:51:59] Tâm: Em sửa bảng giá theo mức 3 triệu.
+[00:52:10] Mi: Vậy tuyến Cần Thơ vẫn miễn luôn hả anh?
+[00:52:19] Bách: Ừ, trước mắt áp dụng chung.
+[00:52:32] Quân: Còn mấy phản hồi của khách em báo nhanh được không?
+[00:52:38] Bách: Ừ nói đi.
+[00:52:53] Quân: Đại lý Cần Thơ khen mẫu bình hoa men lam mới, xin thêm 50 cái.
+[00:53:09] Quân: Hai đại lý Sài Gòn phàn nàn giao chậm hai ngày ở đợt cuối tháng 10.
+[00:53:22] Mi: Đợt đó xe kẹt ở trạm cân, em đã làm việc với nhà xe.
+[00:53:33] Thành: Mẫu men lam thì xưởng còn khoảng 200 cái.
+[00:53:49] Hạnh: Thành chốt đơn 50 cái cho Cần Thơ, giữ lại phần còn lại cho đơn Tết.
+[00:53:59] Thành: Dạ ok chị, chiều nay em chốt đơn.
+[00:54:13] Tâm: Còn công nợ đại lý Cần Thơ 180 triệu như em nói đầu buổi.
+[00:54:20] Bách: Nợ bao lâu rồi?
+[00:54:28] Tâm: Quá hạn 45 ngày anh.
+[00:54:45] Hạnh: Vậy chưa giao thêm 50 cái men lam khi họ chưa thanh toán ít nhất một nửa.
+[00:54:54] Thành: Dạ, em báo họ điều kiện này.
+[00:55:09] Bách: Tâm gửi thư nhắc nợ chính thức cho Cần Thơ trong tuần này nhé.
+[00:55:18] Tâm: Dạ ok anh, thứ Sáu em gửi.
+[00:55:35] Quân: Đại lý Biên Hòa vụ giao nhầm em đã đổi hàng xong, họ không khiếu nại thêm.
+[00:55:40] Hạnh: Tốt.
+[00:55:54] Mi: Anh chị, lịch kiểm kê cuối năm em đề xuất làm ngày 28/12.
+[00:56:06] Hạnh: 28/12 sát Tết quá, kho còn đang giao hàng.
+[00:56:15] Mi: Vậy làm sau Tết, khoảng 10/2.
+[00:56:22] Hạnh: Ừ, chị thấy được.
+[00:56:32] Bách: Kiểm kê để sau Tết, ngày 10/2.
+[00:56:37] Mi: Dạ.
+[00:56:54] Thành: Em hỏi thêm, chương trình chiết khấu cuối năm cho đại lý có làm không anh?
+[00:57:08] Bách: Cái đó để họp tuần sau bàn, khi có số doanh thu tháng 11.
+[00:57:23] Bách: Rồi, anh tóm lại: lô Tết đi đường biển, Mi đặt booking hôm nay.
+[00:57:42] Bách: Từ thứ Hai tuần sau xuất kho phải có PO, miễn phí vận chuyển từ 3 triệu áp dụng 15/11.
+[00:57:57] Hạnh: Còn bản vẽ pallet cho forwarder thì vẫn chưa ai nhận đâu anh.
+[00:58:08] Bách: Ừ, cái đó tính sau. Hôm nay vậy thôi.
+[00:58:15] Bách: Cảm ơn mọi người.

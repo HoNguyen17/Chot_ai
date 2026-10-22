@@ -7,10 +7,13 @@ import { api } from "@/lib/api";
 import type { MeetingSummary } from "@/lib/types";
 
 // Transcript mẫu (bản sao data/raw) — API replay output LLM đã lưu, không tốn token.
-const SAMPLES = Array.from({ length: 25 }, (_, i) => `m${String(i + 1).padStart(2, "0")}`);
+// L1–L4 (họp dài 150–200 câu, M3) đứng đầu; m01–m25 là bộ ngắn của M2.
+const LONG_SAMPLES = ["L1", "L2", "L3", "L4"];
+const SAMPLES = [...LONG_SAMPLES, ...Array.from({ length: 25 }, (_, i) => `m${String(i + 1).padStart(2, "0")}`)];
 // Mã truy cập để gọi LLM — chỉ nhớ trong tab hiện tại.
 const CODE_KEY = "chot-access-code";
 const SAMPLE_SERIES = "mau-chot-m01-m05";
+const LONG_SAMPLE_SERIES = "mau-chot-hop-dai";
 
 export default function UploadPage() {
   const router = useRouter();
@@ -131,7 +134,7 @@ export default function UploadPage() {
               <option value="">Dùng transcript mẫu…</option>
               {SAMPLES.map((id) => (
                 <option key={id} value={id}>
-                  {id}
+                  {LONG_SAMPLES.includes(id) ? `${id} · họp dài` : id}
                 </option>
               ))}
             </select>
@@ -158,7 +161,7 @@ export default function UploadPage() {
         {isSample && (
           <p className="faint" style={{ marginTop: 12 }}>
             <b>{sample.title}</b> — kết quả mẫu là output đã lưu của LLM (gpt-4.1-mini, ngày
-            14/10/2026), không phải đáp án.
+            {LONG_SAMPLES.includes(sample.id) ? "21/10/2026, hai lượt" : "14/10/2026"}), không phải đáp án.
           </p>
         )}
         <p className="faint" style={{ marginTop: 8 }}>
@@ -198,6 +201,7 @@ export default function UploadPage() {
           </form>
           <p className="faint" style={{ marginTop: 8 }}>
             Nhóm gom các buổi họp, Kho tri thức và việc treo vào một link bí mật. Xem thử{" "}
+            <Link href={`/s/${LONG_SAMPLE_SERIES}`}>nhóm mẫu họp dài L1–L4</Link> hoặc{" "}
             <Link href={`/s/${SAMPLE_SERIES}`}>nhóm mẫu m01–m05</Link>.
           </p>
         </section>

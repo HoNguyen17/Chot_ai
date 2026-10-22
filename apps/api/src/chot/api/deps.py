@@ -169,20 +169,29 @@ def make_repo(settings: Settings) -> MeetingRepository:
 
 # Nhóm họp mẫu: chỉ xem, id công khai (không cần bí mật vì không sửa được).
 SAMPLE_SERIES_ID = "mau-chot-m01-m05"
-SAMPLE_MEETINGS = ("m01", "m02", "m03", "m04", "m05")
+LONG_SAMPLE_SERIES_ID = "mau-chot-hop-dai"
+SAMPLE_SERIES = (
+    (SAMPLE_SERIES_ID, "Nhóm họp mẫu (m01–m05)", ("m01", "m02", "m03", "m04", "m05")),
+    # Họp dài 148–200 câu: sự kiện của run M3 20261021-153854-llm-m3-long-c100-r2
+    (LONG_SAMPLE_SERIES_ID, "Nhóm họp mẫu — họp dài (L1–L4)", ("L1", "L2", "L3", "L4")),
+)
 
 
 def seed_sample_series(svc: MeetingService, events_dir: str) -> None:
-    """Nạp m01–m05 bằng replay sự kiện đã lưu — không bao giờ gọi LLM."""
-    paths = [Path(events_dir) / f"{m}.txt" for m in SAMPLE_MEETINGS]
-    if missing := [p.name for p in paths if not p.exists()]:
-        log.warning("Không nạp nhóm họp mẫu: thiếu %s trong REPLAY_EVENTS_DIR", missing)
-        return
-    svc.seed_series(
-        Series(id=SAMPLE_SERIES_ID, name="Nhóm họp mẫu (m01–m05)", read_only=True),
-        [p.read_text(encoding="utf-8") for p in paths],
-        RulesLedgerBuilder(DirectoryReplayExtractor(events_dir)),
-    )
+    """Nạp các nhóm mẫu bằng replay sự kiện đã lưu — không bao giờ gọi LLM."""
+    builder = RulesLedgerBuilder(DirectoryReplayExtractor(events_dir))
+    for series_id, name, meetings in SAMPLE_SERIES:
+        paths = [Path(events_dir) / f"{m}.txt" for m in meetings]
+        if missing := [p.name for p in paths if not p.exists()]:
+            log.warning(
+                "Không nạp nhóm mẫu %s: thiếu %s trong REPLAY_EVENTS_DIR", series_id, missing
+            )
+            continue
+        svc.seed_series(
+            Series(id=series_id, name=name, read_only=True),
+            [p.read_text(encoding="utf-8") for p in paths],
+            builder,
+        )
 
 
 @lru_cache

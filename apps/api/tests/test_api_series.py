@@ -156,3 +156,21 @@ def test_meeting_list_never_shows_series_meetings():
     _meeting(c)  # thuộc nhóm (link bí mật)
     solo = c.post("/meetings", json={"transcript_text": TEXT}).json()["id"]
     assert [m["id"] for m in c.get("/meetings").json()] == [solo]
+
+
+def test_long_sample_series_replays_l1_to_l4(monkeypatch):
+    from chot.api import deps
+
+    monkeypatch.setenv("LEDGER_BUILDER", "keyword")
+    deps.get_service.cache_clear()
+    try:
+        c = TestClient(create_app())
+        series = c.get(f"/series/{deps.LONG_SAMPLE_SERIES_ID}").json()
+        assert series["read_only"] and len(series["meetings"]) == 4
+        l1 = next(m for m in series["meetings"] if m["title"].startswith("Họp tuần liên phòng"))
+        items = c.get(f"/meetings/{l1['id']}").json()["ledger"]["items"]
+        # T1: quyết định MoMo của khối m01 vẫn Đã chốt khi nằm trong họp dài
+        assert any(i["type"] == "decision" and i["status"] == "final" and "MoMo" in i["content"]
+                   for i in items)  # fmt: skip
+    finally:
+        deps.get_service.cache_clear()
