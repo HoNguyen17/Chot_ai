@@ -23,7 +23,7 @@ lint:            ## Lint + kiểm tra format + typecheck web
 	cd apps/web && npx tsc --noEmit
 
 dev-api:         ## API ở :8000 (đọc .env)
-	cd $(API) && set -a && . ../../.env 2>/dev/null; set +a; $(UV) uvicorn chot.api.main:app --reload --port 8000
+	cd $(API) && $(UV) uvicorn chot.api.main:app --reload --port 8000 --env-file ../../.env
 
 dev-web:         ## Web ở :3000
 	cd apps/web && npm run dev
