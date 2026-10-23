@@ -35,7 +35,6 @@ _archive/
 
 #docs (trừ bài nộp M3)
 docs/*
-!docs/MISSION3.md
 
 #scripts
 scripts/
