@@ -89,14 +89,13 @@ Người dùng: PM / trưởng nhóm SME chủ trì họp dự án định kỳ.
 
 "Chốt nhầm" = trong các mục hệ thống ghi "Đã chốt", tỷ lệ mục thật ra chưa chốt. Lỗi duy nhất của lần chạy đầu-cuối là LLM coi "Ừ." là đồng ý; luật mới chặn lỗi này, dòng cuối là cùng sự kiện đó chạy lại.
 
-**Họp dài (Mission 3).** 4 cuộc họp 148–200 câu (L1–L4), chủ đề bị cắt rồi quay lại. Chấm bằng luật và metrics hiện tại:
+**Họp dài.** 4 cuộc họp 148–200 câu (L1–L4), chủ đề bị cắt rồi quay lại. Chấm bằng luật và metrics hiện tại:
 
 | | Chốt nhầm ⭐ | Nhất quán chủ đề | Việc nhầm | Phương án cũ "bị thay thế" | Chi phí / buổi |
 |---|---|---|---|---|---|
-| M2: một lần gọi | 13% (3/23) | 94,3% | 5,7% | 52,4% | $0,019 |
-| M3: hai lượt | **4,8% (1/21)** | **100%** | **3,3%** | 38,1% | $0,029 |
+| một lần gọi llm | 13% (3/23) | 94,3% | 5,7% | 52,4% | $0,019 |
+| hai lượt llm | **4,8% (1/21)** | **100%** | **3,3%** | 38,1% | $0,029 |
 
-Run: `20261022-135052-replay-p8-m2-long`, `20261022-135053-replay-p8-m3-long`. Chi phí lấy từ `20261021-143047-llm-m2-long` và `20261021-153854-llm-m3-long-c100-r2`. Với luật cũ, M2 chốt nhầm 25%. Trên m01–m25, M3 vẫn 0% như M2. M3 kém hơn ở "bị thay thế"; chi tiết và giới hạn ở [MISSION3](docs/MISSION3.md).
 
 <p align="right"><a href="#chốt">↑ lên đầu</a></p>
 
